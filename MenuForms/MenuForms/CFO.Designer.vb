@@ -69,7 +69,17 @@ Partial Class CFO
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.SupplierIDTextBox = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -81,6 +91,7 @@ Partial Class CFO
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -462,7 +473,13 @@ Partial Class CFO
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button5)
+        Me.TabPage3.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage3.Controls.Add(Me.Label18)
+        Me.TabPage3.Controls.Add(Me.SupplierIDTextBox)
+        Me.TabPage3.Controls.Add(Me.Label17)
+        Me.TabPage3.Controls.Add(Me.DataGridView3)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.ComboBox3)
         Me.TabPage3.Controls.Add(Me.Button4)
         Me.TabPage3.Controls.Add(Me.TextBox2)
         Me.TabPage3.Controls.Add(Me.TextBox1)
@@ -475,19 +492,88 @@ Partial Class CFO
         Me.TabPage3.Text = "Supplier Accounts"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button5
+        'DateTimePicker1
         '
-        Me.Button5.Location = New System.Drawing.Point(705, 41)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(172, 47)
-        Me.Button5.TabIndex = 18
-        Me.Button5.Text = "View All Supplier Payments"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.DateTimePicker1.Location = New System.Drawing.Point(186, 95)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 27
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(7, 95)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(74, 13)
+        Me.Label18.TabIndex = 26
+        Me.Label18.Text = "Payment Date"
+        '
+        'SupplierIDTextBox
+        '
+        Me.SupplierIDTextBox.Location = New System.Drawing.Point(186, 13)
+        Me.SupplierIDTextBox.Name = "SupplierIDTextBox"
+        Me.SupplierIDTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.SupplierIDTextBox.TabIndex = 25
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(7, 13)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(59, 13)
+        Me.Label17.TabIndex = 24
+        Me.Label17.Text = "Supplier ID"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridView3.Location = New System.Drawing.Point(415, 65)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(443, 746)
+        Me.DataGridView3.TabIndex = 23
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Supplier ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Purchase Order No"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Purchase Order Payment"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Payment Date"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(412, 13)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(120, 13)
+        Me.Label16.TabIndex = 22
+        Me.Label16.Text = "View Supplier Payments"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(415, 38)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(200, 21)
+        Me.ComboBox3.TabIndex = 21
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(194, 104)
+        Me.Button4.Location = New System.Drawing.Point(186, 143)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(200, 79)
         Me.Button4.TabIndex = 17
@@ -496,14 +582,14 @@ Partial Class CFO
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(194, 58)
+        Me.TextBox2.Location = New System.Drawing.Point(186, 69)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(200, 20)
         Me.TextBox2.TabIndex = 5
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(194, 30)
+        Me.TextBox1.Location = New System.Drawing.Point(186, 41)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(200, 20)
         Me.TextBox1.TabIndex = 3
@@ -511,7 +597,7 @@ Partial Class CFO
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(11, 58)
+        Me.Label15.Location = New System.Drawing.Point(7, 69)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(125, 13)
         Me.Label15.TabIndex = 2
@@ -520,7 +606,7 @@ Partial Class CFO
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(11, 30)
+        Me.Label12.Location = New System.Drawing.Point(7, 41)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 13)
         Me.Label12.TabIndex = 0
@@ -543,6 +629,7 @@ Partial Class CFO
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -594,10 +681,20 @@ Partial Class CFO
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label18 As Label
+    Friend WithEvents SupplierIDTextBox As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ComboBox3 As ComboBox
 End Class
