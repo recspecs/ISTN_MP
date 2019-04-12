@@ -43,6 +43,14 @@ Partial Class CFO
         Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sales_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Customer_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Customer_Payment_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sales_Order_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Payment_Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Payment_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Payment_Date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Employee_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -67,20 +75,12 @@ Partial Class CFO
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Customer_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Customer_Payment_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sales_Order_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Payment_Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Payment_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Payment_Date = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Employee_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -88,11 +88,11 @@ Partial Class CFO
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(-2, 0)
+        Me.TabControl1.Location = New System.Drawing.Point(1, 3)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1183, 837)
-        Me.TabControl1.TabIndex = 0
+        Me.TabControl1.TabIndex = 1
         '
         'TabPage2
         '
@@ -273,6 +273,50 @@ Partial Class CFO
         Me.TabPage1.TabIndex = 2
         Me.TabPage1.Text = "Customer Accounts"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Customer_ID, Me.Customer_Payment_ID, Me.Sales_Order_ID, Me.Payment_Type, Me.Payment_Total, Me.Payment_Date, Me.Employee_ID})
+        Me.DataGridView2.Location = New System.Drawing.Point(423, 65)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(743, 746)
+        Me.DataGridView2.TabIndex = 20
+        '
+        'Customer_ID
+        '
+        Me.Customer_ID.HeaderText = "Customer ID"
+        Me.Customer_ID.Name = "Customer_ID"
+        '
+        'Customer_Payment_ID
+        '
+        Me.Customer_Payment_ID.HeaderText = "Customer Payment ID"
+        Me.Customer_Payment_ID.Name = "Customer_Payment_ID"
+        '
+        'Sales_Order_ID
+        '
+        Me.Sales_Order_ID.HeaderText = "Sales Order ID"
+        Me.Sales_Order_ID.Name = "Sales_Order_ID"
+        '
+        'Payment_Type
+        '
+        Me.Payment_Type.HeaderText = "Payment Type"
+        Me.Payment_Type.Name = "Payment_Type"
+        '
+        'Payment_Total
+        '
+        Me.Payment_Total.HeaderText = "Payment Total"
+        Me.Payment_Total.Name = "Payment_Total"
+        '
+        'Payment_Date
+        '
+        Me.Payment_Date.HeaderText = "Payment Date"
+        Me.Payment_Date.Name = "Payment_Date"
+        '
+        'Employee_ID
+        '
+        Me.Employee_ID.HeaderText = "Employee ID"
+        Me.Employee_ID.Name = "Employee_ID"
         '
         'Label14
         '
@@ -482,55 +526,11 @@ Partial Class CFO
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Purchase Order No"
         '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Customer_ID, Me.Customer_Payment_ID, Me.Sales_Order_ID, Me.Payment_Type, Me.Payment_Total, Me.Payment_Date, Me.Employee_ID})
-        Me.DataGridView2.Location = New System.Drawing.Point(423, 65)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(743, 746)
-        Me.DataGridView2.TabIndex = 20
-        '
-        'Customer_ID
-        '
-        Me.Customer_ID.HeaderText = "Customer ID"
-        Me.Customer_ID.Name = "Customer_ID"
-        '
-        'Customer_Payment_ID
-        '
-        Me.Customer_Payment_ID.HeaderText = "Customer Payment ID"
-        Me.Customer_Payment_ID.Name = "Customer_Payment_ID"
-        '
-        'Sales_Order_ID
-        '
-        Me.Sales_Order_ID.HeaderText = "Sales Order ID"
-        Me.Sales_Order_ID.Name = "Sales_Order_ID"
-        '
-        'Payment_Type
-        '
-        Me.Payment_Type.HeaderText = "Payment Type"
-        Me.Payment_Type.Name = "Payment_Type"
-        '
-        'Payment_Total
-        '
-        Me.Payment_Total.HeaderText = "Payment Total"
-        Me.Payment_Total.Name = "Payment_Total"
-        '
-        'Payment_Date
-        '
-        Me.Payment_Date.HeaderText = "Payment Date"
-        Me.Payment_Date.Name = "Payment_Date"
-        '
-        'Employee_ID
-        '
-        Me.Employee_ID.HeaderText = "Employee ID"
-        Me.Employee_ID.Name = "Employee_ID"
-        '
         'CFO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1182, 840)
+        Me.ClientSize = New System.Drawing.Size(1185, 842)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "CFO"
         Me.Text = "CFO"
@@ -540,18 +540,15 @@ Partial Class CFO
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents OrderDateBox As DateTimePicker
@@ -563,12 +560,25 @@ Partial Class CFO
     Friend WithEvents CustomerPaymentIDTextBox As TextBox
     Friend WithEvents CustomerIDTextBox As TextBox
     Friend WithEvents SalesOrderIDTextBox As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Product_Code As DataGridViewTextBoxColumn
     Friend WithEvents Product_Name As DataGridViewTextBoxColumn
     Friend WithEvents Product_Price As DataGridViewTextBoxColumn
     Friend WithEvents Product_Qty As DataGridViewTextBoxColumn
     Friend WithEvents Subtotal As DataGridViewTextBoxColumn
     Friend WithEvents Sales_Total As DataGridViewTextBoxColumn
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Customer_ID As DataGridViewTextBoxColumn
+    Friend WithEvents Customer_Payment_ID As DataGridViewTextBoxColumn
+    Friend WithEvents Sales_Order_ID As DataGridViewTextBoxColumn
+    Friend WithEvents Payment_Type As DataGridViewTextBoxColumn
+    Friend WithEvents Payment_Total As DataGridViewTextBoxColumn
+    Friend WithEvents Payment_Date As DataGridViewTextBoxColumn
+    Friend WithEvents Employee_ID As DataGridViewTextBoxColumn
+    Friend WithEvents Label14 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Button2 As Button
     Friend WithEvents Customer_IDComboBox As ComboBox
     Friend WithEvents Employee_IDComboBox As ComboBox
     Friend WithEvents Payment_TypeComboBox As ComboBox
@@ -583,21 +593,11 @@ Partial Class CFO
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Label14 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents Customer_ID As DataGridViewTextBoxColumn
-    Friend WithEvents Customer_Payment_ID As DataGridViewTextBoxColumn
-    Friend WithEvents Sales_Order_ID As DataGridViewTextBoxColumn
-    Friend WithEvents Payment_Type As DataGridViewTextBoxColumn
-    Friend WithEvents Payment_Total As DataGridViewTextBoxColumn
-    Friend WithEvents Payment_Date As DataGridViewTextBoxColumn
-    Friend WithEvents Employee_ID As DataGridViewTextBoxColumn
 End Class
