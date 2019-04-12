@@ -29,3 +29,7 @@ C:\Users\Smeg Lord\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.
 C:\Users\Smeg Lord\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.Resources.resources
 C:\Users\Smeg Lord\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.Sales_Rep.resources
 C:\Users\Smeg Lord\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.vbproj.GenerateResource.Cache
+C:\Users\Tony\Source\Repos\Subs23\ISTN_MP\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\Tony\Source\Repos\Subs23\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.exe
+C:\Users\Tony\Source\Repos\Subs23\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.xml
+C:\Users\Tony\Source\Repos\Subs23\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.pdb

@@ -23,7 +23,7 @@ Partial Class CFO
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.CaptureSalesOrderTab = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.OrderDateBox = New System.Windows.Forms.DateTimePicker()
@@ -75,17 +75,17 @@ Partial Class CFO
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabControl1.SuspendLayout
+        Me.CaptureSalesOrderTab.SuspendLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage1.SuspendLayout
+        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage3.SuspendLayout
+        Me.SuspendLayout
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.CaptureSalesOrderTab)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(1, 3)
@@ -94,41 +94,41 @@ Partial Class CFO
         Me.TabControl1.Size = New System.Drawing.Size(1183, 837)
         Me.TabControl1.TabIndex = 1
         '
-        'TabPage2
+        'CaptureSalesOrderTab
         '
-        Me.TabPage2.Controls.Add(Me.Button1)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
-        Me.TabPage2.Controls.Add(Me.OrderDateBox)
-        Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Controls.Add(Me.Label2)
-        Me.TabPage2.Controls.Add(Me.Label1)
-        Me.TabPage2.Controls.Add(Me.CustomerPaymentIDTextBox)
-        Me.TabPage2.Controls.Add(Me.CustomerIDTextBox)
-        Me.TabPage2.Controls.Add(Me.SalesOrderIDTextBox)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1175, 811)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Capture Sales Order"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.CaptureSalesOrderTab.Controls.Add(Me.Button1)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.ComboBox1)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.OrderDateBox)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.Label5)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.Label4)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.Label3)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.Label2)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.Label1)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.CustomerPaymentIDTextBox)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.CustomerIDTextBox)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.SalesOrderIDTextBox)
+        Me.CaptureSalesOrderTab.Controls.Add(Me.DataGridView1)
+        Me.CaptureSalesOrderTab.Location = New System.Drawing.Point(4, 22)
+        Me.CaptureSalesOrderTab.Name = "CaptureSalesOrderTab"
+        Me.CaptureSalesOrderTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.CaptureSalesOrderTab.Size = New System.Drawing.Size(1175, 811)
+        Me.CaptureSalesOrderTab.TabIndex = 1
+        Me.CaptureSalesOrderTab.Text = "Capture Sales Order"
+        Me.CaptureSalesOrderTab.UseVisualStyleBackColor = true
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button1.Location = New System.Drawing.Point(404, 20)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(243, 126)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "Capture Sales Order"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'ComboBox1
         '
-        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.FormattingEnabled = true
         Me.ComboBox1.Location = New System.Drawing.Point(198, 125)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
@@ -143,7 +143,7 @@ Partial Class CFO
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
+        Me.Label5.AutoSize = true
         Me.Label5.Location = New System.Drawing.Point(11, 125)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 13)
@@ -152,7 +152,7 @@ Partial Class CFO
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
+        Me.Label4.AutoSize = true
         Me.Label4.Location = New System.Drawing.Point(11, 98)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(109, 13)
@@ -161,7 +161,7 @@ Partial Class CFO
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.Location = New System.Drawing.Point(11, 72)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 13)
@@ -170,7 +170,7 @@ Partial Class CFO
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.Location = New System.Drawing.Point(11, 46)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 13)
@@ -179,7 +179,7 @@ Partial Class CFO
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.Location = New System.Drawing.Point(11, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 13)
@@ -272,7 +272,7 @@ Partial Class CFO
         Me.TabPage1.Size = New System.Drawing.Size(1175, 811)
         Me.TabPage1.TabIndex = 2
         Me.TabPage1.Text = "Customer Accounts"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = true
         '
         'DataGridView2
         '
@@ -320,7 +320,7 @@ Partial Class CFO
         '
         'Label14
         '
-        Me.Label14.AutoSize = True
+        Me.Label14.AutoSize = true
         Me.Label14.Location = New System.Drawing.Point(420, 13)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(126, 13)
@@ -329,7 +329,7 @@ Partial Class CFO
         '
         'ComboBox2
         '
-        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.FormattingEnabled = true
         Me.ComboBox2.Location = New System.Drawing.Point(423, 38)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
@@ -337,17 +337,17 @@ Partial Class CFO
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button2.Location = New System.Drawing.Point(156, 248)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(200, 79)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "Add Payment"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'Customer_IDComboBox
         '
-        Me.Customer_IDComboBox.FormattingEnabled = True
+        Me.Customer_IDComboBox.FormattingEnabled = true
         Me.Customer_IDComboBox.Location = New System.Drawing.Point(156, 38)
         Me.Customer_IDComboBox.Name = "Customer_IDComboBox"
         Me.Customer_IDComboBox.Size = New System.Drawing.Size(200, 21)
@@ -355,7 +355,7 @@ Partial Class CFO
         '
         'Employee_IDComboBox
         '
-        Me.Employee_IDComboBox.FormattingEnabled = True
+        Me.Employee_IDComboBox.FormattingEnabled = true
         Me.Employee_IDComboBox.Location = New System.Drawing.Point(156, 200)
         Me.Employee_IDComboBox.Name = "Employee_IDComboBox"
         Me.Employee_IDComboBox.Size = New System.Drawing.Size(200, 21)
@@ -363,7 +363,7 @@ Partial Class CFO
         '
         'Payment_TypeComboBox
         '
-        Me.Payment_TypeComboBox.FormattingEnabled = True
+        Me.Payment_TypeComboBox.FormattingEnabled = true
         Me.Payment_TypeComboBox.Location = New System.Drawing.Point(156, 117)
         Me.Payment_TypeComboBox.Name = "Payment_TypeComboBox"
         Me.Payment_TypeComboBox.Size = New System.Drawing.Size(200, 21)
@@ -399,7 +399,7 @@ Partial Class CFO
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
+        Me.Label13.AutoSize = true
         Me.Label13.Location = New System.Drawing.Point(6, 38)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(65, 13)
@@ -408,7 +408,7 @@ Partial Class CFO
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
+        Me.Label11.AutoSize = true
         Me.Label11.Location = New System.Drawing.Point(6, 200)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(67, 13)
@@ -417,7 +417,7 @@ Partial Class CFO
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
+        Me.Label10.AutoSize = true
         Me.Label10.Location = New System.Drawing.Point(6, 170)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(74, 13)
@@ -426,7 +426,7 @@ Partial Class CFO
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
+        Me.Label9.AutoSize = true
         Me.Label9.Location = New System.Drawing.Point(6, 143)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 13)
@@ -435,7 +435,7 @@ Partial Class CFO
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
+        Me.Label8.AutoSize = true
         Me.Label8.Location = New System.Drawing.Point(6, 117)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 13)
@@ -444,7 +444,7 @@ Partial Class CFO
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
+        Me.Label7.AutoSize = true
         Me.Label7.Location = New System.Drawing.Point(6, 65)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(109, 13)
@@ -453,7 +453,7 @@ Partial Class CFO
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
+        Me.Label6.AutoSize = true
         Me.Label6.Location = New System.Drawing.Point(6, 91)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
@@ -473,7 +473,7 @@ Partial Class CFO
         Me.TabPage3.Size = New System.Drawing.Size(1175, 811)
         Me.TabPage3.TabIndex = 3
         Me.TabPage3.Text = "Supplier Accounts"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPage3.UseVisualStyleBackColor = true
         '
         'Button5
         '
@@ -482,17 +482,17 @@ Partial Class CFO
         Me.Button5.Size = New System.Drawing.Size(172, 47)
         Me.Button5.TabIndex = 18
         Me.Button5.Text = "View All Supplier Payments"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = true
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button4.Location = New System.Drawing.Point(194, 104)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(200, 79)
         Me.Button4.TabIndex = 17
         Me.Button4.Text = "Add Payment"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = true
         '
         'TextBox2
         '
@@ -510,7 +510,7 @@ Partial Class CFO
         '
         'Label15
         '
-        Me.Label15.AutoSize = True
+        Me.Label15.AutoSize = true
         Me.Label15.Location = New System.Drawing.Point(11, 58)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(125, 13)
@@ -519,7 +519,7 @@ Partial Class CFO
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
+        Me.Label12.AutoSize = true
         Me.Label12.Location = New System.Drawing.Point(11, 30)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 13)
@@ -528,27 +528,27 @@ Partial Class CFO
         '
         'CFO
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1185, 842)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "CFO"
         Me.Text = "CFO"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(false)
+        Me.CaptureSalesOrderTab.ResumeLayout(false)
+        Me.CaptureSalesOrderTab.PerformLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.TabPage1.ResumeLayout(false)
+        Me.TabPage1.PerformLayout
+        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).EndInit
+        Me.TabPage3.ResumeLayout(false)
+        Me.TabPage3.PerformLayout
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents CaptureSalesOrderTab As TabPage
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents OrderDateBox As DateTimePicker
