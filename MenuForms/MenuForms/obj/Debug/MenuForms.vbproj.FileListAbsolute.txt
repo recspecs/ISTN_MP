@@ -1,0 +1,17 @@
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\bin\Debug\MenuForms.exe
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\bin\Debug\MenuForms.pdb
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\bin\Debug\MenuForms.xml
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.vbprojResolveAssemblyReference.cache
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.Login.resources
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.Resources.resources
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.vbproj.GenerateResource.Cache
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.exe
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.xml
+c:\users\lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.pdb
+C:\Users\Lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.Gen_Manager.resources
+C:\Users\Lindiwe\documents\visual studio 2015\Projects\MenuForms\MenuForms\obj\Debug\MenuForms.Sales_Rep.resources
+C:\Users\Garden Service\Documents\Visual Studio 2015\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\Garden Service\Documents\Visual Studio 2015\MenuForms\MenuForms\obj\Debug\MenuForms.exe
+C:\Users\Garden Service\Documents\Visual Studio 2015\MenuForms\MenuForms\obj\Debug\MenuForms.xml
+C:\Users\Garden Service\Documents\Visual Studio 2015\MenuForms\MenuForms\obj\Debug\MenuForms.pdb
