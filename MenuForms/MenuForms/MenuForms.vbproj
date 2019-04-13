@@ -209,6 +209,18 @@
   <ItemGroup>
     <None Include="Resources\network-error-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action-ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Awicons-Vista-Artistic-Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Crystal-Clear-Action-ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
