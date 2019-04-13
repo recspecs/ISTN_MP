@@ -30,4 +30,12 @@ Public Class NewProduct
                                                                                 
         End If                    
     End Sub
+
+    Private Sub tbPrice_TextChanged(sender As Object, e As EventArgs) Handles tbPrice.TextChanged
+
+    End Sub
+
+    Private Sub cbUnit_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbUnit.SelectedIndexChanged
+
+    End Sub
 End Class

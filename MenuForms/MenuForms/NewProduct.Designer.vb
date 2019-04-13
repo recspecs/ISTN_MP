@@ -35,6 +35,8 @@ Partial Class NewProduct
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.radioNo = New System.Windows.Forms.RadioButton()
+        Me.cbUnit = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout
         '
         'radioYes
@@ -83,7 +85,7 @@ Partial Class NewProduct
         'TextBox50
         '
         Me.TextBox50.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.TextBox50.Location = New System.Drawing.Point(707, 269)
+        Me.TextBox50.Location = New System.Drawing.Point(685, 163)
         Me.TextBox50.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox50.Name = "TextBox50"
         Me.TextBox50.Size = New System.Drawing.Size(186, 25)
@@ -95,9 +97,9 @@ Partial Class NewProduct
         Me.Label6.AutoSize = true
         Me.Label6.Location = New System.Drawing.Point(65, 259)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(81, 17)
+        Me.Label6.Size = New System.Drawing.Size(78, 17)
         Me.Label6.TabIndex = 33
-        Me.Label6.Text = "Selling |Price"
+        Me.Label6.Text = "Selling Price"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblOnHand
@@ -115,7 +117,7 @@ Partial Class NewProduct
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label4.AutoSize = true
-        Me.Label4.Location = New System.Drawing.Point(579, 273)
+        Me.Label4.Location = New System.Drawing.Point(557, 167)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(61, 17)
         Me.Label4.TabIndex = 32
@@ -178,11 +180,33 @@ Partial Class NewProduct
         Me.radioNo.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.radioNo.UseVisualStyleBackColor = true
         '
+        'cbUnit
+        '
+        Me.cbUnit.FormattingEnabled = true
+        Me.cbUnit.Items.AddRange(New Object() {"Liter(s)", "Piece(s) ", "Box(es)", "Roll(s)", "Pallet(s)", "Kg(s)", "Set(s)"})
+        Me.cbUnit.Location = New System.Drawing.Point(193, 307)
+        Me.cbUnit.Name = "cbUnit"
+        Me.cbUnit.Size = New System.Drawing.Size(186, 25)
+        Me.cbUnit.TabIndex = 42
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label5.AutoSize = true
+        Me.Label5.Location = New System.Drawing.Point(65, 315)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(31, 17)
+        Me.Label5.TabIndex = 43
+        Me.Label5.Text = "Unit"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'NewProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(978, 687)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cbUnit)
         Me.Controls.Add(Me.radioNo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -199,7 +223,7 @@ Partial Class NewProduct
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "NewProduct"
-        Me.Text = "Add New Product"
+        Me.Text = "`1"
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -218,4 +242,6 @@ End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents radioNo As RadioButton
+    Friend WithEvents cbUnit As ComboBox
+    Friend WithEvents Label5 As Label
 End Class
