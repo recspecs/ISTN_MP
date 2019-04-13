@@ -78,6 +78,17 @@
     <Compile Include="CFO.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RecSpecDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewProduct.Designer.vb">
+      <DependentUpon>NewProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WarehouseManager.Designer.vb">
       <DependentUpon>WarehouseManager.vb</DependentUpon>
     </Compile>
@@ -123,6 +134,9 @@
     <EmbeddedResource Include="CFO.resx">
       <DependentUpon>CFO.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewProduct.resx">
+      <DependentUpon>NewProduct.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WarehouseManager.resx">
       <DependentUpon>WarehouseManager.vb</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +157,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="RecSpecDataset.xsc">
+      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
+    </None>
+    <None Include="RecSpecDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecSpecDataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RecSpecDataset.xss">
+      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -153,6 +178,48 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatcow-Farm-Fresh-Exclamation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-Exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash-can-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin-red-full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network-error-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action-ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Awicons-Vista-Artistic-Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Crystal-Clear-Action-ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

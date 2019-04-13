@@ -22,5 +22,300 @@ MenuForms
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:MenuForms.My.Resources.Resources.add_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.bin_red_full_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.close_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.delete_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Fatcow_Farm_Fresh_Exclamation">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.network_error_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Pencil_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Save_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Trash_can_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Users_Exit_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Customer_PaymentDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.CustomerTableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.EmployeeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.ProductDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Purchase_OrderDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Purchase_Order_InvoiceDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.ReturnsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Returns_Line_ItemsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Sales_OrderDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.SupplierDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Customer_PaymentRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.CustomerTableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.EmployeeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.ProductRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Purchase_OrderRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Purchase_Order_InvoiceRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.ReturnsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Returns_Line_ItemsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Sales_OrderRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.SupplierRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Customer_PaymentRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.CustomerTableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.EmployeeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.ProductRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Purchase_OrderRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Purchase_Order_InvoiceRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.ReturnsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Returns_Line_ItemsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.Sales_OrderRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.SupplierRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.Customer_PaymentTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.CustomerTableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.EmployeeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.Purchase_Order_InvoiceTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.ReturnsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.Returns_Line_ItemsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.Sales_OrderTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.SupplierTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.UpdateUpdatedRows(MenuForms.RecSpecDataset,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.UpdateInsertedRows(MenuForms.RecSpecDataset,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.UpdateDeletedRows(MenuForms.RecSpecDataset,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.UpdateAll(MenuForms.RecSpecDataset)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>
