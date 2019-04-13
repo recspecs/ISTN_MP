@@ -22,7 +22,9 @@ Partial Class WarehouseManager
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Orders = New System.Windows.Forms.TabControl()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Tc_WarehouseManager = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txbOrderID = New System.Windows.Forms.TextBox()
@@ -30,10 +32,9 @@ Partial Class WarehouseManager
         Me.btnSearchOrderID = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ProductTab = New System.Windows.Forms.TabPage()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -48,6 +49,8 @@ Partial Class WarehouseManager
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -82,27 +85,38 @@ Partial Class WarehouseManager
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Orders.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.SuspendLayout()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnAddNewProduct = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RecSpecDataset = New MenuForms.RecSpecDataset()
+        Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
+        Me.RecSpecDatasetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tc_WarehouseManager.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.ProductTab.SuspendLayout
+        Me.TabPage3.SuspendLayout
+        Me.TabPage4.SuspendLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RecSpecDatasetBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
-        'Orders
+        'Tc_WarehouseManager
         '
-        Me.Orders.AccessibleName = ""
-        Me.Orders.Controls.Add(Me.TabPage1)
-        Me.Orders.Controls.Add(Me.TabPage2)
-        Me.Orders.Controls.Add(Me.TabPage3)
-        Me.Orders.Controls.Add(Me.TabPage4)
-        Me.Orders.Location = New System.Drawing.Point(13, 13)
-        Me.Orders.Name = "Orders"
-        Me.Orders.SelectedIndex = 0
-        Me.Orders.Size = New System.Drawing.Size(684, 361)
-        Me.Orders.TabIndex = 0
+        Me.Tc_WarehouseManager.AccessibleName = ""
+        Me.Tc_WarehouseManager.Controls.Add(Me.TabPage1)
+        Me.Tc_WarehouseManager.Controls.Add(Me.ProductTab)
+        Me.Tc_WarehouseManager.Controls.Add(Me.TabPage3)
+        Me.Tc_WarehouseManager.Controls.Add(Me.TabPage4)
+        Me.Tc_WarehouseManager.Location = New System.Drawing.Point(13, 13)
+        Me.Tc_WarehouseManager.Name = "Tc_WarehouseManager"
+        Me.Tc_WarehouseManager.SelectedIndex = 0
+        Me.Tc_WarehouseManager.Size = New System.Drawing.Size(936, 691)
+        Me.Tc_WarehouseManager.TabIndex = 0
         '
         'TabPage1
         '
@@ -115,10 +129,10 @@ Partial Class WarehouseManager
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(676, 335)
+        Me.TabPage1.Size = New System.Drawing.Size(928, 665)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Orders"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = true
         '
         'TextBox1
         '
@@ -136,7 +150,7 @@ Partial Class WarehouseManager
         '
         'Label17
         '
-        Me.Label17.AutoSize = True
+        Me.Label17.AutoSize = true
         Me.Label17.Location = New System.Drawing.Point(199, 77)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(53, 13)
@@ -150,7 +164,7 @@ Partial Class WarehouseManager
         Me.btnSearchOrderID.Size = New System.Drawing.Size(130, 23)
         Me.btnSearchOrderID.TabIndex = 12
         Me.btnSearchOrderID.Text = "Search by Order ID"
-        Me.btnSearchOrderID.UseVisualStyleBackColor = True
+        Me.btnSearchOrderID.UseVisualStyleBackColor = true
         '
         'Button4
         '
@@ -159,7 +173,7 @@ Partial Class WarehouseManager
         Me.Button4.Size = New System.Drawing.Size(98, 23)
         Me.Button4.TabIndex = 11
         Me.Button4.Text = "Remove Order"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = true
         '
         'Button3
         '
@@ -168,115 +182,110 @@ Partial Class WarehouseManager
         Me.Button3.Size = New System.Drawing.Size(98, 23)
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "View Orders"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = true
         '
-        'TabPage2
+        'ProductTab
         '
-        Me.TabPage2.Controls.Add(Me.TextBox21)
-        Me.TabPage2.Controls.Add(Me.Button7)
-        Me.TabPage2.Controls.Add(Me.Button6)
-        Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.TextBox20)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
-        Me.TabPage2.Controls.Add(Me.TextBox19)
-        Me.TabPage2.Controls.Add(Me.TextBox18)
-        Me.TabPage2.Controls.Add(Me.TextBox17)
-        Me.TabPage2.Controls.Add(Me.TextBox16)
-        Me.TabPage2.Controls.Add(Me.Label23)
-        Me.TabPage2.Controls.Add(Me.Label22)
-        Me.TabPage2.Controls.Add(Me.Label21)
-        Me.TabPage2.Controls.Add(Me.Label20)
-        Me.TabPage2.Controls.Add(Me.Label19)
-        Me.TabPage2.Controls.Add(Me.Label18)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(676, 335)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Stock"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.ProductTab.Controls.Add(Me.btnRemove)
+        Me.ProductTab.Controls.Add(Me.btnSave)
+        Me.ProductTab.Controls.Add(Me.btnUpdate)
+        Me.ProductTab.Controls.Add(Me.btnAddNewProduct)
+        Me.ProductTab.Controls.Add(Me.DataGridView1)
+        Me.ProductTab.Controls.Add(Me.TextBox21)
+        Me.ProductTab.Controls.Add(Me.Button7)
+        Me.ProductTab.Controls.Add(Me.Button5)
+        Me.ProductTab.Controls.Add(Me.TextBox20)
+        Me.ProductTab.Controls.Add(Me.ComboBox1)
+        Me.ProductTab.Controls.Add(Me.TextBox19)
+        Me.ProductTab.Controls.Add(Me.TextBox18)
+        Me.ProductTab.Controls.Add(Me.TextBox17)
+        Me.ProductTab.Controls.Add(Me.TextBox16)
+        Me.ProductTab.Controls.Add(Me.Label23)
+        Me.ProductTab.Controls.Add(Me.Label22)
+        Me.ProductTab.Controls.Add(Me.Label21)
+        Me.ProductTab.Controls.Add(Me.Label20)
+        Me.ProductTab.Controls.Add(Me.Label19)
+        Me.ProductTab.Controls.Add(Me.Label18)
+        Me.ProductTab.Location = New System.Drawing.Point(4, 22)
+        Me.ProductTab.Name = "ProductTab"
+        Me.ProductTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.ProductTab.Size = New System.Drawing.Size(928, 665)
+        Me.ProductTab.TabIndex = 1
+        Me.ProductTab.Text = "Product"
+        Me.ProductTab.UseVisualStyleBackColor = true
         '
         'TextBox21
         '
-        Me.TextBox21.Location = New System.Drawing.Point(494, 231)
+        Me.TextBox21.Location = New System.Drawing.Point(214, 251)
         Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(125, 20)
+        Me.TextBox21.Size = New System.Drawing.Size(279, 20)
         Me.TextBox21.TabIndex = 15
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(351, 231)
+        Me.Button7.Location = New System.Drawing.Point(86, 248)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(107, 23)
         Me.Button7.TabIndex = 14
         Me.Button7.Text = "Search Product"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(351, 63)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(107, 23)
-        Me.Button6.TabIndex = 13
-        Me.Button6.Text = "View Products"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button7.UseVisualStyleBackColor = true
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(351, 100)
+        Me.Button5.Location = New System.Drawing.Point(229, 25)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(107, 23)
         Me.Button5.TabIndex = 12
         Me.Button5.Text = "Update Store QTY"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = true
         '
         'TextBox20
         '
-        Me.TextBox20.Location = New System.Drawing.Point(134, 233)
+        Me.TextBox20.Location = New System.Drawing.Point(748, 229)
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(100, 20)
         Me.TextBox20.TabIndex = 11
         '
         'ComboBox1
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(134, 191)
+        Me.ComboBox1.FormattingEnabled = true
+        Me.ComboBox1.Location = New System.Drawing.Point(748, 187)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(56, 21)
         Me.ComboBox1.TabIndex = 10
         '
         'TextBox19
         '
-        Me.TextBox19.Location = New System.Drawing.Point(134, 147)
+        Me.TextBox19.Location = New System.Drawing.Point(748, 143)
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(100, 20)
         Me.TextBox19.TabIndex = 9
         '
         'TextBox18
         '
-        Me.TextBox18.Location = New System.Drawing.Point(134, 107)
+        Me.TextBox18.Location = New System.Drawing.Point(748, 103)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(100, 20)
         Me.TextBox18.TabIndex = 8
         '
         'TextBox17
         '
-        Me.TextBox17.Location = New System.Drawing.Point(134, 65)
+        Me.TextBox17.Location = New System.Drawing.Point(748, 61)
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(100, 20)
         Me.TextBox17.TabIndex = 7
         '
         'TextBox16
         '
-        Me.TextBox16.Location = New System.Drawing.Point(134, 26)
+        Me.TextBox16.Location = New System.Drawing.Point(748, 22)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(100, 20)
         Me.TextBox16.TabIndex = 6
         '
         'Label23
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(22, 236)
+        Me.Label23.AutoSize = true
+        Me.Label23.Location = New System.Drawing.Point(636, 232)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(58, 13)
         Me.Label23.TabIndex = 5
@@ -284,8 +293,8 @@ Partial Class WarehouseManager
         '
         'Label22
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(22, 194)
+        Me.Label22.AutoSize = true
+        Me.Label22.Location = New System.Drawing.Point(636, 190)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(28, 13)
         Me.Label22.TabIndex = 4
@@ -293,8 +302,8 @@ Partial Class WarehouseManager
         '
         'Label21
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(22, 150)
+        Me.Label21.AutoSize = true
+        Me.Label21.Location = New System.Drawing.Point(636, 146)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(57, 13)
         Me.Label21.TabIndex = 3
@@ -302,8 +311,8 @@ Partial Class WarehouseManager
         '
         'Label20
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(22, 68)
+        Me.Label20.AutoSize = true
+        Me.Label20.Location = New System.Drawing.Point(636, 64)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(75, 13)
         Me.Label20.TabIndex = 2
@@ -311,8 +320,8 @@ Partial Class WarehouseManager
         '
         'Label19
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(22, 110)
+        Me.Label19.AutoSize = true
+        Me.Label19.Location = New System.Drawing.Point(636, 106)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(65, 13)
         Me.Label19.TabIndex = 1
@@ -320,8 +329,8 @@ Partial Class WarehouseManager
         '
         'Label18
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(22, 29)
+        Me.Label18.AutoSize = true
+        Me.Label18.Location = New System.Drawing.Point(636, 25)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(72, 13)
         Me.Label18.TabIndex = 0
@@ -352,10 +361,26 @@ Partial Class WarehouseManager
         Me.TabPage3.Controls.Add(Me.Label1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(676, 335)
+        Me.TabPage3.Size = New System.Drawing.Size(928, 665)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Returns"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPage3.UseVisualStyleBackColor = true
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(526, 13)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox13.TabIndex = 22
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(384, 11)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(119, 23)
+        Me.Button8.TabIndex = 21
+        Me.Button8.Text = "Search Returns Order"
+        Me.Button8.UseVisualStyleBackColor = true
         '
         'DateTimePicker1
         '
@@ -420,7 +445,7 @@ Partial Class WarehouseManager
         Me.btnUpdateReturned.Size = New System.Drawing.Size(136, 23)
         Me.btnUpdateReturned.TabIndex = 11
         Me.btnUpdateReturned.Text = "Update Returned Goods"
-        Me.btnUpdateReturned.UseVisualStyleBackColor = True
+        Me.btnUpdateReturned.UseVisualStyleBackColor = true
         '
         'btnViewRet
         '
@@ -429,7 +454,7 @@ Partial Class WarehouseManager
         Me.btnViewRet.Size = New System.Drawing.Size(136, 23)
         Me.btnViewRet.TabIndex = 10
         Me.btnViewRet.Text = "View Returned Goods"
-        Me.btnViewRet.UseVisualStyleBackColor = True
+        Me.btnViewRet.UseVisualStyleBackColor = true
         '
         'btnAddRet
         '
@@ -438,11 +463,11 @@ Partial Class WarehouseManager
         Me.btnAddRet.Size = New System.Drawing.Size(136, 23)
         Me.btnAddRet.TabIndex = 9
         Me.btnAddRet.Text = "Add Returned Goods"
-        Me.btnAddRet.UseVisualStyleBackColor = True
+        Me.btnAddRet.UseVisualStyleBackColor = true
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
+        Me.Label8.AutoSize = true
         Me.Label8.Location = New System.Drawing.Point(16, 257)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(58, 13)
@@ -451,7 +476,7 @@ Partial Class WarehouseManager
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
+        Me.Label7.AutoSize = true
         Me.Label7.Location = New System.Drawing.Point(16, 224)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 13)
@@ -460,7 +485,7 @@ Partial Class WarehouseManager
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
+        Me.Label6.AutoSize = true
         Me.Label6.Location = New System.Drawing.Point(16, 191)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(122, 13)
@@ -469,7 +494,7 @@ Partial Class WarehouseManager
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
+        Me.Label5.AutoSize = true
         Me.Label5.Location = New System.Drawing.Point(16, 156)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(31, 13)
@@ -478,7 +503,7 @@ Partial Class WarehouseManager
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
+        Me.Label4.AutoSize = true
         Me.Label4.Location = New System.Drawing.Point(16, 122)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 13)
@@ -487,7 +512,7 @@ Partial Class WarehouseManager
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.Location = New System.Drawing.Point(16, 87)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 13)
@@ -496,7 +521,7 @@ Partial Class WarehouseManager
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.Location = New System.Drawing.Point(16, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(104, 13)
@@ -505,7 +530,7 @@ Partial Class WarehouseManager
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.Location = New System.Drawing.Point(16, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(53, 13)
@@ -530,10 +555,10 @@ Partial Class WarehouseManager
         Me.TabPage4.Controls.Add(Me.Label9)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(676, 335)
+        Me.TabPage4.Size = New System.Drawing.Size(928, 665)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Defective"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabPage4.UseVisualStyleBackColor = true
         '
         'TextBox12
         '
@@ -577,7 +602,7 @@ Partial Class WarehouseManager
         Me.Button2.Size = New System.Drawing.Size(128, 23)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "View Defective Items"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'Button1
         '
@@ -586,7 +611,7 @@ Partial Class WarehouseManager
         Me.Button1.Size = New System.Drawing.Size(128, 23)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Add Defective Item"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'txbSearchDef
         '
@@ -602,11 +627,11 @@ Partial Class WarehouseManager
         Me.btnSearchDefective.Size = New System.Drawing.Size(127, 23)
         Me.btnSearchDefective.TabIndex = 8
         Me.btnSearchDefective.Text = "Search Defective Item"
-        Me.btnSearchDefective.UseVisualStyleBackColor = True
+        Me.btnSearchDefective.UseVisualStyleBackColor = true
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
+        Me.Label13.AutoSize = true
         Me.Label13.Location = New System.Drawing.Point(13, 161)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(71, 13)
@@ -615,7 +640,7 @@ Partial Class WarehouseManager
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
+        Me.Label12.AutoSize = true
         Me.Label12.Location = New System.Drawing.Point(13, 123)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(71, 13)
@@ -624,7 +649,7 @@ Partial Class WarehouseManager
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
+        Me.Label11.AutoSize = true
         Me.Label11.Location = New System.Drawing.Point(13, 87)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(77, 13)
@@ -633,7 +658,7 @@ Partial Class WarehouseManager
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
+        Me.Label10.AutoSize = true
         Me.Label10.Location = New System.Drawing.Point(13, 54)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 13)
@@ -642,53 +667,115 @@ Partial Class WarehouseManager
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
+        Me.Label9.AutoSize = true
         Me.Label9.Location = New System.Drawing.Point(13, 19)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(72, 13)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Product Code"
         '
-        'Button8
+        'DataGridView1
         '
-        Me.Button8.Location = New System.Drawing.Point(384, 11)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(119, 23)
-        Me.Button8.TabIndex = 21
-        Me.Button8.Text = "Search Returns Order"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.DataGridView1.AllowUserToOrderColumns = true
+        Me.DataGridView1.AutoGenerateColumns = false
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.DataSource = Me.RecSpecDatasetBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(86, 277)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(784, 369)
+        Me.DataGridView1.TabIndex = 16
         '
-        'TextBox13
+        'btnAddNewProduct
         '
-        Me.TextBox13.Location = New System.Drawing.Point(526, 13)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox13.TabIndex = 22
+        Me.btnAddNewProduct.Location = New System.Drawing.Point(86, 87)
+        Me.btnAddNewProduct.Name = "btnAddNewProduct"
+        Me.btnAddNewProduct.Size = New System.Drawing.Size(104, 90)
+        Me.btnAddNewProduct.TabIndex = 17
+        Me.btnAddNewProduct.Text = "Add New Product"
+        Me.btnAddNewProduct.UseVisualStyleBackColor = true
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(214, 87)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(104, 90)
+        Me.btnUpdate.TabIndex = 18
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = true
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(340, 87)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(104, 90)
+        Me.btnSave.TabIndex = 19
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = true
+        '
+        'btnRemove
+        '
+        Me.btnRemove.Location = New System.Drawing.Point(486, 87)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(104, 90)
+        Me.btnRemove.TabIndex = 20
+        Me.btnRemove.Text = "Remove"
+        Me.btnRemove.UseVisualStyleBackColor = true
+        '
+        'ProductBindingSource
+        '
+        Me.ProductBindingSource.DataMember = "Product"
+        Me.ProductBindingSource.DataSource = Me.RecSpecDataset
+        '
+        'RecSpecDataset
+        '
+        Me.RecSpecDataset.DataSetName = "RecSpecDataset"
+        Me.RecSpecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductTableAdapter
+        '
+        Me.ProductTableAdapter.ClearBeforeFill = true
+        '
+        'RecSpecDatasetBindingSource
+        '
+        Me.RecSpecDatasetBindingSource.DataSource = Me.RecSpecDataset
+        Me.RecSpecDatasetBindingSource.Position = 0
         '
         'WarehouseManager
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(709, 386)
-        Me.Controls.Add(Me.Orders)
+        Me.ClientSize = New System.Drawing.Size(961, 768)
+        Me.Controls.Add(Me.Tc_WarehouseManager)
         Me.Name = "WarehouseManager"
         Me.Text = "Warehouse Manager"
-        Me.Orders.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        Me.ResumeLayout(False)
+        Me.Tc_WarehouseManager.ResumeLayout(false)
+        Me.TabPage1.ResumeLayout(false)
+        Me.TabPage1.PerformLayout
+        Me.ProductTab.ResumeLayout(false)
+        Me.ProductTab.PerformLayout
+        Me.TabPage3.ResumeLayout(false)
+        Me.TabPage3.PerformLayout
+        Me.TabPage4.ResumeLayout(false)
+        Me.TabPage4.PerformLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RecSpecDatasetBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
-    Friend WithEvents Orders As TabControl
+    Friend WithEvents Tc_WarehouseManager As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents ProductTab As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents btnUpdateReturned As Button
     Friend WithEvents btnViewRet As Button
@@ -725,7 +812,6 @@ Partial Class WarehouseManager
     Friend WithEvents Label18 As Label
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents TextBox20 As TextBox
     Friend WithEvents ComboBox1 As ComboBox
@@ -748,4 +834,13 @@ Partial Class WarehouseManager
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Button8 As Button
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnAddNewProduct As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents RecSpecDataset As RecSpecDataset
+    Friend WithEvents ProductBindingSource As BindingSource
+    Friend WithEvents ProductTableAdapter As RecSpecDatasetTableAdapters.ProductTableAdapter
+    Friend WithEvents RecSpecDatasetBindingSource As BindingSource
 End Class
