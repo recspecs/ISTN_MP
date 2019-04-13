@@ -49,3 +49,7 @@ C:\Users\Tony\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.Login
 C:\Users\Tony\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.Resources.resources
 C:\Users\Tony\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.Sales_Rep.resources
 C:\Users\Tony\Source\Repos\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.vbproj.GenerateResource.Cache
+C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.exe
+C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.xml
+C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.pdb
