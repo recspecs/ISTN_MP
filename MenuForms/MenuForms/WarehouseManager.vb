@@ -17,4 +17,12 @@
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) 
 
     End Sub
+
+    Private Sub btnAddNewProduct_Click(sender As Object, e As EventArgs) Handles btnAddNewProduct.Click
+
+    End Sub
+
+    Private Sub InventoryTab_Click(sender As Object, e As EventArgs) Handles InventoryTab.Click
+
+    End Sub
 End Class

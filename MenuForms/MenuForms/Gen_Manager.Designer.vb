@@ -23,6 +23,8 @@ Partial Class Gen_Manager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TabPage18 = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button23 = New System.Windows.Forms.Button()
         Me.Button24 = New System.Windows.Forms.Button()
@@ -59,6 +61,9 @@ Partial Class Gen_Manager
         Me.searchPayments = New System.Windows.Forms.Button()
         Me.viewPayments = New System.Windows.Forms.Button()
         Me.TabPage15 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox52 = New System.Windows.Forms.TextBox()
         Me.TextBox53 = New System.Windows.Forms.TextBox()
         Me.TextBox54 = New System.Windows.Forms.TextBox()
@@ -140,23 +145,18 @@ Partial Class Gen_Manager
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TabPage18.SuspendLayout()
-        Me.TabPage17.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        Me.TabPage16.SuspendLayout()
-        Me.TabPage15.SuspendLayout()
-        Me.TabPage14.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.TabPage13.SuspendLayout()
-        Me.TabPage11.SuspendLayout()
-        Me.TabControl2.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabPage18.SuspendLayout
+        Me.TabPage17.SuspendLayout
+        Me.GroupBox7.SuspendLayout
+        Me.TabPage16.SuspendLayout
+        Me.TabPage15.SuspendLayout
+        Me.TabPage14.SuspendLayout
+        Me.GroupBox4.SuspendLayout
+        Me.GroupBox5.SuspendLayout
+        Me.TabPage13.SuspendLayout
+        Me.TabPage11.SuspendLayout
+        Me.TabControl2.SuspendLayout
+        Me.SuspendLayout
         '
         'TabPage18
         '
@@ -172,11 +172,27 @@ Partial Class Gen_Manager
         Me.TabPage18.Size = New System.Drawing.Size(691, 302)
         Me.TabPage18.TabIndex = 10
         Me.TabPage18.Text = "Stock"
-        Me.TabPage18.UseVisualStyleBackColor = True
+        Me.TabPage18.UseVisualStyleBackColor = true
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(220, 249)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
+        Me.TextBox1.TabIndex = 25
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(39, 247)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 23)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "Search for Stock Item"
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'ListBox1
         '
-        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.FormattingEnabled = true
         Me.ListBox1.Items.AddRange(New Object() {"Stock on Hand :"})
         Me.ListBox1.Location = New System.Drawing.Point(39, 49)
         Me.ListBox1.Name = "ListBox1"
@@ -190,7 +206,7 @@ Partial Class Gen_Manager
         Me.Button23.Size = New System.Drawing.Size(75, 38)
         Me.Button23.TabIndex = 22
         Me.Button23.Text = "Add Stock"
-        Me.Button23.UseVisualStyleBackColor = True
+        Me.Button23.UseVisualStyleBackColor = true
         '
         'Button24
         '
@@ -199,7 +215,7 @@ Partial Class Gen_Manager
         Me.Button24.Size = New System.Drawing.Size(75, 38)
         Me.Button24.TabIndex = 21
         Me.Button24.Text = "Update Stock"
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.Button24.UseVisualStyleBackColor = true
         '
         'Button25
         '
@@ -208,7 +224,7 @@ Partial Class Gen_Manager
         Me.Button25.Size = New System.Drawing.Size(75, 38)
         Me.Button25.TabIndex = 20
         Me.Button25.Text = "Remove Stock"
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.Button25.UseVisualStyleBackColor = true
         '
         'TabPage17
         '
@@ -234,7 +250,7 @@ Partial Class Gen_Manager
         Me.TabPage17.Size = New System.Drawing.Size(691, 302)
         Me.TabPage17.TabIndex = 9
         Me.TabPage17.Text = "Supplier"
-        Me.TabPage17.UseVisualStyleBackColor = True
+        Me.TabPage17.UseVisualStyleBackColor = true
         '
         'Button26
         '
@@ -243,7 +259,7 @@ Partial Class Gen_Manager
         Me.Button26.Size = New System.Drawing.Size(75, 54)
         Me.Button26.TabIndex = 60
         Me.Button26.Text = "Search Suppliers"
-        Me.Button26.UseVisualStyleBackColor = True
+        Me.Button26.UseVisualStyleBackColor = true
         '
         'Button27
         '
@@ -252,7 +268,7 @@ Partial Class Gen_Manager
         Me.Button27.Size = New System.Drawing.Size(75, 54)
         Me.Button27.TabIndex = 59
         Me.Button27.Text = "View Suppliers"
-        Me.Button27.UseVisualStyleBackColor = True
+        Me.Button27.UseVisualStyleBackColor = true
         '
         'Button28
         '
@@ -261,7 +277,7 @@ Partial Class Gen_Manager
         Me.Button28.Size = New System.Drawing.Size(75, 54)
         Me.Button28.TabIndex = 58
         Me.Button28.Text = "Add Supplier"
-        Me.Button28.UseVisualStyleBackColor = True
+        Me.Button28.UseVisualStyleBackColor = true
         '
         'TextBox67
         '
@@ -307,7 +323,7 @@ Partial Class Gen_Manager
         '
         'Label67
         '
-        Me.Label67.AutoSize = True
+        Me.Label67.AutoSize = true
         Me.Label67.Location = New System.Drawing.Point(42, 227)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(41, 13)
@@ -330,7 +346,7 @@ Partial Class Gen_Manager
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(209, 195)
         Me.GroupBox7.TabIndex = 55
-        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.TabStop = false
         Me.GroupBox7.Text = "Address"
         '
         'TextBox68
@@ -370,7 +386,7 @@ Partial Class Gen_Manager
         '
         'Label68
         '
-        Me.Label68.AutoSize = True
+        Me.Label68.AutoSize = true
         Me.Label68.Location = New System.Drawing.Point(6, 147)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(92, 13)
@@ -379,7 +395,7 @@ Partial Class Gen_Manager
         '
         'Label69
         '
-        Me.Label69.AutoSize = True
+        Me.Label69.AutoSize = true
         Me.Label69.Location = New System.Drawing.Point(7, 114)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(52, 13)
@@ -388,7 +404,7 @@ Partial Class Gen_Manager
         '
         'Label70
         '
-        Me.Label70.AutoSize = True
+        Me.Label70.AutoSize = true
         Me.Label70.Location = New System.Drawing.Point(7, 81)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(69, 13)
@@ -397,7 +413,7 @@ Partial Class Gen_Manager
         '
         'Label71
         '
-        Me.Label71.AutoSize = True
+        Me.Label71.AutoSize = true
         Me.Label71.Location = New System.Drawing.Point(7, 47)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(82, 13)
@@ -406,7 +422,7 @@ Partial Class Gen_Manager
         '
         'Label72
         '
-        Me.Label72.AutoSize = True
+        Me.Label72.AutoSize = true
         Me.Label72.Location = New System.Drawing.Point(7, 19)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(82, 13)
@@ -415,7 +431,7 @@ Partial Class Gen_Manager
         '
         'Label73
         '
-        Me.Label73.AutoSize = True
+        Me.Label73.AutoSize = true
         Me.Label73.Location = New System.Drawing.Point(34, 53)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(76, 13)
@@ -424,7 +440,7 @@ Partial Class Gen_Manager
         '
         'Label74
         '
-        Me.Label74.AutoSize = True
+        Me.Label74.AutoSize = true
         Me.Label74.Location = New System.Drawing.Point(34, 23)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(59, 13)
@@ -433,7 +449,7 @@ Partial Class Gen_Manager
         '
         'Label75
         '
-        Me.Label75.AutoSize = True
+        Me.Label75.AutoSize = true
         Me.Label75.Location = New System.Drawing.Point(33, 148)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(108, 13)
@@ -442,7 +458,7 @@ Partial Class Gen_Manager
         '
         'Label76
         '
-        Me.Label76.AutoSize = True
+        Me.Label76.AutoSize = true
         Me.Label76.Location = New System.Drawing.Point(34, 119)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(59, 13)
@@ -451,7 +467,7 @@ Partial Class Gen_Manager
         '
         'Label77
         '
-        Me.Label77.AutoSize = True
+        Me.Label77.AutoSize = true
         Me.Label77.Location = New System.Drawing.Point(34, 86)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(84, 13)
@@ -469,7 +485,7 @@ Partial Class Gen_Manager
         Me.TabPage16.Size = New System.Drawing.Size(691, 302)
         Me.TabPage16.TabIndex = 8
         Me.TabPage16.Text = "Payment"
-        Me.TabPage16.UseVisualStyleBackColor = True
+        Me.TabPage16.UseVisualStyleBackColor = true
         '
         'paymentstxf
         '
@@ -485,7 +501,7 @@ Partial Class Gen_Manager
         Me.searchPayments.Size = New System.Drawing.Size(108, 23)
         Me.searchPayments.TabIndex = 1
         Me.searchPayments.Text = "Search Payments"
-        Me.searchPayments.UseVisualStyleBackColor = True
+        Me.searchPayments.UseVisualStyleBackColor = true
         '
         'viewPayments
         '
@@ -494,7 +510,7 @@ Partial Class Gen_Manager
         Me.viewPayments.Size = New System.Drawing.Size(108, 23)
         Me.viewPayments.TabIndex = 0
         Me.viewPayments.Text = "View Payments"
-        Me.viewPayments.UseVisualStyleBackColor = True
+        Me.viewPayments.UseVisualStyleBackColor = true
         '
         'TabPage15
         '
@@ -519,7 +535,32 @@ Partial Class Gen_Manager
         Me.TabPage15.Size = New System.Drawing.Size(691, 302)
         Me.TabPage15.TabIndex = 7
         Me.TabPage15.Text = "Purchase_Order"
-        Me.TabPage15.UseVisualStyleBackColor = True
+        Me.TabPage15.UseVisualStyleBackColor = true
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(395, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 23)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "Search Purchase Order"
+        Me.Button1.UseVisualStyleBackColor = true
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = true
+        Me.ListBox2.Items.AddRange(New Object() {"Products Ordered with QTY:"})
+        Me.ListBox2.Location = New System.Drawing.Point(182, 88)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(154, 95)
+        Me.ListBox2.TabIndex = 58
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(182, 52)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 57
         '
         'TextBox52
         '
@@ -558,7 +599,7 @@ Partial Class Gen_Manager
         '
         'Label53
         '
-        Me.Label53.AutoSize = True
+        Me.Label53.AutoSize = true
         Me.Label53.Location = New System.Drawing.Point(50, 200)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(59, 13)
@@ -567,7 +608,7 @@ Partial Class Gen_Manager
         '
         'Label54
         '
-        Me.Label54.AutoSize = True
+        Me.Label54.AutoSize = true
         Me.Label54.Location = New System.Drawing.Point(50, 266)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(67, 13)
@@ -576,7 +617,7 @@ Partial Class Gen_Manager
         '
         'Label55
         '
-        Me.Label55.AutoSize = True
+        Me.Label55.AutoSize = true
         Me.Label55.Location = New System.Drawing.Point(50, 235)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(55, 13)
@@ -585,7 +626,7 @@ Partial Class Gen_Manager
         '
         'Label56
         '
-        Me.Label56.AutoSize = True
+        Me.Label56.AutoSize = true
         Me.Label56.Location = New System.Drawing.Point(42, 88)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(126, 13)
@@ -594,7 +635,7 @@ Partial Class Gen_Manager
         '
         'Label57
         '
-        Me.Label57.AutoSize = True
+        Me.Label57.AutoSize = true
         Me.Label57.Location = New System.Drawing.Point(42, 58)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(107, 13)
@@ -603,7 +644,7 @@ Partial Class Gen_Manager
         '
         'Label58
         '
-        Me.Label58.AutoSize = True
+        Me.Label58.AutoSize = true
         Me.Label58.Location = New System.Drawing.Point(42, 23)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(101, 13)
@@ -617,7 +658,7 @@ Partial Class Gen_Manager
         Me.Button19.Size = New System.Drawing.Size(75, 54)
         Me.Button19.TabIndex = 40
         Me.Button19.Text = "Add New  Purchase Order"
-        Me.Button19.UseVisualStyleBackColor = True
+        Me.Button19.UseVisualStyleBackColor = true
         '
         'TabPage14
         '
@@ -632,7 +673,7 @@ Partial Class Gen_Manager
         Me.TabPage14.Size = New System.Drawing.Size(691, 302)
         Me.TabPage14.TabIndex = 6
         Me.TabPage14.Text = "Customer"
-        Me.TabPage14.UseVisualStyleBackColor = True
+        Me.TabPage14.UseVisualStyleBackColor = true
         '
         'Button5
         '
@@ -641,7 +682,7 @@ Partial Class Gen_Manager
         Me.Button5.Size = New System.Drawing.Size(75, 44)
         Me.Button5.TabIndex = 9
         Me.Button5.Text = "Edit Customer"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = true
         '
         'Button6
         '
@@ -650,7 +691,7 @@ Partial Class Gen_Manager
         Me.Button6.Size = New System.Drawing.Size(75, 44)
         Me.Button6.TabIndex = 8
         Me.Button6.Text = "Search Customer"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = true
         '
         'Button7
         '
@@ -659,7 +700,7 @@ Partial Class Gen_Manager
         Me.Button7.Size = New System.Drawing.Size(75, 44)
         Me.Button7.TabIndex = 7
         Me.Button7.Text = "ADD Customer"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button7.UseVisualStyleBackColor = true
         '
         'GroupBox4
         '
@@ -677,7 +718,7 @@ Partial Class Gen_Manager
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(209, 195)
         Me.GroupBox4.TabIndex = 6
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = false
         Me.GroupBox4.Text = "Address"
         '
         'TextBox16
@@ -717,7 +758,7 @@ Partial Class Gen_Manager
         '
         'Label16
         '
-        Me.Label16.AutoSize = True
+        Me.Label16.AutoSize = true
         Me.Label16.Location = New System.Drawing.Point(7, 150)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(64, 13)
@@ -726,7 +767,7 @@ Partial Class Gen_Manager
         '
         'Label17
         '
-        Me.Label17.AutoSize = True
+        Me.Label17.AutoSize = true
         Me.Label17.Location = New System.Drawing.Point(7, 114)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(24, 13)
@@ -735,7 +776,7 @@ Partial Class Gen_Manager
         '
         'Label18
         '
-        Me.Label18.AutoSize = True
+        Me.Label18.AutoSize = true
         Me.Label18.Location = New System.Drawing.Point(7, 81)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(41, 13)
@@ -744,7 +785,7 @@ Partial Class Gen_Manager
         '
         'Label19
         '
-        Me.Label19.AutoSize = True
+        Me.Label19.AutoSize = true
         Me.Label19.Location = New System.Drawing.Point(7, 47)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(78, 13)
@@ -753,7 +794,7 @@ Partial Class Gen_Manager
         '
         'Label20
         '
-        Me.Label20.AutoSize = True
+        Me.Label20.AutoSize = true
         Me.Label20.Location = New System.Drawing.Point(7, 19)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(78, 13)
@@ -782,7 +823,7 @@ Partial Class Gen_Manager
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(261, 269)
         Me.GroupBox5.TabIndex = 5
-        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.TabStop = false
         Me.GroupBox5.Text = "Customer details"
         '
         'TextBox21
@@ -794,7 +835,7 @@ Partial Class Gen_Manager
         '
         'Label21
         '
-        Me.Label21.AutoSize = True
+        Me.Label21.AutoSize = true
         Me.Label21.Location = New System.Drawing.Point(15, 243)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(82, 13)
@@ -845,7 +886,7 @@ Partial Class Gen_Manager
         '
         'Label22
         '
-        Me.Label22.AutoSize = True
+        Me.Label22.AutoSize = true
         Me.Label22.Location = New System.Drawing.Point(15, 22)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(68, 13)
@@ -861,7 +902,7 @@ Partial Class Gen_Manager
         '
         'Label23
         '
-        Me.Label23.AutoSize = True
+        Me.Label23.AutoSize = true
         Me.Label23.Location = New System.Drawing.Point(15, 217)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(84, 13)
@@ -870,7 +911,7 @@ Partial Class Gen_Manager
         '
         'Label24
         '
-        Me.Label24.AutoSize = True
+        Me.Label24.AutoSize = true
         Me.Label24.Location = New System.Drawing.Point(15, 182)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(79, 13)
@@ -879,7 +920,7 @@ Partial Class Gen_Manager
         '
         'Label25
         '
-        Me.Label25.AutoSize = True
+        Me.Label25.AutoSize = true
         Me.Label25.Location = New System.Drawing.Point(14, 147)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(80, 13)
@@ -888,7 +929,7 @@ Partial Class Gen_Manager
         '
         'Label26
         '
-        Me.Label26.AutoSize = True
+        Me.Label26.AutoSize = true
         Me.Label26.Location = New System.Drawing.Point(15, 118)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(78, 13)
@@ -897,7 +938,7 @@ Partial Class Gen_Manager
         '
         'Label27
         '
-        Me.Label27.AutoSize = True
+        Me.Label27.AutoSize = true
         Me.Label27.Location = New System.Drawing.Point(15, 85)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(58, 13)
@@ -906,7 +947,7 @@ Partial Class Gen_Manager
         '
         'Label28
         '
-        Me.Label28.AutoSize = True
+        Me.Label28.AutoSize = true
         Me.Label28.Location = New System.Drawing.Point(15, 52)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(57, 13)
@@ -938,7 +979,7 @@ Partial Class Gen_Manager
         Me.TabPage13.Size = New System.Drawing.Size(691, 302)
         Me.TabPage13.TabIndex = 5
         Me.TabPage13.Text = "Product"
-        Me.TabPage13.UseVisualStyleBackColor = True
+        Me.TabPage13.UseVisualStyleBackColor = true
         '
         'Button14
         '
@@ -947,7 +988,7 @@ Partial Class Gen_Manager
         Me.Button14.Size = New System.Drawing.Size(75, 38)
         Me.Button14.TabIndex = 33
         Me.Button14.Text = "Add Product"
-        Me.Button14.UseVisualStyleBackColor = True
+        Me.Button14.UseVisualStyleBackColor = true
         '
         'Button15
         '
@@ -956,7 +997,7 @@ Partial Class Gen_Manager
         Me.Button15.Size = New System.Drawing.Size(75, 38)
         Me.Button15.TabIndex = 32
         Me.Button15.Text = "Search"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.Button15.UseVisualStyleBackColor = true
         '
         'Button16
         '
@@ -965,7 +1006,7 @@ Partial Class Gen_Manager
         Me.Button16.Size = New System.Drawing.Size(75, 38)
         Me.Button16.TabIndex = 31
         Me.Button16.Text = "View Product Info"
-        Me.Button16.UseVisualStyleBackColor = True
+        Me.Button16.UseVisualStyleBackColor = true
         '
         'TextBox45
         '
@@ -1018,7 +1059,7 @@ Partial Class Gen_Manager
         '
         'Label45
         '
-        Me.Label45.AutoSize = True
+        Me.Label45.AutoSize = true
         Me.Label45.Location = New System.Drawing.Point(298, 34)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(44, 13)
@@ -1027,7 +1068,7 @@ Partial Class Gen_Manager
         '
         'Label46
         '
-        Me.Label46.AutoSize = True
+        Me.Label46.AutoSize = true
         Me.Label46.Location = New System.Drawing.Point(65, 205)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(28, 13)
@@ -1036,7 +1077,7 @@ Partial Class Gen_Manager
         '
         'Label47
         '
-        Me.Label47.AutoSize = True
+        Me.Label47.AutoSize = true
         Me.Label47.Location = New System.Drawing.Point(65, 173)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(74, 13)
@@ -1045,7 +1086,7 @@ Partial Class Gen_Manager
         '
         'Label48
         '
-        Me.Label48.AutoSize = True
+        Me.Label48.AutoSize = true
         Me.Label48.Location = New System.Drawing.Point(65, 139)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(54, 13)
@@ -1054,7 +1095,7 @@ Partial Class Gen_Manager
         '
         'Label49
         '
-        Me.Label49.AutoSize = True
+        Me.Label49.AutoSize = true
         Me.Label49.Location = New System.Drawing.Point(65, 107)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(49, 13)
@@ -1063,7 +1104,7 @@ Partial Class Gen_Manager
         '
         'Label50
         '
-        Me.Label50.AutoSize = True
+        Me.Label50.AutoSize = true
         Me.Label50.Location = New System.Drawing.Point(65, 72)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(75, 13)
@@ -1072,7 +1113,7 @@ Partial Class Gen_Manager
         '
         'Label51
         '
-        Me.Label51.AutoSize = True
+        Me.Label51.AutoSize = true
         Me.Label51.Location = New System.Drawing.Point(65, 38)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(72, 13)
@@ -1104,7 +1145,7 @@ Partial Class Gen_Manager
         Me.TabPage11.Size = New System.Drawing.Size(691, 302)
         Me.TabPage11.TabIndex = 3
         Me.TabPage11.Text = "Employee"
-        Me.TabPage11.UseVisualStyleBackColor = True
+        Me.TabPage11.UseVisualStyleBackColor = true
         '
         'Button11
         '
@@ -1113,7 +1154,7 @@ Partial Class Gen_Manager
         Me.Button11.Size = New System.Drawing.Size(78, 50)
         Me.Button11.TabIndex = 50
         Me.Button11.Text = "Search"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.Button11.UseVisualStyleBackColor = true
         '
         'Button12
         '
@@ -1122,7 +1163,7 @@ Partial Class Gen_Manager
         Me.Button12.Size = New System.Drawing.Size(78, 50)
         Me.Button12.TabIndex = 49
         Me.Button12.Text = "Delete Employee"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.Button12.UseVisualStyleBackColor = true
         '
         'Button13
         '
@@ -1131,7 +1172,7 @@ Partial Class Gen_Manager
         Me.Button13.Size = New System.Drawing.Size(78, 50)
         Me.Button13.TabIndex = 48
         Me.Button13.Text = "Add Employee"
-        Me.Button13.UseVisualStyleBackColor = True
+        Me.Button13.UseVisualStyleBackColor = true
         '
         'TextBox38
         '
@@ -1184,7 +1225,7 @@ Partial Class Gen_Manager
         '
         'Label38
         '
-        Me.Label38.AutoSize = True
+        Me.Label38.AutoSize = true
         Me.Label38.Location = New System.Drawing.Point(40, 211)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(53, 13)
@@ -1193,7 +1234,7 @@ Partial Class Gen_Manager
         '
         'Label39
         '
-        Me.Label39.AutoSize = True
+        Me.Label39.AutoSize = true
         Me.Label39.Location = New System.Drawing.Point(40, 24)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(67, 13)
@@ -1202,7 +1243,7 @@ Partial Class Gen_Manager
         '
         'Label40
         '
-        Me.Label40.AutoSize = True
+        Me.Label40.AutoSize = true
         Me.Label40.Location = New System.Drawing.Point(40, 185)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(84, 13)
@@ -1211,7 +1252,7 @@ Partial Class Gen_Manager
         '
         'Label41
         '
-        Me.Label41.AutoSize = True
+        Me.Label41.AutoSize = true
         Me.Label41.Location = New System.Drawing.Point(40, 150)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(56, 13)
@@ -1220,7 +1261,7 @@ Partial Class Gen_Manager
         '
         'Label42
         '
-        Me.Label42.AutoSize = True
+        Me.Label42.AutoSize = true
         Me.Label42.Location = New System.Drawing.Point(40, 120)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(55, 13)
@@ -1229,7 +1270,7 @@ Partial Class Gen_Manager
         '
         'Label43
         '
-        Me.Label43.AutoSize = True
+        Me.Label43.AutoSize = true
         Me.Label43.Location = New System.Drawing.Point(40, 87)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(65, 13)
@@ -1238,7 +1279,7 @@ Partial Class Gen_Manager
         '
         'Label44
         '
-        Me.Label44.AutoSize = True
+        Me.Label44.AutoSize = true
         Me.Label44.Location = New System.Drawing.Point(40, 54)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(65, 13)
@@ -1260,78 +1301,37 @@ Partial Class Gen_Manager
         Me.TabControl2.Size = New System.Drawing.Size(699, 328)
         Me.TabControl2.TabIndex = 1
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(182, 52)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 57
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Items.AddRange(New Object() {"Products Ordered with QTY:"})
-        Me.ListBox2.Location = New System.Drawing.Point(182, 88)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(154, 95)
-        Me.ListBox2.TabIndex = 58
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(395, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(132, 23)
-        Me.Button1.TabIndex = 59
-        Me.Button1.Text = "Search Purchase Order"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(39, 247)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(122, 23)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Search for Stock Item"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(220, 249)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 25
-        '
         'Gen_Manager
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(913, 361)
         Me.Controls.Add(Me.TabControl2)
         Me.Name = "Gen_Manager"
         Me.Text = "Gen_Manager"
-        Me.TabPage18.ResumeLayout(False)
-        Me.TabPage18.PerformLayout()
-        Me.TabPage17.ResumeLayout(False)
-        Me.TabPage17.PerformLayout()
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        Me.TabPage16.ResumeLayout(False)
-        Me.TabPage16.PerformLayout()
-        Me.TabPage15.ResumeLayout(False)
-        Me.TabPage15.PerformLayout()
-        Me.TabPage14.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        Me.TabPage13.ResumeLayout(False)
-        Me.TabPage13.PerformLayout()
-        Me.TabPage11.ResumeLayout(False)
-        Me.TabPage11.PerformLayout()
-        Me.TabControl2.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        Me.TabPage18.ResumeLayout(false)
+        Me.TabPage18.PerformLayout
+        Me.TabPage17.ResumeLayout(false)
+        Me.TabPage17.PerformLayout
+        Me.GroupBox7.ResumeLayout(false)
+        Me.GroupBox7.PerformLayout
+        Me.TabPage16.ResumeLayout(false)
+        Me.TabPage16.PerformLayout
+        Me.TabPage15.ResumeLayout(false)
+        Me.TabPage15.PerformLayout
+        Me.TabPage14.ResumeLayout(false)
+        Me.GroupBox4.ResumeLayout(false)
+        Me.GroupBox4.PerformLayout
+        Me.GroupBox5.ResumeLayout(false)
+        Me.GroupBox5.PerformLayout
+        Me.TabPage13.ResumeLayout(false)
+        Me.TabPage13.PerformLayout
+        Me.TabPage11.ResumeLayout(false)
+        Me.TabPage11.PerformLayout
+        Me.TabControl2.ResumeLayout(false)
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents TabPage18 As TabPage
     Friend WithEvents ListBox1 As ListBox
