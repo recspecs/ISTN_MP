@@ -23,6 +23,8 @@ Partial Class Gen_Manager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TabPage18 = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button23 = New System.Windows.Forms.Button()
         Me.Button24 = New System.Windows.Forms.Button()
@@ -59,15 +61,10 @@ Partial Class Gen_Manager
         Me.searchPayments = New System.Windows.Forms.Button()
         Me.viewPayments = New System.Windows.Forms.Button()
         Me.TabPage15 = New System.Windows.Forms.TabPage()
-        Me.TextBox52 = New System.Windows.Forms.TextBox()
-        Me.TextBox53 = New System.Windows.Forms.TextBox()
-        Me.TextBox54 = New System.Windows.Forms.TextBox()
-        Me.TextBox55 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox58 = New System.Windows.Forms.TextBox()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label56 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Button19 = New System.Windows.Forms.Button()
@@ -140,11 +137,14 @@ Partial Class Gen_Manager
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Product_Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cost_Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Purchase_Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total_Cost = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage18.SuspendLayout()
         Me.TabPage17.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -156,6 +156,7 @@ Partial Class Gen_Manager
         Me.TabPage13.SuspendLayout()
         Me.TabPage11.SuspendLayout()
         Me.TabControl2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabPage18
@@ -169,10 +170,26 @@ Partial Class Gen_Manager
         Me.TabPage18.Location = New System.Drawing.Point(4, 22)
         Me.TabPage18.Name = "TabPage18"
         Me.TabPage18.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage18.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage18.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage18.TabIndex = 10
         Me.TabPage18.Text = "Stock"
         Me.TabPage18.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(220, 249)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
+        Me.TextBox1.TabIndex = 25
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(39, 247)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 23)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "Search for Stock Item"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'ListBox1
         '
@@ -231,7 +248,7 @@ Partial Class Gen_Manager
         Me.TabPage17.Location = New System.Drawing.Point(4, 22)
         Me.TabPage17.Name = "TabPage17"
         Me.TabPage17.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage17.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage17.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage17.TabIndex = 9
         Me.TabPage17.Text = "Supplier"
         Me.TabPage17.UseVisualStyleBackColor = True
@@ -466,7 +483,7 @@ Partial Class Gen_Manager
         Me.TabPage16.Location = New System.Drawing.Point(4, 22)
         Me.TabPage16.Name = "TabPage16"
         Me.TabPage16.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage16.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage16.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage16.TabIndex = 8
         Me.TabPage16.Text = "Payment"
         Me.TabPage16.UseVisualStyleBackColor = True
@@ -498,68 +515,42 @@ Partial Class Gen_Manager
         '
         'TabPage15
         '
-        Me.TabPage15.Controls.Add(Me.Button1)
-        Me.TabPage15.Controls.Add(Me.ListBox2)
+        Me.TabPage15.Controls.Add(Me.DataGridView1)
+        Me.TabPage15.Controls.Add(Me.ComboBox2)
+        Me.TabPage15.Controls.Add(Me.ComboBox1)
         Me.TabPage15.Controls.Add(Me.DateTimePicker1)
-        Me.TabPage15.Controls.Add(Me.TextBox52)
-        Me.TabPage15.Controls.Add(Me.TextBox53)
-        Me.TabPage15.Controls.Add(Me.TextBox54)
-        Me.TabPage15.Controls.Add(Me.TextBox55)
         Me.TabPage15.Controls.Add(Me.TextBox58)
         Me.TabPage15.Controls.Add(Me.Label53)
         Me.TabPage15.Controls.Add(Me.Label54)
-        Me.TabPage15.Controls.Add(Me.Label55)
-        Me.TabPage15.Controls.Add(Me.Label56)
         Me.TabPage15.Controls.Add(Me.Label57)
         Me.TabPage15.Controls.Add(Me.Label58)
         Me.TabPage15.Controls.Add(Me.Button19)
         Me.TabPage15.Location = New System.Drawing.Point(4, 22)
         Me.TabPage15.Name = "TabPage15"
         Me.TabPage15.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage15.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage15.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage15.TabIndex = 7
-        Me.TabPage15.Text = "Purchase_Order"
+        Me.TabPage15.Text = "Purchase Order"
         Me.TabPage15.UseVisualStyleBackColor = True
         '
-        'TextBox52
+        'DateTimePicker1
         '
-        Me.TextBox52.Location = New System.Drawing.Point(533, 20)
-        Me.TextBox52.Name = "TextBox52"
-        Me.TextBox52.Size = New System.Drawing.Size(139, 20)
-        Me.TextBox52.TabIndex = 56
-        '
-        'TextBox53
-        '
-        Me.TextBox53.Location = New System.Drawing.Point(182, 197)
-        Me.TextBox53.Name = "TextBox53"
-        Me.TextBox53.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox53.TabIndex = 54
-        '
-        'TextBox54
-        '
-        Me.TextBox54.Location = New System.Drawing.Point(182, 263)
-        Me.TextBox54.Name = "TextBox54"
-        Me.TextBox54.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox54.TabIndex = 53
-        '
-        'TextBox55
-        '
-        Me.TextBox55.Location = New System.Drawing.Point(182, 232)
-        Me.TextBox55.Name = "TextBox55"
-        Me.TextBox55.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox55.TabIndex = 52
+        Me.DateTimePicker1.Location = New System.Drawing.Point(182, 46)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 57
         '
         'TextBox58
         '
         Me.TextBox58.Location = New System.Drawing.Point(182, 20)
         Me.TextBox58.Name = "TextBox58"
-        Me.TextBox58.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox58.Size = New System.Drawing.Size(200, 20)
         Me.TextBox58.TabIndex = 49
         '
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(50, 200)
+        Me.Label53.Location = New System.Drawing.Point(42, 72)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(59, 13)
         Me.Label53.TabIndex = 48
@@ -568,34 +559,16 @@ Partial Class Gen_Manager
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(50, 266)
+        Me.Label54.Location = New System.Drawing.Point(42, 98)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(67, 13)
         Me.Label54.TabIndex = 47
         Me.Label54.Text = "Employee ID"
         '
-        'Label55
-        '
-        Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(50, 235)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(55, 13)
-        Me.Label55.TabIndex = 46
-        Me.Label55.Text = "Total Cost"
-        '
-        'Label56
-        '
-        Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(42, 88)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(126, 13)
-        Me.Label56.TabIndex = 45
-        Me.Label56.Text = "Purchase Order Products"
-        '
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(42, 58)
+        Me.Label57.Location = New System.Drawing.Point(42, 46)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(107, 13)
         Me.Label57.TabIndex = 44
@@ -606,15 +579,16 @@ Partial Class Gen_Manager
         Me.Label58.AutoSize = True
         Me.Label58.Location = New System.Drawing.Point(42, 23)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(101, 13)
+        Me.Label58.Size = New System.Drawing.Size(98, 13)
         Me.Label58.TabIndex = 43
-        Me.Label58.Text = "Purchase Order No."
+        Me.Label58.Text = "Purchase Order No"
         '
         'Button19
         '
-        Me.Button19.Location = New System.Drawing.Point(395, 108)
+        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.Location = New System.Drawing.Point(405, 20)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(75, 54)
+        Me.Button19.Size = New System.Drawing.Size(138, 118)
         Me.Button19.TabIndex = 40
         Me.Button19.Text = "Add New  Purchase Order"
         Me.Button19.UseVisualStyleBackColor = True
@@ -629,7 +603,7 @@ Partial Class Gen_Manager
         Me.TabPage14.Location = New System.Drawing.Point(4, 22)
         Me.TabPage14.Name = "TabPage14"
         Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage14.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage14.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage14.TabIndex = 6
         Me.TabPage14.Text = "Customer"
         Me.TabPage14.UseVisualStyleBackColor = True
@@ -935,7 +909,7 @@ Partial Class Gen_Manager
         Me.TabPage13.Location = New System.Drawing.Point(4, 22)
         Me.TabPage13.Name = "TabPage13"
         Me.TabPage13.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage13.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage13.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage13.TabIndex = 5
         Me.TabPage13.Text = "Product"
         Me.TabPage13.UseVisualStyleBackColor = True
@@ -1101,7 +1075,7 @@ Partial Class Gen_Manager
         Me.TabPage11.Location = New System.Drawing.Point(4, 22)
         Me.TabPage11.Name = "TabPage11"
         Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(691, 302)
+        Me.TabPage11.Size = New System.Drawing.Size(1165, 789)
         Me.TabPage11.TabIndex = 3
         Me.TabPage11.Text = "Employee"
         Me.TabPage11.UseVisualStyleBackColor = True
@@ -1254,58 +1228,67 @@ Partial Class Gen_Manager
         Me.TabControl2.Controls.Add(Me.TabPage16)
         Me.TabControl2.Controls.Add(Me.TabPage17)
         Me.TabControl2.Controls.Add(Me.TabPage18)
-        Me.TabControl2.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl2.Location = New System.Drawing.Point(-1, 1)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(699, 328)
+        Me.TabControl2.Size = New System.Drawing.Size(1173, 815)
         Me.TabControl2.TabIndex = 1
         '
-        'DateTimePicker1
+        'ComboBox1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(182, 52)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 57
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(182, 72)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
+        Me.ComboBox1.TabIndex = 58
         '
-        'ListBox2
+        'ComboBox2
         '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Items.AddRange(New Object() {"Products Ordered with QTY:"})
-        Me.ListBox2.Location = New System.Drawing.Point(182, 88)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(154, 95)
-        Me.ListBox2.TabIndex = 58
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(182, 99)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
+        Me.ComboBox2.TabIndex = 59
         '
-        'Button1
+        'DataGridView1
         '
-        Me.Button1.Location = New System.Drawing.Point(395, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(132, 23)
-        Me.Button1.TabIndex = 59
-        Me.Button1.Text = "Search Purchase Order"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Product_Code, Me.Cost_Price, Me.Purchase_Quantity, Me.Subtotal, Me.Total_Cost})
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 144)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(543, 645)
+        Me.DataGridView1.TabIndex = 60
         '
-        'Button2
+        'Product_Code
         '
-        Me.Button2.Location = New System.Drawing.Point(39, 247)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(122, 23)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Search for Stock Item"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Product_Code.HeaderText = "Product Code"
+        Me.Product_Code.Name = "Product_Code"
         '
-        'TextBox1
+        'Cost_Price
         '
-        Me.TextBox1.Location = New System.Drawing.Point(220, 249)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.Cost_Price.HeaderText = "Cost Price"
+        Me.Cost_Price.Name = "Cost_Price"
+        '
+        'Purchase_Quantity
+        '
+        Me.Purchase_Quantity.HeaderText = "Purchase Quantity"
+        Me.Purchase_Quantity.Name = "Purchase_Quantity"
+        '
+        'Subtotal
+        '
+        Me.Subtotal.HeaderText = "Subtotal"
+        Me.Subtotal.Name = "Subtotal"
+        '
+        'Total_Cost
+        '
+        Me.Total_Cost.HeaderText = "Total Cost"
+        Me.Total_Cost.Name = "Total_Cost"
         '
         'Gen_Manager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(913, 361)
+        Me.ClientSize = New System.Drawing.Size(1172, 819)
         Me.Controls.Add(Me.TabControl2)
         Me.Name = "Gen_Manager"
         Me.Text = "Gen_Manager"
@@ -1329,6 +1312,7 @@ Partial Class Gen_Manager
         Me.TabPage11.ResumeLayout(False)
         Me.TabPage11.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1370,15 +1354,9 @@ Partial Class Gen_Manager
     Friend WithEvents searchPayments As Button
     Friend WithEvents viewPayments As Button
     Friend WithEvents TabPage15 As TabPage
-    Friend WithEvents TextBox52 As TextBox
-    Friend WithEvents TextBox53 As TextBox
-    Friend WithEvents TextBox54 As TextBox
-    Friend WithEvents TextBox55 As TextBox
     Friend WithEvents TextBox58 As TextBox
     Friend WithEvents Label53 As Label
     Friend WithEvents Label54 As Label
-    Friend WithEvents Label55 As Label
-    Friend WithEvents Label56 As Label
     Friend WithEvents Label57 As Label
     Friend WithEvents Label58 As Label
     Friend WithEvents Button19 As Button
@@ -1451,9 +1429,15 @@ Partial Class Gen_Manager
     Friend WithEvents Label43 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ListBox2 As ListBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Product_Code As DataGridViewTextBoxColumn
+    Friend WithEvents Cost_Price As DataGridViewTextBoxColumn
+    Friend WithEvents Purchase_Quantity As DataGridViewTextBoxColumn
+    Friend WithEvents Subtotal As DataGridViewTextBoxColumn
+    Friend WithEvents Total_Cost As DataGridViewTextBoxColumn
 End Class
