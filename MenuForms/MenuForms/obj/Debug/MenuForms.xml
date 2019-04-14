@@ -22,9 +22,19 @@ MenuForms
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:MenuForms.My.Resources.Resources.Action_ok_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MenuForms.My.Resources.Resources.add_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Awicons_Vista_Artistic_Delete">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
 <member name="P:MenuForms.My.Resources.Resources.bin_red_full_icon">
@@ -40,6 +50,16 @@ MenuForms
 <member name="P:MenuForms.My.Resources.Resources.delete_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.delete_icon__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Everaldo_Crystal_Clear_Action_ok">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
 <member name="P:MenuForms.My.Resources.Resources.Fatcow_Farm_Fresh_Exclamation">

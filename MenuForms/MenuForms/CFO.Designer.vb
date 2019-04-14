@@ -37,6 +37,12 @@ Partial Class CFO
         Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
         Me.SalesOrderIDTextBox = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Product_Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Product_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Product_Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Product_Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sales_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Customer_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,25 +70,30 @@ Partial Class CFO
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Product_Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sales_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TabControl1.SuspendLayout
-        Me.CaptureSalesOrderTab.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.TabPage1.SuspendLayout
-        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.TabPage3.SuspendLayout
-        Me.SuspendLayout
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Purchase_Order_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Purchase_Order_Payment = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Supplier_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Purchase_Order_Payment_Date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabControl1.SuspendLayout()
+        Me.CaptureSalesOrderTab.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'TabControl1
         '
@@ -117,7 +128,7 @@ Partial Class CFO
         Me.CaptureSalesOrderTab.Size = New System.Drawing.Size(1372, 1065)
         Me.CaptureSalesOrderTab.TabIndex = 1
         Me.CaptureSalesOrderTab.Text = "Capture Sales Order"
-        Me.CaptureSalesOrderTab.UseVisualStyleBackColor = true
+        Me.CaptureSalesOrderTab.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -127,11 +138,11 @@ Partial Class CFO
         Me.Button1.Size = New System.Drawing.Size(283, 165)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "Capture Sales Order"
-        Me.Button1.UseVisualStyleBackColor = true
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
-        Me.ComboBox1.FormattingEnabled = true
+        Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(231, 163)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ComboBox1.Name = "ComboBox1"
@@ -148,7 +159,7 @@ Partial Class CFO
         '
         'Label5
         '
-        Me.Label5.AutoSize = true
+        Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(13, 163)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(81, 17)
@@ -157,7 +168,7 @@ Partial Class CFO
         '
         'Label4
         '
-        Me.Label4.AutoSize = true
+        Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(13, 128)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(133, 17)
@@ -166,7 +177,7 @@ Partial Class CFO
         '
         'Label3
         '
-        Me.Label3.AutoSize = true
+        Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(13, 94)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 17)
@@ -175,7 +186,7 @@ Partial Class CFO
         '
         'Label2
         '
-        Me.Label2.AutoSize = true
+        Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(13, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 17)
@@ -184,7 +195,7 @@ Partial Class CFO
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
+        Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(13, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(93, 17)
@@ -217,10 +228,10 @@ Partial Class CFO
         '
         'DataGridView1
         '
-        Me.DataGridView1.AllowUserToOrderColumns = true
+        Me.DataGridView1.AllowUserToOrderColumns = True
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -233,6 +244,42 @@ Partial Class CFO
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(882, 642)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Product_Code
+        '
+        Me.Product_Code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Product_Code.HeaderText = "Product Code"
+        Me.Product_Code.Name = "Product_Code"
+        '
+        'Product_Name
+        '
+        Me.Product_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Product_Name.HeaderText = "Product Name"
+        Me.Product_Name.Name = "Product_Name"
+        '
+        'Product_Price
+        '
+        Me.Product_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Product_Price.HeaderText = "Product Price"
+        Me.Product_Price.Name = "Product_Price"
+        '
+        'Product_Qty
+        '
+        Me.Product_Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Product_Qty.HeaderText = "Product Quantity"
+        Me.Product_Qty.Name = "Product_Qty"
+        '
+        'Subtotal
+        '
+        Me.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Subtotal.HeaderText = "Subtotal"
+        Me.Subtotal.Name = "Subtotal"
+        '
+        'Sales_Total
+        '
+        Me.Sales_Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Sales_Total.HeaderText = "Sales Total"
+        Me.Sales_Total.Name = "Sales_Total"
         '
         'TabPage1
         '
@@ -254,14 +301,14 @@ Partial Class CFO
         Me.TabPage1.Controls.Add(Me.Label8)
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage1.Size = New System.Drawing.Size(1372, 1069)
+        Me.TabPage1.Size = New System.Drawing.Size(1372, 1065)
         Me.TabPage1.TabIndex = 2
         Me.TabPage1.Text = "Customer Accounts"
-        Me.TabPage1.UseVisualStyleBackColor = true
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'DataGridView2
         '
@@ -310,7 +357,7 @@ Partial Class CFO
         '
         'Label14
         '
-        Me.Label14.AutoSize = true
+        Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(490, 17)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(154, 17)
@@ -319,7 +366,7 @@ Partial Class CFO
         '
         'ComboBox2
         '
-        Me.ComboBox2.FormattingEnabled = true
+        Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(493, 50)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ComboBox2.Name = "ComboBox2"
@@ -328,18 +375,18 @@ Partial Class CFO
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(182, 324)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(233, 103)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "Add Payment"
-        Me.Button2.UseVisualStyleBackColor = true
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Customer_IDComboBox
         '
-        Me.Customer_IDComboBox.FormattingEnabled = true
+        Me.Customer_IDComboBox.FormattingEnabled = True
         Me.Customer_IDComboBox.Location = New System.Drawing.Point(182, 50)
         Me.Customer_IDComboBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Customer_IDComboBox.Name = "Customer_IDComboBox"
@@ -348,7 +395,7 @@ Partial Class CFO
         '
         'Employee_IDComboBox
         '
-        Me.Employee_IDComboBox.FormattingEnabled = true
+        Me.Employee_IDComboBox.FormattingEnabled = True
         Me.Employee_IDComboBox.Location = New System.Drawing.Point(182, 262)
         Me.Employee_IDComboBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Employee_IDComboBox.Name = "Employee_IDComboBox"
@@ -357,7 +404,7 @@ Partial Class CFO
         '
         'Payment_TypeComboBox
         '
-        Me.Payment_TypeComboBox.FormattingEnabled = true
+        Me.Payment_TypeComboBox.FormattingEnabled = True
         Me.Payment_TypeComboBox.Location = New System.Drawing.Point(182, 153)
         Me.Payment_TypeComboBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Payment_TypeComboBox.Name = "Payment_TypeComboBox"
@@ -398,7 +445,7 @@ Partial Class CFO
         '
         'Label13
         '
-        Me.Label13.AutoSize = true
+        Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(7, 50)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(80, 17)
@@ -407,7 +454,7 @@ Partial Class CFO
         '
         'Label11
         '
-        Me.Label11.AutoSize = true
+        Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(7, 262)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(81, 17)
@@ -416,7 +463,7 @@ Partial Class CFO
         '
         'Label10
         '
-        Me.Label10.AutoSize = true
+        Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(7, 222)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(88, 17)
@@ -425,7 +472,7 @@ Partial Class CFO
         '
         'Label9
         '
-        Me.Label9.AutoSize = true
+        Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(7, 187)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(89, 17)
@@ -434,7 +481,7 @@ Partial Class CFO
         '
         'Label8
         '
-        Me.Label8.AutoSize = true
+        Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(7, 153)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(88, 17)
@@ -443,7 +490,7 @@ Partial Class CFO
         '
         'Label7
         '
-        Me.Label7.AutoSize = true
+        Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(7, 85)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(133, 17)
@@ -452,7 +499,7 @@ Partial Class CFO
         '
         'Label6
         '
-        Me.Label6.AutoSize = true
+        Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(7, 119)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(93, 17)
@@ -461,44 +508,40 @@ Partial Class CFO
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button5)
+        Me.TabPage3.Controls.Add(Me.ComboBox3)
+        Me.TabPage3.Controls.Add(Me.Label18)
+        Me.TabPage3.Controls.Add(Me.DataGridView3)
+        Me.TabPage3.Controls.Add(Me.Label17)
+        Me.TabPage3.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage3.Controls.Add(Me.TextBox3)
+        Me.TabPage3.Controls.Add(Me.Label16)
         Me.TabPage3.Controls.Add(Me.Button4)
         Me.TabPage3.Controls.Add(Me.TextBox2)
         Me.TabPage3.Controls.Add(Me.TextBox1)
         Me.TabPage3.Controls.Add(Me.Label15)
         Me.TabPage3.Controls.Add(Me.Label12)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 26)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1372, 1069)
+        Me.TabPage3.Size = New System.Drawing.Size(1372, 1065)
         Me.TabPage3.TabIndex = 3
         Me.TabPage3.Text = "Supplier Accounts"
-        Me.TabPage3.UseVisualStyleBackColor = true
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(822, 54)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(201, 61)
-        Me.Button5.TabIndex = 18
-        Me.Button5.Text = "View All Supplier Payments"
-        Me.Button5.UseVisualStyleBackColor = true
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button4.Location = New System.Drawing.Point(226, 136)
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(238, 244)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(233, 103)
         Me.Button4.TabIndex = 17
         Me.Button4.Text = "Add Payment"
-        Me.Button4.UseVisualStyleBackColor = true
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(226, 76)
+        Me.TextBox2.Location = New System.Drawing.Point(238, 113)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(233, 25)
@@ -506,7 +549,7 @@ Partial Class CFO
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(226, 39)
+        Me.TextBox1.Location = New System.Drawing.Point(238, 76)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(233, 25)
@@ -514,8 +557,8 @@ Partial Class CFO
         '
         'Label15
         '
-        Me.Label15.AutoSize = true
-        Me.Label15.Location = New System.Drawing.Point(13, 76)
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(25, 113)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(152, 17)
         Me.Label15.TabIndex = 2
@@ -523,71 +566,115 @@ Partial Class CFO
         '
         'Label12
         '
-        Me.Label12.AutoSize = true
-        Me.Label12.Location = New System.Drawing.Point(13, 39)
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(25, 76)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(121, 17)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Purchase Order No"
         '
-        'Product_Code
+        'TextBox3
         '
-        Me.Product_Code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Product_Code.HeaderText = "Product Code"
-        Me.Product_Code.Name = "Product_Code"
+        Me.TextBox3.Location = New System.Drawing.Point(238, 146)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(233, 25)
+        Me.TextBox3.TabIndex = 20
         '
-        'Product_Name
+        'Label16
         '
-        Me.Product_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Product_Name.HeaderText = "Product Name"
-        Me.Product_Name.Name = "Product_Name"
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(25, 146)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(72, 17)
+        Me.Label16.TabIndex = 19
+        Me.Label16.Text = "Supplier ID"
         '
-        'Product_Price
+        'DateTimePicker1
         '
-        Me.Product_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Product_Price.HeaderText = "Product Price"
-        Me.Product_Price.Name = "Product_Price"
+        Me.DateTimePicker1.Location = New System.Drawing.Point(238, 178)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(233, 25)
+        Me.DateTimePicker1.TabIndex = 21
         '
-        'Product_Qty
+        'Label17
         '
-        Me.Product_Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Product_Qty.HeaderText = "Product Quantity"
-        Me.Product_Qty.Name = "Product_Qty"
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(25, 178)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(88, 17)
+        Me.Label17.TabIndex = 22
+        Me.Label17.Text = "Payment Date"
         '
-        'Subtotal
+        'DataGridView3
         '
-        Me.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Subtotal.HeaderText = "Subtotal"
-        Me.Subtotal.Name = "Subtotal"
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Purchase_Order_No, Me.Purchase_Order_Payment, Me.Supplier_ID, Me.Purchase_Order_Payment_Date})
+        Me.DataGridView3.Location = New System.Drawing.Point(688, 109)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(444, 792)
+        Me.DataGridView3.TabIndex = 23
         '
-        'Sales_Total
+        'Label18
         '
-        Me.Sales_Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Sales_Total.HeaderText = "Sales Total"
-        Me.Sales_Total.Name = "Sales_Total"
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(685, 39)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(136, 17)
+        Me.Label18.TabIndex = 24
+        Me.Label18.Text = "View Purchase Orders"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(688, 76)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(133, 25)
+        Me.ComboBox3.TabIndex = 25
+        '
+        'Purchase_Order_No
+        '
+        Me.Purchase_Order_No.HeaderText = "Purchase Order No"
+        Me.Purchase_Order_No.Name = "Purchase_Order_No"
+        '
+        'Purchase_Order_Payment
+        '
+        Me.Purchase_Order_Payment.HeaderText = "Purchase Order Payment"
+        Me.Purchase_Order_Payment.Name = "Purchase_Order_Payment"
+        '
+        'Supplier_ID
+        '
+        Me.Supplier_ID.HeaderText = "Supplier ID"
+        Me.Supplier_ID.Name = "Supplier_ID"
+        '
+        'Purchase_Order_Payment_Date
+        '
+        Me.Purchase_Order_Payment_Date.HeaderText = "Payment Date"
+        Me.Purchase_Order_Payment_Date.Name = "Purchase_Order_Payment_Date"
         '
         'CFO
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1382, 1061)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "CFO"
         Me.Text = "CFO"
-        Me.TabControl1.ResumeLayout(false)
-        Me.CaptureSalesOrderTab.ResumeLayout(false)
-        Me.CaptureSalesOrderTab.PerformLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
-        Me.TabPage1.ResumeLayout(false)
-        Me.TabPage1.PerformLayout
-        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).EndInit
-        Me.TabPage3.ResumeLayout(false)
-        Me.TabPage3.PerformLayout
-        Me.ResumeLayout(false)
+        Me.TabControl1.ResumeLayout(False)
+        Me.CaptureSalesOrderTab.ResumeLayout(False)
+        Me.CaptureSalesOrderTab.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
 
-End Sub
+    End Sub
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents CaptureSalesOrderTab As TabPage
@@ -630,7 +717,6 @@ End Sub
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
@@ -642,4 +728,15 @@ End Sub
     Friend WithEvents Product_Qty As DataGridViewTextBoxColumn
     Friend WithEvents Subtotal As DataGridViewTextBoxColumn
     Friend WithEvents Sales_Total As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents Purchase_Order_No As DataGridViewTextBoxColumn
+    Friend WithEvents Purchase_Order_Payment As DataGridViewTextBoxColumn
+    Friend WithEvents Supplier_ID As DataGridViewTextBoxColumn
+    Friend WithEvents Purchase_Order_Payment_Date As DataGridViewTextBoxColumn
+    Friend WithEvents Label17 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label16 As Label
 End Class
