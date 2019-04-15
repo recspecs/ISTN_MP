@@ -22,7 +22,16 @@ Partial Class Sales_Rep
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txbUpdatePayment = New System.Windows.Forms.TextBox()
@@ -63,12 +72,6 @@ Partial Class Sales_Rep
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Product_Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sales_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InventoryTab = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btrnDisableProduct = New System.Windows.Forms.Button()
@@ -78,17 +81,6 @@ Partial Class Sales_Rep
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.cbSearchParam = New System.Windows.Forms.ComboBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductDescript = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SellingPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OnHand = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Vat = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Active = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PONum = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PoDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReturnId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tbcSupplier = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Customer = New System.Windows.Forms.TabPage()
@@ -109,6 +101,24 @@ Partial Class Sales_Rep
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.Product_Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Product_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Product_Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Product_Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sales_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductDescript = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SellingPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OnHand = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Vat = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Active = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PONum = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReturnId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbcSupplier = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TabPage1.SuspendLayout
         Me.GroupBox1.SuspendLayout
         Me.TabControl2.SuspendLayout
@@ -306,7 +316,7 @@ Partial Class Sales_Rep
         Me.TabControl2.Location = New System.Drawing.Point(12, 12)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(1045, 789)
+        Me.TabControl2.Size = New System.Drawing.Size(1275, 789)
         Me.TabControl2.TabIndex = 2
         '
         'TabPage2
@@ -436,10 +446,34 @@ Partial Class Sales_Rep
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToOrderColumns = true
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(19, 172)
         Me.DataGridView1.Name = "DataGridView1"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Size = New System.Drawing.Size(647, 491)
         Me.DataGridView1.TabIndex = 26
         '
@@ -473,36 +507,6 @@ Partial Class Sales_Rep
         Me.DataGridViewTextBoxColumn6.HeaderText = "Sales Total"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'Product_Code
-        '
-        Me.Product_Code.HeaderText = "Product Code"
-        Me.Product_Code.Name = "Product_Code"
-        '
-        'Product_Name
-        '
-        Me.Product_Name.HeaderText = "Product Name"
-        Me.Product_Name.Name = "Product_Name"
-        '
-        'Product_Price
-        '
-        Me.Product_Price.HeaderText = "Product Price"
-        Me.Product_Price.Name = "Product_Price"
-        '
-        'Product_Qty
-        '
-        Me.Product_Qty.HeaderText = "Product Quantity"
-        Me.Product_Qty.Name = "Product_Qty"
-        '
-        'Subtotal
-        '
-        Me.Subtotal.HeaderText = "Subtotal"
-        Me.Subtotal.Name = "Subtotal"
-        '
-        'Sales_Total
-        '
-        Me.Sales_Total.HeaderText = "Sales Total"
-        Me.Sales_Total.Name = "Sales_Total"
-        '
         'InventoryTab
         '
         Me.InventoryTab.Controls.Add(Me.Panel1)
@@ -514,9 +518,9 @@ Partial Class Sales_Rep
         Me.InventoryTab.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.InventoryTab.Name = "InventoryTab"
         Me.InventoryTab.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.InventoryTab.Size = New System.Drawing.Size(1037, 763)
+        Me.InventoryTab.Size = New System.Drawing.Size(1267, 763)
         Me.InventoryTab.TabIndex = 9
-        Me.InventoryTab.Text = "Products"
+        Me.InventoryTab.Text = " "
         Me.InventoryTab.UseVisualStyleBackColor = true
         '
         'Panel1
@@ -626,94 +630,37 @@ Partial Class Sales_Rep
         'DataGridView2
         '
         Me.DataGridView2.AllowUserToOrderColumns = true
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCode, Me.ProductDescript, Me.SellingPrice, Me.OnHand, Me.Vat, Me.Active, Me.PONum, Me.PoDate, Me.ReturnId, Me.LastReturnDate, Me.tbcSupplier})
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView2.Location = New System.Drawing.Point(19, 220)
         Me.DataGridView2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView2.Name = "DataGridView2"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView2.Size = New System.Drawing.Size(1211, 390)
         Me.DataGridView2.TabIndex = 16
-        '
-        'ProductCode
-        '
-        Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductCode.DividerWidth = 1
-        Me.ProductCode.FillWeight = 80!
-        Me.ProductCode.HeaderText = "Product Code"
-        Me.ProductCode.MinimumWidth = 40
-        Me.ProductCode.Name = "ProductCode"
-        Me.ProductCode.ReadOnly = true
-        '
-        'ProductDescript
-        '
-        Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductDescript.FillWeight = 200!
-        Me.ProductDescript.HeaderText = "Product Name"
-        Me.ProductDescript.MinimumWidth = 80
-        Me.ProductDescript.Name = "ProductDescript"
-        '
-        'SellingPrice
-        '
-        Me.SellingPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.SellingPrice.FillWeight = 88.55048!
-        Me.SellingPrice.HeaderText = "Selling Price"
-        Me.SellingPrice.Name = "SellingPrice"
-        '
-        'OnHand
-        '
-        Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.OnHand.FillWeight = 88.55048!
-        Me.OnHand.HeaderText = "On Hand"
-        Me.OnHand.Name = "OnHand"
-        '
-        'Vat
-        '
-        Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Vat.FillWeight = 50!
-        Me.Vat.HeaderText = "Vat"
-        Me.Vat.MinimumWidth = 25
-        Me.Vat.Name = "Vat"
-        '
-        'Active
-        '
-        Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Active.FillWeight = 50!
-        Me.Active.HeaderText = "Active"
-        Me.Active.MinimumWidth = 25
-        Me.Active.Name = "Active"
-        '
-        'PONum
-        '
-        Me.PONum.HeaderText = "PO Number"
-        Me.PONum.Name = "PONum"
-        '
-        'PoDate
-        '
-        Me.PoDate.HeaderText = "Last PO Date"
-        Me.PoDate.Name = "PoDate"
-        '
-        'ReturnId
-        '
-        Me.ReturnId.HeaderText = "Return ID"
-        Me.ReturnId.Name = "ReturnId"
-        '
-        'LastReturnDate
-        '
-        Me.LastReturnDate.HeaderText = "Last Return Date"
-        Me.LastReturnDate.Name = "LastReturnDate"
-        '
-        'tbcSupplier
-        '
-        Me.tbcSupplier.HeaderText = "Supplier"
-        Me.tbcSupplier.Name = "tbcSupplier"
         '
         'TextBox1
         '
@@ -830,10 +777,34 @@ Partial Class Sales_Rep
         '
         'DataGridView3
         '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column7, Me.Column5, Me.Column6, Me.Column8})
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView3.Location = New System.Drawing.Point(16, 66)
         Me.DataGridView3.Name = "DataGridView3"
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView3.Size = New System.Drawing.Size(573, 296)
         Me.DataGridView3.TabIndex = 10
         '
@@ -885,6 +856,115 @@ Partial Class Sales_Rep
         Me.Button7.TabIndex = 8
         Me.Button7.Text = "Search Customer"
         Me.Button7.UseVisualStyleBackColor = true
+        '
+        'Product_Code
+        '
+        Me.Product_Code.HeaderText = "Product Code"
+        Me.Product_Code.Name = "Product_Code"
+        '
+        'Product_Name
+        '
+        Me.Product_Name.HeaderText = "Product Name"
+        Me.Product_Name.Name = "Product_Name"
+        '
+        'Product_Price
+        '
+        Me.Product_Price.HeaderText = "Product Price"
+        Me.Product_Price.Name = "Product_Price"
+        '
+        'Product_Qty
+        '
+        Me.Product_Qty.HeaderText = "Product Quantity"
+        Me.Product_Qty.Name = "Product_Qty"
+        '
+        'Subtotal
+        '
+        Me.Subtotal.HeaderText = "Subtotal"
+        Me.Subtotal.Name = "Subtotal"
+        '
+        'Sales_Total
+        '
+        Me.Sales_Total.HeaderText = "Sales Total"
+        Me.Sales_Total.Name = "Sales_Total"
+        '
+        'ProductCode
+        '
+        Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ProductCode.DividerWidth = 1
+        Me.ProductCode.FillWeight = 80!
+        Me.ProductCode.HeaderText = "Product Code"
+        Me.ProductCode.MinimumWidth = 40
+        Me.ProductCode.Name = "ProductCode"
+        Me.ProductCode.ReadOnly = true
+        '
+        'ProductDescript
+        '
+        Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ProductDescript.FillWeight = 200!
+        Me.ProductDescript.HeaderText = "Product Name"
+        Me.ProductDescript.MinimumWidth = 80
+        Me.ProductDescript.Name = "ProductDescript"
+        '
+        'SellingPrice
+        '
+        Me.SellingPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.SellingPrice.FillWeight = 88.55048!
+        Me.SellingPrice.HeaderText = "Selling Price"
+        Me.SellingPrice.Name = "SellingPrice"
+        '
+        'OnHand
+        '
+        Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.OnHand.FillWeight = 50!
+        Me.OnHand.HeaderText = "On Hand"
+        Me.OnHand.Name = "OnHand"
+        '
+        'Vat
+        '
+        Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Vat.FillWeight = 50!
+        Me.Vat.HeaderText = "Vat"
+        Me.Vat.MinimumWidth = 25
+        Me.Vat.Name = "Vat"
+        '
+        'Active
+        '
+        Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Active.FillWeight = 50!
+        Me.Active.HeaderText = "Active"
+        Me.Active.MinimumWidth = 25
+        Me.Active.Name = "Active"
+        '
+        'PONum
+        '
+        Me.PONum.HeaderText = "PO Number"
+        Me.PONum.Name = "PONum"
+        '
+        'PoDate
+        '
+        Me.PoDate.HeaderText = "Last PO Date"
+        Me.PoDate.Name = "PoDate"
+        '
+        'ReturnId
+        '
+        Me.ReturnId.HeaderText = "Return ID"
+        Me.ReturnId.Name = "ReturnId"
+        '
+        'LastReturnDate
+        '
+        Me.LastReturnDate.HeaderText = "Last Return Date"
+        Me.LastReturnDate.Name = "LastReturnDate"
+        '
+        'tbcSupplier
+        '
+        Me.tbcSupplier.HeaderText = "Supplier"
+        Me.tbcSupplier.Name = "tbcSupplier"
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
         'Sales_Rep
         '
@@ -970,17 +1050,6 @@ End Sub
     Friend WithEvents btnUpdate As Button
     Friend WithEvents cbSearchParam As ComboBox
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents ProductCode As DataGridViewTextBoxColumn
-    Friend WithEvents ProductDescript As DataGridViewTextBoxColumn
-    Friend WithEvents SellingPrice As DataGridViewTextBoxColumn
-    Friend WithEvents OnHand As DataGridViewTextBoxColumn
-    Friend WithEvents Vat As DataGridViewCheckBoxColumn
-    Friend WithEvents Active As DataGridViewCheckBoxColumn
-    Friend WithEvents PONum As DataGridViewTextBoxColumn
-    Friend WithEvents PoDate As DataGridViewTextBoxColumn
-    Friend WithEvents ReturnId As DataGridViewTextBoxColumn
-    Friend WithEvents LastReturnDate As DataGridViewTextBoxColumn
-    Friend WithEvents tbcSupplier As DataGridViewTextBoxColumn
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Customer As TabPage
@@ -1001,4 +1070,16 @@ End Sub
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Button7 As Button
+    Friend WithEvents ProductCode As DataGridViewTextBoxColumn
+    Friend WithEvents ProductDescript As DataGridViewTextBoxColumn
+    Friend WithEvents SellingPrice As DataGridViewTextBoxColumn
+    Friend WithEvents OnHand As DataGridViewTextBoxColumn
+    Friend WithEvents Vat As DataGridViewCheckBoxColumn
+    Friend WithEvents Active As DataGridViewCheckBoxColumn
+    Friend WithEvents PONum As DataGridViewTextBoxColumn
+    Friend WithEvents PoDate As DataGridViewTextBoxColumn
+    Friend WithEvents ReturnId As DataGridViewTextBoxColumn
+    Friend WithEvents LastReturnDate As DataGridViewTextBoxColumn
+    Friend WithEvents tbcSupplier As DataGridViewTextBoxColumn
+    Friend WithEvents ImageList1 As ImageList
 End Class

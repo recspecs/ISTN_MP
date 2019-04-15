@@ -84,12 +84,6 @@
     <Compile Include="AddNewCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CFO.Designer.vb">
-      <DependentUpon>CFO.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CFO.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="New Supplier.Designer.vb">
       <DependentUpon>New Supplier.vb</DependentUpon>
     </Compile>
@@ -152,8 +146,8 @@
     <EmbeddedResource Include="Add New Employee.resx">
       <DependentUpon>Add New Employee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CFO.resx">
-      <DependentUpon>CFO.vb</DependentUpon>
+    <EmbeddedResource Include="AddNewCustomer.resx">
+      <DependentUpon>AddNewCustomer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="New Supplier.resx">
       <DependentUpon>New Supplier.vb</DependentUpon>
