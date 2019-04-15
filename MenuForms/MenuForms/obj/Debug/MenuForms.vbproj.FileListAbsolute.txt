@@ -40,3 +40,4 @@ C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuFo
 C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.xml
 C:\Users\Tony\Source\Repos\ScThTony\ISTN_MP\MenuForms\MenuForms\obj\Debug\MenuForms.pdb
 C:\Users\Tony\Source\Repos\ISTN_MPTony\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\Esther Dzitiro\Source\Repos\ISTN_MP2Tony\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config

@@ -40,23 +40,6 @@ Partial Class GenManager
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Employee = New System.Windows.Forms.TabPage()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.TextBox38 = New System.Windows.Forms.TextBox()
-        Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.TextBox40 = New System.Windows.Forms.TextBox()
-        Me.TextBox41 = New System.Windows.Forms.TextBox()
-        Me.TextBox42 = New System.Windows.Forms.TextBox()
-        Me.TextBox43 = New System.Windows.Forms.TextBox()
-        Me.TextBox44 = New System.Windows.Forms.TextBox()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
         Me.Product = New System.Windows.Forms.TabControl()
         Me.Products = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -129,22 +112,39 @@ Partial Class GenManager
         Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.PurchaseOrder.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Employee.SuspendLayout
-        Me.Product.SuspendLayout
-        Me.Products.SuspendLayout
-        Me.Panel3.SuspendLayout
-        CType(Me.DataGridView5,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Customer.SuspendLayout
-        Me.Panel1.SuspendLayout
-        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Payment.SuspendLayout
-        CType(Me.DataGridView4,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Supplier.SuspendLayout
-        Me.Panel2.SuspendLayout
-        CType(Me.DataGridView3,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.SuspendLayout
+        Me.DataGridView6 = New System.Windows.Forms.DataGridView()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.PurchaseOrder.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Employee.SuspendLayout()
+        Me.Product.SuspendLayout()
+        Me.Products.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Customer.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Payment.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Supplier.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
+        Me.SuspendLayout()
         '
         'PurchaseOrder
         '
@@ -164,7 +164,7 @@ Partial Class GenManager
         Me.PurchaseOrder.Size = New System.Drawing.Size(1240, 622)
         Me.PurchaseOrder.TabIndex = 7
         Me.PurchaseOrder.Text = "Purchase Order"
-        Me.PurchaseOrder.UseVisualStyleBackColor = true
+        Me.PurchaseOrder.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -202,7 +202,7 @@ Partial Class GenManager
         '
         'ComboBox2
         '
-        Me.ComboBox2.FormattingEnabled = true
+        Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(182, 99)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
@@ -210,7 +210,7 @@ Partial Class GenManager
         '
         'ComboBox1
         '
-        Me.ComboBox1.FormattingEnabled = true
+        Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(182, 72)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
@@ -232,7 +232,7 @@ Partial Class GenManager
         '
         'Label53
         '
-        Me.Label53.AutoSize = true
+        Me.Label53.AutoSize = True
         Me.Label53.Location = New System.Drawing.Point(42, 72)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(59, 13)
@@ -241,7 +241,7 @@ Partial Class GenManager
         '
         'Label54
         '
-        Me.Label54.AutoSize = true
+        Me.Label54.AutoSize = True
         Me.Label54.Location = New System.Drawing.Point(42, 98)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(67, 13)
@@ -250,7 +250,7 @@ Partial Class GenManager
         '
         'Label57
         '
-        Me.Label57.AutoSize = true
+        Me.Label57.AutoSize = True
         Me.Label57.Location = New System.Drawing.Point(42, 46)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(107, 13)
@@ -259,7 +259,7 @@ Partial Class GenManager
         '
         'Label58
         '
-        Me.Label58.AutoSize = true
+        Me.Label58.AutoSize = True
         Me.Label58.Location = New System.Drawing.Point(42, 23)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(98, 13)
@@ -268,179 +268,28 @@ Partial Class GenManager
         '
         'Button19
         '
-        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 18!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.Location = New System.Drawing.Point(405, 20)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(138, 118)
         Me.Button19.TabIndex = 40
         Me.Button19.Text = "Add New  Purchase Order"
-        Me.Button19.UseVisualStyleBackColor = true
+        Me.Button19.UseVisualStyleBackColor = True
         '
         'Employee
         '
+        Me.Employee.Controls.Add(Me.Panel4)
+        Me.Employee.Controls.Add(Me.ComboBox8)
+        Me.Employee.Controls.Add(Me.TextBox1)
         Me.Employee.Controls.Add(Me.Button11)
-        Me.Employee.Controls.Add(Me.Button12)
-        Me.Employee.Controls.Add(Me.Button13)
-        Me.Employee.Controls.Add(Me.TextBox38)
-        Me.Employee.Controls.Add(Me.TextBox39)
-        Me.Employee.Controls.Add(Me.TextBox40)
-        Me.Employee.Controls.Add(Me.TextBox41)
-        Me.Employee.Controls.Add(Me.TextBox42)
-        Me.Employee.Controls.Add(Me.TextBox43)
-        Me.Employee.Controls.Add(Me.TextBox44)
-        Me.Employee.Controls.Add(Me.Label38)
-        Me.Employee.Controls.Add(Me.Label39)
-        Me.Employee.Controls.Add(Me.Label40)
-        Me.Employee.Controls.Add(Me.Label41)
-        Me.Employee.Controls.Add(Me.Label42)
-        Me.Employee.Controls.Add(Me.Label43)
-        Me.Employee.Controls.Add(Me.Label44)
+        Me.Employee.Controls.Add(Me.DataGridView6)
         Me.Employee.Location = New System.Drawing.Point(4, 22)
         Me.Employee.Name = "Employee"
         Me.Employee.Padding = New System.Windows.Forms.Padding(3)
         Me.Employee.Size = New System.Drawing.Size(1240, 622)
         Me.Employee.TabIndex = 3
         Me.Employee.Text = "Employee"
-        Me.Employee.UseVisualStyleBackColor = true
-        '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(471, 195)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(78, 50)
-        Me.Button11.TabIndex = 50
-        Me.Button11.Text = "Search"
-        Me.Button11.UseVisualStyleBackColor = true
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(390, 195)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(78, 50)
-        Me.Button12.TabIndex = 49
-        Me.Button12.Text = "Delete Employee"
-        Me.Button12.UseVisualStyleBackColor = true
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(308, 195)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(78, 50)
-        Me.Button13.TabIndex = 48
-        Me.Button13.Text = "Add Employee"
-        Me.Button13.UseVisualStyleBackColor = true
-        '
-        'TextBox38
-        '
-        Me.TextBox38.Location = New System.Drawing.Point(128, 211)
-        Me.TextBox38.Name = "TextBox38"
-        Me.TextBox38.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox38.TabIndex = 47
-        '
-        'TextBox39
-        '
-        Me.TextBox39.Location = New System.Drawing.Point(128, 178)
-        Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox39.TabIndex = 45
-        '
-        'TextBox40
-        '
-        Me.TextBox40.Location = New System.Drawing.Point(128, 143)
-        Me.TextBox40.Name = "TextBox40"
-        Me.TextBox40.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox40.TabIndex = 44
-        '
-        'TextBox41
-        '
-        Me.TextBox41.Location = New System.Drawing.Point(128, 113)
-        Me.TextBox41.Name = "TextBox41"
-        Me.TextBox41.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox41.TabIndex = 43
-        '
-        'TextBox42
-        '
-        Me.TextBox42.Location = New System.Drawing.Point(128, 80)
-        Me.TextBox42.Name = "TextBox42"
-        Me.TextBox42.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox42.TabIndex = 42
-        '
-        'TextBox43
-        '
-        Me.TextBox43.Location = New System.Drawing.Point(128, 54)
-        Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox43.TabIndex = 41
-        '
-        'TextBox44
-        '
-        Me.TextBox44.Location = New System.Drawing.Point(128, 21)
-        Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox44.TabIndex = 40
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = true
-        Me.Label38.Location = New System.Drawing.Point(40, 211)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(53, 13)
-        Me.Label38.TabIndex = 46
-        Me.Label38.Text = "Password"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = true
-        Me.Label39.Location = New System.Drawing.Point(40, 24)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(67, 13)
-        Me.Label39.TabIndex = 35
-        Me.Label39.Text = "Employee ID"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = true
-        Me.Label40.Location = New System.Drawing.Point(40, 185)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(84, 13)
-        Me.Label40.TabIndex = 39
-        Me.Label40.Text = "Contact Number"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = true
-        Me.Label41.Location = New System.Drawing.Point(40, 150)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(56, 13)
-        Me.Label41.TabIndex = 38
-        Me.Label41.Text = "Emp Email"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = true
-        Me.Label42.Location = New System.Drawing.Point(40, 120)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(55, 13)
-        Me.Label42.TabIndex = 37
-        Me.Label42.Text = "Emp Type"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = true
-        Me.Label43.Location = New System.Drawing.Point(40, 87)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(65, 13)
-        Me.Label43.TabIndex = 36
-        Me.Label43.Text = "Emp LName"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = true
-        Me.Label44.Location = New System.Drawing.Point(40, 54)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(65, 13)
-        Me.Label44.TabIndex = 34
-        Me.Label44.Text = "Emp FName"
+        Me.Employee.UseVisualStyleBackColor = True
         '
         'Product
         '
@@ -470,7 +319,7 @@ Partial Class GenManager
         Me.Products.Size = New System.Drawing.Size(1240, 622)
         Me.Products.TabIndex = 15
         Me.Products.Text = "Products"
-        Me.Products.UseVisualStyleBackColor = true
+        Me.Products.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -487,9 +336,9 @@ Partial Class GenManager
         '
         'btrnDisableProduct
         '
-        Me.btrnDisableProduct.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.btrnDisableProduct.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btrnDisableProduct.Image = Global.MenuForms.My.Resources.Resources.network_error_icon
         Me.btrnDisableProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btrnDisableProduct.Location = New System.Drawing.Point(717, 4)
@@ -499,13 +348,13 @@ Partial Class GenManager
         Me.btrnDisableProduct.TabIndex = 31
         Me.btrnDisableProduct.Text = "Deactivate Product"
         Me.btrnDisableProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btrnDisableProduct.UseVisualStyleBackColor = true
+        Me.btrnDisableProduct.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Button2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button2.Location = New System.Drawing.Point(536, 4)
@@ -515,13 +364,13 @@ Partial Class GenManager
         Me.Button2.TabIndex = 30
         Me.Button2.Text = "Remove"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.UseVisualStyleBackColor = true
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button18
         '
-        Me.Button18.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Button18.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button18.Image = Global.MenuForms.My.Resources.Resources.Save_icon
         Me.Button18.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button18.Location = New System.Drawing.Point(350, 4)
@@ -531,13 +380,13 @@ Partial Class GenManager
         Me.Button18.TabIndex = 29
         Me.Button18.Text = "Save"
         Me.Button18.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button18.UseVisualStyleBackColor = true
+        Me.Button18.UseVisualStyleBackColor = True
         '
         'Button20
         '
-        Me.Button20.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Button20.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button20.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.Button20.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button20.Location = New System.Drawing.Point(5, 4)
@@ -547,13 +396,13 @@ Partial Class GenManager
         Me.Button20.TabIndex = 27
         Me.Button20.Text = "Add New Product"
         Me.Button20.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button20.UseVisualStyleBackColor = true
+        Me.Button20.UseVisualStyleBackColor = True
         '
         'btnUpdate
         '
-        Me.btnUpdate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.btnUpdate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.btnUpdate.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
         Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -564,12 +413,12 @@ Partial Class GenManager
         Me.btnUpdate.TabIndex = 28
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnUpdate.UseCompatibleTextRendering = true
-        Me.btnUpdate.UseVisualStyleBackColor = true
+        Me.btnUpdate.UseCompatibleTextRendering = True
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'cbSearchParam
         '
-        Me.cbSearchParam.FormattingEnabled = true
+        Me.cbSearchParam.FormattingEnabled = True
         Me.cbSearchParam.Items.AddRange(New Object() {"By Product Code", "By Name"})
         Me.cbSearchParam.Location = New System.Drawing.Point(924, 176)
         Me.cbSearchParam.Name = "cbSearchParam"
@@ -578,10 +427,10 @@ Partial Class GenManager
         '
         'DataGridView5
         '
-        Me.DataGridView5.AllowUserToOrderColumns = true
+        Me.DataGridView5.AllowUserToOrderColumns = True
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -599,16 +448,16 @@ Partial Class GenManager
         '
         Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.ProductCode.DividerWidth = 1
-        Me.ProductCode.FillWeight = 80!
+        Me.ProductCode.FillWeight = 80.0!
         Me.ProductCode.HeaderText = "Product Code"
         Me.ProductCode.MinimumWidth = 40
         Me.ProductCode.Name = "ProductCode"
-        Me.ProductCode.ReadOnly = true
+        Me.ProductCode.ReadOnly = True
         '
         'ProductDescript
         '
         Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductDescript.FillWeight = 200!
+        Me.ProductDescript.FillWeight = 200.0!
         Me.ProductDescript.HeaderText = "Product Name"
         Me.ProductDescript.MinimumWidth = 80
         Me.ProductDescript.Name = "ProductDescript"
@@ -630,7 +479,7 @@ Partial Class GenManager
         'Vat
         '
         Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Vat.FillWeight = 50!
+        Me.Vat.FillWeight = 50.0!
         Me.Vat.HeaderText = "Vat"
         Me.Vat.MinimumWidth = 25
         Me.Vat.Name = "Vat"
@@ -638,7 +487,7 @@ Partial Class GenManager
         'Active
         '
         Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Active.FillWeight = 50!
+        Me.Active.FillWeight = 50.0!
         Me.Active.HeaderText = "Active"
         Me.Active.MinimumWidth = 25
         Me.Active.Name = "Active"
@@ -684,7 +533,7 @@ Partial Class GenManager
         Me.Button21.Size = New System.Drawing.Size(125, 30)
         Me.Button21.TabIndex = 14
         Me.Button21.Text = "Search Product"
-        Me.Button21.UseVisualStyleBackColor = true
+        Me.Button21.UseVisualStyleBackColor = True
         '
         'Customer
         '
@@ -699,7 +548,7 @@ Partial Class GenManager
         Me.Customer.Size = New System.Drawing.Size(1240, 622)
         Me.Customer.TabIndex = 12
         Me.Customer.Text = "Customer"
-        Me.Customer.UseVisualStyleBackColor = true
+        Me.Customer.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -723,7 +572,7 @@ Partial Class GenManager
         Me.btnRemove.TabIndex = 31
         Me.btnRemove.Text = "Remove"
         Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemove.UseVisualStyleBackColor = true
+        Me.btnRemove.UseVisualStyleBackColor = True
         '
         'btnSave
         '
@@ -736,7 +585,7 @@ Partial Class GenManager
         Me.btnSave.TabIndex = 30
         Me.btnSave.Text = "Save"
         Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSave.UseVisualStyleBackColor = true
+        Me.btnSave.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -750,8 +599,8 @@ Partial Class GenManager
         Me.Button4.TabIndex = 29
         Me.Button4.Text = "Update"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button4.UseCompatibleTextRendering = true
-        Me.Button4.UseVisualStyleBackColor = true
+        Me.Button4.UseCompatibleTextRendering = True
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'btnAddNewProduct
         '
@@ -764,11 +613,11 @@ Partial Class GenManager
         Me.btnAddNewProduct.TabIndex = 28
         Me.btnAddNewProduct.Text = "Add New Customer"
         Me.btnAddNewProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddNewProduct.UseVisualStyleBackColor = true
+        Me.btnAddNewProduct.UseVisualStyleBackColor = True
         '
         'ComboBox3
         '
-        Me.ComboBox3.FormattingEnabled = true
+        Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(358, 20)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
@@ -837,7 +686,7 @@ Partial Class GenManager
         Me.Button1.Size = New System.Drawing.Size(104, 25)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Search Customer"
-        Me.Button1.UseVisualStyleBackColor = true
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Payment
         '
@@ -853,11 +702,11 @@ Partial Class GenManager
         Me.Payment.Size = New System.Drawing.Size(1240, 622)
         Me.Payment.TabIndex = 14
         Me.Payment.Text = "Payment"
-        Me.Payment.UseVisualStyleBackColor = true
+        Me.Payment.UseVisualStyleBackColor = True
         '
         'ComboBox6
         '
-        Me.ComboBox6.FormattingEnabled = true
+        Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Location = New System.Drawing.Point(175, 87)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(121, 21)
@@ -865,7 +714,7 @@ Partial Class GenManager
         '
         'ComboBox7
         '
-        Me.ComboBox7.FormattingEnabled = true
+        Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Location = New System.Drawing.Point(386, 22)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
@@ -924,7 +773,7 @@ Partial Class GenManager
         Me.Button10.Size = New System.Drawing.Size(108, 23)
         Me.Button10.TabIndex = 1
         Me.Button10.Text = "Search Payments"
-        Me.Button10.UseVisualStyleBackColor = true
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'Button17
         '
@@ -933,7 +782,7 @@ Partial Class GenManager
         Me.Button17.Size = New System.Drawing.Size(108, 23)
         Me.Button17.TabIndex = 0
         Me.Button17.Text = "View Payments"
-        Me.Button17.UseVisualStyleBackColor = true
+        Me.Button17.UseVisualStyleBackColor = True
         '
         'Supplier
         '
@@ -950,7 +799,7 @@ Partial Class GenManager
         Me.Supplier.Size = New System.Drawing.Size(1240, 622)
         Me.Supplier.TabIndex = 13
         Me.Supplier.Text = "Supplier"
-        Me.Supplier.UseVisualStyleBackColor = true
+        Me.Supplier.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -974,7 +823,7 @@ Partial Class GenManager
         Me.Button5.TabIndex = 31
         Me.Button5.Text = "Remove"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button5.UseVisualStyleBackColor = true
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Button7
         '
@@ -987,7 +836,7 @@ Partial Class GenManager
         Me.Button7.TabIndex = 30
         Me.Button7.Text = "Save"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button7.UseVisualStyleBackColor = true
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
@@ -1001,8 +850,8 @@ Partial Class GenManager
         Me.Button8.TabIndex = 29
         Me.Button8.Text = "Update"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button8.UseCompatibleTextRendering = true
-        Me.Button8.UseVisualStyleBackColor = true
+        Me.Button8.UseCompatibleTextRendering = True
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
@@ -1015,11 +864,11 @@ Partial Class GenManager
         Me.Button9.TabIndex = 28
         Me.Button9.Text = "Add New Supplier"
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button9.UseVisualStyleBackColor = true
+        Me.Button9.UseVisualStyleBackColor = True
         '
         'ComboBox5
         '
-        Me.ComboBox5.FormattingEnabled = true
+        Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Location = New System.Drawing.Point(165, 102)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
@@ -1032,11 +881,11 @@ Partial Class GenManager
         Me.Button3.Size = New System.Drawing.Size(108, 23)
         Me.Button3.TabIndex = 63
         Me.Button3.Text = "View Supplier"
-        Me.Button3.UseVisualStyleBackColor = true
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'ComboBox4
         '
-        Me.ComboBox4.FormattingEnabled = true
+        Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Location = New System.Drawing.Point(277, 39)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
@@ -1088,7 +937,7 @@ Partial Class GenManager
         Me.Button6.Size = New System.Drawing.Size(75, 29)
         Me.Button6.TabIndex = 58
         Me.Button6.Text = "Search"
-        Me.Button6.UseVisualStyleBackColor = true
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
@@ -1097,38 +946,168 @@ Partial Class GenManager
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 57
         '
+        'DataGridView6
+        '
+        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column25, Me.Column26})
+        Me.DataGridView6.Location = New System.Drawing.Point(19, 121)
+        Me.DataGridView6.Name = "DataGridView6"
+        Me.DataGridView6.Size = New System.Drawing.Size(617, 250)
+        Me.DataGridView6.TabIndex = 51
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "Employee ID"
+        Me.Column21.Name = "Column21"
+        '
+        'Column22
+        '
+        Me.Column22.HeaderText = "Employee First Name"
+        Me.Column22.Name = "Column22"
+        '
+        'Column23
+        '
+        Me.Column23.HeaderText = "Employee Last Name"
+        Me.Column23.Name = "Column23"
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "Employee Type"
+        Me.Column24.Name = "Column24"
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "Employee Email"
+        Me.Column25.Name = "Column25"
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "Employee Contact Number"
+        Me.Column26.Name = "Column26"
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(361, 42)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox8.TabIndex = 54
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(174, 43)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(151, 20)
+        Me.TextBox1.TabIndex = 53
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(19, 38)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(104, 25)
+        Me.Button11.TabIndex = 52
+        Me.Button11.Text = "Search Employee"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Button12)
+        Me.Panel4.Controls.Add(Me.Button13)
+        Me.Panel4.Controls.Add(Me.Button14)
+        Me.Panel4.Controls.Add(Me.Button15)
+        Me.Panel4.Location = New System.Drawing.Point(674, 38)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(171, 415)
+        Me.Panel4.TabIndex = 55
+        '
+        'Button12
+        '
+        Me.Button12.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
+        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button12.Location = New System.Drawing.Point(22, 306)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(121, 88)
+        Me.Button12.TabIndex = 31
+        Me.Button12.Text = "Remove"
+        Me.Button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Image = Global.MenuForms.My.Resources.Resources.Save_icon
+        Me.Button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button13.Location = New System.Drawing.Point(22, 207)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(121, 91)
+        Me.Button13.TabIndex = 30
+        Me.Button13.Text = "Save"
+        Me.Button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Button14.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
+        Me.Button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button14.Location = New System.Drawing.Point(22, 112)
+        Me.Button14.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(121, 87)
+        Me.Button14.TabIndex = 29
+        Me.Button14.Text = "Update"
+        Me.Button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button14.UseCompatibleTextRendering = True
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Image = Global.MenuForms.My.Resources.Resources.add_icon
+        Me.Button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button15.Location = New System.Drawing.Point(22, 15)
+        Me.Button15.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(121, 89)
+        Me.Button15.TabIndex = 28
+        Me.Button15.Text = "Add New Employee"
+        Me.Button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button15.UseVisualStyleBackColor = True
+        '
         'GenManager
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1279, 701)
         Me.Controls.Add(Me.Product)
         Me.Name = "GenManager"
         Me.Text = "General Manager"
-        Me.PurchaseOrder.ResumeLayout(false)
-        Me.PurchaseOrder.PerformLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Employee.ResumeLayout(false)
-        Me.Employee.PerformLayout
-        Me.Product.ResumeLayout(false)
-        Me.Products.ResumeLayout(false)
-        Me.Products.PerformLayout
-        Me.Panel3.ResumeLayout(false)
-        CType(Me.DataGridView5,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Customer.ResumeLayout(false)
-        Me.Customer.PerformLayout
-        Me.Panel1.ResumeLayout(false)
-        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Payment.ResumeLayout(false)
-        Me.Payment.PerformLayout
-        CType(Me.DataGridView4,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Supplier.ResumeLayout(false)
-        Me.Supplier.PerformLayout
-        Me.Panel2.ResumeLayout(false)
-        CType(Me.DataGridView3,System.ComponentModel.ISupportInitialize).EndInit
-        Me.ResumeLayout(false)
+        Me.PurchaseOrder.ResumeLayout(False)
+        Me.PurchaseOrder.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Employee.ResumeLayout(False)
+        Me.Employee.PerformLayout()
+        Me.Product.ResumeLayout(False)
+        Me.Products.ResumeLayout(False)
+        Me.Products.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Customer.ResumeLayout(False)
+        Me.Customer.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Payment.ResumeLayout(False)
+        Me.Payment.PerformLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Supplier.ResumeLayout(False)
+        Me.Supplier.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.ResumeLayout(False)
 
-End Sub
+    End Sub
     Friend WithEvents PurchaseOrder As TabPage
     Friend WithEvents TextBox58 As TextBox
     Friend WithEvents Label53 As Label
@@ -1137,23 +1116,6 @@ End Sub
     Friend WithEvents Label58 As Label
     Friend WithEvents Button19 As Button
     Friend WithEvents Employee As TabPage
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents TextBox38 As TextBox
-    Friend WithEvents TextBox39 As TextBox
-    Friend WithEvents TextBox40 As TextBox
-    Friend WithEvents TextBox41 As TextBox
-    Friend WithEvents TextBox42 As TextBox
-    Friend WithEvents TextBox43 As TextBox
-    Friend WithEvents TextBox44 As TextBox
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label44 As Label
     Friend WithEvents Product As TabControl
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
@@ -1235,4 +1197,19 @@ End Sub
     Friend WithEvents tbcSupplier As DataGridViewTextBoxColumn
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents Button21 As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button11 As Button
+    Friend WithEvents DataGridView6 As DataGridView
+    Friend WithEvents Column21 As DataGridViewTextBoxColumn
+    Friend WithEvents Column22 As DataGridViewTextBoxColumn
+    Friend WithEvents Column23 As DataGridViewTextBoxColumn
+    Friend WithEvents Column24 As DataGridViewTextBoxColumn
+    Friend WithEvents Column25 As DataGridViewTextBoxColumn
+    Friend WithEvents Column26 As DataGridViewTextBoxColumn
 End Class
