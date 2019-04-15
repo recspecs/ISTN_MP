@@ -20,7 +20,7 @@
             Sales_Rep.Show()
             Me.Hide()
         ElseIf WarehouseMngRadioBtn.Checked = True Then
-            Gen_Manager.Show()
+            GenManager.Show()
             Me.Hide()
         End If
     End Sub

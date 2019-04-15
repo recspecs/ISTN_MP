@@ -58,37 +58,37 @@ Partial Class WarehouseManager
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Tc_WarehouseManager = New System.Windows.Forms.TabControl()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.tbcSupplier = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReturnId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PoDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PONum = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Active = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Vat = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.OnHand = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SellingPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductDescript = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cbSearchParam = New System.Windows.Forms.ComboBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.InventoryTab = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btrnDisableProduct = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnAddNewProduct = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.cbSearchParam = New System.Windows.Forms.ComboBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductDescript = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SellingPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OnHand = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Vat = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Active = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PONum = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReturnId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbcSupplier = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.RecSpecDatasetBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
         Me.TabPage3.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.Tc_WarehouseManager.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Panel1.SuspendLayout
         Me.InventoryTab.SuspendLayout
+        Me.Panel1.SuspendLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
         'RecSpecDatasetBindingSource
@@ -136,7 +136,7 @@ Partial Class WarehouseManager
         Me.TabPage3.Location = New System.Drawing.Point(4, 26)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1327, 858)
+        Me.TabPage3.Size = New System.Drawing.Size(1265, 618)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Returns"
         Me.TabPage3.UseVisualStyleBackColor = true
@@ -337,7 +337,7 @@ Partial Class WarehouseManager
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage1.Size = New System.Drawing.Size(1327, 858)
+        Me.TabPage1.Size = New System.Drawing.Size(1327, 618)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Orders"
         Me.TabPage1.UseVisualStyleBackColor = true
@@ -407,144 +407,8 @@ Partial Class WarehouseManager
         Me.Tc_WarehouseManager.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Tc_WarehouseManager.Name = "Tc_WarehouseManager"
         Me.Tc_WarehouseManager.SelectedIndex = 0
-        Me.Tc_WarehouseManager.Size = New System.Drawing.Size(1335, 888)
+        Me.Tc_WarehouseManager.Size = New System.Drawing.Size(1248, 648)
         Me.Tc_WarehouseManager.TabIndex = 0
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(116, 296)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(125, 30)
-        Me.Button7.TabIndex = 14
-        Me.Button7.Text = "Search Product"
-        Me.Button7.UseVisualStyleBackColor = true
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Location = New System.Drawing.Point(266, 300)
-        Me.TextBox21.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(560, 25)
-        Me.TextBox21.TabIndex = 15
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToOrderColumns = true
-        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DataGridView1.AutoGenerateColumns = false
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCode, Me.ProductDescript, Me.SellingPrice, Me.OnHand, Me.Vat, Me.Active, Me.PONum, Me.PoDate, Me.ReturnId, Me.LastReturnDate, Me.tbcSupplier})
-        Me.DataGridView1.DataSource = Me.RecSpecDatasetBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(57, 367)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1211, 483)
-        Me.DataGridView1.TabIndex = 16
-        '
-        'tbcSupplier
-        '
-        Me.tbcSupplier.HeaderText = "Supplier"
-        Me.tbcSupplier.Name = "tbcSupplier"
-        '
-        'LastReturnDate
-        '
-        Me.LastReturnDate.HeaderText = "Last Return Date"
-        Me.LastReturnDate.Name = "LastReturnDate"
-        '
-        'ReturnId
-        '
-        Me.ReturnId.HeaderText = "Return ID"
-        Me.ReturnId.Name = "ReturnId"
-        '
-        'PoDate
-        '
-        Me.PoDate.HeaderText = "Last PO Date"
-        Me.PoDate.Name = "PoDate"
-        '
-        'PONum
-        '
-        Me.PONum.HeaderText = "PO Number"
-        Me.PONum.Name = "PONum"
-        '
-        'Active
-        '
-        Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Active.FillWeight = 50!
-        Me.Active.HeaderText = "Active"
-        Me.Active.MinimumWidth = 25
-        Me.Active.Name = "Active"
-        '
-        'Vat
-        '
-        Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Vat.FillWeight = 50!
-        Me.Vat.HeaderText = "Vat"
-        Me.Vat.MinimumWidth = 25
-        Me.Vat.Name = "Vat"
-        '
-        'OnHand
-        '
-        Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.OnHand.FillWeight = 88.55048!
-        Me.OnHand.HeaderText = "On Hand"
-        Me.OnHand.Name = "OnHand"
-        '
-        'SellingPrice
-        '
-        Me.SellingPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.SellingPrice.FillWeight = 88.55048!
-        Me.SellingPrice.HeaderText = "Selling Price"
-        Me.SellingPrice.Name = "SellingPrice"
-        '
-        'ProductDescript
-        '
-        Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductDescript.FillWeight = 200!
-        Me.ProductDescript.HeaderText = "Product Name"
-        Me.ProductDescript.MinimumWidth = 80
-        Me.ProductDescript.Name = "ProductDescript"
-        '
-        'ProductCode
-        '
-        Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductCode.DividerWidth = 1
-        Me.ProductCode.FillWeight = 80!
-        Me.ProductCode.HeaderText = "Product Code"
-        Me.ProductCode.MinimumWidth = 40
-        Me.ProductCode.Name = "ProductCode"
-        Me.ProductCode.ReadOnly = true
-        '
-        'cbSearchParam
-        '
-        Me.cbSearchParam.FormattingEnabled = true
-        Me.cbSearchParam.Items.AddRange(New Object() {"By Product Code", "By Name"})
-        Me.cbSearchParam.Location = New System.Drawing.Point(860, 300)
-        Me.cbSearchParam.Name = "cbSearchParam"
-        Me.cbSearchParam.Size = New System.Drawing.Size(151, 25)
-        Me.cbSearchParam.TabIndex = 22
-        '
-        'Panel1
-        '
-        Me.Panel1.AutoSize = true
-        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.Controls.Add(Me.btrnDisableProduct)
-        Me.Panel1.Controls.Add(Me.btnRemove)
-        Me.Panel1.Controls.Add(Me.btnSave)
-        Me.Panel1.Controls.Add(Me.btnAddNewProduct)
-        Me.Panel1.Controls.Add(Me.btnUpdate)
-        Me.Panel1.Location = New System.Drawing.Point(156, 70)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(841, 126)
-        Me.Panel1.TabIndex = 27
         '
         'InventoryTab
         '
@@ -557,13 +421,29 @@ Partial Class WarehouseManager
         Me.InventoryTab.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.InventoryTab.Name = "InventoryTab"
         Me.InventoryTab.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.InventoryTab.Size = New System.Drawing.Size(1327, 858)
+        Me.InventoryTab.Size = New System.Drawing.Size(1240, 618)
         Me.InventoryTab.TabIndex = 1
         Me.InventoryTab.Text = "Products"
         Me.InventoryTab.UseVisualStyleBackColor = true
         '
+        'Panel1
+        '
+        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel1.Controls.Add(Me.btrnDisableProduct)
+        Me.Panel1.Controls.Add(Me.btnRemove)
+        Me.Panel1.Controls.Add(Me.btnSave)
+        Me.Panel1.Controls.Add(Me.btnAddNewProduct)
+        Me.Panel1.Controls.Add(Me.btnUpdate)
+        Me.Panel1.Location = New System.Drawing.Point(205, 30)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(841, 126)
+        Me.Panel1.TabIndex = 27
+        '
         'btrnDisableProduct
         '
+        Me.btrnDisableProduct.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btrnDisableProduct.Image = Global.MenuForms.My.Resources.Resources.network_error_icon
         Me.btrnDisableProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btrnDisableProduct.Location = New System.Drawing.Point(717, 4)
@@ -577,6 +457,9 @@ Partial Class WarehouseManager
         '
         'btnRemove
         '
+        Me.btnRemove.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnRemove.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
         Me.btnRemove.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemove.Location = New System.Drawing.Point(536, 4)
@@ -590,6 +473,9 @@ Partial Class WarehouseManager
         '
         'btnSave
         '
+        Me.btnSave.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnSave.Image = Global.MenuForms.My.Resources.Resources.Save_icon
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSave.Location = New System.Drawing.Point(350, 4)
@@ -603,6 +489,9 @@ Partial Class WarehouseManager
         '
         'btnAddNewProduct
         '
+        Me.btnAddNewProduct.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnAddNewProduct.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.btnAddNewProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnAddNewProduct.Location = New System.Drawing.Point(5, 4)
@@ -616,6 +505,9 @@ Partial Class WarehouseManager
         '
         'btnUpdate
         '
+        Me.btnUpdate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.btnUpdate.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
         Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -629,11 +521,132 @@ Partial Class WarehouseManager
         Me.btnUpdate.UseCompatibleTextRendering = true
         Me.btnUpdate.UseVisualStyleBackColor = true
         '
+        'cbSearchParam
+        '
+        Me.cbSearchParam.FormattingEnabled = true
+        Me.cbSearchParam.Items.AddRange(New Object() {"By Product Code", "By Name"})
+        Me.cbSearchParam.Location = New System.Drawing.Point(924, 176)
+        Me.cbSearchParam.Name = "cbSearchParam"
+        Me.cbSearchParam.Size = New System.Drawing.Size(151, 25)
+        Me.cbSearchParam.TabIndex = 22
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = true
+        Me.DataGridView1.AutoGenerateColumns = false
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCode, Me.ProductDescript, Me.SellingPrice, Me.OnHand, Me.Vat, Me.Active, Me.PONum, Me.PoDate, Me.ReturnId, Me.LastReturnDate, Me.tbcSupplier})
+        Me.DataGridView1.DataSource = Me.RecSpecDatasetBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(19, 220)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(1211, 390)
+        Me.DataGridView1.TabIndex = 16
+        '
+        'ProductCode
+        '
+        Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ProductCode.DividerWidth = 1
+        Me.ProductCode.FillWeight = 80!
+        Me.ProductCode.HeaderText = "Product Code"
+        Me.ProductCode.MinimumWidth = 40
+        Me.ProductCode.Name = "ProductCode"
+        Me.ProductCode.ReadOnly = true
+        '
+        'ProductDescript
+        '
+        Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ProductDescript.FillWeight = 200!
+        Me.ProductDescript.HeaderText = "Product Name"
+        Me.ProductDescript.MinimumWidth = 80
+        Me.ProductDescript.Name = "ProductDescript"
+        '
+        'SellingPrice
+        '
+        Me.SellingPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.SellingPrice.FillWeight = 88.55048!
+        Me.SellingPrice.HeaderText = "Selling Price"
+        Me.SellingPrice.Name = "SellingPrice"
+        '
+        'OnHand
+        '
+        Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.OnHand.FillWeight = 88.55048!
+        Me.OnHand.HeaderText = "On Hand"
+        Me.OnHand.Name = "OnHand"
+        '
+        'Vat
+        '
+        Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Vat.FillWeight = 50!
+        Me.Vat.HeaderText = "Vat"
+        Me.Vat.MinimumWidth = 25
+        Me.Vat.Name = "Vat"
+        '
+        'Active
+        '
+        Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Active.FillWeight = 50!
+        Me.Active.HeaderText = "Active"
+        Me.Active.MinimumWidth = 25
+        Me.Active.Name = "Active"
+        '
+        'PONum
+        '
+        Me.PONum.HeaderText = "PO Number"
+        Me.PONum.Name = "PONum"
+        '
+        'PoDate
+        '
+        Me.PoDate.HeaderText = "Last PO Date"
+        Me.PoDate.Name = "PoDate"
+        '
+        'ReturnId
+        '
+        Me.ReturnId.HeaderText = "Return ID"
+        Me.ReturnId.Name = "ReturnId"
+        '
+        'LastReturnDate
+        '
+        Me.LastReturnDate.HeaderText = "Last Return Date"
+        Me.LastReturnDate.Name = "LastReturnDate"
+        '
+        'tbcSupplier
+        '
+        Me.tbcSupplier.HeaderText = "Supplier"
+        Me.tbcSupplier.Name = "tbcSupplier"
+        '
+        'TextBox21
+        '
+        Me.TextBox21.Location = New System.Drawing.Point(330, 176)
+        Me.TextBox21.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.Size = New System.Drawing.Size(560, 25)
+        Me.TextBox21.TabIndex = 15
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(180, 172)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(125, 30)
+        Me.Button7.TabIndex = 14
+        Me.Button7.Text = "Search Product"
+        Me.Button7.UseVisualStyleBackColor = true
+        '
         'WarehouseManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1384, 931)
+        Me.ClientSize = New System.Drawing.Size(1279, 701)
         Me.Controls.Add(Me.Tc_WarehouseManager)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -648,10 +661,10 @@ Partial Class WarehouseManager
         Me.TabPage1.ResumeLayout(false)
         Me.TabPage1.PerformLayout
         Me.Tc_WarehouseManager.ResumeLayout(false)
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Panel1.ResumeLayout(false)
         Me.InventoryTab.ResumeLayout(false)
         Me.InventoryTab.PerformLayout
+        Me.Panel1.ResumeLayout(false)
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
 
 End Sub
