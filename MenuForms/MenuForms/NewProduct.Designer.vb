@@ -231,7 +231,7 @@ Partial Class NewProduct
         '
         Me.btnAdd.Image = Global.MenuForms.My.Resources.Resources.Action_ok_icon
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.Location = New System.Drawing.Point(420, 431)
+        Me.btnAdd.Location = New System.Drawing.Point(193, 419)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
         Me.btnAdd.Size = New System.Drawing.Size(92, 40)
@@ -244,7 +244,7 @@ Partial Class NewProduct
         '
         Me.btnCancel.Image = Global.MenuForms.My.Resources.Resources.delete_icon__1_
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancel.Location = New System.Drawing.Point(588, 431)
+        Me.btnCancel.Location = New System.Drawing.Point(444, 419)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.btnCancel.Size = New System.Drawing.Size(92, 40)
