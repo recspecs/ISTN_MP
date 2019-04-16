@@ -55,12 +55,6 @@ Partial Class Sales_Rep
         Me.PoCostPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.PurchaseOrderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PurOrderDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PoPurTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Supp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.srRunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RecEmployee = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -129,6 +123,13 @@ Partial Class Sales_Rep
         Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sales_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PurchaseOrderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PurOrderDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Supp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PaymentType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoPurTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.srRunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecEmployee = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SalesOrder.SuspendLayout
         Me.srSalesOrder.SuspendLayout
         Me.Panel6.SuspendLayout
@@ -365,7 +366,7 @@ Partial Class Sales_Rep
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PurchaseOrderID, Me.PurOrderDate, Me.PoPurTotal, Me.Supp, Me.srRunningBalance, Me.RecEmployee})
+        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PurchaseOrderID, Me.PurOrderDate, Me.Supp, Me.PaymentType, Me.PoPurTotal, Me.srRunningBalance, Me.RecEmployee})
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
@@ -386,42 +387,6 @@ Partial Class Sales_Rep
         Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView4.Size = New System.Drawing.Size(831, 213)
         Me.DataGridView4.TabIndex = 61
-        '
-        'PurchaseOrderID
-        '
-        Me.PurchaseOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.PurchaseOrderID.FillWeight = 50!
-        Me.PurchaseOrderID.HeaderText = "SO-ID"
-        Me.PurchaseOrderID.Name = "PurchaseOrderID"
-        '
-        'PurOrderDate
-        '
-        Me.PurOrderDate.FillWeight = 53.53319!
-        Me.PurOrderDate.HeaderText = "SO-Date"
-        Me.PurOrderDate.Name = "PurOrderDate"
-        '
-        'PoPurTotal
-        '
-        Me.PoPurTotal.FillWeight = 79.38996!
-        Me.PoPurTotal.HeaderText = "SO Total"
-        Me.PoPurTotal.Name = "PoPurTotal"
-        '
-        'Supp
-        '
-        Me.Supp.FillWeight = 123.0947!
-        Me.Supp.HeaderText = "Customer"
-        Me.Supp.Name = "Supp"
-        '
-        'srRunningBalance
-        '
-        Me.srRunningBalance.HeaderText = "RunningBalance(excl.)"
-        Me.srRunningBalance.Name = "srRunningBalance"
-        '
-        'RecEmployee
-        '
-        Me.RecEmployee.FillWeight = 141.5038!
-        Me.RecEmployee.HeaderText = "Sales Rep."
-        Me.RecEmployee.Name = "RecEmployee"
         '
         'TabPage2
         '
@@ -1094,11 +1059,52 @@ Partial Class Sales_Rep
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
+        'PurchaseOrderID
+        '
+        Me.PurchaseOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PurchaseOrderID.FillWeight = 50!
+        Me.PurchaseOrderID.HeaderText = "SO-ID"
+        Me.PurchaseOrderID.Name = "PurchaseOrderID"
+        '
+        'PurOrderDate
+        '
+        Me.PurOrderDate.FillWeight = 53.53319!
+        Me.PurOrderDate.HeaderText = "SO-Date"
+        Me.PurOrderDate.Name = "PurOrderDate"
+        '
+        'Supp
+        '
+        Me.Supp.FillWeight = 123.0947!
+        Me.Supp.HeaderText = "Customer"
+        Me.Supp.Name = "Supp"
+        '
+        'PaymentType
+        '
+        Me.PaymentType.HeaderText = "Payment Type"
+        Me.PaymentType.Name = "PaymentType"
+        '
+        'PoPurTotal
+        '
+        Me.PoPurTotal.FillWeight = 79.38996!
+        Me.PoPurTotal.HeaderText = "SO Total"
+        Me.PoPurTotal.Name = "PoPurTotal"
+        '
+        'srRunningBalance
+        '
+        Me.srRunningBalance.HeaderText = "RunningBalance(excl.)"
+        Me.srRunningBalance.Name = "srRunningBalance"
+        '
+        'RecEmployee
+        '
+        Me.RecEmployee.FillWeight = 141.5038!
+        Me.RecEmployee.HeaderText = "Sales Rep."
+        Me.RecEmployee.Name = "RecEmployee"
+        '
         'Sales_Rep
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1151, 828)
+        Me.ClientSize = New System.Drawing.Size(1264, 828)
         Me.Controls.Add(Me.SalesOrder)
         Me.Name = "Sales_Rep"
         Me.Text = "Sales_Rep"
@@ -1212,8 +1218,9 @@ End Sub
     Friend WithEvents DataGridView4 As DataGridView
     Friend WithEvents PurchaseOrderID As DataGridViewTextBoxColumn
     Friend WithEvents PurOrderDate As DataGridViewTextBoxColumn
-    Friend WithEvents PoPurTotal As DataGridViewTextBoxColumn
     Friend WithEvents Supp As DataGridViewTextBoxColumn
+    Friend WithEvents PaymentType As DataGridViewTextBoxColumn
+    Friend WithEvents PoPurTotal As DataGridViewTextBoxColumn
     Friend WithEvents srRunningBalance As DataGridViewTextBoxColumn
     Friend WithEvents RecEmployee As DataGridViewTextBoxColumn
 End Class
