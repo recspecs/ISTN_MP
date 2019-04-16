@@ -43,3 +43,4 @@ C:\Users\Tony\Source\Repos\ISTN_MPTony\MenuForms\MenuForms\bin\Debug\MenuForms.e
 C:\Users\Esther Dzitiro\Source\Repos\ISTN_MP2Tony\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
 C:\Users\Tony\Source\Repos\ScThTony\ISTN_MPTony\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
 C:\Users\Tony\Source\Repos\ISubs\STN_MP3\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\Tony\Source\Repos\ISTN_MPSubs\MenuForms\MenuForms\bin\Debug\MenuForms.exe.config
