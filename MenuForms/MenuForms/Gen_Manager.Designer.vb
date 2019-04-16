@@ -23,8 +23,9 @@ Partial Class GenManager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Supplier = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -60,27 +61,11 @@ Partial Class GenManager
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProcessingEmployee = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseOrder = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Product_Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cost_Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Purchase_Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Total_Cost = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox58 = New System.Windows.Forms.TextBox()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.Button19 = New System.Windows.Forms.Button()
         Me.Products = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
+        Me.btnAddProduct = New System.Windows.Forms.Button()
         Me.btrnDisableProduct = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button23 = New System.Windows.Forms.Button()
@@ -134,6 +119,29 @@ Partial Class GenManager
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView7 = New System.Windows.Forms.DataGridView()
+        Me.PurchaseOrderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PurOrderDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoPurTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReceivingStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReceivedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecEmployee = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Supp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoCostPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PurchaseQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.btnEmpEdit = New System.Windows.Forms.Button()
+        Me.btnNewEmp = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.lblPO = New System.Windows.Forms.Label()
+        Me.lblPoDetails = New System.Windows.Forms.Label()
         Me.Supplier.SuspendLayout
         Me.Panel2.SuspendLayout
         CType(Me.DataGridView3,System.ComponentModel.ISupportInitialize).BeginInit
@@ -141,7 +149,6 @@ Partial Class GenManager
         Me.Panel5.SuspendLayout
         CType(Me.DataGridView4,System.ComponentModel.ISupportInitialize).BeginInit
         Me.PurchaseOrder.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.Products.SuspendLayout
         Me.Panel3.SuspendLayout
         CType(Me.DataGridView5,System.ComponentModel.ISupportInitialize).BeginInit
@@ -152,6 +159,9 @@ Partial Class GenManager
         Me.Customer.SuspendLayout
         Me.Panel4.SuspendLayout
         CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.DataGridView7,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Panel6.SuspendLayout
         Me.SuspendLayout
         '
         'Supplier
@@ -164,7 +174,7 @@ Partial Class GenManager
         Me.Supplier.Location = New System.Drawing.Point(4, 22)
         Me.Supplier.Name = "Supplier"
         Me.Supplier.Padding = New System.Windows.Forms.Padding(3)
-        Me.Supplier.Size = New System.Drawing.Size(1020, 652)
+        Me.Supplier.Size = New System.Drawing.Size(1020, 680)
         Me.Supplier.TabIndex = 13
         Me.Supplier.Text = "Supplier"
         Me.Supplier.UseVisualStyleBackColor = true
@@ -335,7 +345,7 @@ Partial Class GenManager
         Me.Payment.Location = New System.Drawing.Point(4, 22)
         Me.Payment.Name = "Payment"
         Me.Payment.Padding = New System.Windows.Forms.Padding(3)
-        Me.Payment.Size = New System.Drawing.Size(1020, 652)
+        Me.Payment.Size = New System.Drawing.Size(1020, 680)
         Me.Payment.TabIndex = 14
         Me.Payment.Text = "Payment"
         Me.Payment.UseVisualStyleBackColor = true
@@ -502,144 +512,21 @@ Partial Class GenManager
         '
         'PurchaseOrder
         '
-        Me.PurchaseOrder.Controls.Add(Me.DataGridView1)
-        Me.PurchaseOrder.Controls.Add(Me.ComboBox2)
+        Me.PurchaseOrder.Controls.Add(Me.lblPoDetails)
+        Me.PurchaseOrder.Controls.Add(Me.lblPO)
+        Me.PurchaseOrder.Controls.Add(Me.Panel6)
+        Me.PurchaseOrder.Controls.Add(Me.Button30)
         Me.PurchaseOrder.Controls.Add(Me.ComboBox1)
-        Me.PurchaseOrder.Controls.Add(Me.DateTimePicker1)
-        Me.PurchaseOrder.Controls.Add(Me.TextBox58)
-        Me.PurchaseOrder.Controls.Add(Me.Label53)
-        Me.PurchaseOrder.Controls.Add(Me.Label54)
-        Me.PurchaseOrder.Controls.Add(Me.Label57)
-        Me.PurchaseOrder.Controls.Add(Me.Label58)
-        Me.PurchaseOrder.Controls.Add(Me.Button19)
+        Me.PurchaseOrder.Controls.Add(Me.TextBox6)
+        Me.PurchaseOrder.Controls.Add(Me.DataGridView7)
+        Me.PurchaseOrder.Controls.Add(Me.DataGridView1)
         Me.PurchaseOrder.Location = New System.Drawing.Point(4, 22)
         Me.PurchaseOrder.Name = "PurchaseOrder"
         Me.PurchaseOrder.Padding = New System.Windows.Forms.Padding(3)
-        Me.PurchaseOrder.Size = New System.Drawing.Size(1020, 652)
+        Me.PurchaseOrder.Size = New System.Drawing.Size(1020, 680)
         Me.PurchaseOrder.TabIndex = 7
         Me.PurchaseOrder.Text = "Purchase Order"
         Me.PurchaseOrder.UseVisualStyleBackColor = true
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Product_Code, Me.Cost_Price, Me.Purchase_Quantity, Me.Subtotal, Me.Total_Cost, Me.ProductName})
-        Me.DataGridView1.Location = New System.Drawing.Point(82, 274)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(831, 345)
-        Me.DataGridView1.TabIndex = 60
-        '
-        'Product_Code
-        '
-        Me.Product_Code.FillWeight = 53.53319!
-        Me.Product_Code.HeaderText = "Product Code"
-        Me.Product_Code.Name = "Product_Code"
-        '
-        'Cost_Price
-        '
-        Me.Cost_Price.FillWeight = 79.38996!
-        Me.Cost_Price.HeaderText = "Cost Price"
-        Me.Cost_Price.Name = "Cost_Price"
-        '
-        'Purchase_Quantity
-        '
-        Me.Purchase_Quantity.FillWeight = 102.4783!
-        Me.Purchase_Quantity.HeaderText = "Purchase Quantity"
-        Me.Purchase_Quantity.Name = "Purchase_Quantity"
-        '
-        'Subtotal
-        '
-        Me.Subtotal.FillWeight = 123.0947!
-        Me.Subtotal.HeaderText = "Subtotal"
-        Me.Subtotal.Name = "Subtotal"
-        '
-        'Total_Cost
-        '
-        Me.Total_Cost.FillWeight = 141.5038!
-        Me.Total_Cost.HeaderText = "Total Cost"
-        Me.Total_Cost.Name = "Total_Cost"
-        '
-        'ProductName
-        '
-        Me.ProductName.HeaderText = "Product Name"
-        Me.ProductName.Name = "ProductName"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = true
-        Me.ComboBox2.Location = New System.Drawing.Point(374, 185)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox2.TabIndex = 59
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = true
-        Me.ComboBox1.Location = New System.Drawing.Point(374, 158)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox1.TabIndex = 58
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(374, 132)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 57
-        '
-        'TextBox58
-        '
-        Me.TextBox58.Location = New System.Drawing.Point(374, 106)
-        Me.TextBox58.Name = "TextBox58"
-        Me.TextBox58.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox58.TabIndex = 49
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = true
-        Me.Label53.Location = New System.Drawing.Point(234, 158)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(59, 13)
-        Me.Label53.TabIndex = 48
-        Me.Label53.Text = "Supplier ID"
-        '
-        'Label54
-        '
-        Me.Label54.AutoSize = true
-        Me.Label54.Location = New System.Drawing.Point(234, 184)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(67, 13)
-        Me.Label54.TabIndex = 47
-        Me.Label54.Text = "Employee ID"
-        '
-        'Label57
-        '
-        Me.Label57.AutoSize = true
-        Me.Label57.Location = New System.Drawing.Point(234, 132)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(107, 13)
-        Me.Label57.TabIndex = 44
-        Me.Label57.Text = "Purchase Order Date"
-        '
-        'Label58
-        '
-        Me.Label58.AutoSize = true
-        Me.Label58.Location = New System.Drawing.Point(234, 109)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(98, 13)
-        Me.Label58.TabIndex = 43
-        Me.Label58.Text = "Purchase Order No"
-        '
-        'Button19
-        '
-        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 18!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button19.Location = New System.Drawing.Point(597, 106)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(138, 118)
-        Me.Button19.TabIndex = 40
-        Me.Button19.Text = "Add New  Purchase Order"
-        Me.Button19.UseVisualStyleBackColor = true
         '
         'Products
         '
@@ -652,7 +539,7 @@ Partial Class GenManager
         Me.Products.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Products.Name = "Products"
         Me.Products.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Products.Size = New System.Drawing.Size(1020, 652)
+        Me.Products.Size = New System.Drawing.Size(1020, 680)
         Me.Products.TabIndex = 15
         Me.Products.Text = "Products"
         Me.Products.UseVisualStyleBackColor = true
@@ -661,7 +548,7 @@ Partial Class GenManager
         '
         Me.Panel3.Controls.Add(Me.Button18)
         Me.Panel3.Controls.Add(Me.Button20)
-        Me.Panel3.Controls.Add(Me.Button21)
+        Me.Panel3.Controls.Add(Me.btnAddProduct)
         Me.Panel3.Controls.Add(Me.btrnDisableProduct)
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
@@ -700,19 +587,19 @@ Partial Class GenManager
         Me.Button20.UseCompatibleTextRendering = true
         Me.Button20.UseVisualStyleBackColor = true
         '
-        'Button21
+        'btnAddProduct
         '
-        Me.Button21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button21.Image = Global.MenuForms.My.Resources.Resources.add_icon
-        Me.Button21.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button21.Location = New System.Drawing.Point(22, 15)
-        Me.Button21.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(125, 104)
-        Me.Button21.TabIndex = 28
-        Me.Button21.Text = "Add"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new supplier"
-        Me.Button21.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button21.UseVisualStyleBackColor = true
+        Me.btnAddProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnAddProduct.Image = Global.MenuForms.My.Resources.Resources.add_icon
+        Me.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnAddProduct.Location = New System.Drawing.Point(22, 15)
+        Me.btnAddProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAddProduct.Name = "btnAddProduct"
+        Me.btnAddProduct.Size = New System.Drawing.Size(125, 104)
+        Me.btnAddProduct.TabIndex = 28
+        Me.btnAddProduct.Text = "Add"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new Product"
+        Me.btnAddProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnAddProduct.UseVisualStyleBackColor = true
         '
         'btrnDisableProduct
         '
@@ -776,14 +663,14 @@ Partial Class GenManager
         'DataGridView5
         '
         Me.DataGridView5.AllowUserToOrderColumns = true
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCode, Me.ProductDescript, Me.SellingPrice, Me.OnHand, Me.ReOrderLevel, Me.ReOrderQty, Me.Vat, Me.Active, Me.PONum, Me.PoDate, Me.tbcSupplier})
         Me.DataGridView5.Location = New System.Drawing.Point(28, 236)
@@ -1038,7 +925,7 @@ Partial Class GenManager
         Me.Product.Location = New System.Drawing.Point(-1, 1)
         Me.Product.Name = "Product"
         Me.Product.SelectedIndex = 0
-        Me.Product.Size = New System.Drawing.Size(1028, 678)
+        Me.Product.Size = New System.Drawing.Size(1028, 706)
         Me.Product.TabIndex = 1
         '
         'Customer
@@ -1051,7 +938,7 @@ Partial Class GenManager
         Me.Customer.Location = New System.Drawing.Point(4, 22)
         Me.Customer.Name = "Customer"
         Me.Customer.Padding = New System.Windows.Forms.Padding(3)
-        Me.Customer.Size = New System.Drawing.Size(1020, 652)
+        Me.Customer.Size = New System.Drawing.Size(1020, 680)
         Me.Customer.TabIndex = 12
         Me.Customer.Text = "Customer"
         Me.Customer.UseVisualStyleBackColor = true
@@ -1160,14 +1047,14 @@ Partial Class GenManager
         '
         'DataGridView2
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column7, Me.Column5, Me.Column6, Me.Column8, Me.RunningBalance})
         Me.DataGridView2.Location = New System.Drawing.Point(30, 220)
@@ -1234,6 +1121,220 @@ Partial Class GenManager
         Me.RunningBalance.HeaderText = "Balance"
         Me.RunningBalance.Name = "RunningBalance"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PurchaseOrderID, Me.PurOrderDate, Me.PoPurTotal, Me.ReceivingStatus, Me.ReceivedDate, Me.RecEmployee, Me.Supp})
+        Me.DataGridView1.Location = New System.Drawing.Point(81, 211)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(831, 213)
+        Me.DataGridView1.TabIndex = 61
+        '
+        'DataGridView7
+        '
+        Me.DataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView7.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PoProductCode, Me.PoProductName, Me.PoCostPrice, Me.PurchaseQty})
+        Me.DataGridView7.Location = New System.Drawing.Point(81, 455)
+        Me.DataGridView7.Name = "DataGridView7"
+        Me.DataGridView7.Size = New System.Drawing.Size(831, 204)
+        Me.DataGridView7.TabIndex = 62
+        '
+        'PurchaseOrderID
+        '
+        Me.PurchaseOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PurchaseOrderID.FillWeight = 50!
+        Me.PurchaseOrderID.HeaderText = "PO-ID"
+        Me.PurchaseOrderID.Name = "PurchaseOrderID"
+        '
+        'PurOrderDate
+        '
+        Me.PurOrderDate.FillWeight = 53.53319!
+        Me.PurOrderDate.HeaderText = "PO-Date"
+        Me.PurOrderDate.Name = "PurOrderDate"
+        '
+        'PoPurTotal
+        '
+        Me.PoPurTotal.FillWeight = 79.38996!
+        Me.PoPurTotal.HeaderText = "PO Total"
+        Me.PoPurTotal.Name = "PoPurTotal"
+        '
+        'ReceivingStatus
+        '
+        Me.ReceivingStatus.FillWeight = 102.4783!
+        Me.ReceivingStatus.HeaderText = "Receiving Status"
+        Me.ReceivingStatus.Name = "ReceivingStatus"
+        '
+        'ReceivedDate
+        '
+        Me.ReceivedDate.HeaderText = "Received Date"
+        Me.ReceivedDate.Name = "ReceivedDate"
+        '
+        'RecEmployee
+        '
+        Me.RecEmployee.FillWeight = 141.5038!
+        Me.RecEmployee.HeaderText = "Receiving Employee"
+        Me.RecEmployee.Name = "RecEmployee"
+        '
+        'Supp
+        '
+        Me.Supp.FillWeight = 123.0947!
+        Me.Supp.HeaderText = "Supplier"
+        Me.Supp.Name = "Supp"
+        '
+        'PoProductCode
+        '
+        Me.PoProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PoProductCode.FillWeight = 60!
+        Me.PoProductCode.HeaderText = "Product Code"
+        Me.PoProductCode.Name = "PoProductCode"
+        '
+        'PoProductName
+        '
+        Me.PoProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PoProductName.FillWeight = 200!
+        Me.PoProductName.HeaderText = "Product Name"
+        Me.PoProductName.Name = "PoProductName"
+        '
+        'PoCostPrice
+        '
+        Me.PoCostPrice.HeaderText = "Cost Price"
+        Me.PoCostPrice.Name = "PoCostPrice"
+        '
+        'PurchaseQty
+        '
+        Me.PurchaseQty.HeaderText = "Purchase Qty"
+        Me.PurchaseQty.Name = "PurchaseQty"
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.Button19)
+        Me.Panel6.Controls.Add(Me.Button27)
+        Me.Panel6.Controls.Add(Me.btnEmpEdit)
+        Me.Panel6.Controls.Add(Me.btnNewEmp)
+        Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Panel6.Location = New System.Drawing.Point(193, 2)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(624, 135)
+        Me.Panel6.TabIndex = 75
+        '
+        'Button19
+        '
+        Me.Button19.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
+        Me.Button19.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button19.Location = New System.Drawing.Point(485, 15)
+        Me.Button19.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Button19.Size = New System.Drawing.Size(125, 104)
+        Me.Button19.TabIndex = 31
+        Me.Button19.Text = "Remove"
+        Me.Button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button19.UseVisualStyleBackColor = true
+        '
+        'Button27
+        '
+        Me.Button27.Image = Global.MenuForms.My.Resources.Resources.Save_icon
+        Me.Button27.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button27.Location = New System.Drawing.Point(333, 15)
+        Me.Button27.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Button27.Size = New System.Drawing.Size(125, 104)
+        Me.Button27.TabIndex = 30
+        Me.Button27.Text = "Save"
+        Me.Button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button27.UseVisualStyleBackColor = true
+        '
+        'btnEmpEdit
+        '
+        Me.btnEmpEdit.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.btnEmpEdit.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
+        Me.btnEmpEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnEmpEdit.Location = New System.Drawing.Point(187, 15)
+        Me.btnEmpEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnEmpEdit.Name = "btnEmpEdit"
+        Me.btnEmpEdit.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.btnEmpEdit.Size = New System.Drawing.Size(125, 104)
+        Me.btnEmpEdit.TabIndex = 29
+        Me.btnEmpEdit.Text = "Edit"
+        Me.btnEmpEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnEmpEdit.UseCompatibleTextRendering = true
+        Me.btnEmpEdit.UseVisualStyleBackColor = true
+        '
+        'btnNewEmp
+        '
+        Me.btnNewEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnNewEmp.Image = Global.MenuForms.My.Resources.Resources.add_icon
+        Me.btnNewEmp.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnNewEmp.Location = New System.Drawing.Point(22, 15)
+        Me.btnNewEmp.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnNewEmp.Name = "btnNewEmp"
+        Me.btnNewEmp.Size = New System.Drawing.Size(125, 104)
+        Me.btnNewEmp.TabIndex = 28
+        Me.btnNewEmp.Text = "Add new "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"purchase Order"
+        Me.btnNewEmp.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnNewEmp.UseVisualStyleBackColor = true
+        '
+        'Button30
+        '
+        Me.Button30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button30.Image = Global.MenuForms.My.Resources.Resources.search_ico2n
+        Me.Button30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button30.Location = New System.Drawing.Point(227, 155)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button30.Size = New System.Drawing.Size(141, 28)
+        Me.Button30.TabIndex = 74
+        Me.Button30.Text = "Search"
+        Me.Button30.UseVisualStyleBackColor = true
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.ComboBox1.FormattingEnabled = true
+        Me.ComboBox1.Location = New System.Drawing.Point(629, 155)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(159, 25)
+        Me.ComboBox1.TabIndex = 73
+        Me.ComboBox1.Text = "Search criteria..."
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(392, 155)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(194, 25)
+        Me.TextBox6.TabIndex = 72
+        Me.TextBox6.Text = "Enter query ..."
+        '
+        'lblPO
+        '
+        Me.lblPO.AutoSize = true
+        Me.lblPO.Location = New System.Drawing.Point(78, 195)
+        Me.lblPO.Name = "lblPO"
+        Me.lblPO.Size = New System.Drawing.Size(86, 13)
+        Me.lblPO.TabIndex = 76
+        Me.lblPO.Text = "Purchase Orders"
+        '
+        'lblPoDetails
+        '
+        Me.lblPoDetails.AutoSize = true
+        Me.lblPoDetails.Location = New System.Drawing.Point(78, 439)
+        Me.lblPoDetails.Name = "lblPoDetails"
+        Me.lblPoDetails.Size = New System.Drawing.Size(116, 13)
+        Me.lblPoDetails.TabIndex = 77
+        Me.lblPoDetails.Text = "Purchase Order Details"
+        '
         'GenManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -1241,7 +1342,7 @@ Partial Class GenManager
         Me.ClientSize = New System.Drawing.Size(1068, 719)
         Me.Controls.Add(Me.Product)
         Me.Name = "GenManager"
-        Me.Text = "General Manager"
+        Me.Text = "Manager"
         Me.Supplier.ResumeLayout(false)
         Me.Supplier.PerformLayout
         Me.Panel2.ResumeLayout(false)
@@ -1252,7 +1353,6 @@ Partial Class GenManager
         CType(Me.DataGridView4,System.ComponentModel.ISupportInitialize).EndInit
         Me.PurchaseOrder.ResumeLayout(false)
         Me.PurchaseOrder.PerformLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
         Me.Products.ResumeLayout(false)
         Me.Products.PerformLayout
         Me.Panel3.ResumeLayout(false)
@@ -1266,6 +1366,9 @@ Partial Class GenManager
         Me.Customer.PerformLayout
         Me.Panel4.ResumeLayout(false)
         CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.DataGridView7,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Panel6.ResumeLayout(false)
         Me.ResumeLayout(false)
 
 End Sub
@@ -1276,21 +1379,6 @@ End Sub
     Friend WithEvents Payment As TabPage
     Friend WithEvents DataGridView4 As DataGridView
     Friend WithEvents PurchaseOrder As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Product_Code As DataGridViewTextBoxColumn
-    Friend WithEvents Cost_Price As DataGridViewTextBoxColumn
-    Friend WithEvents Purchase_Quantity As DataGridViewTextBoxColumn
-    Friend WithEvents Subtotal As DataGridViewTextBoxColumn
-    Friend WithEvents Total_Cost As DataGridViewTextBoxColumn
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox58 As TextBox
-    Friend WithEvents Label53 As Label
-    Friend WithEvents Label54 As Label
-    Friend WithEvents Label57 As Label
-    Friend WithEvents Label58 As Label
-    Friend WithEvents Button19 As Button
     Friend WithEvents Products As TabPage
     Friend WithEvents btrnDisableProduct As Button
     Friend WithEvents DataGridView5 As DataGridView
@@ -1337,7 +1425,7 @@ End Sub
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button18 As Button
     Friend WithEvents Button20 As Button
-    Friend WithEvents Button21 As Button
+    Friend WithEvents btnAddProduct As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button23 As Button
     Friend WithEvents ComboBox8 As ComboBox
@@ -1350,7 +1438,6 @@ End Sub
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents ProcessingEmployee As DataGridViewTextBoxColumn
-    Friend WithEvents ProductName As DataGridViewTextBoxColumn
     Friend WithEvents ProductCode As DataGridViewTextBoxColumn
     Friend WithEvents ProductDescript As DataGridViewTextBoxColumn
     Friend WithEvents SellingPrice As DataGridViewTextBoxColumn
@@ -1379,4 +1466,27 @@ End Sub
     Friend WithEvents Button26 As Button
     Friend WithEvents ComboBox6 As ComboBox
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents lblPoDetails As Label
+    Friend WithEvents lblPO As Label
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Button27 As Button
+    Friend WithEvents btnEmpEdit As Button
+    Friend WithEvents btnNewEmp As Button
+    Friend WithEvents Button30 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents DataGridView7 As DataGridView
+    Friend WithEvents PoProductCode As DataGridViewTextBoxColumn
+    Friend WithEvents PoProductName As DataGridViewTextBoxColumn
+    Friend WithEvents PoCostPrice As DataGridViewTextBoxColumn
+    Friend WithEvents PurchaseQty As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents PurchaseOrderID As DataGridViewTextBoxColumn
+    Friend WithEvents PurOrderDate As DataGridViewTextBoxColumn
+    Friend WithEvents PoPurTotal As DataGridViewTextBoxColumn
+    Friend WithEvents ReceivingStatus As DataGridViewTextBoxColumn
+    Friend WithEvents ReceivedDate As DataGridViewTextBoxColumn
+    Friend WithEvents RecEmployee As DataGridViewTextBoxColumn
+    Friend WithEvents Supp As DataGridViewTextBoxColumn
 End Class

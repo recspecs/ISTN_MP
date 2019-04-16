@@ -1,5 +1,5 @@
 ﻿Public Class GenManager
-    Private Sub Label58_Click(sender As Object, e As EventArgs) Handles Label58.Click
+    Private Sub Label58_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
