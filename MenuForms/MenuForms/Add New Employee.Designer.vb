@@ -26,6 +26,7 @@ Partial Class Add_New_Employee
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label73 = New System.Windows.Forms.Label()
         Me.Label77 = New System.Windows.Forms.Label()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -40,7 +41,6 @@ Partial Class Add_New_Employee
         Me.Label71 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel1.SuspendLayout
         Me.SuspendLayout
         '
@@ -120,6 +120,14 @@ Partial Class Add_New_Employee
         Me.Label77.Size = New System.Drawing.Size(59, 19)
         Me.Label77.TabIndex = 58
         Me.Label77.Text = "Surname"
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(242, 241)
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(206, 25)
+        Me.MaskedTextBox1.TabIndex = 66
         '
         'TextBox4
         '
@@ -281,14 +289,6 @@ Partial Class Add_New_Employee
         Me.Button2.Text = "Add"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.UseVisualStyleBackColor = true
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(242, 241)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(206, 25)
-        Me.MaskedTextBox1.TabIndex = 66
         '
         'Add_New_Employee
         '
