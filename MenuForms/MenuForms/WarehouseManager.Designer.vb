@@ -447,7 +447,7 @@ Partial Class WarehouseManager
         'Button30
         '
         Me.Button30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button30.Image = Global.MenuForms.My.Resources.Resources.search_ico2n
+        Me.Button30.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button30.Location = New System.Drawing.Point(227, 147)
         Me.Button30.Name = "Button30"

@@ -22,7 +22,6 @@ Partial Class NewSalesOrder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.OrderDateBox = New System.Windows.Forms.DateTimePicker()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -41,18 +40,10 @@ Partial Class NewSalesOrder
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnCancelNewSalesOrder = New System.Windows.Forms.Button()
         CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button1.Location = New System.Drawing.Point(445, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(243, 126)
-        Me.Button1.TabIndex = 49
-        Me.Button1.Text = "Capture Sales Order"
-        Me.Button1.UseVisualStyleBackColor = true
         '
         'ComboBox1
         '
@@ -184,12 +175,39 @@ Partial Class NewSalesOrder
         Me.DataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
+        'btnAdd
+        '
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnAdd.Image = Global.MenuForms.My.Resources.Resources.ok
+        Me.btnAdd.Location = New System.Drawing.Point(454, 39)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btnAdd.Size = New System.Drawing.Size(107, 98)
+        Me.btnAdd.TabIndex = 71
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnAdd.UseVisualStyleBackColor = true
+        '
+        'btnCancelNewSalesOrder
+        '
+        Me.btnCancelNewSalesOrder.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnCancelNewSalesOrder.Image = Global.MenuForms.My.Resources.Resources.delete48x48
+        Me.btnCancelNewSalesOrder.Location = New System.Drawing.Point(581, 39)
+        Me.btnCancelNewSalesOrder.Name = "btnCancelNewSalesOrder"
+        Me.btnCancelNewSalesOrder.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btnCancelNewSalesOrder.Size = New System.Drawing.Size(107, 98)
+        Me.btnCancelNewSalesOrder.TabIndex = 72
+        Me.btnCancelNewSalesOrder.Text = "Cancel"
+        Me.btnCancelNewSalesOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCancelNewSalesOrder.UseVisualStyleBackColor = true
+        '
         'NewSalesOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 528)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnCancelNewSalesOrder)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.OrderDateBox)
         Me.Controls.Add(Me.Label34)
@@ -208,8 +226,6 @@ Partial Class NewSalesOrder
         Me.PerformLayout
 
 End Sub
-
-    Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents OrderDateBox As DateTimePicker
     Friend WithEvents Label34 As Label
@@ -228,4 +244,6 @@ End Sub
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewCheckBoxColumn
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnCancelNewSalesOrder As Button
 End Class

@@ -11,7 +11,7 @@
 
     End Sub
 
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click 
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs)  
 
     End Sub
 
@@ -19,7 +19,7 @@
 
     End Sub
 
-    Private Sub GroupBox6_Enter(sender As Object, e As EventArgs) Handles GroupBox6.Enter 
+    Private Sub GroupBox6_Enter(sender As Object, e As EventArgs)  
 
     End Sub
 

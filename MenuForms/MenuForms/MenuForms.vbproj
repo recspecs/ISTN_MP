@@ -264,6 +264,24 @@
   <ItemGroup>
     <None Include="Resources\search-ico2n.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete48x48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
