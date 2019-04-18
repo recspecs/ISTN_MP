@@ -96,6 +96,17 @@ Partial Class GenManager
         Me.ComboBox8 = New System.Windows.Forms.ComboBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductDescript = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OnHand = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReOrderLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReOrderQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Vat = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Active = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PONum = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbcSupplier = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Employee = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -106,6 +117,13 @@ Partial Class GenManager
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpPassword = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Product = New System.Windows.Forms.TabControl()
         Me.Customer = New System.Windows.Forms.TabPage()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -126,24 +144,6 @@ Partial Class GenManager
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpPassword = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductDescript = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OnHand = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReOrderLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReOrderQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Vat = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Active = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PONum = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PoDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tbcSupplier = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Supplier.SuspendLayout
         Me.Panel2.SuspendLayout
         CType(Me.DataGridView3,System.ComponentModel.ISupportInitialize).BeginInit
@@ -895,6 +895,85 @@ Partial Class GenManager
         Me.DataGridView5.Size = New System.Drawing.Size(981, 390)
         Me.DataGridView5.TabIndex = 16
         '
+        'ProductCode
+        '
+        Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ProductCode.DividerWidth = 1
+        Me.ProductCode.FillWeight = 50!
+        Me.ProductCode.HeaderText = "Product Code"
+        Me.ProductCode.MinimumWidth = 40
+        Me.ProductCode.Name = "ProductCode"
+        Me.ProductCode.ReadOnly = true
+        '
+        'ProductDescript
+        '
+        Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ProductDescript.FillWeight = 150!
+        Me.ProductDescript.HeaderText = "Product Name"
+        Me.ProductDescript.MinimumWidth = 80
+        Me.ProductDescript.Name = "ProductDescript"
+        '
+        'CostPrice
+        '
+        Me.CostPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CostPrice.FillWeight = 50!
+        Me.CostPrice.HeaderText = "Cost Price"
+        Me.CostPrice.Name = "CostPrice"
+        '
+        'OnHand
+        '
+        Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.OnHand.FillWeight = 35!
+        Me.OnHand.HeaderText = "On Hand"
+        Me.OnHand.Name = "OnHand"
+        '
+        'ReOrderLevel
+        '
+        Me.ReOrderLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ReOrderLevel.FillWeight = 35!
+        Me.ReOrderLevel.HeaderText = "Re-Order Level"
+        Me.ReOrderLevel.MinimumWidth = 65
+        Me.ReOrderLevel.Name = "ReOrderLevel"
+        '
+        'ReOrderQty
+        '
+        Me.ReOrderQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ReOrderQty.FillWeight = 35!
+        Me.ReOrderQty.HeaderText = "Re-Order Qty"
+        Me.ReOrderQty.MinimumWidth = 65
+        Me.ReOrderQty.Name = "ReOrderQty"
+        '
+        'Vat
+        '
+        Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Vat.FillWeight = 30!
+        Me.Vat.HeaderText = "Vat"
+        Me.Vat.MinimumWidth = 30
+        Me.Vat.Name = "Vat"
+        '
+        'Active
+        '
+        Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Active.FillWeight = 30!
+        Me.Active.HeaderText = "Active"
+        Me.Active.MinimumWidth = 30
+        Me.Active.Name = "Active"
+        '
+        'PONum
+        '
+        Me.PONum.HeaderText = "PO Number"
+        Me.PONum.Name = "PONum"
+        '
+        'PoDate
+        '
+        Me.PoDate.HeaderText = "Last PO Date"
+        Me.PoDate.Name = "PoDate"
+        '
+        'tbcSupplier
+        '
+        Me.tbcSupplier.HeaderText = "Supplier"
+        Me.tbcSupplier.Name = "tbcSupplier"
+        '
         'Employee
         '
         Me.Employee.Controls.Add(Me.Panel1)
@@ -1027,8 +1106,43 @@ Partial Class GenManager
         Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column25, Me.EmpPassword, Me.Column26})
         Me.DataGridView6.Location = New System.Drawing.Point(22, 231)
         Me.DataGridView6.Name = "DataGridView6"
-        Me.DataGridView6.Size = New System.Drawing.Size(731, 250)
+        Me.DataGridView6.Size = New System.Drawing.Size(841, 250)
         Me.DataGridView6.TabIndex = 51
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "Employee ID"
+        Me.Column21.Name = "Column21"
+        '
+        'Column22
+        '
+        Me.Column22.HeaderText = "Employee First Name"
+        Me.Column22.Name = "Column22"
+        '
+        'Column23
+        '
+        Me.Column23.HeaderText = "Employee Surname"
+        Me.Column23.Name = "Column23"
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "Employee Type"
+        Me.Column24.Name = "Column24"
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "Employee Email"
+        Me.Column25.Name = "Column25"
+        '
+        'EmpPassword
+        '
+        Me.EmpPassword.HeaderText = "Password"
+        Me.EmpPassword.Name = "EmpPassword"
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "Employee Contact Number"
+        Me.Column26.Name = "Column26"
         '
         'Product
         '
@@ -1236,120 +1350,6 @@ Partial Class GenManager
         Me.RunningBalance.FillWeight = 50!
         Me.RunningBalance.HeaderText = "Balance"
         Me.RunningBalance.Name = "RunningBalance"
-        '
-        'Column21
-        '
-        Me.Column21.HeaderText = "Employee ID"
-        Me.Column21.Name = "Column21"
-        '
-        'Column22
-        '
-        Me.Column22.HeaderText = "Employee First Name"
-        Me.Column22.Name = "Column22"
-        '
-        'Column23
-        '
-        Me.Column23.HeaderText = "Employee Surname"
-        Me.Column23.Name = "Column23"
-        '
-        'Column24
-        '
-        Me.Column24.HeaderText = "Employee Type"
-        Me.Column24.Name = "Column24"
-        '
-        'Column25
-        '
-        Me.Column25.HeaderText = "Employee Email"
-        Me.Column25.Name = "Column25"
-        '
-        'EmpPassword
-        '
-        Me.EmpPassword.HeaderText = "Password"
-        Me.EmpPassword.Name = "EmpPassword"
-        '
-        'Column26
-        '
-        Me.Column26.HeaderText = "Employee Contact Number"
-        Me.Column26.Name = "Column26"
-        '
-        'ProductCode
-        '
-        Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductCode.DividerWidth = 1
-        Me.ProductCode.FillWeight = 50!
-        Me.ProductCode.HeaderText = "Product Code"
-        Me.ProductCode.MinimumWidth = 40
-        Me.ProductCode.Name = "ProductCode"
-        Me.ProductCode.ReadOnly = true
-        '
-        'ProductDescript
-        '
-        Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductDescript.FillWeight = 150!
-        Me.ProductDescript.HeaderText = "Product Name"
-        Me.ProductDescript.MinimumWidth = 80
-        Me.ProductDescript.Name = "ProductDescript"
-        '
-        'CostPrice
-        '
-        Me.CostPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.CostPrice.FillWeight = 50!
-        Me.CostPrice.HeaderText = "Cost Price"
-        Me.CostPrice.Name = "CostPrice"
-        '
-        'OnHand
-        '
-        Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.OnHand.FillWeight = 35!
-        Me.OnHand.HeaderText = "On Hand"
-        Me.OnHand.Name = "OnHand"
-        '
-        'ReOrderLevel
-        '
-        Me.ReOrderLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ReOrderLevel.FillWeight = 35!
-        Me.ReOrderLevel.HeaderText = "Re-Order Level"
-        Me.ReOrderLevel.MinimumWidth = 65
-        Me.ReOrderLevel.Name = "ReOrderLevel"
-        '
-        'ReOrderQty
-        '
-        Me.ReOrderQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ReOrderQty.FillWeight = 35!
-        Me.ReOrderQty.HeaderText = "Re-Order Qty"
-        Me.ReOrderQty.MinimumWidth = 65
-        Me.ReOrderQty.Name = "ReOrderQty"
-        '
-        'Vat
-        '
-        Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Vat.FillWeight = 30!
-        Me.Vat.HeaderText = "Vat"
-        Me.Vat.MinimumWidth = 30
-        Me.Vat.Name = "Vat"
-        '
-        'Active
-        '
-        Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Active.FillWeight = 30!
-        Me.Active.HeaderText = "Active"
-        Me.Active.MinimumWidth = 30
-        Me.Active.Name = "Active"
-        '
-        'PONum
-        '
-        Me.PONum.HeaderText = "PO Number"
-        Me.PONum.Name = "PONum"
-        '
-        'PoDate
-        '
-        Me.PoDate.HeaderText = "Last PO Date"
-        Me.PoDate.Name = "PoDate"
-        '
-        'tbcSupplier
-        '
-        Me.tbcSupplier.HeaderText = "Supplier"
-        Me.tbcSupplier.Name = "tbcSupplier"
         '
         'GenManager
         '

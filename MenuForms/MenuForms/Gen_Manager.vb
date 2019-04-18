@@ -18,4 +18,8 @@
     Private Sub Payment_Click(sender As Object, e As EventArgs) Handles Payment.Click
 
     End Sub
+
+    Private Sub DataGridView6_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView6.CellContentClick
+
+    End Sub
 End Class

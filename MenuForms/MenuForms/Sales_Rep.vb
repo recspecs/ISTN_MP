@@ -11,7 +11,7 @@
 
     End Sub
 
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click 
 
     End Sub
 
@@ -19,15 +19,15 @@
 
     End Sub
 
-    Private Sub GroupBox6_Enter(sender As Object, e As EventArgs) Handles GroupBox6.Enter
+    Private Sub GroupBox6_Enter(sender As Object, e As EventArgs) Handles GroupBox6.Enter 
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged 
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick 
 
     End Sub
 
