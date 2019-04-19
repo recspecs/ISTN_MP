@@ -22,15 +22,14 @@ Partial Class GenManager
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Supplier = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -121,20 +120,14 @@ Partial Class GenManager
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpPassword = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Product = New System.Windows.Forms.TabControl()
-        Me.SalesOrder = New System.Windows.Forms.TabPage()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button32 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.DataGridView9 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PaymentType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.srRunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Customer = New System.Windows.Forms.TabPage()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -154,42 +147,42 @@ Partial Class GenManager
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RecSpecDataset = New MenuForms.RecSpecDataset()
-        Me.EmployeeTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.EmployeeTableAdapter()
-        Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpSNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpPasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Supplier.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Payment.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PurchaseOrder.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Products.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Employee.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Product.SuspendLayout()
-        Me.SalesOrder.SuspendLayout()
-        CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Customer.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.SalesOrder = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button32 = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.DataGridView9 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PaymentType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.srRunningBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Supplier.SuspendLayout
+        Me.Panel2.SuspendLayout
+        CType(Me.DataGridView3,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Payment.SuspendLayout
+        Me.Panel5.SuspendLayout
+        CType(Me.DataGridView4,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.PurchaseOrder.SuspendLayout
+        Me.Panel6.SuspendLayout
+        CType(Me.DataGridView7,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Products.SuspendLayout
+        Me.Panel3.SuspendLayout
+        CType(Me.DataGridView5,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Employee.SuspendLayout
+        Me.Panel1.SuspendLayout
+        CType(Me.DataGridView6,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Product.SuspendLayout
+        Me.Customer.SuspendLayout
+        Me.Panel4.SuspendLayout
+        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SalesOrder.SuspendLayout
+        CType(Me.DataGridView9,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'Supplier
         '
@@ -201,10 +194,10 @@ Partial Class GenManager
         Me.Supplier.Location = New System.Drawing.Point(4, 22)
         Me.Supplier.Name = "Supplier"
         Me.Supplier.Padding = New System.Windows.Forms.Padding(3)
-        Me.Supplier.Size = New System.Drawing.Size(1060, 797)
+        Me.Supplier.Size = New System.Drawing.Size(1020, 680)
         Me.Supplier.TabIndex = 13
         Me.Supplier.Text = "Supplier"
-        Me.Supplier.UseVisualStyleBackColor = True
+        Me.Supplier.UseVisualStyleBackColor = true
         '
         'Panel2
         '
@@ -212,7 +205,7 @@ Partial Class GenManager
         Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.Button7)
         Me.Panel2.Controls.Add(Me.Button8)
-        Me.Panel2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Panel2.Location = New System.Drawing.Point(88, 26)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(624, 135)
@@ -230,7 +223,7 @@ Partial Class GenManager
         Me.Button4.TabIndex = 31
         Me.Button4.Text = "Remove"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = true
         '
         'Button5
         '
@@ -244,7 +237,7 @@ Partial Class GenManager
         Me.Button5.TabIndex = 30
         Me.Button5.Text = "Save"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = true
         '
         'Button7
         '
@@ -259,12 +252,12 @@ Partial Class GenManager
         Me.Button7.TabIndex = 29
         Me.Button7.Text = "Edit"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button7.UseCompatibleTextRendering = True
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button7.UseCompatibleTextRendering = true
+        Me.Button7.UseVisualStyleBackColor = true
         '
         'Button8
         '
-        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button8.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.Button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button8.Location = New System.Drawing.Point(22, 15)
@@ -272,13 +265,13 @@ Partial Class GenManager
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(125, 104)
         Me.Button8.TabIndex = 28
-        Me.Button8.Text = "Add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "new supplier"
+        Me.Button8.Text = "Add"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new supplier"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.UseVisualStyleBackColor = true
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button3.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.Location = New System.Drawing.Point(116, 192)
@@ -287,12 +280,12 @@ Partial Class GenManager
         Me.Button3.Size = New System.Drawing.Size(141, 28)
         Me.Button3.TabIndex = 66
         Me.Button3.Text = "Search"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = true
         '
         'ComboBox4
         '
         Me.ComboBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.FormattingEnabled = true
         Me.ComboBox4.Location = New System.Drawing.Point(518, 192)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(159, 25)
@@ -305,7 +298,7 @@ Partial Class GenManager
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column15, Me.Column16, Me.Column19, Me.Column17, Me.Column18, Me.Column20})
         Me.DataGridView3.Location = New System.Drawing.Point(24, 239)
         Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.ReadOnly = true
         Me.DataGridView3.Size = New System.Drawing.Size(788, 316)
         Me.DataGridView3.TabIndex = 61
         '
@@ -313,49 +306,49 @@ Partial Class GenManager
         '
         Me.Column15.HeaderText = "Supplier ID"
         Me.Column15.Name = "Column15"
-        Me.Column15.ReadOnly = True
+        Me.Column15.ReadOnly = true
         '
         'Column16
         '
         Me.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column16.HeaderText = "Supplier Name"
         Me.Column16.Name = "Column16"
-        Me.Column16.ReadOnly = True
+        Me.Column16.ReadOnly = true
         '
         'Column19
         '
         Me.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column19.HeaderText = "Supplier Contact Person"
         Me.Column19.Name = "Column19"
-        Me.Column19.ReadOnly = True
+        Me.Column19.ReadOnly = true
         '
         'Column17
         '
         Me.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column17.FillWeight = 120.0!
+        Me.Column17.FillWeight = 120!
         Me.Column17.HeaderText = "Contact Number"
         Me.Column17.Name = "Column17"
-        Me.Column17.ReadOnly = True
+        Me.Column17.ReadOnly = true
         '
         'Column18
         '
         Me.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column18.FillWeight = 150.0!
+        Me.Column18.FillWeight = 150!
         Me.Column18.HeaderText = "Supplier Email"
         Me.Column18.Name = "Column18"
-        Me.Column18.ReadOnly = True
+        Me.Column18.ReadOnly = true
         '
         'Column20
         '
         Me.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column20.FillWeight = 200.0!
+        Me.Column20.FillWeight = 200!
         Me.Column20.HeaderText = "Address"
         Me.Column20.Name = "Column20"
-        Me.Column20.ReadOnly = True
+        Me.Column20.ReadOnly = true
         '
         'TextBox2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBox2.Location = New System.Drawing.Point(281, 192)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(194, 25)
@@ -372,10 +365,10 @@ Partial Class GenManager
         Me.Payment.Location = New System.Drawing.Point(4, 22)
         Me.Payment.Name = "Payment"
         Me.Payment.Padding = New System.Windows.Forms.Padding(3)
-        Me.Payment.Size = New System.Drawing.Size(1060, 797)
+        Me.Payment.Size = New System.Drawing.Size(1020, 680)
         Me.Payment.TabIndex = 14
         Me.Payment.Text = "Customer Payment"
-        Me.Payment.UseVisualStyleBackColor = True
+        Me.Payment.UseVisualStyleBackColor = true
         '
         'Panel5
         '
@@ -383,7 +376,7 @@ Partial Class GenManager
         Me.Panel5.Controls.Add(Me.Button17)
         Me.Panel5.Controls.Add(Me.Button24)
         Me.Panel5.Controls.Add(Me.Button25)
-        Me.Panel5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Panel5.Location = New System.Drawing.Point(220, 63)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(624, 135)
@@ -401,7 +394,7 @@ Partial Class GenManager
         Me.Button10.TabIndex = 31
         Me.Button10.Text = "Remove"
         Me.Button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.Button10.UseVisualStyleBackColor = true
         '
         'Button17
         '
@@ -415,7 +408,7 @@ Partial Class GenManager
         Me.Button17.TabIndex = 30
         Me.Button17.Text = "Save"
         Me.Button17.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button17.UseVisualStyleBackColor = True
+        Me.Button17.UseVisualStyleBackColor = true
         '
         'Button24
         '
@@ -430,12 +423,12 @@ Partial Class GenManager
         Me.Button24.TabIndex = 29
         Me.Button24.Text = "Edit"
         Me.Button24.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button24.UseCompatibleTextRendering = True
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.Button24.UseCompatibleTextRendering = true
+        Me.Button24.UseVisualStyleBackColor = true
         '
         'Button25
         '
-        Me.Button25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button25.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.Button25.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button25.Location = New System.Drawing.Point(22, 15)
@@ -443,13 +436,13 @@ Partial Class GenManager
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(125, 104)
         Me.Button25.TabIndex = 28
-        Me.Button25.Text = "Add " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "new payment"
+        Me.Button25.Text = "Add "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new payment"
         Me.Button25.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.Button25.UseVisualStyleBackColor = true
         '
         'Button26
         '
-        Me.Button26.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button26.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button26.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button26.Location = New System.Drawing.Point(269, 253)
@@ -458,12 +451,12 @@ Partial Class GenManager
         Me.Button26.Size = New System.Drawing.Size(141, 28)
         Me.Button26.TabIndex = 74
         Me.Button26.Text = "Search"
-        Me.Button26.UseVisualStyleBackColor = True
+        Me.Button26.UseVisualStyleBackColor = true
         '
         'ComboBox6
         '
         Me.ComboBox6.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.FormattingEnabled = true
         Me.ComboBox6.Location = New System.Drawing.Point(671, 253)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(159, 25)
@@ -472,7 +465,7 @@ Partial Class GenManager
         '
         'TextBox4
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBox4.Location = New System.Drawing.Point(434, 253)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(194, 25)
@@ -484,7 +477,7 @@ Partial Class GenManager
         Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -550,14 +543,14 @@ Partial Class GenManager
         Me.PurchaseOrder.Location = New System.Drawing.Point(4, 22)
         Me.PurchaseOrder.Name = "PurchaseOrder"
         Me.PurchaseOrder.Padding = New System.Windows.Forms.Padding(3)
-        Me.PurchaseOrder.Size = New System.Drawing.Size(1060, 797)
+        Me.PurchaseOrder.Size = New System.Drawing.Size(1020, 680)
         Me.PurchaseOrder.TabIndex = 7
         Me.PurchaseOrder.Text = "Purchase Order"
-        Me.PurchaseOrder.UseVisualStyleBackColor = True
+        Me.PurchaseOrder.UseVisualStyleBackColor = true
         '
         'lblPoDetails
         '
-        Me.lblPoDetails.AutoSize = True
+        Me.lblPoDetails.AutoSize = true
         Me.lblPoDetails.Location = New System.Drawing.Point(78, 439)
         Me.lblPoDetails.Name = "lblPoDetails"
         Me.lblPoDetails.Size = New System.Drawing.Size(116, 13)
@@ -566,7 +559,7 @@ Partial Class GenManager
         '
         'lblPO
         '
-        Me.lblPO.AutoSize = True
+        Me.lblPO.AutoSize = true
         Me.lblPO.Location = New System.Drawing.Point(78, 195)
         Me.lblPO.Name = "lblPO"
         Me.lblPO.Size = New System.Drawing.Size(86, 13)
@@ -579,7 +572,7 @@ Partial Class GenManager
         Me.Panel6.Controls.Add(Me.Button27)
         Me.Panel6.Controls.Add(Me.btnEmpEdit)
         Me.Panel6.Controls.Add(Me.btnNewEmp)
-        Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Panel6.Location = New System.Drawing.Point(193, 2)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(624, 135)
@@ -597,7 +590,7 @@ Partial Class GenManager
         Me.Button19.TabIndex = 31
         Me.Button19.Text = "Remove"
         Me.Button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button19.UseVisualStyleBackColor = True
+        Me.Button19.UseVisualStyleBackColor = true
         '
         'Button27
         '
@@ -611,7 +604,7 @@ Partial Class GenManager
         Me.Button27.TabIndex = 30
         Me.Button27.Text = "Save"
         Me.Button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button27.UseVisualStyleBackColor = True
+        Me.Button27.UseVisualStyleBackColor = true
         '
         'btnEmpEdit
         '
@@ -626,12 +619,12 @@ Partial Class GenManager
         Me.btnEmpEdit.TabIndex = 29
         Me.btnEmpEdit.Text = "Edit"
         Me.btnEmpEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnEmpEdit.UseCompatibleTextRendering = True
-        Me.btnEmpEdit.UseVisualStyleBackColor = True
+        Me.btnEmpEdit.UseCompatibleTextRendering = true
+        Me.btnEmpEdit.UseVisualStyleBackColor = true
         '
         'btnNewEmp
         '
-        Me.btnNewEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNewEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnNewEmp.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.btnNewEmp.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnNewEmp.Location = New System.Drawing.Point(22, 15)
@@ -639,13 +632,13 @@ Partial Class GenManager
         Me.btnNewEmp.Name = "btnNewEmp"
         Me.btnNewEmp.Size = New System.Drawing.Size(125, 104)
         Me.btnNewEmp.TabIndex = 28
-        Me.btnNewEmp.Text = "Add new " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "purchase Order"
+        Me.btnNewEmp.Text = "Add new "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"purchase Order"
         Me.btnNewEmp.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnNewEmp.UseVisualStyleBackColor = True
+        Me.btnNewEmp.UseVisualStyleBackColor = true
         '
         'Button30
         '
-        Me.Button30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button30.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button30.Location = New System.Drawing.Point(227, 155)
@@ -654,12 +647,12 @@ Partial Class GenManager
         Me.Button30.Size = New System.Drawing.Size(141, 28)
         Me.Button30.TabIndex = 74
         Me.Button30.Text = "Search"
-        Me.Button30.UseVisualStyleBackColor = True
+        Me.Button30.UseVisualStyleBackColor = true
         '
         'ComboBox1
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.FormattingEnabled = true
         Me.ComboBox1.Location = New System.Drawing.Point(629, 155)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(159, 25)
@@ -668,7 +661,7 @@ Partial Class GenManager
         '
         'TextBox6
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBox6.Location = New System.Drawing.Point(392, 155)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(194, 25)
@@ -680,7 +673,7 @@ Partial Class GenManager
         Me.DataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -696,14 +689,14 @@ Partial Class GenManager
         'PoProductCode
         '
         Me.PoProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.PoProductCode.FillWeight = 60.0!
+        Me.PoProductCode.FillWeight = 60!
         Me.PoProductCode.HeaderText = "Product Code"
         Me.PoProductCode.Name = "PoProductCode"
         '
         'PoProductName
         '
         Me.PoProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.PoProductName.FillWeight = 200.0!
+        Me.PoProductName.FillWeight = 200!
         Me.PoProductName.HeaderText = "Product Name"
         Me.PoProductName.Name = "PoProductName"
         '
@@ -730,7 +723,7 @@ Partial Class GenManager
         'PurchaseOrderID
         '
         Me.PurchaseOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.PurchaseOrderID.FillWeight = 50.0!
+        Me.PurchaseOrderID.FillWeight = 50!
         Me.PurchaseOrderID.HeaderText = "PO-ID"
         Me.PurchaseOrderID.Name = "PurchaseOrderID"
         '
@@ -780,10 +773,10 @@ Partial Class GenManager
         Me.Products.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Products.Name = "Products"
         Me.Products.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Products.Size = New System.Drawing.Size(1060, 797)
+        Me.Products.Size = New System.Drawing.Size(1020, 680)
         Me.Products.TabIndex = 15
         Me.Products.Text = "Products"
-        Me.Products.UseVisualStyleBackColor = True
+        Me.Products.UseVisualStyleBackColor = true
         '
         'Panel3
         '
@@ -792,7 +785,7 @@ Partial Class GenManager
         Me.Panel3.Controls.Add(Me.btnAddProduct)
         Me.Panel3.Controls.Add(Me.btrnDisableProduct)
         Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Panel3.Location = New System.Drawing.Point(122, 26)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(780, 135)
@@ -810,7 +803,7 @@ Partial Class GenManager
         Me.Button18.TabIndex = 30
         Me.Button18.Text = "Save"
         Me.Button18.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button18.UseVisualStyleBackColor = True
+        Me.Button18.UseVisualStyleBackColor = true
         '
         'Button20
         '
@@ -825,12 +818,12 @@ Partial Class GenManager
         Me.Button20.TabIndex = 29
         Me.Button20.Text = "Edit"
         Me.Button20.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button20.UseCompatibleTextRendering = True
-        Me.Button20.UseVisualStyleBackColor = True
+        Me.Button20.UseCompatibleTextRendering = true
+        Me.Button20.UseVisualStyleBackColor = true
         '
         'btnAddProduct
         '
-        Me.btnAddProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnAddProduct.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnAddProduct.Location = New System.Drawing.Point(22, 15)
@@ -838,9 +831,9 @@ Partial Class GenManager
         Me.btnAddProduct.Name = "btnAddProduct"
         Me.btnAddProduct.Size = New System.Drawing.Size(125, 104)
         Me.btnAddProduct.TabIndex = 28
-        Me.btnAddProduct.Text = "Add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "new Product"
+        Me.btnAddProduct.Text = "Add"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new Product"
         Me.btnAddProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddProduct.UseVisualStyleBackColor = True
+        Me.btnAddProduct.UseVisualStyleBackColor = true
         '
         'btrnDisableProduct
         '
@@ -853,7 +846,7 @@ Partial Class GenManager
         Me.btrnDisableProduct.TabIndex = 31
         Me.btrnDisableProduct.Text = "Deactivate Product"
         Me.btrnDisableProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btrnDisableProduct.UseVisualStyleBackColor = True
+        Me.btrnDisableProduct.UseVisualStyleBackColor = true
         '
         'Button2
         '
@@ -867,11 +860,11 @@ Partial Class GenManager
         Me.Button2.TabIndex = 31
         Me.Button2.Text = "Remove"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'Button23
         '
-        Me.Button23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button23.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button23.Location = New System.Drawing.Point(230, 190)
@@ -880,12 +873,12 @@ Partial Class GenManager
         Me.Button23.Size = New System.Drawing.Size(141, 28)
         Me.Button23.TabIndex = 70
         Me.Button23.Text = "Search"
-        Me.Button23.UseVisualStyleBackColor = True
+        Me.Button23.UseVisualStyleBackColor = true
         '
         'ComboBox8
         '
         Me.ComboBox8.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.FormattingEnabled = true
         Me.ComboBox8.Location = New System.Drawing.Point(632, 190)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(159, 25)
@@ -894,7 +887,7 @@ Partial Class GenManager
         '
         'TextBox5
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBox5.Location = New System.Drawing.Point(395, 190)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(194, 25)
@@ -903,10 +896,10 @@ Partial Class GenManager
         '
         'DataGridView5
         '
-        Me.DataGridView5.AllowUserToOrderColumns = True
+        Me.DataGridView5.AllowUserToOrderColumns = true
         DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -924,16 +917,16 @@ Partial Class GenManager
         '
         Me.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.ProductCode.DividerWidth = 1
-        Me.ProductCode.FillWeight = 50.0!
+        Me.ProductCode.FillWeight = 50!
         Me.ProductCode.HeaderText = "Product Code"
         Me.ProductCode.MinimumWidth = 40
         Me.ProductCode.Name = "ProductCode"
-        Me.ProductCode.ReadOnly = True
+        Me.ProductCode.ReadOnly = true
         '
         'ProductDescript
         '
         Me.ProductDescript.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ProductDescript.FillWeight = 150.0!
+        Me.ProductDescript.FillWeight = 150!
         Me.ProductDescript.HeaderText = "Product Name"
         Me.ProductDescript.MinimumWidth = 80
         Me.ProductDescript.Name = "ProductDescript"
@@ -941,21 +934,21 @@ Partial Class GenManager
         'CostPrice
         '
         Me.CostPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.CostPrice.FillWeight = 50.0!
+        Me.CostPrice.FillWeight = 50!
         Me.CostPrice.HeaderText = "Cost Price"
         Me.CostPrice.Name = "CostPrice"
         '
         'OnHand
         '
         Me.OnHand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.OnHand.FillWeight = 35.0!
+        Me.OnHand.FillWeight = 35!
         Me.OnHand.HeaderText = "On Hand"
         Me.OnHand.Name = "OnHand"
         '
         'ReOrderLevel
         '
         Me.ReOrderLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ReOrderLevel.FillWeight = 35.0!
+        Me.ReOrderLevel.FillWeight = 35!
         Me.ReOrderLevel.HeaderText = "Re-Order Level"
         Me.ReOrderLevel.MinimumWidth = 65
         Me.ReOrderLevel.Name = "ReOrderLevel"
@@ -963,7 +956,7 @@ Partial Class GenManager
         'ReOrderQty
         '
         Me.ReOrderQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ReOrderQty.FillWeight = 35.0!
+        Me.ReOrderQty.FillWeight = 35!
         Me.ReOrderQty.HeaderText = "Re-Order Qty"
         Me.ReOrderQty.MinimumWidth = 65
         Me.ReOrderQty.Name = "ReOrderQty"
@@ -971,7 +964,7 @@ Partial Class GenManager
         'Vat
         '
         Me.Vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Vat.FillWeight = 30.0!
+        Me.Vat.FillWeight = 30!
         Me.Vat.HeaderText = "Vat"
         Me.Vat.MinimumWidth = 30
         Me.Vat.Name = "Vat"
@@ -979,7 +972,7 @@ Partial Class GenManager
         'Active
         '
         Me.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Active.FillWeight = 30.0!
+        Me.Active.FillWeight = 30!
         Me.Active.HeaderText = "Active"
         Me.Active.MinimumWidth = 30
         Me.Active.Name = "Active"
@@ -1001,7 +994,6 @@ Partial Class GenManager
         '
         'Employee
         '
-        Me.Employee.Controls.Add(Me.Button21)
         Me.Employee.Controls.Add(Me.Panel1)
         Me.Employee.Controls.Add(Me.Button22)
         Me.Employee.Controls.Add(Me.ComboBox5)
@@ -1010,10 +1002,10 @@ Partial Class GenManager
         Me.Employee.Location = New System.Drawing.Point(4, 22)
         Me.Employee.Name = "Employee"
         Me.Employee.Padding = New System.Windows.Forms.Padding(3)
-        Me.Employee.Size = New System.Drawing.Size(1060, 723)
+        Me.Employee.Size = New System.Drawing.Size(1020, 680)
         Me.Employee.TabIndex = 3
         Me.Employee.Text = "Employee"
-        Me.Employee.UseVisualStyleBackColor = True
+        Me.Employee.UseVisualStyleBackColor = true
         '
         'Panel1
         '
@@ -1021,7 +1013,7 @@ Partial Class GenManager
         Me.Panel1.Controls.Add(Me.Button9)
         Me.Panel1.Controls.Add(Me.Button11)
         Me.Panel1.Controls.Add(Me.Button16)
-        Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Panel1.Location = New System.Drawing.Point(78, 21)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(624, 135)
@@ -1039,7 +1031,7 @@ Partial Class GenManager
         Me.Button6.TabIndex = 31
         Me.Button6.Text = "Remove"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = true
         '
         'Button9
         '
@@ -1053,7 +1045,7 @@ Partial Class GenManager
         Me.Button9.TabIndex = 30
         Me.Button9.Text = "Save"
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.Button9.UseVisualStyleBackColor = true
         '
         'Button11
         '
@@ -1068,12 +1060,12 @@ Partial Class GenManager
         Me.Button11.TabIndex = 29
         Me.Button11.Text = "Edit"
         Me.Button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button11.UseCompatibleTextRendering = True
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.Button11.UseCompatibleTextRendering = true
+        Me.Button11.UseVisualStyleBackColor = true
         '
         'Button16
         '
-        Me.Button16.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button16.Image = Global.MenuForms.My.Resources.Resources.add_icon
         Me.Button16.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button16.Location = New System.Drawing.Point(22, 15)
@@ -1081,13 +1073,13 @@ Partial Class GenManager
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(125, 104)
         Me.Button16.TabIndex = 28
-        Me.Button16.Text = "Add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "new employee"
+        Me.Button16.Text = "Add"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new employee"
         Me.Button16.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button16.UseVisualStyleBackColor = True
+        Me.Button16.UseVisualStyleBackColor = true
         '
         'Button22
         '
-        Me.Button22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button22.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button22.Location = New System.Drawing.Point(106, 187)
@@ -1096,12 +1088,12 @@ Partial Class GenManager
         Me.Button22.Size = New System.Drawing.Size(141, 28)
         Me.Button22.TabIndex = 70
         Me.Button22.Text = "Search"
-        Me.Button22.UseVisualStyleBackColor = True
+        Me.Button22.UseVisualStyleBackColor = true
         '
         'ComboBox5
         '
         Me.ComboBox5.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.FormattingEnabled = true
         Me.ComboBox5.Location = New System.Drawing.Point(508, 187)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(159, 25)
@@ -1110,7 +1102,7 @@ Partial Class GenManager
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBox1.Location = New System.Drawing.Point(271, 187)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(194, 25)
@@ -1119,23 +1111,56 @@ Partial Class GenManager
         '
         'DataGridView6
         '
-        Me.DataGridView6.AutoGenerateColumns = False
         Me.DataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeIDDataGridViewTextBoxColumn, Me.EmpFNameDataGridViewTextBoxColumn, Me.EmpSNameDataGridViewTextBoxColumn, Me.EmpEmailDataGridViewTextBoxColumn, Me.EmpPasswordDataGridViewTextBoxColumn, Me.EmpContactNoDataGridViewTextBoxColumn, Me.EmpTypeDataGridViewTextBoxColumn})
-        Me.DataGridView6.DataSource = Me.BindingSource1
+        Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column25, Me.EmpPassword, Me.Column26})
         Me.DataGridView6.Location = New System.Drawing.Point(22, 231)
         Me.DataGridView6.Name = "DataGridView6"
         Me.DataGridView6.Size = New System.Drawing.Size(841, 250)
         Me.DataGridView6.TabIndex = 51
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "Employee ID"
+        Me.Column21.Name = "Column21"
+        '
+        'Column22
+        '
+        Me.Column22.HeaderText = "Employee First Name"
+        Me.Column22.Name = "Column22"
+        '
+        'Column23
+        '
+        Me.Column23.HeaderText = "Employee Surname"
+        Me.Column23.Name = "Column23"
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "Employee Type"
+        Me.Column24.Name = "Column24"
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "Employee Email"
+        Me.Column25.Name = "Column25"
+        '
+        'EmpPassword
+        '
+        Me.EmpPassword.HeaderText = "Password"
+        Me.EmpPassword.Name = "EmpPassword"
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "Employee Contact Number"
+        Me.Column26.Name = "Column26"
         '
         'Product
         '
@@ -1150,8 +1175,201 @@ Partial Class GenManager
         Me.Product.Location = New System.Drawing.Point(0, 0)
         Me.Product.Name = "Product"
         Me.Product.SelectedIndex = 0
-        Me.Product.Size = New System.Drawing.Size(1068, 749)
+        Me.Product.Size = New System.Drawing.Size(1068, 823)
         Me.Product.TabIndex = 1
+        '
+        'Customer
+        '
+        Me.Customer.Controls.Add(Me.Panel4)
+        Me.Customer.Controls.Add(Me.Button15)
+        Me.Customer.Controls.Add(Me.ComboBox3)
+        Me.Customer.Controls.Add(Me.TextBox3)
+        Me.Customer.Controls.Add(Me.DataGridView2)
+        Me.Customer.Location = New System.Drawing.Point(4, 22)
+        Me.Customer.Name = "Customer"
+        Me.Customer.Padding = New System.Windows.Forms.Padding(3)
+        Me.Customer.Size = New System.Drawing.Size(1020, 680)
+        Me.Customer.TabIndex = 12
+        Me.Customer.Text = "Customer"
+        Me.Customer.UseVisualStyleBackColor = true
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Button1)
+        Me.Panel4.Controls.Add(Me.Button12)
+        Me.Panel4.Controls.Add(Me.Button13)
+        Me.Panel4.Controls.Add(Me.Button14)
+        Me.Panel4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Panel4.Location = New System.Drawing.Point(210, 6)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(624, 135)
+        Me.Panel4.TabIndex = 71
+        '
+        'Button1
+        '
+        Me.Button1.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.Location = New System.Drawing.Point(485, 15)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(125, 104)
+        Me.Button1.TabIndex = 31
+        Me.Button1.Text = "Remove"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.UseVisualStyleBackColor = true
+        '
+        'Button12
+        '
+        Me.Button12.Image = Global.MenuForms.My.Resources.Resources.Save_icon
+        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button12.Location = New System.Drawing.Point(333, 15)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Button12.Size = New System.Drawing.Size(125, 104)
+        Me.Button12.TabIndex = 30
+        Me.Button12.Text = "Save"
+        Me.Button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button12.UseVisualStyleBackColor = true
+        '
+        'Button13
+        '
+        Me.Button13.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Button13.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
+        Me.Button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button13.Location = New System.Drawing.Point(187, 15)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Button13.Size = New System.Drawing.Size(125, 104)
+        Me.Button13.TabIndex = 29
+        Me.Button13.Text = "Edit"
+        Me.Button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button13.UseCompatibleTextRendering = true
+        Me.Button13.UseVisualStyleBackColor = true
+        '
+        'Button14
+        '
+        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button14.Image = Global.MenuForms.My.Resources.Resources.add_icon
+        Me.Button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button14.Location = New System.Drawing.Point(22, 15)
+        Me.Button14.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(125, 104)
+        Me.Button14.TabIndex = 28
+        Me.Button14.Text = "Add"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"new customer"
+        Me.Button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button14.UseVisualStyleBackColor = true
+        '
+        'Button15
+        '
+        Me.Button15.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button15.Image = Global.MenuForms.My.Resources.Resources.searchico2n
+        Me.Button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button15.Location = New System.Drawing.Point(244, 170)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button15.Size = New System.Drawing.Size(141, 28)
+        Me.Button15.TabIndex = 70
+        Me.Button15.Text = "Search"
+        Me.Button15.UseVisualStyleBackColor = true
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.ComboBox3.FormattingEnabled = true
+        Me.ComboBox3.Location = New System.Drawing.Point(646, 170)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(159, 25)
+        Me.ComboBox3.TabIndex = 69
+        Me.ComboBox3.Text = "Search criteria..."
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(409, 170)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(194, 25)
+        Me.TextBox3.TabIndex = 68
+        Me.TextBox3.Text = "Enter query ..."
+        '
+        'DataGridView2
+        '
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle24
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column7, Me.Column5, Me.Column6, Me.Column8, Me.RunningBalance})
+        Me.DataGridView2.Location = New System.Drawing.Point(30, 220)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(971, 400)
+        Me.DataGridView2.TabIndex = 10
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column1.FillWeight = 50!
+        Me.Column1.HeaderText = "Customer ID"
+        Me.Column1.MinimumWidth = 50
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column2.HeaderText = "First Name"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column3.HeaderText = "Last Name"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column4.FillWeight = 75!
+        Me.Column4.HeaderText = "Customer Type"
+        Me.Column4.Name = "Column4"
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column7.HeaderText = "Business Name"
+        Me.Column7.Name = "Column7"
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column5.FillWeight = 150!
+        Me.Column5.HeaderText = "Customer Email"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "Contact Number"
+        Me.Column6.Name = "Column6"
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column8.HeaderText = "Address"
+        Me.Column8.Name = "Column8"
+        '
+        'RunningBalance
+        '
+        Me.RunningBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.RunningBalance.FillWeight = 50!
+        Me.RunningBalance.HeaderText = "Balance"
+        Me.RunningBalance.Name = "RunningBalance"
         '
         'SalesOrder
         '
@@ -1166,11 +1384,11 @@ Partial Class GenManager
         Me.SalesOrder.Size = New System.Drawing.Size(1060, 797)
         Me.SalesOrder.TabIndex = 16
         Me.SalesOrder.Text = "Sales Order"
-        Me.SalesOrder.UseVisualStyleBackColor = True
+        Me.SalesOrder.UseVisualStyleBackColor = true
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.Location = New System.Drawing.Point(23, 107)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
@@ -1179,7 +1397,7 @@ Partial Class GenManager
         '
         'Button32
         '
-        Me.Button32.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button32.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button32.Image = Global.MenuForms.My.Resources.Resources.searchico2n
         Me.Button32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button32.Location = New System.Drawing.Point(77, 31)
@@ -1188,12 +1406,12 @@ Partial Class GenManager
         Me.Button32.Size = New System.Drawing.Size(141, 28)
         Me.Button32.TabIndex = 74
         Me.Button32.Text = "Search"
-        Me.Button32.UseVisualStyleBackColor = True
+        Me.Button32.UseVisualStyleBackColor = true
         '
         'ComboBox2
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.FormattingEnabled = true
         Me.ComboBox2.Location = New System.Drawing.Point(479, 31)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(159, 25)
@@ -1202,7 +1420,7 @@ Partial Class GenManager
         '
         'TextBox7
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBox7.Location = New System.Drawing.Point(242, 31)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(194, 25)
@@ -1214,7 +1432,7 @@ Partial Class GenManager
         Me.DataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1224,7 +1442,7 @@ Partial Class GenManager
         Me.DataGridView9.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.PaymentType, Me.DataGridViewTextBoxColumn8, Me.srRunningBalance, Me.DataGridViewTextBoxColumn9})
         DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1234,7 +1452,7 @@ Partial Class GenManager
         Me.DataGridView9.Name = "DataGridView9"
         DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1246,7 +1464,7 @@ Partial Class GenManager
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn5.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn5.FillWeight = 50!
         Me.DataGridViewTextBoxColumn5.HeaderText = "SO-ID"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
@@ -1284,306 +1502,46 @@ Partial Class GenManager
         Me.DataGridViewTextBoxColumn9.HeaderText = "Sales Rep."
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
-        'Customer
-        '
-        Me.Customer.Controls.Add(Me.Panel4)
-        Me.Customer.Controls.Add(Me.Button15)
-        Me.Customer.Controls.Add(Me.ComboBox3)
-        Me.Customer.Controls.Add(Me.TextBox3)
-        Me.Customer.Controls.Add(Me.DataGridView2)
-        Me.Customer.Location = New System.Drawing.Point(4, 22)
-        Me.Customer.Name = "Customer"
-        Me.Customer.Padding = New System.Windows.Forms.Padding(3)
-        Me.Customer.Size = New System.Drawing.Size(1060, 797)
-        Me.Customer.TabIndex = 12
-        Me.Customer.Text = "Customer"
-        Me.Customer.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Button1)
-        Me.Panel4.Controls.Add(Me.Button12)
-        Me.Panel4.Controls.Add(Me.Button13)
-        Me.Panel4.Controls.Add(Me.Button14)
-        Me.Panel4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(210, 6)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(624, 135)
-        Me.Panel4.TabIndex = 71
-        '
-        'Button1
-        '
-        Me.Button1.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(485, 15)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(125, 104)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "Remove"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button12
-        '
-        Me.Button12.Image = Global.MenuForms.My.Resources.Resources.Save_icon
-        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button12.Location = New System.Drawing.Point(333, 15)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.Button12.Size = New System.Drawing.Size(125, 104)
-        Me.Button12.TabIndex = 30
-        Me.Button12.Text = "Save"
-        Me.Button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Button13.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
-        Me.Button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button13.Location = New System.Drawing.Point(187, 15)
-        Me.Button13.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.Button13.Size = New System.Drawing.Size(125, 104)
-        Me.Button13.TabIndex = 29
-        Me.Button13.Text = "Edit"
-        Me.Button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button13.UseCompatibleTextRendering = True
-        Me.Button13.UseVisualStyleBackColor = True
-        '
-        'Button14
-        '
-        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button14.Image = Global.MenuForms.My.Resources.Resources.add_icon
-        Me.Button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button14.Location = New System.Drawing.Point(22, 15)
-        Me.Button14.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(125, 104)
-        Me.Button14.TabIndex = 28
-        Me.Button14.Text = "Add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "new customer"
-        Me.Button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button14.UseVisualStyleBackColor = True
-        '
-        'Button15
-        '
-        Me.Button15.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.Image = Global.MenuForms.My.Resources.Resources.searchico2n
-        Me.Button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button15.Location = New System.Drawing.Point(244, 170)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button15.Size = New System.Drawing.Size(141, 28)
-        Me.Button15.TabIndex = 70
-        Me.Button15.Text = "Search"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(646, 170)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(159, 25)
-        Me.ComboBox3.TabIndex = 69
-        Me.ComboBox3.Text = "Search criteria..."
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(409, 170)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(194, 25)
-        Me.TextBox3.TabIndex = 68
-        Me.TextBox3.Text = "Enter query ..."
-        '
-        'DataGridView2
-        '
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle24
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column7, Me.Column5, Me.Column6, Me.Column8, Me.RunningBalance})
-        Me.DataGridView2.Location = New System.Drawing.Point(30, 220)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(971, 400)
-        Me.DataGridView2.TabIndex = 10
-        '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column1.FillWeight = 50.0!
-        Me.Column1.HeaderText = "Customer ID"
-        Me.Column1.MinimumWidth = 50
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column2.HeaderText = "First Name"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "Last Name"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.FillWeight = 75.0!
-        Me.Column4.HeaderText = "Customer Type"
-        Me.Column4.Name = "Column4"
-        '
-        'Column7
-        '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column7.HeaderText = "Business Name"
-        Me.Column7.Name = "Column7"
-        '
-        'Column5
-        '
-        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column5.FillWeight = 150.0!
-        Me.Column5.HeaderText = "Customer Email"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column6.HeaderText = "Contact Number"
-        Me.Column6.Name = "Column6"
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column8.HeaderText = "Address"
-        Me.Column8.Name = "Column8"
-        '
-        'RunningBalance
-        '
-        Me.RunningBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.RunningBalance.FillWeight = 50.0!
-        Me.RunningBalance.HeaderText = "Balance"
-        Me.RunningBalance.Name = "RunningBalance"
-        '
-        'BindingSource1
-        '
-        Me.BindingSource1.DataMember = "Employee"
-        Me.BindingSource1.DataSource = Me.RecSpecDataset
-        '
-        'RecSpecDataset
-        '
-        Me.RecSpecDataset.DataSetName = "RecSpecDataset"
-        Me.RecSpecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmployeeTableAdapter
-        '
-        Me.EmployeeTableAdapter.ClearBeforeFill = True
-        '
-        'EmployeeIDDataGridViewTextBoxColumn
-        '
-        Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
-        '
-        'EmpFNameDataGridViewTextBoxColumn
-        '
-        Me.EmpFNameDataGridViewTextBoxColumn.DataPropertyName = "Emp_FName"
-        Me.EmpFNameDataGridViewTextBoxColumn.HeaderText = "Emp_FName"
-        Me.EmpFNameDataGridViewTextBoxColumn.Name = "EmpFNameDataGridViewTextBoxColumn"
-        '
-        'EmpSNameDataGridViewTextBoxColumn
-        '
-        Me.EmpSNameDataGridViewTextBoxColumn.DataPropertyName = "Emp_SName"
-        Me.EmpSNameDataGridViewTextBoxColumn.HeaderText = "Emp_SName"
-        Me.EmpSNameDataGridViewTextBoxColumn.Name = "EmpSNameDataGridViewTextBoxColumn"
-        '
-        'EmpEmailDataGridViewTextBoxColumn
-        '
-        Me.EmpEmailDataGridViewTextBoxColumn.DataPropertyName = "Emp_Email"
-        Me.EmpEmailDataGridViewTextBoxColumn.HeaderText = "Emp_Email"
-        Me.EmpEmailDataGridViewTextBoxColumn.Name = "EmpEmailDataGridViewTextBoxColumn"
-        '
-        'EmpPasswordDataGridViewTextBoxColumn
-        '
-        Me.EmpPasswordDataGridViewTextBoxColumn.DataPropertyName = "Emp_Password"
-        Me.EmpPasswordDataGridViewTextBoxColumn.HeaderText = "Emp_Password"
-        Me.EmpPasswordDataGridViewTextBoxColumn.Name = "EmpPasswordDataGridViewTextBoxColumn"
-        '
-        'EmpContactNoDataGridViewTextBoxColumn
-        '
-        Me.EmpContactNoDataGridViewTextBoxColumn.DataPropertyName = "Emp_Contact_No"
-        Me.EmpContactNoDataGridViewTextBoxColumn.HeaderText = "Emp_Contact_No"
-        Me.EmpContactNoDataGridViewTextBoxColumn.Name = "EmpContactNoDataGridViewTextBoxColumn"
-        '
-        'EmpTypeDataGridViewTextBoxColumn
-        '
-        Me.EmpTypeDataGridViewTextBoxColumn.DataPropertyName = "Emp_Type"
-        Me.EmpTypeDataGridViewTextBoxColumn.HeaderText = "Emp_Type"
-        Me.EmpTypeDataGridViewTextBoxColumn.Name = "EmpTypeDataGridViewTextBoxColumn"
-        '
-        'Button21
-        '
-        Me.Button21.Location = New System.Drawing.Point(712, 188)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(99, 23)
-        Me.Button21.TabIndex = 72
-        Me.Button21.Text = "Load Employees"
-        Me.Button21.UseVisualStyleBackColor = True
-        '
         'GenManager
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1068, 749)
+        Me.ClientSize = New System.Drawing.Size(1068, 823)
         Me.Controls.Add(Me.Product)
         Me.Name = "GenManager"
         Me.Text = "Manager"
-        Me.Supplier.ResumeLayout(False)
-        Me.Supplier.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Payment.ResumeLayout(False)
-        Me.Payment.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PurchaseOrder.ResumeLayout(False)
-        Me.PurchaseOrder.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Products.ResumeLayout(False)
-        Me.Products.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Employee.ResumeLayout(False)
-        Me.Employee.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Product.ResumeLayout(False)
-        Me.SalesOrder.ResumeLayout(False)
-        Me.SalesOrder.PerformLayout()
-        CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Customer.ResumeLayout(False)
-        Me.Customer.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        Me.Supplier.ResumeLayout(false)
+        Me.Supplier.PerformLayout
+        Me.Panel2.ResumeLayout(false)
+        CType(Me.DataGridView3,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Payment.ResumeLayout(false)
+        Me.Payment.PerformLayout
+        Me.Panel5.ResumeLayout(false)
+        CType(Me.DataGridView4,System.ComponentModel.ISupportInitialize).EndInit
+        Me.PurchaseOrder.ResumeLayout(false)
+        Me.PurchaseOrder.PerformLayout
+        Me.Panel6.ResumeLayout(false)
+        CType(Me.DataGridView7,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Products.ResumeLayout(false)
+        Me.Products.PerformLayout
+        Me.Panel3.ResumeLayout(false)
+        CType(Me.DataGridView5,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Employee.ResumeLayout(false)
+        Me.Employee.PerformLayout
+        Me.Panel1.ResumeLayout(false)
+        CType(Me.DataGridView6,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Product.ResumeLayout(false)
+        Me.Customer.ResumeLayout(false)
+        Me.Customer.PerformLayout
+        Me.Panel4.ResumeLayout(false)
+        CType(Me.DataGridView2,System.ComponentModel.ISupportInitialize).EndInit
+        Me.SalesOrder.ResumeLayout(false)
+        Me.SalesOrder.PerformLayout
+        CType(Me.DataGridView9,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents Supplier As TabPage
     Friend WithEvents ComboBox4 As ComboBox
@@ -1684,6 +1642,13 @@ Partial Class GenManager
     Friend WithEvents ReceivedDate As DataGridViewTextBoxColumn
     Friend WithEvents RecEmployee As DataGridViewTextBoxColumn
     Friend WithEvents Supp As DataGridViewTextBoxColumn
+    Friend WithEvents Column21 As DataGridViewTextBoxColumn
+    Friend WithEvents Column22 As DataGridViewTextBoxColumn
+    Friend WithEvents Column23 As DataGridViewTextBoxColumn
+    Friend WithEvents Column24 As DataGridViewTextBoxColumn
+    Friend WithEvents Column25 As DataGridViewTextBoxColumn
+    Friend WithEvents EmpPassword As DataGridViewTextBoxColumn
+    Friend WithEvents Column26 As DataGridViewTextBoxColumn
     Friend WithEvents ProductCode As DataGridViewTextBoxColumn
     Friend WithEvents ProductDescript As DataGridViewTextBoxColumn
     Friend WithEvents CostPrice As DataGridViewTextBoxColumn
@@ -1708,15 +1673,4 @@ Partial Class GenManager
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents srRunningBalance As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents BindingSource1 As BindingSource
-    Friend WithEvents RecSpecDataset As RecSpecDataset
-    Friend WithEvents EmployeeTableAdapter As RecSpecDatasetTableAdapters.EmployeeTableAdapter
-    Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpFNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpSNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpEmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpPasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpContactNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button21 As Button
 End Class
