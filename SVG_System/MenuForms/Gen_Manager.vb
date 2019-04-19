@@ -26,6 +26,7 @@
     Private Sub SalesOrder_Click(sender As Object, e As EventArgs) Handles SalesOrder.Click
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     End Sub
 =======
     End Sub
@@ -52,4 +53,7 @@
 
     End Sub
 >>>>>>> parent of d15d175... tables synced for general manager
+=======
+    End Sub
+>>>>>>> parent of e4eaaf0... employee table
 End Class

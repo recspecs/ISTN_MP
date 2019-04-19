@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e4eaaf0... employee table
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
@@ -331,6 +334,7 @@
   <metadata name="RunningBalance.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<<<<<<< HEAD
 =======
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -656,4 +660,6 @@
     <value>292, 17</value>
   </metadata>
 >>>>>>> parent of d15d175... tables synced for general manager
+=======
+>>>>>>> parent of e4eaaf0... employee table
 </root>

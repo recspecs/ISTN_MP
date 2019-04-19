@@ -23,6 +23,9 @@ Partial Class GenManager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e4eaaf0... employee table
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -1543,6 +1546,7 @@ Partial Class GenManager
         Me.ResumeLayout(false)
 
 End Sub
+<<<<<<< HEAD
 =======
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -3107,6 +3111,8 @@ End Sub
 
     End Sub
 >>>>>>> parent of d15d175... tables synced for general manager
+=======
+>>>>>>> parent of e4eaaf0... employee table
 
     Friend WithEvents Supplier As TabPage
     Friend WithEvents ComboBox4 As ComboBox
@@ -3208,6 +3214,9 @@ End Sub
     Friend WithEvents RecEmployee As DataGridViewTextBoxColumn
     Friend WithEvents Supp As DataGridViewTextBoxColumn
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e4eaaf0... employee table
     Friend WithEvents Column21 As DataGridViewTextBoxColumn
     Friend WithEvents Column22 As DataGridViewTextBoxColumn
     Friend WithEvents Column23 As DataGridViewTextBoxColumn
@@ -3215,8 +3224,11 @@ End Sub
     Friend WithEvents Column25 As DataGridViewTextBoxColumn
     Friend WithEvents EmpPassword As DataGridViewTextBoxColumn
     Friend WithEvents Column26 As DataGridViewTextBoxColumn
+<<<<<<< HEAD
 =======
 >>>>>>> parent of d15d175... tables synced for general manager
+=======
+>>>>>>> parent of e4eaaf0... employee table
     Friend WithEvents ProductCode As DataGridViewTextBoxColumn
     Friend WithEvents ProductDescript As DataGridViewTextBoxColumn
     Friend WithEvents CostPrice As DataGridViewTextBoxColumn
@@ -3241,6 +3253,7 @@ End Sub
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents srRunningBalance As DataGridViewTextBoxColumn
 <<<<<<< HEAD
+<<<<<<< HEAD
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
 =======
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
@@ -3256,4 +3269,7 @@ End Sub
     Friend WithEvents EmpTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Button21 As Button
 >>>>>>> parent of d15d175... tables synced for general manager
+=======
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+>>>>>>> parent of e4eaaf0... employee table
 End Class
