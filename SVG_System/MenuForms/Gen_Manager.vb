@@ -25,35 +25,5 @@
 
     Private Sub SalesOrder_Click(sender As Object, e As EventArgs) Handles SalesOrder.Click
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     End Sub
-=======
-    End Sub
-
-    Private Sub BindingSource1_CurrentChanged(sender As Object, e As EventArgs) Handles BindingSource1.CurrentChanged
-
-    End Sub
-
-    Private Sub GenManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'RecSpecDataset.Employee' table. You can move, or remove it, as needed.
-        Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
-
-
-
-
-
-    End Sub
-
-    Private Sub Employee_Click(sender As Object, e As EventArgs) Handles Employee.Click
-
-    End Sub
-
-    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-
-    End Sub
->>>>>>> parent of d15d175... tables synced for general manager
-=======
-    End Sub
->>>>>>> parent of e4eaaf0... employee table
 End Class

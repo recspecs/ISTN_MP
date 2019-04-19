@@ -1,0 +1,4 @@
+C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.exe
+C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.xml
+C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.pdb
