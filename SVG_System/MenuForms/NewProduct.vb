@@ -24,18 +24,22 @@ Public Class NewProduct
     Private Sub NewProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
 
-    Private Sub tbPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbPrice.KeyPress
+    Private Sub tbPrice_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "." Then
             e.Handled = True
-                                                                                
-        End If                    
+
+        End If
     End Sub
 
-    Private Sub tbPrice_TextChanged(sender As Object, e As EventArgs) Handles tbPrice.TextChanged
+    Private Sub tbPrice_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub cbUnit_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbUnit.SelectedIndexChanged
+    Private Sub cbUnit_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
     End Sub
 End Class
