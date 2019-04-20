@@ -69,4 +69,8 @@
         End If
 
     End Sub
+
+    Private Sub Supplier_Click(sender As Object, e As EventArgs) Handles Supplier.Click
+
+    End Sub
 End Class
