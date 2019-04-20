@@ -71,10 +71,26 @@
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        ProductDGV.ReadOnly = False
-        ProductDGV.AllowUserToDeleteRows = True
-        ProductDGV.GridColor = Color.Crimson
-        MsgBox("Select products to delete! Click on the Save button when done!")
+        If Not btnRemove.Text = "Cancel" Then
+            ProductDGV.ReadOnly = False
+            ProductDGV.AllowUserToDeleteRows = True
+            ProductDGV.GridColor = Color.Crimson
+            btnRemove.Text = "Cancel"
+            btnRemove.Image = My.Resources._return
+            btnRemove.ImageAlign = ContentAlignment.TopCenter
+            btnUpdate.Enabled = False
+            MsgBox("Select products then press delete key! Click on the Save button when done!")
+        Else
+            btnRemove.Text = "Remove"
+            ProductDGV.ReadOnly = True
+            ProductDGV.AllowUserToDeleteRows = False
+            ProductDGV.GridColor = Color.Gray
+            btnRemove.Image = My.Resources.bin_red_full_icon
+            btnRemove.ImageAlign = ContentAlignment.TopCenter
+            btnUpdate.Enabled = True
+            Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
+        End If
+
     End Sub
 
 
