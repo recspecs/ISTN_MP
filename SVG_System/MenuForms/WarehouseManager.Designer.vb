@@ -25,25 +25,43 @@ Partial Class WarehouseManager
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.RecSpecDatasetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RecSpecDataset = New MenuForms.RecSpecDataset()
-        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
         Me.Tc_WarehouseManager = New System.Windows.Forms.TabControl()
         Me.InventoryTab = New System.Windows.Forms.TabPage()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Prod_NameToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.Prod_NameToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.Prod_NameToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.Product_Code1ToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.Product_CodeToolStrip = New System.Windows.Forms.ToolStrip()
         Me.Product_CodeToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.Product_Code1ToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.Product_CodeToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.Prod_NameToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.Prod_NameToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.Prod_NameToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btrnDisableProduct = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.ProductDGV = New System.Windows.Forms.DataGridView()
+        Me.PurchaseOrder = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblPoDetails = New System.Windows.Forms.Label()
+        Me.lblPO = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.btnEmpEdit = New System.Windows.Forms.Button()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.PurchaseOrderDetailsDGV = New System.Windows.Forms.DataGridView()
+        Me.PurchaseOrderDGV = New System.Windows.Forms.DataGridView()
+        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PurchaseOrderBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PO_NoToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.PO_NoToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.PO_NoToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PO_DateToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.PO_DateToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.PO_DateToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdCostPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,75 +70,48 @@ Partial Class WarehouseManager
         Me.ProdActiveDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ProdCategoriesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdReorderThresholdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PurchaseOrder = New System.Windows.Forms.TabPage()
-        Me.lblPoDetails = New System.Windows.Forms.Label()
-        Me.lblPO = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.btnEmpEdit = New System.Windows.Forms.Button()
-        Me.Button27 = New System.Windows.Forms.Button()
-        Me.PurchaseOrderDetailsDGV = New System.Windows.Forms.DataGridView()
+        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RecSpecDataset = New MenuForms.RecSpecDataset()
         Me.PurchaseItemLineNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PONoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductCodeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PurchaseOrderDGV = New System.Windows.Forms.DataGridView()
-        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Purchase_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter()
-        Me.SaleItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Sale_ItemTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Sale_ItemTableAdapter()
-        Me.Purchase_ItemTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_ItemTableAdapter()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PONoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PODateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.POTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.POReceivedFlagDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label2 = New System.Windows.Forms.Label()
-        CType(Me.RecSpecDatasetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RecSpecDatasetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
+        Me.Purchase_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter()
+        Me.SaleItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sale_ItemTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Sale_ItemTableAdapter()
+        Me.Purchase_ItemTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_ItemTableAdapter()
         Me.Tc_WarehouseManager.SuspendLayout()
         Me.InventoryTab.SuspendLayout()
-        Me.Prod_NameToolStrip.SuspendLayout()
-        Me.Product_Code1ToolStrip.SuspendLayout()
+        Me.Product_CodeToolStrip.SuspendLayout()
+        Me.Prod_NameToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.ProductDGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PurchaseOrder.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PurchaseOrderDetailsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PurchaseOrderBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PO_NoToolStrip.SuspendLayout()
+        Me.PO_DateToolStrip.SuspendLayout()
+        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecSpecDatasetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SaleItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'RecSpecDatasetBindingSource
-        '
-        Me.RecSpecDatasetBindingSource.DataSource = Me.RecSpecDataset
-        Me.RecSpecDatasetBindingSource.Position = 0
-        '
-        'RecSpecDataset
-        '
-        Me.RecSpecDataset.DataSetName = "RecSpecDataset"
-        Me.RecSpecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProductBindingSource
-        '
-        Me.ProductBindingSource.DataMember = "Product"
-        Me.ProductBindingSource.DataSource = Me.RecSpecDataset
-        '
-        'ProductTableAdapter
-        '
-        Me.ProductTableAdapter.ClearBeforeFill = True
         '
         'Tc_WarehouseManager
         '
@@ -137,10 +128,10 @@ Partial Class WarehouseManager
         'InventoryTab
         '
         Me.InventoryTab.AutoScroll = True
+        Me.InventoryTab.Controls.Add(Me.Product_CodeToolStrip)
+        Me.InventoryTab.Controls.Add(Me.Prod_NameToolStrip1)
         Me.InventoryTab.Controls.Add(Me.Label1)
         Me.InventoryTab.Controls.Add(Me.ComboBox2)
-        Me.InventoryTab.Controls.Add(Me.Prod_NameToolStrip)
-        Me.InventoryTab.Controls.Add(Me.Product_Code1ToolStrip)
         Me.InventoryTab.Controls.Add(Me.Panel1)
         Me.InventoryTab.Controls.Add(Me.ProductDGV)
         Me.InventoryTab.Location = New System.Drawing.Point(4, 26)
@@ -152,6 +143,62 @@ Partial Class WarehouseManager
         Me.InventoryTab.Text = "Products"
         Me.InventoryTab.UseVisualStyleBackColor = True
         '
+        'Product_CodeToolStrip
+        '
+        Me.Product_CodeToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.Product_CodeToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Product_CodeToolStripTextBox, Me.Product_CodeToolStripButton})
+        Me.Product_CodeToolStrip.Location = New System.Drawing.Point(311, 188)
+        Me.Product_CodeToolStrip.Name = "Product_CodeToolStrip"
+        Me.Product_CodeToolStrip.Size = New System.Drawing.Size(200, 25)
+        Me.Product_CodeToolStrip.TabIndex = 1
+        Me.Product_CodeToolStrip.Text = "Product_CodeToolStrip"
+        Me.Product_CodeToolStrip.Visible = False
+        '
+        'Product_CodeToolStripTextBox
+        '
+        Me.Product_CodeToolStripTextBox.Name = "Product_CodeToolStripTextBox"
+        Me.Product_CodeToolStripTextBox.Size = New System.Drawing.Size(100, 25)
+        '
+        'Product_CodeToolStripButton
+        '
+        Me.Product_CodeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Product_CodeToolStripButton.Name = "Product_CodeToolStripButton"
+        Me.Product_CodeToolStripButton.Size = New System.Drawing.Size(86, 22)
+        Me.Product_CodeToolStripButton.Text = "Product_Code"
+        '
+        'Prod_NameToolStrip1
+        '
+        Me.Prod_NameToolStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.Prod_NameToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Prod_NameToolStripTextBox1, Me.Prod_NameToolStripButton1})
+        Me.Prod_NameToolStrip1.Location = New System.Drawing.Point(311, 188)
+        Me.Prod_NameToolStrip1.Name = "Prod_NameToolStrip1"
+        Me.Prod_NameToolStrip1.Size = New System.Drawing.Size(160, 25)
+        Me.Prod_NameToolStrip1.TabIndex = 1
+        Me.Prod_NameToolStrip1.Text = "Prod_NameToolStrip1"
+        Me.Prod_NameToolStrip1.Visible = False
+        '
+        'Prod_NameToolStripTextBox1
+        '
+        Me.Prod_NameToolStripTextBox1.Name = "Prod_NameToolStripTextBox1"
+        Me.Prod_NameToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
+        '
+        'Prod_NameToolStripButton1
+        '
+        Me.Prod_NameToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Prod_NameToolStripButton1.Name = "Prod_NameToolStripButton1"
+        Me.Prod_NameToolStripButton1.Size = New System.Drawing.Size(46, 22)
+        Me.Prod_NameToolStripButton1.Text = "Search"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(83, 185)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(98, 25)
+        Me.Label1.TabIndex = 29
+        Me.Label1.Text = "Search By:"
+        '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
@@ -161,52 +208,6 @@ Partial Class WarehouseManager
         Me.ComboBox2.Size = New System.Drawing.Size(121, 25)
         Me.ComboBox2.TabIndex = 28
         Me.ComboBox2.Text = "Search Criteria"
-        '
-        'Prod_NameToolStrip
-        '
-        Me.Prod_NameToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.Prod_NameToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Prod_NameToolStripTextBox, Me.Prod_NameToolStripButton})
-        Me.Prod_NameToolStrip.Location = New System.Drawing.Point(311, 188)
-        Me.Prod_NameToolStrip.Name = "Prod_NameToolStrip"
-        Me.Prod_NameToolStrip.Size = New System.Drawing.Size(160, 25)
-        Me.Prod_NameToolStrip.TabIndex = 1
-        Me.Prod_NameToolStrip.Text = "Prod_NameToolStrip"
-        Me.Prod_NameToolStrip.Visible = False
-        '
-        'Prod_NameToolStripTextBox
-        '
-        Me.Prod_NameToolStripTextBox.Name = "Prod_NameToolStripTextBox"
-        Me.Prod_NameToolStripTextBox.Size = New System.Drawing.Size(100, 25)
-        '
-        'Prod_NameToolStripButton
-        '
-        Me.Prod_NameToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Prod_NameToolStripButton.Name = "Prod_NameToolStripButton"
-        Me.Prod_NameToolStripButton.Size = New System.Drawing.Size(46, 22)
-        Me.Prod_NameToolStripButton.Text = "Search"
-        '
-        'Product_Code1ToolStrip
-        '
-        Me.Product_Code1ToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.Product_Code1ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Product_CodeToolStripTextBox, Me.Product_Code1ToolStripButton})
-        Me.Product_Code1ToolStrip.Location = New System.Drawing.Point(311, 188)
-        Me.Product_Code1ToolStrip.Name = "Product_Code1ToolStrip"
-        Me.Product_Code1ToolStrip.Size = New System.Drawing.Size(160, 25)
-        Me.Product_Code1ToolStrip.TabIndex = 1
-        Me.Product_Code1ToolStrip.Text = "Product_Code1ToolStrip"
-        Me.Product_Code1ToolStrip.Visible = False
-        '
-        'Product_CodeToolStripTextBox
-        '
-        Me.Product_CodeToolStripTextBox.Name = "Product_CodeToolStripTextBox"
-        Me.Product_CodeToolStripTextBox.Size = New System.Drawing.Size(100, 25)
-        '
-        'Product_Code1ToolStripButton
-        '
-        Me.Product_Code1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Product_Code1ToolStripButton.Name = "Product_Code1ToolStripButton"
-        Me.Product_Code1ToolStripButton.Size = New System.Drawing.Size(46, 22)
-        Me.Product_Code1ToolStripButton.Text = "Search"
         '
         'Panel1
         '
@@ -301,7 +302,7 @@ Partial Class WarehouseManager
         Me.ProductDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProductDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCodeDataGridViewTextBoxColumn, Me.ProdNameDataGridViewTextBoxColumn, Me.ProdCostPriceDataGridViewTextBoxColumn, Me.ProdStockLevelDataGridViewTextBoxColumn, Me.ProdVATDataGridViewTextBoxColumn, Me.ProdActiveDataGridViewCheckBoxColumn, Me.ProdCategoriesDataGridViewTextBoxColumn, Me.ProdReorderThresholdDataGridViewTextBoxColumn})
-        Me.ProductDGV.DataSource = Me.ProductBindingSource2
+        Me.ProductDGV.DataSource = Me.ProductBindingSource
         Me.ProductDGV.Location = New System.Drawing.Point(19, 220)
         Me.ProductDGV.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ProductDGV.MultiSelect = False
@@ -310,69 +311,11 @@ Partial Class WarehouseManager
         Me.ProductDGV.Size = New System.Drawing.Size(1211, 390)
         Me.ProductDGV.TabIndex = 16
         '
-        'ProductCodeDataGridViewTextBoxColumn
-        '
-        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
-        Me.ProductCodeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdNameDataGridViewTextBoxColumn
-        '
-        Me.ProdNameDataGridViewTextBoxColumn.DataPropertyName = "Prod_Name"
-        Me.ProdNameDataGridViewTextBoxColumn.HeaderText = "Prod_Name"
-        Me.ProdNameDataGridViewTextBoxColumn.Name = "ProdNameDataGridViewTextBoxColumn"
-        Me.ProdNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdCostPriceDataGridViewTextBoxColumn
-        '
-        Me.ProdCostPriceDataGridViewTextBoxColumn.DataPropertyName = "Prod_Cost_Price"
-        Me.ProdCostPriceDataGridViewTextBoxColumn.HeaderText = "Prod_Cost_Price"
-        Me.ProdCostPriceDataGridViewTextBoxColumn.Name = "ProdCostPriceDataGridViewTextBoxColumn"
-        Me.ProdCostPriceDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdStockLevelDataGridViewTextBoxColumn
-        '
-        Me.ProdStockLevelDataGridViewTextBoxColumn.DataPropertyName = "Prod_Stock_Level"
-        Me.ProdStockLevelDataGridViewTextBoxColumn.HeaderText = "Prod_Stock_Level"
-        Me.ProdStockLevelDataGridViewTextBoxColumn.Name = "ProdStockLevelDataGridViewTextBoxColumn"
-        Me.ProdStockLevelDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdVATDataGridViewTextBoxColumn
-        '
-        Me.ProdVATDataGridViewTextBoxColumn.DataPropertyName = "Prod_VAT"
-        Me.ProdVATDataGridViewTextBoxColumn.HeaderText = "Prod_VAT"
-        Me.ProdVATDataGridViewTextBoxColumn.Name = "ProdVATDataGridViewTextBoxColumn"
-        Me.ProdVATDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdActiveDataGridViewCheckBoxColumn
-        '
-        Me.ProdActiveDataGridViewCheckBoxColumn.DataPropertyName = "Prod_Active"
-        Me.ProdActiveDataGridViewCheckBoxColumn.HeaderText = "Prod_Active"
-        Me.ProdActiveDataGridViewCheckBoxColumn.Name = "ProdActiveDataGridViewCheckBoxColumn"
-        Me.ProdActiveDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'ProdCategoriesDataGridViewTextBoxColumn
-        '
-        Me.ProdCategoriesDataGridViewTextBoxColumn.DataPropertyName = "Prod_Categories"
-        Me.ProdCategoriesDataGridViewTextBoxColumn.HeaderText = "Prod_Categories"
-        Me.ProdCategoriesDataGridViewTextBoxColumn.Name = "ProdCategoriesDataGridViewTextBoxColumn"
-        Me.ProdCategoriesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdReorderThresholdDataGridViewTextBoxColumn
-        '
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn.DataPropertyName = "Prod_Reorder_Threshold"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn.HeaderText = "Prod_Reorder_Threshold"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn.Name = "ProdReorderThresholdDataGridViewTextBoxColumn"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProductBindingSource2
-        '
-        Me.ProductBindingSource2.DataMember = "Product"
-        Me.ProductBindingSource2.DataSource = Me.RecSpecDatasetBindingSource
-        '
         'PurchaseOrder
         '
+        Me.PurchaseOrder.AutoScroll = True
+        Me.PurchaseOrder.Controls.Add(Me.PO_DateToolStrip)
+        Me.PurchaseOrder.Controls.Add(Me.PO_NoToolStrip)
         Me.PurchaseOrder.Controls.Add(Me.Label2)
         Me.PurchaseOrder.Controls.Add(Me.lblPoDetails)
         Me.PurchaseOrder.Controls.Add(Me.lblPO)
@@ -387,6 +330,16 @@ Partial Class WarehouseManager
         Me.PurchaseOrder.TabIndex = 8
         Me.PurchaseOrder.Text = "Purchase Order"
         Me.PurchaseOrder.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(85, 161)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(98, 25)
+        Me.Label2.TabIndex = 78
+        Me.Label2.Text = "Search By:"
         '
         'lblPoDetails
         '
@@ -459,6 +412,17 @@ Partial Class WarehouseManager
         Me.Button27.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Save"
         Me.Button27.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Purchase Order No", "Date"})
+        Me.ComboBox1.Location = New System.Drawing.Point(199, 161)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(159, 25)
+        Me.ComboBox1.TabIndex = 73
+        Me.ComboBox1.Text = "Search criteria..."
+        '
         'PurchaseOrderDetailsDGV
         '
         Me.PurchaseOrderDetailsDGV.AllowUserToAddRows = False
@@ -482,6 +446,154 @@ Partial Class WarehouseManager
         Me.PurchaseOrderDetailsDGV.ReadOnly = True
         Me.PurchaseOrderDetailsDGV.Size = New System.Drawing.Size(831, 204)
         Me.PurchaseOrderDetailsDGV.TabIndex = 62
+        '
+        'PurchaseOrderDGV
+        '
+        Me.PurchaseOrderDGV.AllowUserToAddRows = False
+        Me.PurchaseOrderDGV.AllowUserToDeleteRows = False
+        Me.PurchaseOrderDGV.AutoGenerateColumns = False
+        Me.PurchaseOrderDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.PurchaseOrderDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.PurchaseOrderDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PONoDataGridViewTextBoxColumn, Me.PODateDataGridViewTextBoxColumn, Me.POTotalDataGridViewTextBoxColumn, Me.POReceivedFlagDataGridViewCheckBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.SupplierIDDataGridViewTextBoxColumn})
+        Me.PurchaseOrderDGV.DataSource = Me.PurchaseOrderBindingSource1
+        Me.PurchaseOrderDGV.Location = New System.Drawing.Point(81, 224)
+        Me.PurchaseOrderDGV.MultiSelect = False
+        Me.PurchaseOrderDGV.Name = "PurchaseOrderDGV"
+        Me.PurchaseOrderDGV.ReadOnly = True
+        Me.PurchaseOrderDGV.Size = New System.Drawing.Size(831, 213)
+        Me.PurchaseOrderDGV.TabIndex = 61
+        '
+        'PurchaseOrderBindingSource
+        '
+        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
+        Me.PurchaseOrderBindingSource.DataSource = Me.RecSpecDatasetBindingSource
+        '
+        'ProductBindingSource2
+        '
+        Me.ProductBindingSource2.DataMember = "Product"
+        Me.ProductBindingSource2.DataSource = Me.RecSpecDatasetBindingSource
+        '
+        'ProductBindingSource1
+        '
+        Me.ProductBindingSource1.DataMember = "Product"
+        Me.ProductBindingSource1.DataSource = Me.RecSpecDatasetBindingSource
+        '
+        'PurchaseOrderBindingSource1
+        '
+        Me.PurchaseOrderBindingSource1.DataMember = "Purchase_Order"
+        Me.PurchaseOrderBindingSource1.DataSource = Me.RecSpecDatasetBindingSource
+        '
+        'PO_NoToolStrip
+        '
+        Me.PO_NoToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.PO_NoToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PO_NoToolStripTextBox, Me.PO_NoToolStripButton})
+        Me.PO_NoToolStrip.Location = New System.Drawing.Point(361, 161)
+        Me.PO_NoToolStrip.Name = "PO_NoToolStrip"
+        Me.PO_NoToolStrip.Size = New System.Drawing.Size(160, 25)
+        Me.PO_NoToolStrip.TabIndex = 1
+        Me.PO_NoToolStrip.Text = "PO_NoToolStrip"
+        Me.PO_NoToolStrip.Visible = False
+        '
+        'PO_NoToolStripTextBox
+        '
+        Me.PO_NoToolStripTextBox.Name = "PO_NoToolStripTextBox"
+        Me.PO_NoToolStripTextBox.Size = New System.Drawing.Size(100, 25)
+        '
+        'PO_NoToolStripButton
+        '
+        Me.PO_NoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.PO_NoToolStripButton.Name = "PO_NoToolStripButton"
+        Me.PO_NoToolStripButton.Size = New System.Drawing.Size(46, 22)
+        Me.PO_NoToolStripButton.Text = "Search"
+        '
+        'PO_DateToolStrip
+        '
+        Me.PO_DateToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.PO_DateToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PO_DateToolStripTextBox, Me.PO_DateToolStripButton})
+        Me.PO_DateToolStrip.Location = New System.Drawing.Point(361, 161)
+        Me.PO_DateToolStrip.Name = "PO_DateToolStrip"
+        Me.PO_DateToolStrip.Size = New System.Drawing.Size(160, 25)
+        Me.PO_DateToolStrip.TabIndex = 1
+        Me.PO_DateToolStrip.Text = "PO_DateToolStrip"
+        Me.PO_DateToolStrip.Visible = False
+        '
+        'PO_DateToolStripTextBox
+        '
+        Me.PO_DateToolStripTextBox.Name = "PO_DateToolStripTextBox"
+        Me.PO_DateToolStripTextBox.Size = New System.Drawing.Size(100, 25)
+        '
+        'PO_DateToolStripButton
+        '
+        Me.PO_DateToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.PO_DateToolStripButton.Name = "PO_DateToolStripButton"
+        Me.PO_DateToolStripButton.Size = New System.Drawing.Size(46, 22)
+        Me.PO_DateToolStripButton.Text = "Search"
+        '
+        'ProductCodeDataGridViewTextBoxColumn
+        '
+        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
+        Me.ProductCodeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdNameDataGridViewTextBoxColumn
+        '
+        Me.ProdNameDataGridViewTextBoxColumn.DataPropertyName = "Prod_Name"
+        Me.ProdNameDataGridViewTextBoxColumn.HeaderText = "Prod_Name"
+        Me.ProdNameDataGridViewTextBoxColumn.Name = "ProdNameDataGridViewTextBoxColumn"
+        Me.ProdNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdCostPriceDataGridViewTextBoxColumn
+        '
+        Me.ProdCostPriceDataGridViewTextBoxColumn.DataPropertyName = "Prod_Cost_Price"
+        Me.ProdCostPriceDataGridViewTextBoxColumn.HeaderText = "Prod_Cost_Price"
+        Me.ProdCostPriceDataGridViewTextBoxColumn.Name = "ProdCostPriceDataGridViewTextBoxColumn"
+        Me.ProdCostPriceDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdStockLevelDataGridViewTextBoxColumn
+        '
+        Me.ProdStockLevelDataGridViewTextBoxColumn.DataPropertyName = "Prod_Stock_Level"
+        Me.ProdStockLevelDataGridViewTextBoxColumn.HeaderText = "Prod_Stock_Level"
+        Me.ProdStockLevelDataGridViewTextBoxColumn.Name = "ProdStockLevelDataGridViewTextBoxColumn"
+        Me.ProdStockLevelDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdVATDataGridViewTextBoxColumn
+        '
+        Me.ProdVATDataGridViewTextBoxColumn.DataPropertyName = "Prod_VAT"
+        Me.ProdVATDataGridViewTextBoxColumn.HeaderText = "Prod_VAT"
+        Me.ProdVATDataGridViewTextBoxColumn.Name = "ProdVATDataGridViewTextBoxColumn"
+        Me.ProdVATDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdActiveDataGridViewCheckBoxColumn
+        '
+        Me.ProdActiveDataGridViewCheckBoxColumn.DataPropertyName = "Prod_Active"
+        Me.ProdActiveDataGridViewCheckBoxColumn.HeaderText = "Prod_Active"
+        Me.ProdActiveDataGridViewCheckBoxColumn.Name = "ProdActiveDataGridViewCheckBoxColumn"
+        Me.ProdActiveDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'ProdCategoriesDataGridViewTextBoxColumn
+        '
+        Me.ProdCategoriesDataGridViewTextBoxColumn.DataPropertyName = "Prod_Categories"
+        Me.ProdCategoriesDataGridViewTextBoxColumn.HeaderText = "Prod_Categories"
+        Me.ProdCategoriesDataGridViewTextBoxColumn.Name = "ProdCategoriesDataGridViewTextBoxColumn"
+        Me.ProdCategoriesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdReorderThresholdDataGridViewTextBoxColumn
+        '
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn.DataPropertyName = "Prod_Reorder_Threshold"
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn.HeaderText = "Prod_Reorder_Threshold"
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn.Name = "ProdReorderThresholdDataGridViewTextBoxColumn"
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductBindingSource
+        '
+        Me.ProductBindingSource.DataMember = "Product"
+        Me.ProductBindingSource.DataSource = Me.RecSpecDataset
+        '
+        'RecSpecDataset
+        '
+        Me.RecSpecDataset.DataSetName = "RecSpecDataset"
+        Me.RecSpecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PurchaseItemLineNoDataGridViewTextBoxColumn
         '
@@ -522,69 +634,6 @@ Partial Class WarehouseManager
         '
         Me.PurchaseItemBindingSource.DataMember = "Purchase_Item"
         Me.PurchaseItemBindingSource.DataSource = Me.RecSpecDataset
-        '
-        'PurchaseOrderDGV
-        '
-        Me.PurchaseOrderDGV.AllowUserToAddRows = False
-        Me.PurchaseOrderDGV.AllowUserToDeleteRows = False
-        Me.PurchaseOrderDGV.AutoGenerateColumns = False
-        Me.PurchaseOrderDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.PurchaseOrderDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PurchaseOrderDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PONoDataGridViewTextBoxColumn, Me.PODateDataGridViewTextBoxColumn, Me.POTotalDataGridViewTextBoxColumn, Me.POReceivedFlagDataGridViewCheckBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.SupplierIDDataGridViewTextBoxColumn})
-        Me.PurchaseOrderDGV.DataSource = Me.PurchaseOrderBindingSource
-        Me.PurchaseOrderDGV.Location = New System.Drawing.Point(81, 224)
-        Me.PurchaseOrderDGV.MultiSelect = False
-        Me.PurchaseOrderDGV.Name = "PurchaseOrderDGV"
-        Me.PurchaseOrderDGV.ReadOnly = True
-        Me.PurchaseOrderDGV.Size = New System.Drawing.Size(831, 213)
-        Me.PurchaseOrderDGV.TabIndex = 61
-        '
-        'PurchaseOrderBindingSource
-        '
-        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
-        Me.PurchaseOrderBindingSource.DataSource = Me.RecSpecDatasetBindingSource
-        '
-        'ProductBindingSource1
-        '
-        Me.ProductBindingSource1.DataMember = "Product"
-        Me.ProductBindingSource1.DataSource = Me.RecSpecDatasetBindingSource
-        '
-        'Purchase_OrderTableAdapter
-        '
-        Me.Purchase_OrderTableAdapter.ClearBeforeFill = True
-        '
-        'SaleItemBindingSource
-        '
-        Me.SaleItemBindingSource.DataMember = "Sale_Item"
-        Me.SaleItemBindingSource.DataSource = Me.RecSpecDataset
-        '
-        'Sale_ItemTableAdapter
-        '
-        Me.Sale_ItemTableAdapter.ClearBeforeFill = True
-        '
-        'Purchase_ItemTableAdapter
-        '
-        Me.Purchase_ItemTableAdapter.ClearBeforeFill = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(83, 185)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 25)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Search By:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(199, 161)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(159, 25)
-        Me.ComboBox1.TabIndex = 73
-        Me.ComboBox1.Text = "Search criteria..."
         '
         'PONoDataGridViewTextBoxColumn
         '
@@ -628,48 +677,69 @@ Partial Class WarehouseManager
         Me.SupplierIDDataGridViewTextBoxColumn.Name = "SupplierIDDataGridViewTextBoxColumn"
         Me.SupplierIDDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'Label2
+        'RecSpecDatasetBindingSource
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(85, 161)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 25)
-        Me.Label2.TabIndex = 78
-        Me.Label2.Text = "Search By:"
+        Me.RecSpecDatasetBindingSource.DataSource = Me.RecSpecDataset
+        Me.RecSpecDatasetBindingSource.Position = 0
+        '
+        'ProductTableAdapter
+        '
+        Me.ProductTableAdapter.ClearBeforeFill = True
+        '
+        'Purchase_OrderTableAdapter
+        '
+        Me.Purchase_OrderTableAdapter.ClearBeforeFill = True
+        '
+        'SaleItemBindingSource
+        '
+        Me.SaleItemBindingSource.DataMember = "Sale_Item"
+        Me.SaleItemBindingSource.DataSource = Me.RecSpecDataset
+        '
+        'Sale_ItemTableAdapter
+        '
+        Me.Sale_ItemTableAdapter.ClearBeforeFill = True
+        '
+        'Purchase_ItemTableAdapter
+        '
+        Me.Purchase_ItemTableAdapter.ClearBeforeFill = True
         '
         'WarehouseManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1283, 726)
+        Me.ClientSize = New System.Drawing.Size(1283, 734)
         Me.Controls.Add(Me.Tc_WarehouseManager)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "WarehouseManager"
         Me.Text = "Warehouse Manager"
         Me.TopMost = True
-        CType(Me.RecSpecDatasetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tc_WarehouseManager.ResumeLayout(False)
         Me.InventoryTab.ResumeLayout(False)
         Me.InventoryTab.PerformLayout()
-        Me.Prod_NameToolStrip.ResumeLayout(False)
-        Me.Prod_NameToolStrip.PerformLayout()
-        Me.Product_Code1ToolStrip.ResumeLayout(False)
-        Me.Product_Code1ToolStrip.PerformLayout()
+        Me.Product_CodeToolStrip.ResumeLayout(False)
+        Me.Product_CodeToolStrip.PerformLayout()
+        Me.Prod_NameToolStrip1.ResumeLayout(False)
+        Me.Prod_NameToolStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.ProductDGV, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PurchaseOrder.ResumeLayout(False)
         Me.PurchaseOrder.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         CType(Me.PurchaseOrderDetailsDGV, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurchaseOrderDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PurchaseOrderBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PO_NoToolStrip.ResumeLayout(False)
+        Me.PO_NoToolStrip.PerformLayout()
+        Me.PO_DateToolStrip.ResumeLayout(False)
+        Me.PO_DateToolStrip.PerformLayout()
+        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecSpecDatasetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SaleItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -724,12 +794,6 @@ Partial Class WarehouseManager
     Friend WithEvents PurchaseItemQtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PurchaseItemPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductCodeDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents Product_Code1ToolStrip As ToolStrip
-    Friend WithEvents Product_CodeToolStripTextBox As ToolStripTextBox
-    Friend WithEvents Product_Code1ToolStripButton As ToolStripButton
-    Friend WithEvents Prod_NameToolStrip As ToolStrip
-    Friend WithEvents Prod_NameToolStripTextBox As ToolStripTextBox
-    Friend WithEvents Prod_NameToolStripButton As ToolStripButton
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -740,4 +804,18 @@ Partial Class WarehouseManager
     Friend WithEvents POReceivedFlagDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Prod_NameToolStrip1 As ToolStrip
+    Friend WithEvents Prod_NameToolStripTextBox1 As ToolStripTextBox
+    Friend WithEvents Prod_NameToolStripButton1 As ToolStripButton
+    Friend WithEvents Product_CodeToolStrip As ToolStrip
+    Friend WithEvents Product_CodeToolStripLabel As ToolStripLabel
+    Friend WithEvents Product_CodeToolStripTextBox As ToolStripTextBox
+    Friend WithEvents Product_CodeToolStripButton As ToolStripButton
+    Friend WithEvents PurchaseOrderBindingSource1 As BindingSource
+    Friend WithEvents PO_NoToolStrip As ToolStrip
+    Friend WithEvents PO_NoToolStripTextBox As ToolStripTextBox
+    Friend WithEvents PO_NoToolStripButton As ToolStripButton
+    Friend WithEvents PO_DateToolStrip As ToolStrip
+    Friend WithEvents PO_DateToolStripTextBox As ToolStripTextBox
+    Friend WithEvents PO_DateToolStripButton As ToolStripButton
 End Class

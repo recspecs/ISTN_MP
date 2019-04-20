@@ -95,40 +95,69 @@
 
     End Sub
 
-    Private Sub Product_CodeToolStripButton_Click(sender As Object, e As EventArgs)
-        Try
-            Me.ProductTableAdapter.Product_Code(Me.RecSpecDataset.Product)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-    End Sub
 
-    Private Sub Product_Code1ToolStripButton_Click(sender As Object, e As EventArgs) Handles Product_Code1ToolStripButton.Click
-        Try
-            Me.ProductTableAdapter.Product_Code1(Me.RecSpecDataset.Product, Product_CodeToolStripTextBox.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-    End Sub
 
-    Private Sub Prod_NameToolStripButton_Click(sender As Object, e As EventArgs) Handles Prod_NameToolStripButton.Click
-        Try
-            Me.ProductTableAdapter.Prod_Name(Me.RecSpecDataset.Product, Prod_NameToolStripTextBox.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-    End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         If ComboBox2.SelectedItem Is "Product Name" Then
-            Prod_NameToolStrip.Show()
-            Product_Code1ToolStrip.Hide()
+            Prod_NameToolStrip1.Show()
+            Product_CodeToolStrip.Hide()
         Else
-            Prod_NameToolStrip.Hide()
-            Product_Code1ToolStrip.Show()
+            Prod_NameToolStrip1.Hide()
+            Product_CodeToolStrip.Show()
+        End If
+    End Sub
+
+    Private Sub InventoryTab_Click(sender As Object, e As EventArgs) Handles InventoryTab.Click
+
+    End Sub
+
+    Private Sub Prod_NameToolStripButton1_Click(sender As Object, e As EventArgs) Handles Prod_NameToolStripButton1.Click
+        Try
+            Me.ProductTableAdapter.Prod_Name(Me.RecSpecDataset.Product, Prod_NameToolStripTextBox1.Text & "%")
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub Product_CodeToolStripButton_Click(sender As Object, e As EventArgs) Handles Product_CodeToolStripButton.Click
+        Try
+            Me.ProductTableAdapter.Product_Code(Me.RecSpecDataset.Product, Product_CodeToolStripTextBox.Text & "%")
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub PO_NoToolStripButton_Click(sender As Object, e As EventArgs) Handles PO_NoToolStripButton.Click
+        Try
+            Me.Purchase_OrderTableAdapter.PO_No(Me.RecSpecDataset.Purchase_Order, PO_NoToolStripTextBox.Text & "%")
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub PO_DateToolStripButton_Click(sender As Object, e As EventArgs) Handles PO_DateToolStripButton.Click
+        Try
+            Me.Purchase_OrderTableAdapter.PO_Date(Me.RecSpecDataset.Purchase_Order, PO_DateToolStripTextBox.Text & "%")
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        If ComboBox1.SelectedItem Is "Date" Then
+            PO_DateToolStrip.Show()
+            PO_NoToolStrip.Hide()
+        Else
+            PO_DateToolStrip.Hide()
+            PO_NoToolStrip.Show()
         End If
     End Sub
 End Class
