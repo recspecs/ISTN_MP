@@ -27,20 +27,47 @@
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        ProductDGV.ReadOnly = False
-        ProductDGV.AllowUserToAddRows = True
-        ProductDGV.GridColor = Color.Crimson
-        MsgBox("Add new product, or edit existing products!")
+        If Not btnUpdate.Text = "Cancel" Then
+            ProductDGV.ReadOnly = False
+            ProductDGV.AllowUserToAddRows = True
+            ProductDGV.GridColor = Color.Crimson
+            btnUpdate.Text = "Cancel"
+            btnUpdate.Image = My.Resources._return
+            btnUpdate.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemove.Enabled = False
+            MsgBox("Add new product, or edit existing products!")
+        Else
+            ProductDGV.ReadOnly = True
+            ProductDGV.AllowUserToAddRows = False
+            ProductDGV.GridColor = Color.Gray
+            btnUpdate.Text = "Add New/Edit Products"
+            btnUpdate.Image = My.Resources.Pencil_icon
+            btnUpdate.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemove.Enabled = True
+        End If
+
+
+
+
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        ProductBindingSource.EndEdit()
-        ProductTableAdapter.Update(RecSpecDataset.Product)
-        MsgBox("Information saved!")
-        ProductDGV.ReadOnly = True
-        ProductDGV.AllowUserToAddRows = False
-        ProductDGV.AllowUserToDeleteRows = False
-        ProductDGV.GridColor = Color.Gray
+        If btnUpdate.Text = "Cancel" Then
+            ProductBindingSource.EndEdit()
+            Try
+                ProductTableAdapter.Update(RecSpecDataset.Product)
+                MsgBox("Information saved!")
+            Catch ex As DataException
+                MsgBox(ex.StackTrace)
+            End Try
+            ProductDGV.ReadOnly = True
+            ProductDGV.AllowUserToAddRows = False
+            ProductDGV.AllowUserToDeleteRows = False
+            ProductDGV.GridColor = Color.Gray
+            Button19.Enabled = True
+
+        End If
+
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
@@ -151,6 +178,18 @@
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+
+    End Sub
+
+    Private Sub PurchaseOrderDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles PurchaseOrderDGV.CellContentClick
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub ProductDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ProductDGV.CellContentClick
 
     End Sub
 End Class
