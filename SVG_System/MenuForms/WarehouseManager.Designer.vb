@@ -23,8 +23,8 @@ Partial Class WarehouseManager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.RecSpecDatasetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RecSpecDataset = New MenuForms.RecSpecDataset()
         Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -67,15 +67,15 @@ Partial Class WarehouseManager
         Me.PoCostPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Purchase_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter()
         Me.PONoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PODateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.POTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.POReceivedFlagDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Purchase_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter()
         CType(Me.RecSpecDatasetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RecSpecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,8 +88,8 @@ Partial Class WarehouseManager
         Me.Panel6.SuspendLayout()
         CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RecSpecDatasetBindingSource
@@ -247,14 +247,14 @@ Partial Class WarehouseManager
         '
         Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.AutoGenerateColumns = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCodeDataGridViewTextBoxColumn, Me.ProdNameDataGridViewTextBoxColumn, Me.ProdCostPriceDataGridViewTextBoxColumn, Me.ProdStockLevelDataGridViewTextBoxColumn, Me.ProdVATDataGridViewTextBoxColumn, Me.ProdActiveDataGridViewCheckBoxColumn, Me.ProdCategoriesDataGridViewTextBoxColumn, Me.ProdReorderThresholdDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProductBindingSource2
@@ -476,14 +476,14 @@ Partial Class WarehouseManager
         'DataGridView7
         '
         Me.DataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView7.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PoProductCode, Me.PoProductName, Me.PoCostPrice, Me.PurchaseQty})
         Me.DataGridView7.Location = New System.Drawing.Point(81, 441)
@@ -527,6 +527,20 @@ Partial Class WarehouseManager
         Me.DataGridView2.Size = New System.Drawing.Size(831, 213)
         Me.DataGridView2.TabIndex = 61
         '
+        'ProductBindingSource1
+        '
+        Me.ProductBindingSource1.DataMember = "Product"
+        Me.ProductBindingSource1.DataSource = Me.RecSpecDatasetBindingSource
+        '
+        'PurchaseOrderBindingSource
+        '
+        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
+        Me.PurchaseOrderBindingSource.DataSource = Me.RecSpecDatasetBindingSource
+        '
+        'Purchase_OrderTableAdapter
+        '
+        Me.Purchase_OrderTableAdapter.ClearBeforeFill = True
+        '
         'PONoDataGridViewTextBoxColumn
         '
         Me.PONoDataGridViewTextBoxColumn.DataPropertyName = "PO_No"
@@ -563,20 +577,6 @@ Partial Class WarehouseManager
         Me.SupplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier ID"
         Me.SupplierIDDataGridViewTextBoxColumn.Name = "SupplierIDDataGridViewTextBoxColumn"
         '
-        'PurchaseOrderBindingSource
-        '
-        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
-        Me.PurchaseOrderBindingSource.DataSource = Me.RecSpecDatasetBindingSource
-        '
-        'ProductBindingSource1
-        '
-        Me.ProductBindingSource1.DataMember = "Product"
-        Me.ProductBindingSource1.DataSource = Me.RecSpecDatasetBindingSource
-        '
-        'Purchase_OrderTableAdapter
-        '
-        Me.Purchase_OrderTableAdapter.ClearBeforeFill = True
-        '
         'WarehouseManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -602,8 +602,8 @@ Partial Class WarehouseManager
         Me.Panel6.ResumeLayout(False)
         CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
