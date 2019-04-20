@@ -5,7 +5,7 @@
         'TODO: This line of code loads data into the 'RecSpecDataset.Purchase_Item' table. You can move, or remove it, as needed.
         Me.Purchase_ItemTableAdapter.Fill(Me.RecSpecDataset.Purchase_Item)
         'TODO: This line of code loads data into the 'RecSpecDataset.Sale_Item' table. You can move, or remove it, as needed.
-        Me.Sale_ItemTableAdapter.Fill(Me.RecSpecDataset.Sale_Item)
+
         'TODO: This line of code loads data into the 'RecSpecDataset.Purchase_Order' table. You can move, or remove it, as needed.
         Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)
         'TODO: This line of code loads data into the 'RecSpecDataset.Product' table. You can move, or remove it, as needed.
@@ -63,8 +63,8 @@
     End Sub
 
     Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
-        PurchaseOrderBindingSource.EndEdit()
-        PurchaseItemBindingSource.EndEdit()
+        PurchaseOrderBindingSource1.EndEdit()
+        PurchaseItemBindingSource1.EndEdit()
         Purchase_OrderTableAdapter.Update(RecSpecDataset.Purchase_Order)
         Purchase_ItemTableAdapter.Update(RecSpecDataset.Purchase_Item)
         MsgBox("Information saved!")
@@ -103,10 +103,10 @@
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         If ComboBox2.SelectedItem Is "Product Name" Then
-            Prod_NameToolStrip1.Show()
+            Prod_NameToolStrip.Show()
             Product_CodeToolStrip.Hide()
         Else
-            Prod_NameToolStrip1.Hide()
+            Prod_NameToolStrip.Hide()
             Product_CodeToolStrip.Show()
         End If
     End Sub
@@ -115,14 +115,9 @@
 
     End Sub
 
-    Private Sub Prod_NameToolStripButton1_Click(sender As Object, e As EventArgs) Handles Prod_NameToolStripButton1.Click
-        Try
-            Me.ProductTableAdapter.Prod_Name(Me.RecSpecDataset.Product, Prod_NameToolStripTextBox1.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-    End Sub
+
+
 
     Private Sub Product_CodeToolStripButton_Click(sender As Object, e As EventArgs) Handles Product_CodeToolStripButton.Click
         Try
@@ -131,6 +126,14 @@
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub Prod_NameToolStripButton_Click(sender As Object, e As EventArgs) Handles Prod_NameToolStripButton.Click
+        Try
+            Me.ProductTableAdapter.Prod_Name(Me.RecSpecDataset.Product, Prod_NameToolStripTextBox.Text & "%")
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub PO_NoToolStripButton_Click(sender As Object, e As EventArgs) Handles PO_NoToolStripButton.Click
@@ -142,22 +145,12 @@
 
     End Sub
 
-    Private Sub PO_DateToolStripButton_Click(sender As Object, e As EventArgs) Handles PO_DateToolStripButton.Click
+    Private Sub PI_IDToolStripButton_Click(sender As Object, e As EventArgs)
         Try
-            Me.Purchase_OrderTableAdapter.PO_Date(Me.RecSpecDataset.Purchase_Order, PO_DateToolStripTextBox.Text & "%")
+            Me.Purchase_ItemTableAdapter.PI_ID(Me.RecSpecDataset.Purchase_Item)
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        If ComboBox1.SelectedItem Is "Date" Then
-            PO_DateToolStrip.Show()
-            PO_NoToolStrip.Hide()
-        Else
-            PO_DateToolStrip.Hide()
-            PO_NoToolStrip.Show()
-        End If
     End Sub
 End Class
