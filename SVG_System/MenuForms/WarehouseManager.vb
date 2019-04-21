@@ -34,6 +34,8 @@
             btnUpdate.Image = My.Resources.Pencil_icon
             btnUpdate.ImageAlign = ContentAlignment.MiddleCenter
             btnRemove.Enabled = True
+            Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
+
         End If
 
 
