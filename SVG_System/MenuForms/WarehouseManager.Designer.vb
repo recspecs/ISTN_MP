@@ -23,18 +23,13 @@ Partial Class WarehouseManager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Tc_WarehouseManager = New System.Windows.Forms.TabControl()
         Me.InventoryTab = New System.Windows.Forms.TabPage()
-        Me.Product_CodeToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.Product_CodeToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.Product_CodeToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.Prod_NameToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.Prod_NameToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.Prod_NameToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.CriteriaBox = New System.Windows.Forms.ComboBox()
+        Me.Querybox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -80,10 +75,9 @@ Partial Class WarehouseManager
         Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
         Me.Purchase_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter()
         Me.Purchase_ItemTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_ItemTableAdapter()
+        Me.Customer_PaymentTableAdapter1 = New MenuForms.RecSpecDatasetTableAdapters.Customer_PaymentTableAdapter()
         Me.Tc_WarehouseManager.SuspendLayout()
         Me.InventoryTab.SuspendLayout()
-        Me.Product_CodeToolStrip.SuspendLayout()
-        Me.Prod_NameToolStrip.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.ProductDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,10 +107,9 @@ Partial Class WarehouseManager
         'InventoryTab
         '
         Me.InventoryTab.AutoScroll = True
-        Me.InventoryTab.Controls.Add(Me.Product_CodeToolStrip)
-        Me.InventoryTab.Controls.Add(Me.Prod_NameToolStrip)
-        Me.InventoryTab.Controls.Add(Me.Label1)
-        Me.InventoryTab.Controls.Add(Me.ComboBox2)
+        Me.InventoryTab.Controls.Add(Me.Button30)
+        Me.InventoryTab.Controls.Add(Me.CriteriaBox)
+        Me.InventoryTab.Controls.Add(Me.Querybox)
         Me.InventoryTab.Controls.Add(Me.Panel1)
         Me.InventoryTab.Controls.Add(Me.ProductDGV)
         Me.InventoryTab.Location = New System.Drawing.Point(4, 26)
@@ -128,71 +121,38 @@ Partial Class WarehouseManager
         Me.InventoryTab.Text = "Products"
         Me.InventoryTab.UseVisualStyleBackColor = True
         '
-        'Product_CodeToolStrip
+        'Button30
         '
-        Me.Product_CodeToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.Product_CodeToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Product_CodeToolStripTextBox, Me.Product_CodeToolStripButton})
-        Me.Product_CodeToolStrip.Location = New System.Drawing.Point(311, 188)
-        Me.Product_CodeToolStrip.Name = "Product_CodeToolStrip"
-        Me.Product_CodeToolStrip.Size = New System.Drawing.Size(160, 25)
-        Me.Product_CodeToolStrip.TabIndex = 1
-        Me.Product_CodeToolStrip.Text = "Search"
-        Me.Product_CodeToolStrip.Visible = False
+        Me.Button30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button30.Image = Global.MenuForms.My.Resources.Resources.searchico2n
+        Me.Button30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button30.Location = New System.Drawing.Point(252, 175)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button30.Size = New System.Drawing.Size(141, 28)
+        Me.Button30.TabIndex = 77
+        Me.Button30.Text = "Search"
+        Me.Button30.UseVisualStyleBackColor = True
         '
-        'Product_CodeToolStripTextBox
+        'CriteriaBox
         '
-        Me.Product_CodeToolStripTextBox.Name = "Product_CodeToolStripTextBox"
-        Me.Product_CodeToolStripTextBox.Size = New System.Drawing.Size(100, 25)
+        Me.CriteriaBox.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.CriteriaBox.FormattingEnabled = True
+        Me.CriteriaBox.Items.AddRange(New Object() {"...", "by Product Code", "by Product Name", "by Stock level"})
+        Me.CriteriaBox.Location = New System.Drawing.Point(642, 175)
+        Me.CriteriaBox.Name = "CriteriaBox"
+        Me.CriteriaBox.Size = New System.Drawing.Size(159, 25)
+        Me.CriteriaBox.TabIndex = 76
+        Me.CriteriaBox.Text = "by Product Name"
         '
-        'Product_CodeToolStripButton
+        'Querybox
         '
-        Me.Product_CodeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Product_CodeToolStripButton.Name = "Product_CodeToolStripButton"
-        Me.Product_CodeToolStripButton.Size = New System.Drawing.Size(46, 22)
-        Me.Product_CodeToolStripButton.Text = "Search"
-        '
-        'Prod_NameToolStrip
-        '
-        Me.Prod_NameToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.Prod_NameToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Prod_NameToolStripTextBox, Me.Prod_NameToolStripButton})
-        Me.Prod_NameToolStrip.Location = New System.Drawing.Point(311, 188)
-        Me.Prod_NameToolStrip.Name = "Prod_NameToolStrip"
-        Me.Prod_NameToolStrip.Size = New System.Drawing.Size(160, 25)
-        Me.Prod_NameToolStrip.TabIndex = 2
-        Me.Prod_NameToolStrip.Text = "Prod_NameToolStrip"
-        Me.Prod_NameToolStrip.Visible = False
-        '
-        'Prod_NameToolStripTextBox
-        '
-        Me.Prod_NameToolStripTextBox.Name = "Prod_NameToolStripTextBox"
-        Me.Prod_NameToolStripTextBox.Size = New System.Drawing.Size(100, 25)
-        '
-        'Prod_NameToolStripButton
-        '
-        Me.Prod_NameToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Prod_NameToolStripButton.Name = "Prod_NameToolStripButton"
-        Me.Prod_NameToolStripButton.Size = New System.Drawing.Size(46, 22)
-        Me.Prod_NameToolStripButton.Text = "Search"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(83, 185)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 25)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Search By:"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Product Name", "Product Code"})
-        Me.ComboBox2.Location = New System.Drawing.Point(187, 188)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 25)
-        Me.ComboBox2.TabIndex = 28
-        Me.ComboBox2.Text = "Search Criteria"
+        Me.Querybox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Querybox.Location = New System.Drawing.Point(417, 175)
+        Me.Querybox.Name = "Querybox"
+        Me.Querybox.Size = New System.Drawing.Size(194, 25)
+        Me.Querybox.TabIndex = 75
+        Me.Querybox.Text = "Enter query ..."
         '
         'Panel1
         '
@@ -252,14 +212,14 @@ Partial Class WarehouseManager
         Me.ProductDGV.AllowUserToDeleteRows = False
         Me.ProductDGV.AutoGenerateColumns = False
         Me.ProductDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ProductDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ProductDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProductDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCodeDataGridViewTextBoxColumn, Me.ProdNameDataGridViewTextBoxColumn, Me.ProdCostPriceDataGridViewTextBoxColumn, Me.ProdStockLevelDataGridViewTextBoxColumn, Me.ProdVATDataGridViewTextBoxColumn, Me.ProdActiveDataGridViewCheckBoxColumn, Me.ProdCategoriesDataGridViewTextBoxColumn, Me.ProdReorderThresholdDataGridViewTextBoxColumn})
         Me.ProductDGV.DataSource = Me.ProductBindingSource
@@ -468,14 +428,14 @@ Partial Class WarehouseManager
         Me.PurchaseOrderDetailsDGV.AllowUserToDeleteRows = False
         Me.PurchaseOrderDetailsDGV.AutoGenerateColumns = False
         Me.PurchaseOrderDetailsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PurchaseOrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PurchaseOrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.PurchaseOrderDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PurchaseOrderDetailsDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PurchaseItemLineNoDataGridViewTextBoxColumn, Me.PONoDataGridViewTextBoxColumn1, Me.PurchaseItemQtyDataGridViewTextBoxColumn, Me.PurchaseItemPriceDataGridViewTextBoxColumn, Me.ProductCodeDataGridViewTextBoxColumn1})
         Me.PurchaseOrderDetailsDGV.DataSource = Me.PurchaseItemBindingSource1
@@ -606,6 +566,10 @@ Partial Class WarehouseManager
         '
         Me.Purchase_ItemTableAdapter.ClearBeforeFill = True
         '
+        'Customer_PaymentTableAdapter1
+        '
+        Me.Customer_PaymentTableAdapter1.ClearBeforeFill = True
+        '
         'WarehouseManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -620,10 +584,6 @@ Partial Class WarehouseManager
         Me.Tc_WarehouseManager.ResumeLayout(False)
         Me.InventoryTab.ResumeLayout(False)
         Me.InventoryTab.PerformLayout()
-        Me.Product_CodeToolStrip.ResumeLayout(False)
-        Me.Product_CodeToolStrip.PerformLayout()
-        Me.Prod_NameToolStrip.ResumeLayout(False)
-        Me.Prod_NameToolStrip.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.ProductDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -676,8 +636,6 @@ Partial Class WarehouseManager
     Friend WithEvents PurchaseItemQtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PurchaseItemPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductCodeDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PONoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PODateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -687,17 +645,14 @@ Partial Class WarehouseManager
     Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Product_CodeToolStripLabel As ToolStripLabel
     Friend WithEvents PurchaseOrderBindingSource1 As BindingSource
-    Friend WithEvents Product_CodeToolStrip As ToolStrip
     Friend WithEvents Product_CodeToolStripLabel1 As ToolStripLabel
-    Friend WithEvents Product_CodeToolStripTextBox As ToolStripTextBox
-    Friend WithEvents Product_CodeToolStripButton As ToolStripButton
-    Friend WithEvents Prod_NameToolStrip As ToolStrip
-    Friend WithEvents Prod_NameToolStripTextBox As ToolStripTextBox
-    Friend WithEvents Prod_NameToolStripButton As ToolStripButton
     Friend WithEvents PO_NoToolStrip As ToolStrip
     Friend WithEvents PO_NoToolStripTextBox As ToolStripTextBox
     Friend WithEvents PO_NoToolStripButton As ToolStripButton
     Friend WithEvents PurchaseItemBindingSource1 As BindingSource
+    Friend WithEvents Button30 As Button
+    Friend WithEvents CriteriaBox As ComboBox
+    Friend WithEvents Querybox As TextBox
     Friend WithEvents ProductCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProdNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProdCostPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -706,4 +661,5 @@ Partial Class WarehouseManager
     Friend WithEvents ProdActiveDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents ProdCategoriesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProdReorderThresholdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Customer_PaymentTableAdapter1 As RecSpecDatasetTableAdapters.Customer_PaymentTableAdapter
 End Class

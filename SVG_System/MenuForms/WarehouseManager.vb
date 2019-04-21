@@ -1,5 +1,5 @@
 ﻿Public Class WarehouseManager
-    
+
 
     Private Sub WarehouseManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'RecSpecDataset.Purchase_Item' table. You can move, or remove it, as needed.
@@ -191,15 +191,7 @@
 
 
 
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        If ComboBox2.SelectedItem Is "Product Name" Then
-            Prod_NameToolStrip.Show()
-            Product_CodeToolStrip.Hide()
-        Else
-            Prod_NameToolStrip.Hide()
-            Product_CodeToolStrip.Show()
-        End If
-    End Sub
+
 
     Private Sub InventoryTab_Click(sender As Object, e As EventArgs) Handles InventoryTab.Click
 
@@ -209,40 +201,7 @@
 
 
 
-    Private Sub Product_CodeToolStripButton_Click(sender As Object, e As EventArgs) Handles Product_CodeToolStripButton.Click
-        Try
-            Me.ProductTableAdapter.Product_Code(Me.RecSpecDataset.Product, Product_CodeToolStripTextBox.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-    End Sub
-
-    Private Sub Prod_NameToolStripButton_Click(sender As Object, e As EventArgs) Handles Prod_NameToolStripButton.Click
-        Try
-            Me.ProductTableAdapter.Prod_Name(Me.RecSpecDataset.Product, Prod_NameToolStripTextBox.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub PO_NoToolStripButton_Click(sender As Object, e As EventArgs) Handles PO_NoToolStripButton.Click
-        Try
-            Me.Purchase_OrderTableAdapter.PO_No(Me.RecSpecDataset.Purchase_Order, PO_NoToolStripTextBox.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub PI_IDToolStripButton_Click(sender As Object, e As EventArgs)
-        Try
-            Me.Purchase_ItemTableAdapter.PI_ID(Me.RecSpecDataset.Purchase_Item)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
 
     Private Sub PurchaseOrderDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles PurchaseOrderDGV.CellContentClick
 
@@ -254,5 +213,42 @@
 
     Private Sub ProductDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ProductDGV.CellContentClick
 
+    End Sub
+
+    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
+        Dim query As String
+
+        Select Case CriteriaBox.Text
+            Case "by Product Code"
+                query = "Product_Code LIKE '%" + Querybox.Text + "%'"
+            Case "by Product Name"
+                query = "Prod_Name LIKE '%" + Querybox.Text + "%'"
+            Case "by Stock level"
+                query = "Stock_level LIKE '" + Querybox.Text + "'"
+            Case Else
+                query = ""
+        End Select
+
+        If query.Length = 0 Then
+            ProductBindingSource.RemoveFilter()
+        Else
+            ProductBindingSource.Filter = query
+        End If
+    End Sub
+
+    Private Sub ProductBindingSource_CurrentChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub CriteriaBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CriteriaBox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Querybox_Enter(sender As Object, e As EventArgs) Handles Querybox.Enter
+        Querybox.Text = ""
+    End Sub
+
+    Private Sub Querybox_Leave(sender As Object, e As EventArgs) Handles Querybox.Leave
+        Querybox.Text = "Enter Query"
     End Sub
 End Class
