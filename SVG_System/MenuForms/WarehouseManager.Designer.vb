@@ -429,6 +429,7 @@ Partial Class WarehouseManager
         Me.Button19.Size = New System.Drawing.Size(125, 141)
         Me.Button19.TabIndex = 31
         Me.Button19.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Remove"
+        Me.Button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button19.UseVisualStyleBackColor = True
         '
         'btnEmpEdit
@@ -458,6 +459,7 @@ Partial Class WarehouseManager
         Me.Button27.Size = New System.Drawing.Size(125, 141)
         Me.Button27.TabIndex = 30
         Me.Button27.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Save"
+        Me.Button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button27.UseVisualStyleBackColor = True
         '
         'PurchaseOrderDetailsDGV

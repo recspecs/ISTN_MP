@@ -96,13 +96,36 @@
 
 
     Private Sub btnEmpEdit_Click(sender As Object, e As EventArgs) Handles btnEmpEdit.Click
-        PurchaseOrderDGV.ReadOnly = False
-        PurchaseOrderDGV.AllowUserToAddRows = True
-        PurchaseOrderDGV.GridColor = Color.Crimson
-        PurchaseOrderDetailsDGV.ReadOnly = False
-        PurchaseOrderDetailsDGV.AllowUserToAddRows = True
-        PurchaseOrderDetailsDGV.GridColor = Color.Crimson
-        MsgBox("Add new purchase order, or edit existing existing orders!")
+
+
+        If Not btnEmpEdit.Text = "Cancel" Then
+            PurchaseOrderDGV.ReadOnly = False
+            PurchaseOrderDGV.AllowUserToAddRows = True
+            PurchaseOrderDGV.GridColor = Color.Crimson
+            PurchaseOrderDetailsDGV.ReadOnly = False
+            PurchaseOrderDetailsDGV.AllowUserToAddRows = True
+            PurchaseOrderDetailsDGV.GridColor = Color.Crimson
+            btnEmpEdit.Text = "Cancel"
+            btnEmpEdit.Image = My.Resources._return
+            btnEmpEdit.ImageAlign = ContentAlignment.MiddleCenter
+            Button19.Enabled = False
+            MsgBox("Add new purchase order, or edit existing existing orders!")
+        Else
+            PurchaseOrderDGV.ReadOnly = True
+            PurchaseOrderDGV.AllowUserToAddRows = False
+            PurchaseOrderDGV.GridColor = Color.Gray
+            PurchaseOrderDetailsDGV.ReadOnly = True
+            PurchaseOrderDetailsDGV.AllowUserToAddRows = False
+            PurchaseOrderDetailsDGV.GridColor = Color.Gray
+            btnEmpEdit.Text = "Add New/Edit Purchase Order"
+            btnEmpEdit.TextAlign = ContentAlignment.BottomCenter
+            btnEmpEdit.Image = My.Resources.Pencil_icon
+            btnEmpEdit.ImageAlign = ContentAlignment.TopCenter
+            Button19.Enabled = True
+            Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)
+            Me.Purchase_ItemTableAdapter.Fill(Me.RecSpecDataset.Purchase_Item)
+
+        End If
 
     End Sub
 
@@ -126,13 +149,36 @@
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
-        PurchaseOrderDGV.ReadOnly = False
-        PurchaseOrderDGV.AllowUserToDeleteRows = True
-        PurchaseOrderDGV.GridColor = Color.Crimson
-        PurchaseOrderDetailsDGV.ReadOnly = False
-        PurchaseOrderDetailsDGV.AllowUserToDeleteRows = True
-        PurchaseOrderDetailsDGV.GridColor = Color.Crimson
-        MsgBox("Select purchase orders to delete! Click on the Save button when done!")
+
+
+        If Not Button19.Text = "Cancel" Then
+            PurchaseOrderDGV.ReadOnly = False
+            PurchaseOrderDGV.AllowUserToDeleteRows = True
+            PurchaseOrderDGV.GridColor = Color.Crimson
+            PurchaseOrderDetailsDGV.ReadOnly = False
+            PurchaseOrderDetailsDGV.AllowUserToDeleteRows = True
+            PurchaseOrderDetailsDGV.GridColor = Color.Crimson
+            Button19.Text = "Cancel"
+            Button19.TextAlign = ContentAlignment.BottomCenter
+            Button19.Image = My.Resources._return
+            Button19.ImageAlign = ContentAlignment.TopCenter
+            btnEmpEdit.Enabled = False
+            MsgBox("Select a row to delete, then press the delete key. Press the Save Button when done!")
+        Else
+            Button19.Text = "Remove"
+            Button19.TextAlign = ContentAlignment.BottomCenter
+            PurchaseOrderDGV.ReadOnly = True
+            PurchaseOrderDGV.AllowUserToDeleteRows = False
+            PurchaseOrderDGV.GridColor = Color.Gray
+            PurchaseOrderDetailsDGV.ReadOnly = True
+            PurchaseOrderDetailsDGV.AllowUserToDeleteRows = False
+            PurchaseOrderDetailsDGV.GridColor = Color.Gray
+            Button19.Image = My.Resources.bin_red_full_icon
+            Button19.ImageAlign = ContentAlignment.TopCenter
+            btnEmpEdit.Enabled = True
+            Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)
+            Me.Purchase_ItemTableAdapter.Fill(Me.RecSpecDataset.Purchase_Item)
+        End If
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs)
