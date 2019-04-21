@@ -59,7 +59,7 @@
             btnUpdate.Image = My.Resources.Pencil_icon
             btnUpdate.ImageAlign = ContentAlignment.TopCenter
             btnUpdate.Text = "Add New/Edit Products"
-            btnRemove.Enabled = True
+            btnUpdate.Enabled = True
 
             btnRemove.Image = My.Resources.bin_red_full_icon
             btnRemove.ImageAlign = ContentAlignment.TopCenter
@@ -224,7 +224,7 @@
             Case "by Product Name"
                 query = "Prod_Name LIKE '%" + Querybox.Text + "%'"
             Case "by Stock level"
-                query = "Stock_level LIKE '" + Querybox.Text + "'"
+                query = "Prod_Stock_Level LIKE '" + Querybox.Text + "'"
             Case Else
                 query = ""
         End Select
@@ -248,7 +248,5 @@
         Querybox.Text = ""
     End Sub
 
-    Private Sub Querybox_Leave(sender As Object, e As EventArgs) Handles Querybox.Leave
-        Querybox.Text = "Enter Query"
-    End Sub
+
 End Class
