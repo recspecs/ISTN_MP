@@ -16,16 +16,6 @@
 
     End Sub
 
-    Private Sub btrnDisableProduct_Click(sender As Object, e As EventArgs) 
-
-    End Sub
-
-
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If Not btnUpdate.Text = "Cancel" Then
             ProductDGV.ReadOnly = False
@@ -52,7 +42,7 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If btnUpdate.Text = "Cancel" Then
+        If btnUpdate.Text = "Cancel" Or btnRemove.Text = "Cancel" Then
             ProductBindingSource.EndEdit()
             Try
                 ProductTableAdapter.Update(RecSpecDataset.Product)
@@ -64,8 +54,15 @@
             ProductDGV.AllowUserToAddRows = False
             ProductDGV.AllowUserToDeleteRows = False
             ProductDGV.GridColor = Color.Gray
-            Button19.Enabled = True
+            btnUpdate.Image = My.Resources.Pencil_icon
+            btnUpdate.ImageAlign = ContentAlignment.TopCenter
+            btnUpdate.Text = "Add New/Edit Products"
+            btnRemove.Enabled = True
 
+            btnRemove.Image = My.Resources.bin_red_full_icon
+            btnRemove.ImageAlign = ContentAlignment.TopCenter
+            btnRemove.Text = "Remove"
+            btnRemove.Enabled = True
         End If
 
     End Sub
