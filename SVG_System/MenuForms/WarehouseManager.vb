@@ -63,6 +63,8 @@
             btnRemove.ImageAlign = ContentAlignment.TopCenter
             btnRemove.Text = "Remove"
             btnRemove.Enabled = True
+            Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
+
         End If
 
     End Sub
