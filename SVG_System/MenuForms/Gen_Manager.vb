@@ -413,7 +413,7 @@
             Case "by Product Name"
                 query = "Prod_Name LIKE '%" + QB2.Text + "%'"
             Case "by Stock level"
-                query = "Prod_Stock_Level LIKE '" + QB2.Text + "'"
+                query = "Prod_Stock_Level LIKE '" + QB2.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -434,7 +434,7 @@
 
         Select Case CB1.Text
             Case "by Employee ID"
-                query = "CAST(Employee_ID as CHAR) LIKE '%" + QB1.Text + "%'"
+                query = "CONVERT(Employee_ID, System.String) LIKE '%" + QB1.Text + "%'"
             Case "by Employee Name"
                 query = "Emp_FName LIKE '%" + QB1.Text + "%'"
             Case "by Employee Type"
@@ -462,7 +462,7 @@
             Case "by Product Code"
                 query = "Product_Code LIKE '%" + QB3.Text + "%'"
             Case "by Customer ID"
-                query = "Customer_ID LIKE '%" + QB3.Text + "%'"
+                query = "Convert(Customer_ID, System.String) LIKE '%" + QB3.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -476,12 +476,12 @@
     Private Sub QB3_Enter(sender As Object, e As EventArgs) Handles QB3.Enter
         QB3.Text = ""
     End Sub
-    Private Sub S5_Click(sender As Object, e As EventArgs) Handles S3.Click
+    Private Sub S5_Click(sender As Object, e As EventArgs) Handles S5.Click
         Dim query As String
 
         Select Case CB5.Text
             Case "by Supplier ID"
-                query = "Suppier_ID LIKE '%" + QB5.Text + "%'"
+                query = "Convert(Suppier_ID, System.String) LIKE '%" + QB5.Text + "%'"
             Case "by Supplier Name"
                 query = "Supp_Name LIKE '%" + QB5.Text + "%'"
             Case "by Supplier City"
@@ -504,7 +504,7 @@
 
         Select Case CB6.Text
             Case "by Customer ID"
-                query = "Customer_ID LIKE '%" + QB6.Text + "%'"
+                query = "Convert(Customer_ID, System.String) LIKE '%" + QB6.Text + "%'"
             Case "by Customer Name"
                 query = "Cust_FName LIKE '%" + QB6.Text + "%'"
             Case "by Customer City"
@@ -531,7 +531,7 @@
             Case "by Customer Payment Type"
                 query = "Cust_Payment_Type LIKE '%" + QB7.Text + "%'"
             Case "by Customer ID"
-                query = "Customer_ID LIKE '%" + QB7.Text + "%'"
+                query = "Convert(Customer_ID, System.String) LIKE '%" + QB7.Text + "%'"
             Case Else
                 query = ""
         End Select
