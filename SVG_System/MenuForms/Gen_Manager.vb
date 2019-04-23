@@ -45,6 +45,10 @@
         'TODO: This line of code loads data into the 'RecSpecDataset.Employee' table. You can move, or remove it, as needed.
         Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
 
+        Me.Size = New Size(1330, 836)
+
+        Me.CenterToScreen()
+
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
@@ -544,5 +548,98 @@
     End Sub
     Private Sub QB7_Enter(sender As Object, e As EventArgs) Handles QB7.Enter
         QB7.Text = ""
+    End Sub
+
+
+    Private Sub SetDGVFormat(ByRef pan As Panel, ByRef dgvCol As DataGridView, prefix As String)
+
+        For Each i In dgvCol.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace(prefix, "").Replace("_", " ")
+        Next
+        dgvCol.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvCol.ColumnHeadersVisible = True
+        dgvCol.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        dgvCol.ReadOnly = True
+        dgvCol.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvCol.AllowUserToAddRows = False
+        dgvCol.AllowUserToDeleteRows = False
+        dgvCol.AllowUserToOrderColumns = False
+        dgvCol.AllowUserToResizeColumns = True
+        dgvCol.AllowUserToResizeRows = False
+
+        dgvCol.Left = (dgvCol.Parent.Width - dgvCol.Width) / 2
+
+        If pan IsNot Nothing Then
+            pan.Size = New Size(650, 180)
+            pan.Left = (pan.Parent.Width - pan.Width) / 2
+        End If
+
+
+
+    End Sub
+
+
+    Private Sub Employee_Enter(sender As Object, e As EventArgs) Handles Employee.Enter
+
+        SetDGVFormat(Panel1, EmployeeDGV, "Emp_")
+        EmployeeDGV.Columns(1).HeaderText = "First Name"
+        EmployeeDGV.Columns(2).HeaderText = "Surname"
+
+    End Sub
+
+    Private Sub Products_Enter(sender As Object, e As EventArgs) Handles Products.Enter
+        SetDGVFormat(Panel3, DGV1, "Prod_")
+
+    End Sub
+
+    Private Sub SalesOrder_Enter(sender As Object, e As EventArgs) Handles SalesOrder.Enter
+        SetDGVFormat(Nothing, DataGridView9, "Cust_")
+        DataGridView9.Columns(3).HeaderText = "Customer"
+        DataGridView9.Columns(4).HeaderText = "Employee"
+
+    End Sub
+
+    Private Sub Supplier_Enter(sender As Object, e As EventArgs) Handles Supplier.Enter
+        SetDGVFormat(Panel2, DGV3, "Supp_")
+    End Sub
+
+    Private Sub PurchaseOrder_Enter(sender As Object, e As EventArgs) Handles PurchaseOrder.Enter
+        SetDGVFormat(Panel6, DGV2_1, "ZZZ")
+        SetDGVFormat(Nothing, DGV2_2, "ZZZ")
+    End Sub
+
+    Private Sub Customer_Enter(sender As Object, e As EventArgs) Handles Customer.Enter
+        SetDGVFormat(Panel4, DGV4, "Cust_")
+        DGV4.Columns(1).HeaderText = "First Name"
+        DGV4.Columns(2).HeaderText = "Surname"
+    End Sub
+
+    Private Sub Payment_Enter(sender As Object, e As EventArgs) Handles Payment.Enter
+        SetDGVFormat(Panel5, DGV5, "Cust_")
+    End Sub
+
+    Private Sub Customer_Click(sender As Object, e As EventArgs) Handles Customer.Click
+
+    End Sub
+
+    Private Sub S4_Click(sender As Object, e As EventArgs) Handles S4.Click
+        Dim query As String
+
+        Select Case CB4.Text
+            Case "by PO No"
+                query = "PO_No LIKE '%" + QB4.Text + "%'"
+            Case "by PO Date"
+                query = "Convert(PO_Date, System.String) LIKE '" + QB4.Text + "'"
+            Case "by PO Received Flag"
+                query = "PO_Received_Flag ='" + QB7.Text + "'"
+            Case Else
+                query = ""
+        End Select
+
+        If query.Length = 0 Then
+            PurchaseOrderBindingSource.RemoveFilter()
+        Else
+            PurchaseOrderBindingSource.Filter = query
+        End If
     End Sub
 End Class

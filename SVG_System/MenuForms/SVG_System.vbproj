@@ -73,40 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add New Employee.Designer.vb">
-      <DependentUpon>Add New Employee.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Add New Employee.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewCustomer.Designer.vb">
-      <DependentUpon>AddNewCustomer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AddNewCustomer.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="New Supplier.Designer.vb">
-      <DependentUpon>New Supplier.vb</DependentUpon>
-    </Compile>
-    <Compile Include="New Supplier.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewSalesOrder.Designer.vb">
-      <DependentUpon>NewSalesOrder.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NewSalesOrder.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="RecSpecDataset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RecSpecDataset.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="NewProduct.Designer.vb">
-      <DependentUpon>NewProduct.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NewProduct.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="WarehouseManager.Designer.vb">
       <DependentUpon>WarehouseManager.vb</DependentUpon>
@@ -150,21 +120,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Add New Employee.resx">
-      <DependentUpon>Add New Employee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddNewCustomer.resx">
-      <DependentUpon>AddNewCustomer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="New Supplier.resx">
-      <DependentUpon>New Supplier.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewProduct.resx">
-      <DependentUpon>NewProduct.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewSalesOrder.resx">
-      <DependentUpon>NewSalesOrder.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="WarehouseManager.resx">
       <DependentUpon>WarehouseManager.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,17 +140,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="RecSpecDataset.xsc">
-      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
-    </None>
-    <None Include="RecSpecDataset.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RecSpecDataset.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RecSpecDataset.xss">
-      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -208,6 +152,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="RecSpecDataset.xsc">
+      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
+    </None>
+    <None Include="RecSpecDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>RecSpecDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RecSpecDataset.xss">
+      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
+    </None>
     <None Include="Resources\add-icon.png" />
   </ItemGroup>
   <ItemGroup>
