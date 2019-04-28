@@ -240,7 +240,7 @@ Partial Class Sales_Rep
         'btnEmpEdit
         '
         Me.btnEmpEdit.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.btnEmpEdit.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
+        Me.btnEmpEdit.Image = Global.MenuForms.My.Resources.Resources.pencil96
         Me.btnEmpEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnEmpEdit.Location = New System.Drawing.Point(187, 15)
         Me.btnEmpEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -514,7 +514,7 @@ Partial Class Sales_Rep
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.btnUpdate.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
+        Me.btnUpdate.Image = Global.MenuForms.My.Resources.Resources.pencil96
         Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnUpdate.Location = New System.Drawing.Point(27, 0)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -721,7 +721,7 @@ Partial Class Sales_Rep
         'Btn13Edit
         '
         Me.Btn13Edit.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.Btn13Edit.Image = Global.MenuForms.My.Resources.Resources.Pencil_icon
+        Me.Btn13Edit.Image = Global.MenuForms.My.Resources.Resources.pencil96
         Me.Btn13Edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Btn13Edit.Location = New System.Drawing.Point(15, 15)
         Me.Btn13Edit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)

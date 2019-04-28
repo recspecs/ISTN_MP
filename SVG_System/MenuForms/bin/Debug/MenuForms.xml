@@ -47,11 +47,6 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.close_icon">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:MenuForms.My.Resources.Resources.delete_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -72,6 +67,11 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MenuForms.My.Resources.Resources.editbutton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
 <member name="P:MenuForms.My.Resources.Resources.Everaldo_Crystal_Clear_Action_ok">
 <summary>
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
@@ -82,7 +82,17 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
+<member name="P:MenuForms.My.Resources.Resources.Icon1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
 <member name="P:MenuForms.My.Resources.Resources.Iconleak_Atrous_Search">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Mcdo_Design_Cats_2_Application_SB">
 <summary>
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
@@ -97,12 +107,42 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.Pencil_icon">
+<member name="P:MenuForms.My.Resources.Resources.pencil96">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.redbin296">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Redbin72">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.redbin96">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:MenuForms.My.Resources.Resources.Save_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.savedisk72">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.savedisk84">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.savedisk96">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -113,11 +153,6 @@ MenuForms
 </summary>
 </member>
 <member name="P:MenuForms.My.Resources.Resources.searchico2n">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:MenuForms.My.Resources.Resources.Trash_can_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

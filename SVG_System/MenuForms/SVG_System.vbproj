@@ -240,6 +240,51 @@
   <ItemGroup>
     <None Include="Resources\return.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editbutton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mcdo-Design-Cats-2-Application-SB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencilicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savedisk72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savedisk96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redbin72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbin96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbin296.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savedisk961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designcontest-Outline-Pencil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

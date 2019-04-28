@@ -31,7 +31,7 @@
             ProductDGV.AllowUserToAddRows = False
             ProductDGV.GridColor = Color.Gray
             btnUpdate.Text = "Add New/Edit Products"
-            btnUpdate.Image = My.Resources.Pencil_icon
+            btnUpdate.Image = My.Resources.pencil96
             btnUpdate.ImageAlign = ContentAlignment.MiddleCenter
             btnRemove.Enabled = True
             Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
@@ -56,7 +56,7 @@
             ProductDGV.AllowUserToAddRows = False
             ProductDGV.AllowUserToDeleteRows = False
             ProductDGV.GridColor = Color.Gray
-            btnUpdate.Image = My.Resources.Pencil_icon
+            btnUpdate.Image = My.Resources.pencil96
             btnUpdate.ImageAlign = ContentAlignment.TopCenter
             btnUpdate.Text = "Add New/Edit Products"
             btnUpdate.Enabled = True
@@ -119,7 +119,7 @@
             PurchaseOrderDetailsDGV.GridColor = Color.Gray
             btnEmpEdit.Text = "Add New/Edit Purchase Order"
             btnEmpEdit.TextAlign = ContentAlignment.BottomCenter
-            btnEmpEdit.Image = My.Resources.Pencil_icon
+            btnEmpEdit.Image = My.Resources.pencil96
             btnEmpEdit.ImageAlign = ContentAlignment.TopCenter
             Button19.Enabled = True
             Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)
