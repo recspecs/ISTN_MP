@@ -69,4 +69,4 @@ C:\Users\Smeg Lord\Source\Repos\ISTN_MP8\SVG_System\MenuForms\obj\Debug\MenuForm
 C:\Users\Smeg Lord\Source\Repos\ISTN_MP8\SVG_System\MenuForms\obj\Debug\MenuForms.Sales_Rep.resources
 C:\Users\Smeg Lord\Source\Repos\ISTN_MP8\SVG_System\MenuForms\obj\Debug\SVG_System.vbproj.GenerateResource.Cache
 C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbproj.CoreCompileInputs.cache
-C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbprojAssemblyReference.cache
+C:\Users\Tony\Source\Repos\recspecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbprojAssemblyReference.cache

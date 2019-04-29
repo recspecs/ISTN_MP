@@ -3,6 +3,10 @@
     Public UserFormSize = My.Settings.FormSize
 
     Private Sub GenManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.Size = UserFormSize
+        Me.CenterToScreen()
+
         Me.Customer_PaymentTableAdapter.Fill(Me.RecSpecDataset.Customer_Payment)
         Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset.CustomerTable)
         Me.SupplierTableAdapter.Fill(Me.RecSpecDataset.Supplier)
@@ -12,17 +16,17 @@
         Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
         Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
 
+        'Me.AutoScaleMode = AutoScaleMode.Dpi
 
-        Me.Size = UserFormSize
-        Me.CenterToScreen()
 
     End Sub
 
 
 #Region "Employee tab"
-    Private Sub Employee_Enter(sender As Object, e As EventArgs) Handles EmployeeTab.Enter
+    Private Sub Employee_Init()
 
         SetDGVFormat(flpEmployee, dgvEmployee, "Emp_")
+
         dgvEmployee.Columns(1).HeaderText = "First Name"
         dgvEmployee.Columns(2).HeaderText = "Surname"
 
@@ -132,11 +136,15 @@
 #End Region
 
 
-
 #Region "Product tab"
 
+    Private Sub Product_init()
+        SetDGVFormat(flpProducts, dgvProduct, "Prod_")
 
-    Private Sub btnAddEdit1_Click(sender As Object, e As EventArgs)
+    End Sub
+
+
+    Private Sub btnAddEditEmployee_Click(sender As Object, e As EventArgs)
         If Not btnAddEditEmployee.Text = "Cancel" Then
             dgvProduct.ReadOnly = False
             dgvProduct.AllowUserToAddRows = True
@@ -180,7 +188,6 @@
             Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
         End If
     End Sub
-
 
 
     Private Sub btnSave1_Click(sender As Object, e As EventArgs)
@@ -237,13 +244,16 @@
     End Sub
 
 
-
-
 #End Region
 
 #Region "Sales Order tab"
 
+    Private Sub SalesOrder_Init()
+        SetDGVFormat(Nothing, dgvSO, "Cust_")
+        dgvSO.Columns(3).HeaderText = "Customer"
+        dgvSO.Columns(4).HeaderText = "Employee"
 
+    End Sub
 
     Private Sub tbQuerySO_Enter(sender As Object, e As EventArgs)
         tbQuerySO.Text = ""
@@ -274,10 +284,23 @@
 #End Region
 
 
+#Region "Purchase Order Tab"
+    Private Sub PurchaseOrder_Init()
+        SetDGVFormat(flpPO, dgvPO, "ZZZ")
+        SetDGVFormat(Nothing, DGV2_2, "ZZZ")
+    End Sub
 
+
+
+
+
+#End Region
 
 #Region "Supplier tab"
 
+    Private Sub Supplier_Init()
+        SetDGVFormat(flpSupplier, dgvSupplier, "Supp_")
+    End Sub
 
     Private Sub tbQuerySupplier_Enter(sender As Object, e As EventArgs)
         tbQuerySupplier.Text = ""
@@ -382,6 +405,12 @@
 
 
 #Region "Customer tab"
+    Private Sub Customer_Init()
+        SetDGVFormat(flpCustomer, dgvCustomer, "Cust_")
+        dgvCustomer.Columns(1).HeaderText = "First Name"
+        dgvCustomer.Columns(2).HeaderText = "Surname"
+    End Sub
+
 
     Private Sub S6_Click(sender As Object, e As EventArgs)
         Dim query As String
@@ -484,6 +513,9 @@
 
 
 #Region "Payments tab"
+    Private Sub Payment_Init()
+        SetDGVFormat(flpPayment, dgvPayment, "Cust_")
+    End Sub
 
     Private Sub btnSearchPayment_Click(sender As Object, e As EventArgs)
         Dim query As String
@@ -597,8 +629,9 @@
 
 
 
-        dgv.Width = dgv.Parent.Width * 0.9
-        dgv.Left = dgv.Parent.Width * 0.05
+        dgv.Width = Me.ClientSize.Width * 0.9
+        dgv.Left = Me.ClientSize.Width * 0.05
+        'dgv.Bottom = Me.ClientSize.Height * 0.9
 
         'format column headers for display
         For Each i In dgv.Columns
@@ -622,7 +655,8 @@
         'position the buttons
         If pan IsNot Nothing Then
             pan.Size = New Size(588, 146)
-            pan.Left = (pan.Parent.Width - pan.Width) / 2
+            pan.Left = (Me.ClientSize.Width - pan.Size.Width) / 2
+            pan.Top = Me.ClientSize.Height * 0.05
         End If
 
 
@@ -635,42 +669,41 @@
 
 
 
-    Private Sub Products_Enter(sender As Object, e As EventArgs) Handles ProductTab.Enter
-        SetDGVFormat(flpProducts, dgvProduct, "Prod_")
+
+
+
+
+
+
+
+
+
+
+
+
+    Private Sub ManagerFormTabControl_SelectedIndexChanged(sender As Object, e As TabControlEventArgs) Handles ManagerFormTabControl.Selected
+        Select Case ManagerFormTabControl.SelectedTab.Name
+            Case "PaymentTab"
+                Payment_Init()
+            Case "ProductTab"
+                Product_init()
+            Case "SalesOrderTab"
+                SalesOrder_Init()
+            Case "POTab"
+                PurchaseOrder_Init()
+            Case "SupplierTab"
+                Supplier_Init()
+            Case "CustomerTab"
+                Customer_Init()
+            Case "EmployeeTab"
+                Employee_Init()
+            Case Else
+                MsgBox("No such tab exist!")
+        End Select
 
     End Sub
 
-    Private Sub SalesOrder_Enter(sender As Object, e As EventArgs) Handles SalesOrderTab.Enter
-        SetDGVFormat(Nothing, dgvSO, "Cust_")
-        dgvSO.Columns(3).HeaderText = "Customer"
-        dgvSO.Columns(4).HeaderText = "Employee"
-
+    Private Sub EmployeeTab_Enter(sender As Object, e As EventArgs) Handles EmployeeTab.Enter
+        Employee_Init()
     End Sub
-
-    Private Sub Supplier_Enter(sender As Object, e As EventArgs) Handles SupplierTab.Enter
-        SetDGVFormat(flpSupplier, dgvSupplier, "Supp_")
-    End Sub
-
-    Private Sub PurchaseOrder_Enter(sender As Object, e As EventArgs) Handles POTab.Enter
-        SetDGVFormat(flpPO, dgvPO, "ZZZ")
-        SetDGVFormat(Nothing, DGV2_2, "ZZZ")
-    End Sub
-
-    Private Sub Customer_Enter(sender As Object, e As EventArgs) Handles Customer.Enter
-        SetDGVFormat(flpCustomer, dgvCustomer, "Cust_")
-        dgvCustomer.Columns(1).HeaderText = "First Name"
-        dgvCustomer.Columns(2).HeaderText = "Surname"
-    End Sub
-
-    Private Sub Payment_Enter(sender As Object, e As EventArgs) Handles Payment.Enter
-        SetDGVFormat(flpPayment, dgvPayment, "Cust_")
-    End Sub
-
-    Private Sub Customer_Click(sender As Object, e As EventArgs) Handles Customer.Click
-
-    End Sub
-
-
-
-
 End Class
