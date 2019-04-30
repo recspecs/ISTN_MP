@@ -2,6 +2,7 @@
 
     Public UserFormSize = My.Settings.FormSize
 
+#Disable Warning IDE1006 ' Naming Styles
     Private Sub GenManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.Size = UserFormSize
@@ -537,7 +538,9 @@
             CustomerPaymentBindingSource.Filter = query
         End If
     End Sub
+#Disable Warning IDE1006 ' Naming Styles
     Private Sub tbQueryPayment_Enter(sender As Object, e As EventArgs)
+#Enable Warning IDE1006 ' Naming Styles
         tbQueryPayment.Text = ""
     End Sub
 

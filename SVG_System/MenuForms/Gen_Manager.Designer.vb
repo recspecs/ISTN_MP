@@ -310,7 +310,7 @@ Partial Class GenManager
         Me.cbCriteriaPayment.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPayment.FormattingEnabled = True
         Me.cbCriteriaPayment.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaPayment.Location = New System.Drawing.Point(605, 19)
+        Me.cbCriteriaPayment.Location = New System.Drawing.Point(605, 17)
         Me.cbCriteriaPayment.Name = "cbCriteriaPayment"
         Me.cbCriteriaPayment.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaPayment.TabIndex = 71
@@ -516,7 +516,7 @@ Partial Class GenManager
         Me.cbCriteriaCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaCustomer.FormattingEnabled = True
         Me.cbCriteriaCustomer.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(605, 19)
+        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(605, 17)
         Me.cbCriteriaCustomer.Name = "cbCriteriaCustomer"
         Me.cbCriteriaCustomer.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaCustomer.TabIndex = 71
@@ -783,7 +783,7 @@ Partial Class GenManager
         Me.cbCriteriaSupplier.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSupplier.FormattingEnabled = True
         Me.cbCriteriaSupplier.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaSupplier.Location = New System.Drawing.Point(605, 19)
+        Me.cbCriteriaSupplier.Location = New System.Drawing.Point(605, 17)
         Me.cbCriteriaSupplier.Name = "cbCriteriaSupplier"
         Me.cbCriteriaSupplier.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaSupplier.TabIndex = 71
@@ -1019,7 +1019,7 @@ Partial Class GenManager
         Me.cbCriteriaPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPO.FormattingEnabled = True
         Me.cbCriteriaPO.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaPO.Location = New System.Drawing.Point(605, 19)
+        Me.cbCriteriaPO.Location = New System.Drawing.Point(605, 17)
         Me.cbCriteriaPO.Name = "cbCriteriaPO"
         Me.cbCriteriaPO.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaPO.TabIndex = 71
@@ -1291,7 +1291,7 @@ Partial Class GenManager
         Me.cbCriteriaSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSO.FormattingEnabled = True
         Me.cbCriteriaSO.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaSO.Location = New System.Drawing.Point(605, 19)
+        Me.cbCriteriaSO.Location = New System.Drawing.Point(605, 17)
         Me.cbCriteriaSO.Name = "cbCriteriaSO"
         Me.cbCriteriaSO.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaSO.TabIndex = 71
@@ -1434,7 +1434,7 @@ Partial Class GenManager
         Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaProduct.FormattingEnabled = True
         Me.cbCriteriaProduct.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaProduct.Location = New System.Drawing.Point(605, 19)
+        Me.cbCriteriaProduct.Location = New System.Drawing.Point(605, 17)
         Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
         Me.cbCriteriaProduct.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaProduct.TabIndex = 71
@@ -1738,7 +1738,7 @@ Partial Class GenManager
         Me.cbCriteriaEmployee.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaEmployee.FormattingEnabled = True
         Me.cbCriteriaEmployee.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaEmployee.Location = New System.Drawing.Point(605, 17)
+        Me.cbCriteriaEmployee.Location = New System.Drawing.Point(605, 19)
         Me.cbCriteriaEmployee.Name = "cbCriteriaEmployee"
         Me.cbCriteriaEmployee.Size = New System.Drawing.Size(226, 25)
         Me.cbCriteriaEmployee.TabIndex = 71

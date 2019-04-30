@@ -70,3 +70,17 @@ C:\Users\Smeg Lord\Source\Repos\ISTN_MP8\SVG_System\MenuForms\obj\Debug\MenuForm
 C:\Users\Smeg Lord\Source\Repos\ISTN_MP8\SVG_System\MenuForms\obj\Debug\SVG_System.vbproj.GenerateResource.Cache
 C:\Users\Tony\Source\Repos\RecSpecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbproj.CoreCompileInputs.cache
 C:\Users\Tony\Source\Repos\recspecs\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbprojAssemblyReference.cache
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\bin\Debug\MenuForms.exe.config
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\bin\Debug\MenuForms.exe
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\bin\Debug\MenuForms.pdb
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\bin\Debug\MenuForms.xml
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.WarehouseManager.resources
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.GenManager.resources
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.Login.resources
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.Resources.resources
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.Sales_Rep.resources
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbproj.GenerateResource.cache
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\SVG_System.vbproj.CoreCompileInputs.cache
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.exe
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.xml
+C:\Users\SilentChaos\Source\Repos\ISTN_MP\SVG_System\MenuForms\obj\Debug\MenuForms.pdb
