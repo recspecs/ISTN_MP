@@ -212,6 +212,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:MenuForms.RecSpecDataset.SO_DetailsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:MenuForms.RecSpecDataset.Customer_PaymentRow">
 <summary>
 Represents strongly named DataRow class.
@@ -253,6 +258,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:MenuForms.RecSpecDataset.SupplierRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDataset.SO_DetailsRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -302,6 +312,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:MenuForms.RecSpecDataset.SO_DetailsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:MenuForms.RecSpecDatasetTableAdapters.Customer_PaymentTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -343,6 +358,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:MenuForms.RecSpecDatasetTableAdapters.SupplierTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.TA_SODetails">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

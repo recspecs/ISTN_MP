@@ -23,6 +23,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>MenuForms.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -157,8 +158,8 @@
     </None>
     <None Include="RecSpecDataset.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>RecSpecDataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="RecSpecDataset.xss">
       <DependentUpon>RecSpecDataset.xsd</DependentUpon>

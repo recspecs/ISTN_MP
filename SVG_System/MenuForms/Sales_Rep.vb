@@ -1,9 +1,13 @@
 ﻿Public Class Sales_Rep
 
     Private Sub Sales_Rep_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'RecSpecDataset1.CustomerTable' table. You can move, or remove it, as needed.
-        Me.ProductTableAdapter1.Fill(RecSpecDataset1.Product)
-        Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset1.CustomerTable)
+        'TODO: This line of code loads data into the 'RecSpecDataset.Product' table. You can move, or remove it, as needed.
+        Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
+        'TODO: This line of code loads data into the 'RecSpecDataset.CustomerTable' table. You can move, or remove it, as needed.
+        Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset.CustomerTable)
+        'TODO: This line of code loads data into the 'RecspecDataset.CustomerTable' table. You can move, or remove it, as needed.
+        Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
+        Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
 
     End Sub
 
@@ -21,7 +25,7 @@
     Private Sub Btn12Save_Click(sender As Object, e As EventArgs) Handles Btn12Save.Click
 
         BSCust.EndEdit()
-        CustomerTableTableAdapter.Update(RecSpecDataset1.CustomerTable)
+        CustomerTableTableAdapter.Update(RecSpecDataset.CustomerTable)
         MsgBox("Information saved")
         DGVCust.ReadOnly = True
         DGVCust.AllowUserToAddRows = False
@@ -53,7 +57,7 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         BSProd.EndEdit()
-        ProductTableAdapter1.Update(RecSpecDataset1.Product)
+        ProductTableAdapter.Update(RecSpecDataset.Product)
         MsgBox("Information saved")
         DGVProd.ReadOnly = True
         DGVProd.AllowUserToAddRows = False
