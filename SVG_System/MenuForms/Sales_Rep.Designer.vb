@@ -925,9 +925,9 @@ Partial Class Sales_Rep
         Me.TableAdapterManager.EmployeeTableAdapter = Nothing
         Me.TableAdapterManager.ProductTableAdapter = Me.ProductTableAdapter
         Me.TableAdapterManager.Purchase_ItemTableAdapter = Nothing
-        Me.TableAdapterManager.Purchase_OrderTableAdapter = Nothing
+        'Me.TableAdapterManager.Purchase_OrderTableAdapter = Nothing
         Me.TableAdapterManager.Sale_ItemTableAdapter = Nothing
-        Me.TableAdapterManager.Sales_OrderTableAdapter = Nothing
+        'Me.TableAdapterManager.Sales_OrderTableAdapter = Nothing
         Me.TableAdapterManager.SupplierTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = MenuForms.RecSpecDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

@@ -1,8 +1,9 @@
 ﻿Public Class GenManager
 
 
-
     Private Sub GenManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'RecSpecDataset1.Purchase_Order' table. You can move, or remove it, as needed.
+        Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset1.Purchase_Order)
 
         Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
 
@@ -21,13 +22,6 @@
         Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
 
         Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
-
-
-
-
-
-
-
 
 
         Me.DoubleBuffered = True
@@ -265,9 +259,32 @@
 #Region "Sales Order tab"
 
     Private Sub SalesOrder_Init()
-        SetFormat4Dbl(SalesOrderTab, tlpSO, dgvSO, dgvSOBottom, "Cust_", "Prod_")
+        SetFormat4Dbl(SalesOrderTab, tlpSO, dgvSO, dgvSOProduct, dgvSOBottom, "Cust_", "Prod_")
         dgvSO.Columns(3).HeaderText = "Customer"
         dgvSO.Columns(4).HeaderText = "Employee"
+
+    End Sub
+
+    Private Sub dgvSO_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSO.RowEnter
+
+
+        Dim soID = RecspecDataset.Sales_Order.Rows.Item(e.RowIndex).Item("Sales_Order_ID").ToString
+        ProductTableAdapter.Fill(RecspecDataset.Product)
+        Sale_ItemTableAdapter.Fill(RecspecDataset.Sale_Item)
+
+        Dim inter = From i In RecspecDataset.Sale_Item.AsEnumerable
+                    Where i.Sale_Order_ID = soID
+                    Select i.ProductRow.Product_Code, i.ProductRow.Prod_Name, i.ProductRow.Prod_Cost_Price,
+                           i.ProductRow.Prod_Stock_Level, i.ProductRow.Prod_VAT, i.ProductRow.Prod_Active,
+                           i.ProductRow.Prod_Categories, i.ProductRow.Prod_Reorder_Threshold
+
+        dgvSOProduct.AutoGenerateColumns = True
+        dgvSOProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvSOProduct.ReadOnly = True
+        dgvSOProduct.DataSource = inter.ToList
+
+
+
 
     End Sub
 
@@ -302,11 +319,57 @@
 
 #Region "Purchase Order Tab"
     Private Sub PurchaseOrder_Init()
-        SetAllFormat(POTab, flpPO, Nothing, dgvPO, "ZZZ")
-        SetAllFormat(POTab, Nothing, Nothing, DGV2_2, "ZZZ")
+
+        flpPO.Size = New Size(588, 146)
+        flpPO.SetBounds((Me.ClientSize.Width - flpPO.Width) / 2,
+                           Me.ClientSize.Height * 0.02,
+                           flpPO.Width, flpPO.Height)
+
+
+
+        For Each i In dgvPO.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace("PO_", "").Replace("_", " ")
+        Next
+        For Each i In dgvPOD.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace("Prod_", "").Replace("_", " ")
+        Next
+
+
+        dgvPO.Width = Me.ClientSize.Width * 0.9
+        dgvPO.Height = Me.ClientSize.Height * 0.25
+        dgvPO.Left = Me.ClientSize.Width * 0.05
+        dgvPO.Top = Me.ClientSize.Height * 0.35
+        lblPO.Location = New Point(dgvPO.Left, dgvPO.Top - lblPO.Height - 2)
+
+        dgvPOD.Width = Me.ClientSize.Width * 0.9
+        dgvPOD.Height = Me.ClientSize.Height * 0.25
+        dgvPOD.Left = Me.ClientSize.Width * 0.05
+        dgvPOD.Top = Me.ClientSize.Height * 0.65
+        lblPoDetails.Location = New Point(dgvPOD.Left, dgvPOD.Top - lblPO.Height - 2)
+
+
+        tlpPO.Top = Me.ClientSize.Height * 0.25
+        tlpPO.Left = (Me.ClientSize.Width - tlpPO.Width) / 2
     End Sub
 
+    'Private Sub dgvPO_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPO.RowEnter
+    '    ProductTableAdapter.Fill(RecspecDataset.Product)
+    '    Purchase_ItemTableAdapter.Fill(RecspecDataset.Purchase_Item)
 
+    '    Dim poID = RecspecDataset.Purchase_Order.Rows(e.RowIndex).Item("PO_No").ToString
+    '    Dim result = From i In RecspecDataset.Purchase_Item.AsEnumerable
+    '                 Where i.PO_No = poID
+    '                 Select i.ProductRow.Product_Code, i.ProductRow.Prod_Name, i.ProductRow.Prod_Cost_Price,
+    '                       i.ProductRow.Prod_Stock_Level, i.ProductRow.Prod_VAT, i.ProductRow.Prod_Active,
+    '                       i.ProductRow.Prod_Categories, i.ProductRow.Prod_Reorder_Threshold
+
+    '    dgvPOD.AutoGenerateColumns = True
+    '    dgvPOD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+    '    dgvPOD.ReadOnly = True
+    '    dgvPOD.DataSource = result.ToList
+
+
+    'End Sub
 
 
 
@@ -418,8 +481,6 @@
 #End Region
 
 
-
-
 #Region "Customer tab"
     Private Sub Customer_Init()
         SetAllFormat(CustomerTab, flpCustomer, tlpCustomer, dgvCustomer, "Cust_")
@@ -525,7 +586,6 @@
     End Sub
 
 #End Region
-
 
 
 #Region "Payments tab"
@@ -634,15 +694,6 @@
 #End Region
 
 
-
-
-
-
-
-
-
-
-
     Private Sub SetAllFormat(ByRef tpage As TabPage, ByRef pan As FlowLayoutPanel, ByRef searchBar As TableLayoutPanel, ByRef dgv As DataGridView, prefix As String)
         'position the search bar
 
@@ -679,17 +730,11 @@
 
         'position the buttons
         If pan IsNot Nothing Then
-
-
-
             pan.Size = New Size(588, 146)
             pan.SetBounds((Me.ClientSize.Width - pan.Width) / 2,
                            Me.ClientSize.Height * 0.05,
                            pan.Width, pan.Height)
 
-
-            'pan.Left = (Me.ClientSize.Width - pan.Size.Width) / 2
-            'pan.Top = Me.ClientSize.Height * 0.05
         End If
 
         tpage.ResumeLayout()
@@ -697,27 +742,43 @@
 
     End Sub
 
-    Private Sub SetFormat4Dbl(ByRef tpage As TabPage, ByRef searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
+    Private Sub SetFormat4Dbl(ByRef tpage As TabPage, ByRef searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvRight As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
+
+        'dgvTop.AutoGenerateColumns = False
+        'dgvTop.Columns.Add("SoIdCol", "SO ID")
+        'dgvTop.Columns.Add("SoDateCol", "SO Date")
+        'dgvTop.Columns.Add("SaleTotalCol", "Sale Total")
+        'dgvTop.Columns.Add("CustomerCol", "Customer")
+        'dgvTop.Columns.Add("EmployeeCol", "Employee")
+
+
+        dgvTop.Width = Me.ClientSize.Width * 0.43
+        dgvTop.Height = Me.ClientSize.Height * 0.35
+        dgvTop.Left = Me.ClientSize.Width * 0.05
+        dgvTop.Top = Me.ClientSize.Height * 0.16
+        lblSO.Location = New Point(dgvTop.Left, dgvTop.Top - 2)
+
+        dgvRight.Width = Me.ClientSize.Width * 0.43
+        dgvRight.Height = Me.ClientSize.Height * 0.35
+        dgvRight.Left = Me.ClientSize.Width * 0.5
+        dgvRight.Top = Me.ClientSize.Height * 0.16
+        lblSOProduct.Location = New Point(dgvRight.Left, dgvRight.Top - 2)
+
+        dgvBottom.Width = Me.ClientSize.Width * 0.9
+        dgvBottom.Height = Me.ClientSize.Height * 0.4
+        dgvBottom.Left = Me.ClientSize.Width * 0.05
+        dgvBottom.Top = Me.ClientSize.Height * 0.55
+        lblSODetails.Location = New Point(dgvBottom.Left, dgvBottom.Top - 2)
+
         'format column headers for display
         For Each i In dgvTop.Columns
             i.HeaderText = i.HeaderText.ToString.Replace(prefixTop, "").Replace("_", " ")
         Next
-        For Each i In dgvBottom.Columns
+        For Each i In dgvRight.Columns
             i.HeaderText = i.HeaderText.ToString.Replace(prefixBottom, "").Replace("_", " ")
         Next
 
-        dgvTop.Width = Me.ClientSize.Width * 0.9
-        dgvTop.Height = Me.ClientSize.Height * 0.3
-        dgvTop.Left = Me.ClientSize.Width * 0.05
-        dgvTop.Top = Me.ClientSize.Height * 0.2
-
-        dgvBottom.Width = Me.ClientSize.Width * 0.9
-        dgvBottom.Height = Me.ClientSize.Height * 0.3
-        dgvBottom.Left = Me.ClientSize.Width * 0.05
-        dgvBottom.Top = Me.ClientSize.Height * 0.6
-
-
-        searchBar.Top = Me.ClientSize.Height * 0.1
+        searchBar.Top = Me.ClientSize.Height * 0.05
         searchBar.Left = (Me.ClientSize.Width - searchBar.Width) / 2
 
     End Sub
@@ -763,10 +824,4 @@
     End Sub
 
 
-
-    Private Sub dgvSO_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSO.RowEnter
-        'Dim soID = MenuForms.RecSpecDataset.Sale_Order.Rows.Item(e.RowIndex).Item("Sales_Order_ID").ToString
-        'TA_SODetails.Fill(MenuForms.RecSpecDataset.SO_Details, "403")
-
-    End Sub
 End Class
