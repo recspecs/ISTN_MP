@@ -168,7 +168,7 @@ Partial Class WarehouseManager
         'btnUpdate
         '
         Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.btnUpdate.Image = Global.MenuForms.My.Resources.Resources.pencil96
+        Me.btnUpdate.Image = Global.MenuForms.My.Resources.Resources.pencil961
         Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnUpdate.Location = New System.Drawing.Point(0, 4)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -195,7 +195,7 @@ Partial Class WarehouseManager
         '
         'btnRemove
         '
-        Me.btnRemove.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
+        Me.btnRemove.Image = Global.MenuForms.My.Resources.Resources.redbin296
         Me.btnRemove.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemove.Location = New System.Drawing.Point(373, 4)
         Me.btnRemove.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -380,7 +380,7 @@ Partial Class WarehouseManager
         '
         'Button19
         '
-        Me.Button19.Image = Global.MenuForms.My.Resources.Resources.bin_red_full_icon
+        Me.Button19.Image = Global.MenuForms.My.Resources.Resources.redbin296
         Me.Button19.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button19.Location = New System.Drawing.Point(310, 4)
         Me.Button19.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -395,7 +395,7 @@ Partial Class WarehouseManager
         'btnEmpEdit
         '
         Me.btnEmpEdit.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.btnEmpEdit.Image = Global.MenuForms.My.Resources.Resources.pencil96
+        Me.btnEmpEdit.Image = Global.MenuForms.My.Resources.Resources.pencil961
         Me.btnEmpEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnEmpEdit.Location = New System.Drawing.Point(12, 4)
         Me.btnEmpEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)

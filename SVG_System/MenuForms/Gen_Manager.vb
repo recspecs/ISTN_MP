@@ -36,16 +36,12 @@
 
         dgvEmployee.Columns(1).HeaderText = "First Name"
         dgvEmployee.Columns(2).HeaderText = "Surname"
-
-        'MsgBox(flpEmployee.Left.ToString + " " + flpEmployee.Top.ToString + " " + flpEmployee.Width.ToString + " " + flpEmployee.Height.ToString)
-        'MsgBox(FinalSearchLayout.Left.ToString + " " + FinalSearchLayout.Top.ToString + " " + FinalSearchLayout.Width.ToString + " " + FinalSearchLayout.Height.ToString)
-        'MsgBox(dgvEmployee.Left.ToString + " " + dgvEmployee.Top.ToString + " " + dgvEmployee.Width.ToString + " " + dgvEmployee.Height.ToString)
-
     End Sub
 
     Private Sub tbQueryEmployee_Enter(sender As Object, e As EventArgs) Handles tbQueryEmployee.Enter
         tbQueryEmployee.Text = ""
     End Sub
+
 
 
     Private Sub btnAddEdit_Click(sender As Object, e As EventArgs) Handles btnAddEditEmployee.Click
@@ -63,7 +59,7 @@
             dgvEmployee.AllowUserToAddRows = False
             dgvEmployee.GridColor = Color.Gray
             btnAddEditEmployee.Text = "Add New/Edit Employees"
-            btnAddEditEmployee.Image = My.Resources.pencil96
+            btnAddEditEmployee.Image = My.Resources.pencil961
             btnAddEditEmployee.ImageAlign = ContentAlignment.MiddleCenter
             btnRemoveEmployee.Enabled = True
             Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
@@ -86,7 +82,7 @@
             dgvEmployee.ReadOnly = True
             dgvEmployee.AllowUserToDeleteRows = False
             dgvEmployee.GridColor = Color.Gray
-            btnRemoveEmployee.Image = My.Resources.bin_red_full_icon
+            btnRemoveEmployee.Image = My.Resources.redbin296
             btnRemoveEmployee.ImageAlign = ContentAlignment.TopCenter
             btnAddEditEmployee.Enabled = True
             Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
@@ -106,12 +102,12 @@
             dgvEmployee.AllowUserToAddRows = False
             dgvEmployee.AllowUserToDeleteRows = False
             dgvEmployee.GridColor = Color.Gray
-            btnAddEditEmployee.Image = My.Resources.pencil96
+            btnAddEditEmployee.Image = My.Resources.pencil961
             btnAddEditEmployee.ImageAlign = ContentAlignment.TopCenter
             btnAddEditEmployee.Text = "Add New/Edit Employees"
             btnAddEditEmployee.Enabled = True
 
-            btnRemoveEmployee.Image = My.Resources.bin_red_full_icon
+            btnRemoveEmployee.Image = My.Resources.redbin296
             btnRemoveEmployee.ImageAlign = ContentAlignment.TopCenter
             btnRemoveEmployee.Text = "Remove"
             btnRemoveEmployee.Enabled = True
@@ -169,7 +165,7 @@
             dgvProduct.AllowUserToAddRows = False
             dgvProduct.GridColor = Color.Gray
             btnAddEditProduct.Text = "Add New/Edit Products"
-            btnAddEditProduct.Image = My.Resources.pencil96
+            btnAddEditProduct.Image = My.Resources.pencil961
             btnAddEditProduct.ImageAlign = ContentAlignment.MiddleCenter
             btnRemoveProduct.Enabled = True
             Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
@@ -192,7 +188,7 @@
             dgvProduct.ReadOnly = True
             dgvProduct.AllowUserToDeleteRows = False
             dgvProduct.GridColor = Color.Gray
-            btnRemoveProduct.Image = My.Resources.bin_red_full_icon
+            btnRemoveProduct.Image = My.Resources.redbin296
             btnRemoveProduct.ImageAlign = ContentAlignment.TopCenter
             btnAddEditProduct.Enabled = True
             Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
@@ -213,12 +209,12 @@
             dgvProduct.AllowUserToAddRows = False
             dgvProduct.AllowUserToDeleteRows = False
             dgvProduct.GridColor = Color.Gray
-            btnAddEditProduct.Image = My.Resources.pencil96
+            btnAddEditProduct.Image = My.Resources.pencil961
             btnAddEditProduct.ImageAlign = ContentAlignment.TopCenter
             btnAddEditProduct.Text = "Add New/Edit Products"
             btnAddEditProduct.Enabled = True
 
-            btnRemoveProduct.Image = My.Resources.bin_red_full_icon
+            btnRemoveProduct.Image = My.Resources.redbin296
             btnRemoveProduct.ImageAlign = ContentAlignment.TopCenter
             btnRemoveProduct.Text = "Remove"
             btnRemoveProduct.Enabled = True
@@ -259,7 +255,7 @@
 #Region "Sales Order tab"
 
     Private Sub SalesOrder_Init()
-        SetFormat4Dbl(SalesOrderTab, tlpSO, dgvSO, dgvSOProduct, dgvSOBottom, "Cust_", "Prod_")
+        SetFormat4Dbl(SalesOrderTab, tlpSO, dgvSO, dgvSOBottom, "Cust_", "Prod_")
         dgvSO.Columns(3).HeaderText = "Customer"
         dgvSO.Columns(4).HeaderText = "Employee"
 
@@ -274,40 +270,39 @@
 
         Dim inter = From i In RecspecDataset.Sale_Item.AsEnumerable
                     Where i.Sale_Order_ID = soID
-                    Select i.ProductRow.Product_Code, i.ProductRow.Prod_Name, i.ProductRow.Prod_Cost_Price,
-                           i.ProductRow.Prod_Stock_Level, i.ProductRow.Prod_VAT, i.ProductRow.Prod_Active,
-                           i.ProductRow.Prod_Categories, i.ProductRow.Prod_Reorder_Threshold
+                    Select i.Sales_Item_Line_No, i.Sale_Order_ID, i.ProductRow.Product_Code, i.ProductRow.Prod_Name,
+                           i.Sale_Item_Qty, i.Sale_Item_Price, i.ProductRow.Prod_Categories
 
-        dgvSOProduct.AutoGenerateColumns = True
-        dgvSOProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dgvSOProduct.ReadOnly = True
-        dgvSOProduct.DataSource = inter.ToList
+        dgvSOBottom.AutoGenerateColumns = True
+        dgvSOBottom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvSOBottom.ReadOnly = True
+        dgvSOBottom.DataSource = inter.ToList
 
 
 
 
     End Sub
 
-    Private Sub tbQuerySO_Enter(sender As Object, e As EventArgs) Handles tbQuerySO.Enter
-        tbQuerySO.Text = ""
-    End Sub
+
 
 
     Private Sub btnSearchSO_Click(sender As Object, e As EventArgs) Handles btnSearchSO.Click
-        Dim query As String
+        Dim query As String = ""
 
         Select Case cbCriteriaSO.Text
-            Case "by Sales Order ID"
+            Case "By Sales Order ID"
                 query = "Sales_Order_ID LIKE '%" + tbQuerySO.Text + "%'"
-            Case "by Product Code"
+            Case "By Sale Order Date"
                 query = "Product_Code LIKE '%" + tbQuerySO.Text + "%'"
-            Case "by Customer ID"
-                query = "Convert(Customer_ID, System.String) LIKE '%" + tbQuerySO.Text + "%'"
+            Case "By Customer"
+                query = "Cust_FName LIKE '%" + tbQuerySO.Text + "%'"
+            Case "By Employee"
+                query = "Emp_FName LIKE '%" + tbQuerySO.Text + "%'"
             Case Else
                 query = ""
         End Select
 
-        If query.Length = 0 Then
+        If String.IsNullOrWhiteSpace(query) Then
             SalesOrderBindingSource.RemoveFilter()
         Else
             SalesOrderBindingSource.Filter = query
@@ -422,7 +417,7 @@
             dgvSupplier.AllowUserToAddRows = False
             dgvSupplier.GridColor = Color.Gray
             btnAddEditSupplier.Text = "Add New/Edit Suppliers"
-            btnAddEditSupplier.Image = My.Resources.pencil96
+            btnAddEditSupplier.Image = My.Resources.pencil961
             btnAddEditSupplier.ImageAlign = ContentAlignment.MiddleCenter
             btnRemoveSupplier.Enabled = True
             Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
@@ -445,7 +440,7 @@
             dgvSupplier.ReadOnly = True
             dgvSupplier.AllowUserToDeleteRows = False
             dgvSupplier.GridColor = Color.Gray
-            btnRemoveSupplier.Image = My.Resources.bin_red_full_icon
+            btnRemoveSupplier.Image = My.Resources.redbin296
             btnRemoveSupplier.ImageAlign = ContentAlignment.TopCenter
             btnAddEditSupplier.Enabled = True
             Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
@@ -465,12 +460,12 @@
             dgvSupplier.AllowUserToAddRows = False
             dgvSupplier.AllowUserToDeleteRows = False
             dgvSupplier.GridColor = Color.Gray
-            btnAddEditSupplier.Image = My.Resources.pencil96
+            btnAddEditSupplier.Image = My.Resources.pencil961
             btnAddEditSupplier.ImageAlign = ContentAlignment.TopCenter
             btnAddEditSupplier.Text = "Add New/Edit Suppliers"
             btnAddEditSupplier.Enabled = True
 
-            btnRemoveSupplier.Image = My.Resources.bin_red_full_icon
+            btnRemoveSupplier.Image = My.Resources.redbin296
             btnRemoveSupplier.ImageAlign = ContentAlignment.TopCenter
             btnRemoveSupplier.Text = "Remove"
             btnRemoveSupplier.Enabled = True
@@ -529,7 +524,7 @@
             dgvCustomer.AllowUserToAddRows = False
             dgvCustomer.GridColor = Color.Gray
             btnAddEditCustomer.Text = "Add New/Edit Customers"
-            btnAddEditCustomer.Image = My.Resources.pencil96
+            btnAddEditCustomer.Image = My.Resources.pencil961
             btnAddEditCustomer.ImageAlign = ContentAlignment.MiddleCenter
             btnRemoveCustomer.Enabled = True
             Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
@@ -552,7 +547,7 @@
             dgvCustomer.ReadOnly = True
             dgvCustomer.AllowUserToDeleteRows = False
             dgvCustomer.GridColor = Color.Gray
-            btnRemoveCustomer.Image = My.Resources.bin_red_full_icon
+            btnRemoveCustomer.Image = My.Resources.redbin296
             btnRemoveCustomer.ImageAlign = ContentAlignment.TopCenter
             btnAddEditCustomer.Enabled = True
             Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
@@ -572,12 +567,12 @@
             dgvCustomer.AllowUserToAddRows = False
             dgvCustomer.AllowUserToDeleteRows = False
             dgvCustomer.GridColor = Color.Gray
-            btnAddEditCustomer.Image = My.Resources.pencil96
+            btnAddEditCustomer.Image = My.Resources.pencil961
             btnAddEditCustomer.ImageAlign = ContentAlignment.TopCenter
             btnAddEditCustomer.Text = "Add New/Edit Customers"
             btnAddEditCustomer.Enabled = True
 
-            btnRemoveCustomer.Image = My.Resources.bin_red_full_icon
+            btnRemoveCustomer.Image = My.Resources.redbin296
             btnRemoveCustomer.ImageAlign = ContentAlignment.TopCenter
             btnRemoveCustomer.Text = "Remove"
             btnRemoveCustomer.Enabled = True
@@ -635,7 +630,7 @@
             dgvPayment.AllowUserToAddRows = False
             dgvPayment.GridColor = Color.Gray
             btnAddEditPayment.Text = "Add New/Edit Customer Payments"
-            btnAddEditPayment.Image = My.Resources.pencil96
+            btnAddEditPayment.Image = My.Resources.pencil961
             btnAddEditPayment.ImageAlign = ContentAlignment.MiddleCenter
             btnRemovePayment.Enabled = True
             Me.Customer_PaymentTableAdapter.Fill(Me.RecspecDataset.Customer_Payment)
@@ -658,7 +653,7 @@
             dgvPayment.ReadOnly = True
             dgvPayment.AllowUserToDeleteRows = False
             dgvPayment.GridColor = Color.Gray
-            btnRemovePayment.Image = My.Resources.bin_red_full_icon
+            btnRemovePayment.Image = My.Resources.redbin296
             btnRemovePayment.ImageAlign = ContentAlignment.TopCenter
             btnAddEditPayment.Enabled = True
             Me.Customer_PaymentTableAdapter.Fill(Me.RecspecDataset.Customer_Payment)
@@ -678,12 +673,12 @@
             dgvPayment.AllowUserToAddRows = False
             dgvPayment.AllowUserToDeleteRows = False
             dgvPayment.GridColor = Color.Gray
-            btnAddEditPayment.Image = My.Resources.pencil96
+            btnAddEditPayment.Image = My.Resources.pencil961
             btnAddEditPayment.ImageAlign = ContentAlignment.TopCenter
             btnAddEditPayment.Text = "Add New/Edit Customer Payments"
             btnAddEditPayment.Enabled = True
 
-            btnRemovePayment.Image = My.Resources.bin_red_full_icon
+            btnRemovePayment.Image = My.Resources.redbin296
             btnRemovePayment.ImageAlign = ContentAlignment.TopCenter
             btnRemovePayment.Text = "Remove"
             btnRemovePayment.Enabled = True
@@ -742,27 +737,14 @@
 
     End Sub
 
-    Private Sub SetFormat4Dbl(ByRef tpage As TabPage, ByRef searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvRight As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
-
-        'dgvTop.AutoGenerateColumns = False
-        'dgvTop.Columns.Add("SoIdCol", "SO ID")
-        'dgvTop.Columns.Add("SoDateCol", "SO Date")
-        'dgvTop.Columns.Add("SaleTotalCol", "Sale Total")
-        'dgvTop.Columns.Add("CustomerCol", "Customer")
-        'dgvTop.Columns.Add("EmployeeCol", "Employee")
-
-
+    Private Sub SetFormat4Dbl(ByRef tpage As TabPage, ByRef searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
         dgvTop.Width = Me.ClientSize.Width * 0.43
         dgvTop.Height = Me.ClientSize.Height * 0.35
         dgvTop.Left = Me.ClientSize.Width * 0.05
         dgvTop.Top = Me.ClientSize.Height * 0.16
         lblSO.Location = New Point(dgvTop.Left, dgvTop.Top - 2)
 
-        dgvRight.Width = Me.ClientSize.Width * 0.43
-        dgvRight.Height = Me.ClientSize.Height * 0.35
-        dgvRight.Left = Me.ClientSize.Width * 0.5
-        dgvRight.Top = Me.ClientSize.Height * 0.16
-        lblSOProduct.Location = New Point(dgvRight.Left, dgvRight.Top - 2)
+
 
         dgvBottom.Width = Me.ClientSize.Width * 0.9
         dgvBottom.Height = Me.ClientSize.Height * 0.4
@@ -774,7 +756,7 @@
         For Each i In dgvTop.Columns
             i.HeaderText = i.HeaderText.ToString.Replace(prefixTop, "").Replace("_", " ")
         Next
-        For Each i In dgvRight.Columns
+        For Each i In dgvBottom.Columns
             i.HeaderText = i.HeaderText.ToString.Replace(prefixBottom, "").Replace("_", " ")
         Next
 
@@ -823,5 +805,16 @@
         Employee_Init()
     End Sub
 
+
+
+
+    Private Sub tbQuerySO_KeyDown(sender As Object, e As KeyEventArgs) Handles tbQuerySO.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnSearchSO.PerformClick()
+            e.Handled = True
+            e.SuppressKeyPress = True
+        End If
+
+    End Sub
 
 End Class

@@ -31,7 +31,7 @@
             ProductDGV.AllowUserToAddRows = False
             ProductDGV.GridColor = Color.Gray
             btnUpdate.Text = "Add New/Edit Products"
-            btnUpdate.Image = My.Resources.pencil96
+            btnUpdate.Image = My.Resources.pencil961
             btnUpdate.ImageAlign = ContentAlignment.MiddleCenter
             btnRemove.Enabled = True
             Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
@@ -56,12 +56,12 @@
             ProductDGV.AllowUserToAddRows = False
             ProductDGV.AllowUserToDeleteRows = False
             ProductDGV.GridColor = Color.Gray
-            btnUpdate.Image = My.Resources.pencil96
+            btnUpdate.Image = My.Resources.pencil961
             btnUpdate.ImageAlign = ContentAlignment.TopCenter
             btnUpdate.Text = "Add New/Edit Products"
             btnUpdate.Enabled = True
 
-            btnRemove.Image = My.Resources.bin_red_full_icon
+            btnRemove.Image = My.Resources.redbin296
             btnRemove.ImageAlign = ContentAlignment.TopCenter
             btnRemove.Text = "Remove"
             btnRemove.Enabled = True
@@ -86,7 +86,7 @@
             ProductDGV.ReadOnly = True
             ProductDGV.AllowUserToDeleteRows = False
             ProductDGV.GridColor = Color.Gray
-            btnRemove.Image = My.Resources.bin_red_full_icon
+            btnRemove.Image = My.Resources.redbin296
             btnRemove.ImageAlign = ContentAlignment.TopCenter
             btnUpdate.Enabled = True
             Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
@@ -119,7 +119,7 @@
             PurchaseOrderDetailsDGV.GridColor = Color.Gray
             btnEmpEdit.Text = "Add New/Edit Purchase Order"
             btnEmpEdit.TextAlign = ContentAlignment.BottomCenter
-            btnEmpEdit.Image = My.Resources.pencil96
+            btnEmpEdit.Image = My.Resources.pencil961
             btnEmpEdit.ImageAlign = ContentAlignment.TopCenter
             Button19.Enabled = True
             Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)
@@ -173,7 +173,7 @@
             PurchaseOrderDetailsDGV.ReadOnly = True
             PurchaseOrderDetailsDGV.AllowUserToDeleteRows = False
             PurchaseOrderDetailsDGV.GridColor = Color.Gray
-            Button19.Image = My.Resources.bin_red_full_icon
+            Button19.Image = My.Resources.redbin296
             Button19.ImageAlign = ContentAlignment.TopCenter
             btnEmpEdit.Enabled = True
             Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)

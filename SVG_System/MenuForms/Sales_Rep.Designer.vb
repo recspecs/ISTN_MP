@@ -980,7 +980,7 @@ Partial Class Sales_Rep
     Friend WithEvents Sales_Total As DataGridViewTextBoxColumn
     Friend WithEvents InventoryTab As TabPage
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btrnDisableProduct As Button
+    'Friend WithEvents btrnDisableProduct As Button
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnUpdate As Button

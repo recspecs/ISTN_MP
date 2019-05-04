@@ -17,7 +17,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
         If SalesRepRadioButton.Checked = True Then
-            Sales_Rep.Show()
+            'Sales_Rep.Show()
             Me.Hide()
         ElseIf WarehouseMngRadioBtn.Checked = True Then
             GenManager.Show()
