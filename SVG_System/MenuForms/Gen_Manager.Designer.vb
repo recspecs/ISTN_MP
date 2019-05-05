@@ -24,12 +24,11 @@ Partial Class GenManager
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GenManager))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PaymentTab = New System.Windows.Forms.TabPage()
         Me.tlpPayment = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchPayment = New System.Windows.Forms.Button()
@@ -94,7 +93,10 @@ Partial Class GenManager
         Me.SuppPostalCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.POTab = New System.Windows.Forms.TabPage()
-        Me.dgvPOBottom = New System.Windows.Forms.DataGridView()
+        Me.flpPOTotal = New System.Windows.Forms.FlowLayoutPanel()
+        Me.lblPOTotal = New System.Windows.Forms.Label()
+        Me.tbPOTotal = New System.Windows.Forms.TextBox()
+        Me.dgvPOD = New System.Windows.Forms.DataGridView()
         Me.tlpPO = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchPO = New System.Windows.Forms.Button()
         Me.tbQueryPO = New System.Windows.Forms.TextBox()
@@ -105,27 +107,19 @@ Partial Class GenManager
         Me.btnRemovePO = New System.Windows.Forms.Button()
         Me.lblPoDetails = New System.Windows.Forms.Label()
         Me.lblPO = New System.Windows.Forms.Label()
-        Me.dgvPOD = New System.Windows.Forms.DataGridView()
         Me.dgvPO = New System.Windows.Forms.DataGridView()
         Me.PONoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PODateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.POTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.POReceivedFlagDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.EmployeeIDDataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PurchaseOrderBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RecSpecDataset1 = New MenuForms.RecSpecDataset()
+        Me.SuppNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpFNameDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalesOrderTab = New System.Windows.Forms.TabPage()
+        Me.flpSOTotal = New System.Windows.Forms.FlowLayoutPanel()
+        Me.lblSOTotal = New System.Windows.Forms.Label()
+        Me.tbSOTotal = New System.Windows.Forms.TextBox()
         Me.dgvSOBottom = New System.Windows.Forms.DataGridView()
-        Me.SalesItemLineNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdVATDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FKSaleItemSalesOrderBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblSODetails = New System.Windows.Forms.Label()
         Me.lblSO = New System.Windows.Forms.Label()
         Me.tlpSO = New System.Windows.Forms.TableLayoutPanel()
@@ -138,6 +132,7 @@ Partial Class GenManager
         Me.SaleTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Customer_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Employee_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductTab = New System.Windows.Forms.TabPage()
         Me.flpProducts = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAddEditProduct = New System.Windows.Forms.Button()
@@ -175,6 +170,7 @@ Partial Class GenManager
         Me.EmpPasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpContactNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpTypeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpPasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -183,7 +179,6 @@ Partial Class GenManager
         Me.EmpFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FKSaleItemSalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.EmployeeTableAdapter()
         Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
         Me.Sales_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Sales_OrderTableAdapter()
@@ -195,54 +190,51 @@ Partial Class GenManager
         Me.CustomerTableTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.CustomerTableTableAdapter()
         Me.Customer_PaymentTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Customer_PaymentTableAdapter()
         Me.SupplierTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.SupplierTableAdapter()
-        Me.FKSaleItemSalesOrderBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PaymentTab.SuspendLayout()
-        Me.tlpPayment.SuspendLayout()
-        Me.flpPayment.SuspendLayout()
-        CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CustomerPaymentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecspecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CustomerTab.SuspendLayout()
-        Me.tlpCustomer.SuspendLayout()
-        Me.flpCustomer.SuspendLayout()
-        CType(Me.dgvCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CustomerTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SupplierTab.SuspendLayout()
-        Me.tlpSupplier.SuspendLayout()
-        Me.flpSupplier.SuspendLayout()
-        CType(Me.dgvSupplier, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.POTab.SuspendLayout()
-        CType(Me.dgvPOBottom, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tlpPO.SuspendLayout()
-        Me.flpPO.SuspendLayout()
-        CType(Me.dgvPOD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvPO, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseOrderBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecSpecDataset1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SalesOrderTab.SuspendLayout()
-        CType(Me.dgvSOBottom, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SalesOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tlpSO.SuspendLayout()
-        CType(Me.dgvSO, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ProductTab.SuspendLayout()
-        Me.flpProducts.SuspendLayout()
-        CType(Me.dgvProduct, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tlpProduct.SuspendLayout()
-        Me.ManagerFormTabControl.SuspendLayout()
-        Me.EmployeeTab.SuspendLayout()
-        Me.FinalSearchLayout.SuspendLayout()
-        Me.flpEmployee.SuspendLayout()
-        CType(Me.dgvEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SaleItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PaymentTab.SuspendLayout
+        Me.tlpPayment.SuspendLayout
+        Me.flpPayment.SuspendLayout
+        CType(Me.dgvPayment,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.CustomerPaymentBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RecspecDataset,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.CustomerTab.SuspendLayout
+        Me.tlpCustomer.SuspendLayout
+        Me.flpCustomer.SuspendLayout
+        CType(Me.dgvCustomer,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.CustomerTableBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SupplierTab.SuspendLayout
+        Me.tlpSupplier.SuspendLayout
+        Me.flpSupplier.SuspendLayout
+        CType(Me.dgvSupplier,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.SupplierBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.POTab.SuspendLayout
+        Me.flpPOTotal.SuspendLayout
+        CType(Me.dgvPOD,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.tlpPO.SuspendLayout
+        Me.flpPO.SuspendLayout
+        CType(Me.dgvPO,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PurchaseOrderBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SalesOrderTab.SuspendLayout
+        Me.flpSOTotal.SuspendLayout
+        CType(Me.dgvSOBottom,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.tlpSO.SuspendLayout
+        CType(Me.dgvSO,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.SalesOrderBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.ProductTab.SuspendLayout
+        Me.flpProducts.SuspendLayout
+        CType(Me.dgvProduct,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.tlpProduct.SuspendLayout
+        Me.ManagerFormTabControl.SuspendLayout
+        Me.EmployeeTab.SuspendLayout
+        Me.FinalSearchLayout.SuspendLayout
+        Me.flpEmployee.SuspendLayout
+        CType(Me.dgvEmployee,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.EmployeeBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.FKSaleItemSalesOrderBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.SaleItemBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PurchaseItemBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'PaymentTab
         '
@@ -256,7 +248,7 @@ Partial Class GenManager
         Me.PaymentTab.Size = New System.Drawing.Size(1302, 763)
         Me.PaymentTab.TabIndex = 14
         Me.PaymentTab.Text = "Customer Payment"
-        Me.PaymentTab.UseVisualStyleBackColor = True
+        Me.PaymentTab.UseVisualStyleBackColor = true
         '
         'tlpPayment
         '
@@ -277,8 +269,8 @@ Partial Class GenManager
         'btnSearchPayment
         '
         Me.btnSearchPayment.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchPayment.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchPayment.Image = CType(resources.GetObject("btnSearchPayment.Image"), System.Drawing.Image)
+        Me.btnSearchPayment.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchPayment.Image = CType(resources.GetObject("btnSearchPayment.Image"),System.Drawing.Image)
         Me.btnSearchPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchPayment.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchPayment.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -287,16 +279,16 @@ Partial Class GenManager
         Me.btnSearchPayment.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchPayment.TabIndex = 70
         Me.btnSearchPayment.Text = "Search"
-        Me.btnSearchPayment.UseVisualStyleBackColor = True
+        Me.btnSearchPayment.UseVisualStyleBackColor = true
         '
         'tbQueryPayment
         '
         Me.tbQueryPayment.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbQueryPayment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQueryPayment.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbQueryPayment.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.tbQueryPayment.Location = New System.Drawing.Point(299, 17)
         Me.tbQueryPayment.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbQueryPayment.Multiline = True
+        Me.tbQueryPayment.Multiline = true
         Me.tbQueryPayment.Name = "tbQueryPayment"
         Me.tbQueryPayment.Size = New System.Drawing.Size(263, 25)
         Me.tbQueryPayment.TabIndex = 68
@@ -305,7 +297,7 @@ Partial Class GenManager
         'cbCriteriaPayment
         '
         Me.cbCriteriaPayment.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaPayment.FormattingEnabled = True
+        Me.cbCriteriaPayment.FormattingEnabled = true
         Me.cbCriteriaPayment.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
         Me.cbCriteriaPayment.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaPayment.Name = "cbCriteriaPayment"
@@ -315,7 +307,7 @@ Partial Class GenManager
         '
         'flpPayment
         '
-        Me.flpPayment.AutoSize = True
+        Me.flpPayment.AutoSize = true
         Me.flpPayment.Controls.Add(Me.btnAddEditPayment)
         Me.flpPayment.Controls.Add(Me.btnSavePayment)
         Me.flpPayment.Controls.Add(Me.btnRemovePayment)
@@ -327,7 +319,7 @@ Partial Class GenManager
         'btnAddEditPayment
         '
         Me.btnAddEditPayment.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditPayment.Image = CType(resources.GetObject("btnAddEditPayment.Image"), System.Drawing.Image)
+        Me.btnAddEditPayment.Image = CType(resources.GetObject("btnAddEditPayment.Image"),System.Drawing.Image)
         Me.btnAddEditPayment.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditPayment.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditPayment.Name = "btnAddEditPayment"
@@ -335,12 +327,12 @@ Partial Class GenManager
         Me.btnAddEditPayment.TabIndex = 32
         Me.btnAddEditPayment.Text = "Add/Edit"
         Me.btnAddEditPayment.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditPayment.UseCompatibleTextRendering = True
-        Me.btnAddEditPayment.UseVisualStyleBackColor = True
+        Me.btnAddEditPayment.UseCompatibleTextRendering = true
+        Me.btnAddEditPayment.UseVisualStyleBackColor = true
         '
         'btnSavePayment
         '
-        Me.btnSavePayment.Image = CType(resources.GetObject("btnSavePayment.Image"), System.Drawing.Image)
+        Me.btnSavePayment.Image = CType(resources.GetObject("btnSavePayment.Image"),System.Drawing.Image)
         Me.btnSavePayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSavePayment.Location = New System.Drawing.Point(221, 5)
         Me.btnSavePayment.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -350,12 +342,12 @@ Partial Class GenManager
         Me.btnSavePayment.TabIndex = 30
         Me.btnSavePayment.Text = "Save"
         Me.btnSavePayment.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSavePayment.UseVisualStyleBackColor = True
+        Me.btnSavePayment.UseVisualStyleBackColor = true
         '
         'btnRemovePayment
         '
-        Me.btnRemovePayment.AutoSize = True
-        Me.btnRemovePayment.Image = CType(resources.GetObject("btnRemovePayment.Image"), System.Drawing.Image)
+        Me.btnRemovePayment.AutoSize = true
+        Me.btnRemovePayment.Image = CType(resources.GetObject("btnRemovePayment.Image"),System.Drawing.Image)
         Me.btnRemovePayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemovePayment.Location = New System.Drawing.Point(427, 5)
         Me.btnRemovePayment.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -365,23 +357,23 @@ Partial Class GenManager
         Me.btnRemovePayment.TabIndex = 31
         Me.btnRemovePayment.Text = "Remove"
         Me.btnRemovePayment.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemovePayment.UseVisualStyleBackColor = True
+        Me.btnRemovePayment.UseVisualStyleBackColor = true
         '
         'dgvPayment
         '
-        Me.dgvPayment.AllowUserToAddRows = False
-        Me.dgvPayment.AllowUserToDeleteRows = False
-        Me.dgvPayment.AutoGenerateColumns = False
+        Me.dgvPayment.AllowUserToAddRows = false
+        Me.dgvPayment.AllowUserToDeleteRows = false
+        Me.dgvPayment.AutoGenerateColumns = false
         Me.dgvPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustPaymentIDDataGridViewTextBoxColumn, Me.CustPaymentTypeDataGridViewTextBoxColumn, Me.CustPaymentTotalAmtDataGridViewTextBoxColumn, Me.CustPaymentDateDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn4, Me.CustomerIDDataGridViewTextBoxColumn2})
         Me.dgvPayment.DataSource = Me.CustomerPaymentBindingSource
@@ -389,7 +381,7 @@ Partial Class GenManager
         Me.dgvPayment.Location = New System.Drawing.Point(74, 379)
         Me.dgvPayment.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvPayment.Name = "dgvPayment"
-        Me.dgvPayment.ReadOnly = True
+        Me.dgvPayment.ReadOnly = true
         Me.dgvPayment.Size = New System.Drawing.Size(986, 333)
         Me.dgvPayment.TabIndex = 3
         '
@@ -398,42 +390,42 @@ Partial Class GenManager
         Me.CustPaymentIDDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_ID"
         Me.CustPaymentIDDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_ID"
         Me.CustPaymentIDDataGridViewTextBoxColumn.Name = "CustPaymentIDDataGridViewTextBoxColumn"
-        Me.CustPaymentIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustPaymentIDDataGridViewTextBoxColumn.ReadOnly = true
         '
         'CustPaymentTypeDataGridViewTextBoxColumn
         '
         Me.CustPaymentTypeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Type"
         Me.CustPaymentTypeDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Type"
         Me.CustPaymentTypeDataGridViewTextBoxColumn.Name = "CustPaymentTypeDataGridViewTextBoxColumn"
-        Me.CustPaymentTypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustPaymentTypeDataGridViewTextBoxColumn.ReadOnly = true
         '
         'CustPaymentTotalAmtDataGridViewTextBoxColumn
         '
         Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Total_Amt"
         Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Total_Amt"
         Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.Name = "CustPaymentTotalAmtDataGridViewTextBoxColumn"
-        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.ReadOnly = true
         '
         'CustPaymentDateDataGridViewTextBoxColumn
         '
         Me.CustPaymentDateDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Date"
         Me.CustPaymentDateDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Date"
         Me.CustPaymentDateDataGridViewTextBoxColumn.Name = "CustPaymentDateDataGridViewTextBoxColumn"
-        Me.CustPaymentDateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustPaymentDateDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmployeeIDDataGridViewTextBoxColumn4
         '
         Me.EmployeeIDDataGridViewTextBoxColumn4.DataPropertyName = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn4.HeaderText = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn4.Name = "EmployeeIDDataGridViewTextBoxColumn4"
-        Me.EmployeeIDDataGridViewTextBoxColumn4.ReadOnly = True
+        Me.EmployeeIDDataGridViewTextBoxColumn4.ReadOnly = true
         '
         'CustomerIDDataGridViewTextBoxColumn2
         '
         Me.CustomerIDDataGridViewTextBoxColumn2.DataPropertyName = "Customer_ID"
         Me.CustomerIDDataGridViewTextBoxColumn2.HeaderText = "Customer_ID"
         Me.CustomerIDDataGridViewTextBoxColumn2.Name = "CustomerIDDataGridViewTextBoxColumn2"
-        Me.CustomerIDDataGridViewTextBoxColumn2.ReadOnly = True
+        Me.CustomerIDDataGridViewTextBoxColumn2.ReadOnly = true
         '
         'CustomerPaymentBindingSource
         '
@@ -457,7 +449,7 @@ Partial Class GenManager
         Me.CustomerTab.Size = New System.Drawing.Size(1302, 763)
         Me.CustomerTab.TabIndex = 12
         Me.CustomerTab.Text = "Customer"
-        Me.CustomerTab.UseVisualStyleBackColor = True
+        Me.CustomerTab.UseVisualStyleBackColor = true
         '
         'tlpCustomer
         '
@@ -478,8 +470,8 @@ Partial Class GenManager
         'btnSearchCustomer
         '
         Me.btnSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchCustomer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchCustomer.Image = CType(resources.GetObject("btnSearchCustomer.Image"), System.Drawing.Image)
+        Me.btnSearchCustomer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchCustomer.Image = CType(resources.GetObject("btnSearchCustomer.Image"),System.Drawing.Image)
         Me.btnSearchCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchCustomer.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchCustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -488,16 +480,16 @@ Partial Class GenManager
         Me.btnSearchCustomer.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchCustomer.TabIndex = 70
         Me.btnSearchCustomer.Text = "Search"
-        Me.btnSearchCustomer.UseVisualStyleBackColor = True
+        Me.btnSearchCustomer.UseVisualStyleBackColor = true
         '
         'tbQueryCustomer
         '
         Me.tbQueryCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbQueryCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQueryCustomer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbQueryCustomer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.tbQueryCustomer.Location = New System.Drawing.Point(299, 17)
         Me.tbQueryCustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbQueryCustomer.Multiline = True
+        Me.tbQueryCustomer.Multiline = true
         Me.tbQueryCustomer.Name = "tbQueryCustomer"
         Me.tbQueryCustomer.Size = New System.Drawing.Size(263, 25)
         Me.tbQueryCustomer.TabIndex = 68
@@ -506,7 +498,7 @@ Partial Class GenManager
         'cbCriteriaCustomer
         '
         Me.cbCriteriaCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaCustomer.FormattingEnabled = True
+        Me.cbCriteriaCustomer.FormattingEnabled = true
         Me.cbCriteriaCustomer.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
         Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaCustomer.Name = "cbCriteriaCustomer"
@@ -516,7 +508,7 @@ Partial Class GenManager
         '
         'flpCustomer
         '
-        Me.flpCustomer.AutoSize = True
+        Me.flpCustomer.AutoSize = true
         Me.flpCustomer.Controls.Add(Me.btnAddEditCustomer)
         Me.flpCustomer.Controls.Add(Me.btnSaveCustomer)
         Me.flpCustomer.Controls.Add(Me.btnRemoveCustomer)
@@ -528,7 +520,7 @@ Partial Class GenManager
         'btnAddEditCustomer
         '
         Me.btnAddEditCustomer.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditCustomer.Image = CType(resources.GetObject("btnAddEditCustomer.Image"), System.Drawing.Image)
+        Me.btnAddEditCustomer.Image = CType(resources.GetObject("btnAddEditCustomer.Image"),System.Drawing.Image)
         Me.btnAddEditCustomer.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditCustomer.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditCustomer.Name = "btnAddEditCustomer"
@@ -536,12 +528,12 @@ Partial Class GenManager
         Me.btnAddEditCustomer.TabIndex = 32
         Me.btnAddEditCustomer.Text = "Add/Edit"
         Me.btnAddEditCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditCustomer.UseCompatibleTextRendering = True
-        Me.btnAddEditCustomer.UseVisualStyleBackColor = True
+        Me.btnAddEditCustomer.UseCompatibleTextRendering = true
+        Me.btnAddEditCustomer.UseVisualStyleBackColor = true
         '
         'btnSaveCustomer
         '
-        Me.btnSaveCustomer.Image = CType(resources.GetObject("btnSaveCustomer.Image"), System.Drawing.Image)
+        Me.btnSaveCustomer.Image = CType(resources.GetObject("btnSaveCustomer.Image"),System.Drawing.Image)
         Me.btnSaveCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSaveCustomer.Location = New System.Drawing.Point(221, 5)
         Me.btnSaveCustomer.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -551,12 +543,12 @@ Partial Class GenManager
         Me.btnSaveCustomer.TabIndex = 30
         Me.btnSaveCustomer.Text = "Save"
         Me.btnSaveCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSaveCustomer.UseVisualStyleBackColor = True
+        Me.btnSaveCustomer.UseVisualStyleBackColor = true
         '
         'btnRemoveCustomer
         '
-        Me.btnRemoveCustomer.AutoSize = True
-        Me.btnRemoveCustomer.Image = CType(resources.GetObject("btnRemoveCustomer.Image"), System.Drawing.Image)
+        Me.btnRemoveCustomer.AutoSize = true
+        Me.btnRemoveCustomer.Image = CType(resources.GetObject("btnRemoveCustomer.Image"),System.Drawing.Image)
         Me.btnRemoveCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemoveCustomer.Location = New System.Drawing.Point(427, 5)
         Me.btnRemoveCustomer.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -566,22 +558,22 @@ Partial Class GenManager
         Me.btnRemoveCustomer.TabIndex = 31
         Me.btnRemoveCustomer.Text = "Remove"
         Me.btnRemoveCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemoveCustomer.UseVisualStyleBackColor = True
+        Me.btnRemoveCustomer.UseVisualStyleBackColor = true
         '
         'dgvCustomer
         '
-        Me.dgvCustomer.AllowUserToAddRows = False
-        Me.dgvCustomer.AllowUserToDeleteRows = False
-        Me.dgvCustomer.AutoGenerateColumns = False
+        Me.dgvCustomer.AllowUserToAddRows = false
+        Me.dgvCustomer.AllowUserToDeleteRows = false
+        Me.dgvCustomer.AutoGenerateColumns = false
         Me.dgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn1, Me.CustFNameDataGridViewTextBoxColumn, Me.CustLNameDataGridViewTextBoxColumn, Me.CustTypeDataGridViewTextBoxColumn, Me.CustBussinessNameDataGridViewTextBoxColumn, Me.CustEmailDataGridViewTextBoxColumn, Me.CustAddress1DataGridViewTextBoxColumn, Me.CustAddress2DataGridViewTextBoxColumn, Me.CustSuburbDataGridViewTextBoxColumn, Me.CustCityDataGridViewTextBoxColumn, Me.CustPostalCodeDataGridViewTextBoxColumn, Me.CustContactNoDataGridViewTextBoxColumn, Me.CustBalanceDataGridViewTextBoxColumn})
         Me.dgvCustomer.DataSource = Me.CustomerTableBindingSource
@@ -589,7 +581,7 @@ Partial Class GenManager
         Me.dgvCustomer.Location = New System.Drawing.Point(43, 370)
         Me.dgvCustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvCustomer.Name = "dgvCustomer"
-        Me.dgvCustomer.ReadOnly = True
+        Me.dgvCustomer.ReadOnly = true
         Me.dgvCustomer.Size = New System.Drawing.Size(975, 363)
         Me.dgvCustomer.TabIndex = 10
         '
@@ -598,7 +590,7 @@ Partial Class GenManager
         Me.CustomerIDDataGridViewTextBoxColumn1.DataPropertyName = "Customer_ID"
         Me.CustomerIDDataGridViewTextBoxColumn1.HeaderText = "Customer_ID"
         Me.CustomerIDDataGridViewTextBoxColumn1.Name = "CustomerIDDataGridViewTextBoxColumn1"
-        Me.CustomerIDDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.CustomerIDDataGridViewTextBoxColumn1.ReadOnly = true
         Me.CustomerIDDataGridViewTextBoxColumn1.Width = 106
         '
         'CustFNameDataGridViewTextBoxColumn
@@ -606,7 +598,7 @@ Partial Class GenManager
         Me.CustFNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_FName"
         Me.CustFNameDataGridViewTextBoxColumn.HeaderText = "Cust_FName"
         Me.CustFNameDataGridViewTextBoxColumn.Name = "CustFNameDataGridViewTextBoxColumn"
-        Me.CustFNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustFNameDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustFNameDataGridViewTextBoxColumn.Width = 104
         '
         'CustLNameDataGridViewTextBoxColumn
@@ -614,7 +606,7 @@ Partial Class GenManager
         Me.CustLNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_LName"
         Me.CustLNameDataGridViewTextBoxColumn.HeaderText = "Cust_LName"
         Me.CustLNameDataGridViewTextBoxColumn.Name = "CustLNameDataGridViewTextBoxColumn"
-        Me.CustLNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustLNameDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustLNameDataGridViewTextBoxColumn.Width = 104
         '
         'CustTypeDataGridViewTextBoxColumn
@@ -622,7 +614,7 @@ Partial Class GenManager
         Me.CustTypeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Type"
         Me.CustTypeDataGridViewTextBoxColumn.HeaderText = "Cust_Type"
         Me.CustTypeDataGridViewTextBoxColumn.Name = "CustTypeDataGridViewTextBoxColumn"
-        Me.CustTypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustTypeDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustTypeDataGridViewTextBoxColumn.Width = 90
         '
         'CustBussinessNameDataGridViewTextBoxColumn
@@ -630,7 +622,7 @@ Partial Class GenManager
         Me.CustBussinessNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_Bussiness_Name"
         Me.CustBussinessNameDataGridViewTextBoxColumn.HeaderText = "Cust_Bussiness_Name"
         Me.CustBussinessNameDataGridViewTextBoxColumn.Name = "CustBussinessNameDataGridViewTextBoxColumn"
-        Me.CustBussinessNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustBussinessNameDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustBussinessNameDataGridViewTextBoxColumn.Width = 158
         '
         'CustEmailDataGridViewTextBoxColumn
@@ -638,7 +630,7 @@ Partial Class GenManager
         Me.CustEmailDataGridViewTextBoxColumn.DataPropertyName = "Cust_Email"
         Me.CustEmailDataGridViewTextBoxColumn.HeaderText = "Cust_Email"
         Me.CustEmailDataGridViewTextBoxColumn.Name = "CustEmailDataGridViewTextBoxColumn"
-        Me.CustEmailDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustEmailDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustEmailDataGridViewTextBoxColumn.Width = 94
         '
         'CustAddress1DataGridViewTextBoxColumn
@@ -646,7 +638,7 @@ Partial Class GenManager
         Me.CustAddress1DataGridViewTextBoxColumn.DataPropertyName = "Cust_Address1"
         Me.CustAddress1DataGridViewTextBoxColumn.HeaderText = "Cust_Address1"
         Me.CustAddress1DataGridViewTextBoxColumn.Name = "CustAddress1DataGridViewTextBoxColumn"
-        Me.CustAddress1DataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustAddress1DataGridViewTextBoxColumn.ReadOnly = true
         Me.CustAddress1DataGridViewTextBoxColumn.Width = 118
         '
         'CustAddress2DataGridViewTextBoxColumn
@@ -654,7 +646,7 @@ Partial Class GenManager
         Me.CustAddress2DataGridViewTextBoxColumn.DataPropertyName = "Cust_Address2"
         Me.CustAddress2DataGridViewTextBoxColumn.HeaderText = "Cust_Address2"
         Me.CustAddress2DataGridViewTextBoxColumn.Name = "CustAddress2DataGridViewTextBoxColumn"
-        Me.CustAddress2DataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustAddress2DataGridViewTextBoxColumn.ReadOnly = true
         Me.CustAddress2DataGridViewTextBoxColumn.Width = 118
         '
         'CustSuburbDataGridViewTextBoxColumn
@@ -662,7 +654,7 @@ Partial Class GenManager
         Me.CustSuburbDataGridViewTextBoxColumn.DataPropertyName = "Cust_Suburb"
         Me.CustSuburbDataGridViewTextBoxColumn.HeaderText = "Cust_Suburb"
         Me.CustSuburbDataGridViewTextBoxColumn.Name = "CustSuburbDataGridViewTextBoxColumn"
-        Me.CustSuburbDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustSuburbDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustSuburbDataGridViewTextBoxColumn.Width = 105
         '
         'CustCityDataGridViewTextBoxColumn
@@ -670,7 +662,7 @@ Partial Class GenManager
         Me.CustCityDataGridViewTextBoxColumn.DataPropertyName = "Cust_City"
         Me.CustCityDataGridViewTextBoxColumn.HeaderText = "Cust_City"
         Me.CustCityDataGridViewTextBoxColumn.Name = "CustCityDataGridViewTextBoxColumn"
-        Me.CustCityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustCityDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustCityDataGridViewTextBoxColumn.Width = 84
         '
         'CustPostalCodeDataGridViewTextBoxColumn
@@ -678,7 +670,7 @@ Partial Class GenManager
         Me.CustPostalCodeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Postal_Code"
         Me.CustPostalCodeDataGridViewTextBoxColumn.HeaderText = "Cust_Postal_Code"
         Me.CustPostalCodeDataGridViewTextBoxColumn.Name = "CustPostalCodeDataGridViewTextBoxColumn"
-        Me.CustPostalCodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustPostalCodeDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustPostalCodeDataGridViewTextBoxColumn.Width = 134
         '
         'CustContactNoDataGridViewTextBoxColumn
@@ -686,7 +678,7 @@ Partial Class GenManager
         Me.CustContactNoDataGridViewTextBoxColumn.DataPropertyName = "Cust_Contact_No"
         Me.CustContactNoDataGridViewTextBoxColumn.HeaderText = "Cust_Contact_No"
         Me.CustContactNoDataGridViewTextBoxColumn.Name = "CustContactNoDataGridViewTextBoxColumn"
-        Me.CustContactNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustContactNoDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustContactNoDataGridViewTextBoxColumn.Width = 130
         '
         'CustBalanceDataGridViewTextBoxColumn
@@ -694,7 +686,7 @@ Partial Class GenManager
         Me.CustBalanceDataGridViewTextBoxColumn.DataPropertyName = "Cust_Balance"
         Me.CustBalanceDataGridViewTextBoxColumn.HeaderText = "Cust_Balance"
         Me.CustBalanceDataGridViewTextBoxColumn.Name = "CustBalanceDataGridViewTextBoxColumn"
-        Me.CustBalanceDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustBalanceDataGridViewTextBoxColumn.ReadOnly = true
         Me.CustBalanceDataGridViewTextBoxColumn.Width = 107
         '
         'CustomerTableBindingSource
@@ -714,7 +706,7 @@ Partial Class GenManager
         Me.SupplierTab.Size = New System.Drawing.Size(1302, 763)
         Me.SupplierTab.TabIndex = 13
         Me.SupplierTab.Text = "Supplier"
-        Me.SupplierTab.UseVisualStyleBackColor = True
+        Me.SupplierTab.UseVisualStyleBackColor = true
         '
         'tlpSupplier
         '
@@ -735,8 +727,8 @@ Partial Class GenManager
         'btnSearchSupplier
         '
         Me.btnSearchSupplier.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchSupplier.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchSupplier.Image = CType(resources.GetObject("btnSearchSupplier.Image"), System.Drawing.Image)
+        Me.btnSearchSupplier.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchSupplier.Image = CType(resources.GetObject("btnSearchSupplier.Image"),System.Drawing.Image)
         Me.btnSearchSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchSupplier.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchSupplier.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -745,16 +737,16 @@ Partial Class GenManager
         Me.btnSearchSupplier.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchSupplier.TabIndex = 70
         Me.btnSearchSupplier.Text = "Search"
-        Me.btnSearchSupplier.UseVisualStyleBackColor = True
+        Me.btnSearchSupplier.UseVisualStyleBackColor = true
         '
         'tbQuerySupplier
         '
         Me.tbQuerySupplier.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbQuerySupplier.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQuerySupplier.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbQuerySupplier.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.tbQuerySupplier.Location = New System.Drawing.Point(299, 17)
         Me.tbQuerySupplier.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbQuerySupplier.Multiline = True
+        Me.tbQuerySupplier.Multiline = true
         Me.tbQuerySupplier.Name = "tbQuerySupplier"
         Me.tbQuerySupplier.Size = New System.Drawing.Size(263, 25)
         Me.tbQuerySupplier.TabIndex = 68
@@ -763,7 +755,7 @@ Partial Class GenManager
         'cbCriteriaSupplier
         '
         Me.cbCriteriaSupplier.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaSupplier.FormattingEnabled = True
+        Me.cbCriteriaSupplier.FormattingEnabled = true
         Me.cbCriteriaSupplier.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
         Me.cbCriteriaSupplier.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaSupplier.Name = "cbCriteriaSupplier"
@@ -773,7 +765,7 @@ Partial Class GenManager
         '
         'flpSupplier
         '
-        Me.flpSupplier.AutoSize = True
+        Me.flpSupplier.AutoSize = true
         Me.flpSupplier.Controls.Add(Me.btnAddEditSupplier)
         Me.flpSupplier.Controls.Add(Me.btnSaveSupplier)
         Me.flpSupplier.Controls.Add(Me.btnRemoveSupplier)
@@ -785,7 +777,7 @@ Partial Class GenManager
         'btnAddEditSupplier
         '
         Me.btnAddEditSupplier.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditSupplier.Image = CType(resources.GetObject("btnAddEditSupplier.Image"), System.Drawing.Image)
+        Me.btnAddEditSupplier.Image = CType(resources.GetObject("btnAddEditSupplier.Image"),System.Drawing.Image)
         Me.btnAddEditSupplier.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditSupplier.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditSupplier.Name = "btnAddEditSupplier"
@@ -793,12 +785,12 @@ Partial Class GenManager
         Me.btnAddEditSupplier.TabIndex = 32
         Me.btnAddEditSupplier.Text = "Add/Edit"
         Me.btnAddEditSupplier.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditSupplier.UseCompatibleTextRendering = True
-        Me.btnAddEditSupplier.UseVisualStyleBackColor = True
+        Me.btnAddEditSupplier.UseCompatibleTextRendering = true
+        Me.btnAddEditSupplier.UseVisualStyleBackColor = true
         '
         'btnSaveSupplier
         '
-        Me.btnSaveSupplier.Image = CType(resources.GetObject("btnSaveSupplier.Image"), System.Drawing.Image)
+        Me.btnSaveSupplier.Image = CType(resources.GetObject("btnSaveSupplier.Image"),System.Drawing.Image)
         Me.btnSaveSupplier.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSaveSupplier.Location = New System.Drawing.Point(221, 5)
         Me.btnSaveSupplier.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -808,12 +800,12 @@ Partial Class GenManager
         Me.btnSaveSupplier.TabIndex = 30
         Me.btnSaveSupplier.Text = "Save"
         Me.btnSaveSupplier.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSaveSupplier.UseVisualStyleBackColor = True
+        Me.btnSaveSupplier.UseVisualStyleBackColor = true
         '
         'btnRemoveSupplier
         '
-        Me.btnRemoveSupplier.AutoSize = True
-        Me.btnRemoveSupplier.Image = CType(resources.GetObject("btnRemoveSupplier.Image"), System.Drawing.Image)
+        Me.btnRemoveSupplier.AutoSize = true
+        Me.btnRemoveSupplier.Image = CType(resources.GetObject("btnRemoveSupplier.Image"),System.Drawing.Image)
         Me.btnRemoveSupplier.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemoveSupplier.Location = New System.Drawing.Point(427, 5)
         Me.btnRemoveSupplier.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -823,22 +815,22 @@ Partial Class GenManager
         Me.btnRemoveSupplier.TabIndex = 31
         Me.btnRemoveSupplier.Text = "Remove"
         Me.btnRemoveSupplier.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemoveSupplier.UseVisualStyleBackColor = True
+        Me.btnRemoveSupplier.UseVisualStyleBackColor = true
         '
         'dgvSupplier
         '
-        Me.dgvSupplier.AllowUserToAddRows = False
-        Me.dgvSupplier.AllowUserToDeleteRows = False
-        Me.dgvSupplier.AutoGenerateColumns = False
+        Me.dgvSupplier.AllowUserToAddRows = false
+        Me.dgvSupplier.AllowUserToDeleteRows = false
+        Me.dgvSupplier.AutoGenerateColumns = false
         Me.dgvSupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSupplier.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSupplier.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSupplier.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SuppierIDDataGridViewTextBoxColumn, Me.SuppNameDataGridViewTextBoxColumn, Me.SuppContactNoDataGridViewTextBoxColumn, Me.SuppEmailDataGridViewTextBoxColumn, Me.SuppContactPersonDataGridViewTextBoxColumn, Me.SuppAddress1DataGridViewTextBoxColumn, Me.SuppAddress2DataGridViewTextBoxColumn, Me.SuppSurburbDataGridViewTextBoxColumn, Me.SuppCityDataGridViewTextBoxColumn, Me.SuppPostalCodeDataGridViewTextBoxColumn})
         Me.dgvSupplier.DataSource = Me.SupplierBindingSource
@@ -846,7 +838,7 @@ Partial Class GenManager
         Me.dgvSupplier.Location = New System.Drawing.Point(39, 318)
         Me.dgvSupplier.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvSupplier.Name = "dgvSupplier"
-        Me.dgvSupplier.ReadOnly = True
+        Me.dgvSupplier.ReadOnly = true
         Me.dgvSupplier.Size = New System.Drawing.Size(1000, 413)
         Me.dgvSupplier.TabIndex = 61
         '
@@ -855,70 +847,70 @@ Partial Class GenManager
         Me.SuppierIDDataGridViewTextBoxColumn.DataPropertyName = "Suppier_ID"
         Me.SuppierIDDataGridViewTextBoxColumn.HeaderText = "Suppier_ID"
         Me.SuppierIDDataGridViewTextBoxColumn.Name = "SuppierIDDataGridViewTextBoxColumn"
-        Me.SuppierIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppierIDDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppNameDataGridViewTextBoxColumn
         '
         Me.SuppNameDataGridViewTextBoxColumn.DataPropertyName = "Supp_Name"
         Me.SuppNameDataGridViewTextBoxColumn.HeaderText = "Supp_Name"
         Me.SuppNameDataGridViewTextBoxColumn.Name = "SuppNameDataGridViewTextBoxColumn"
-        Me.SuppNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppNameDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppContactNoDataGridViewTextBoxColumn
         '
         Me.SuppContactNoDataGridViewTextBoxColumn.DataPropertyName = "Supp_Contact_No"
         Me.SuppContactNoDataGridViewTextBoxColumn.HeaderText = "Supp_Contact_No"
         Me.SuppContactNoDataGridViewTextBoxColumn.Name = "SuppContactNoDataGridViewTextBoxColumn"
-        Me.SuppContactNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppContactNoDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppEmailDataGridViewTextBoxColumn
         '
         Me.SuppEmailDataGridViewTextBoxColumn.DataPropertyName = "Supp_Email"
         Me.SuppEmailDataGridViewTextBoxColumn.HeaderText = "Supp_Email"
         Me.SuppEmailDataGridViewTextBoxColumn.Name = "SuppEmailDataGridViewTextBoxColumn"
-        Me.SuppEmailDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppEmailDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppContactPersonDataGridViewTextBoxColumn
         '
         Me.SuppContactPersonDataGridViewTextBoxColumn.DataPropertyName = "Supp_Contact_Person"
         Me.SuppContactPersonDataGridViewTextBoxColumn.HeaderText = "Supp_Contact_Person"
         Me.SuppContactPersonDataGridViewTextBoxColumn.Name = "SuppContactPersonDataGridViewTextBoxColumn"
-        Me.SuppContactPersonDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppContactPersonDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppAddress1DataGridViewTextBoxColumn
         '
         Me.SuppAddress1DataGridViewTextBoxColumn.DataPropertyName = "Supp_Address1"
         Me.SuppAddress1DataGridViewTextBoxColumn.HeaderText = "Supp_Address1"
         Me.SuppAddress1DataGridViewTextBoxColumn.Name = "SuppAddress1DataGridViewTextBoxColumn"
-        Me.SuppAddress1DataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppAddress1DataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppAddress2DataGridViewTextBoxColumn
         '
         Me.SuppAddress2DataGridViewTextBoxColumn.DataPropertyName = "Supp_Address2"
         Me.SuppAddress2DataGridViewTextBoxColumn.HeaderText = "Supp_Address2"
         Me.SuppAddress2DataGridViewTextBoxColumn.Name = "SuppAddress2DataGridViewTextBoxColumn"
-        Me.SuppAddress2DataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppAddress2DataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppSurburbDataGridViewTextBoxColumn
         '
         Me.SuppSurburbDataGridViewTextBoxColumn.DataPropertyName = "Supp_Surburb"
         Me.SuppSurburbDataGridViewTextBoxColumn.HeaderText = "Supp_Surburb"
         Me.SuppSurburbDataGridViewTextBoxColumn.Name = "SuppSurburbDataGridViewTextBoxColumn"
-        Me.SuppSurburbDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppSurburbDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppCityDataGridViewTextBoxColumn
         '
         Me.SuppCityDataGridViewTextBoxColumn.DataPropertyName = "Supp_City"
         Me.SuppCityDataGridViewTextBoxColumn.HeaderText = "Supp_City"
         Me.SuppCityDataGridViewTextBoxColumn.Name = "SuppCityDataGridViewTextBoxColumn"
-        Me.SuppCityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppCityDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SuppPostalCodeDataGridViewTextBoxColumn
         '
         Me.SuppPostalCodeDataGridViewTextBoxColumn.DataPropertyName = "Supp_Postal_Code"
         Me.SuppPostalCodeDataGridViewTextBoxColumn.HeaderText = "Supp_Postal_Code"
         Me.SuppPostalCodeDataGridViewTextBoxColumn.Name = "SuppPostalCodeDataGridViewTextBoxColumn"
-        Me.SuppPostalCodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SuppPostalCodeDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SupplierBindingSource
         '
@@ -927,12 +919,12 @@ Partial Class GenManager
         '
         'POTab
         '
-        Me.POTab.Controls.Add(Me.dgvPOBottom)
+        Me.POTab.Controls.Add(Me.flpPOTotal)
+        Me.POTab.Controls.Add(Me.dgvPOD)
         Me.POTab.Controls.Add(Me.tlpPO)
         Me.POTab.Controls.Add(Me.flpPO)
         Me.POTab.Controls.Add(Me.lblPoDetails)
         Me.POTab.Controls.Add(Me.lblPO)
-        Me.POTab.Controls.Add(Me.dgvPOD)
         Me.POTab.Controls.Add(Me.dgvPO)
         Me.POTab.Location = New System.Drawing.Point(4, 26)
         Me.POTab.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -941,18 +933,47 @@ Partial Class GenManager
         Me.POTab.Size = New System.Drawing.Size(1302, 763)
         Me.POTab.TabIndex = 7
         Me.POTab.Text = "Purchase Order"
-        Me.POTab.UseVisualStyleBackColor = True
+        Me.POTab.UseVisualStyleBackColor = true
         '
-        'dgvPOBottom
+        'flpPOTotal
         '
-        Me.dgvPOBottom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPOBottom.Location = New System.Drawing.Point(62, 550)
-        Me.dgvPOBottom.Name = "dgvPOBottom"
-        Me.dgvPOBottom.Size = New System.Drawing.Size(1135, 172)
-        Me.dgvPOBottom.TabIndex = 83
+        Me.flpPOTotal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.flpPOTotal.Controls.Add(Me.lblPOTotal)
+        Me.flpPOTotal.Controls.Add(Me.tbPOTotal)
+        Me.flpPOTotal.Location = New System.Drawing.Point(725, 710)
+        Me.flpPOTotal.Name = "flpPOTotal"
+        Me.flpPOTotal.Size = New System.Drawing.Size(290, 31)
+        Me.flpPOTotal.TabIndex = 92
+        '
+        'lblPOTotal
+        '
+        Me.lblPOTotal.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblPOTotal.AutoSize = true
+        Me.lblPOTotal.Location = New System.Drawing.Point(3, 7)
+        Me.lblPOTotal.Name = "lblPOTotal"
+        Me.lblPOTotal.Size = New System.Drawing.Size(127, 17)
+        Me.lblPOTotal.TabIndex = 91
+        Me.lblPOTotal.Text = "Purchase OrderTotal"
+        '
+        'tbPOTotal
+        '
+        Me.tbPOTotal.Location = New System.Drawing.Point(136, 3)
+        Me.tbPOTotal.Name = "tbPOTotal"
+        Me.tbPOTotal.Size = New System.Drawing.Size(150, 25)
+        Me.tbPOTotal.TabIndex = 90
+        '
+        'dgvPOD
+        '
+        Me.dgvPOD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvPOD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPOD.Location = New System.Drawing.Point(94, 518)
+        Me.dgvPOD.Name = "dgvPOD"
+        Me.dgvPOD.Size = New System.Drawing.Size(899, 172)
+        Me.dgvPOD.TabIndex = 83
         '
         'tlpPO
         '
+        Me.tlpPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tlpPO.ColumnCount = 3
         Me.tlpPO.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tlpPO.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -960,7 +981,7 @@ Partial Class GenManager
         Me.tlpPO.Controls.Add(Me.btnSearchPO, 0, 0)
         Me.tlpPO.Controls.Add(Me.tbQueryPO, 1, 0)
         Me.tlpPO.Controls.Add(Me.cbCriteriaPO, 2, 0)
-        Me.tlpPO.Location = New System.Drawing.Point(131, 181)
+        Me.tlpPO.Location = New System.Drawing.Point(94, 159)
         Me.tlpPO.Name = "tlpPO"
         Me.tlpPO.RowCount = 1
         Me.tlpPO.RowStyles.Add(New System.Windows.Forms.RowStyle())
@@ -970,8 +991,8 @@ Partial Class GenManager
         'btnSearchPO
         '
         Me.btnSearchPO.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchPO.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchPO.Image = CType(resources.GetObject("btnSearchPO.Image"), System.Drawing.Image)
+        Me.btnSearchPO.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchPO.Image = CType(resources.GetObject("btnSearchPO.Image"),System.Drawing.Image)
         Me.btnSearchPO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchPO.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchPO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -980,16 +1001,16 @@ Partial Class GenManager
         Me.btnSearchPO.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchPO.TabIndex = 70
         Me.btnSearchPO.Text = "Search"
-        Me.btnSearchPO.UseVisualStyleBackColor = True
+        Me.btnSearchPO.UseVisualStyleBackColor = true
         '
         'tbQueryPO
         '
         Me.tbQueryPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbQueryPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQueryPO.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbQueryPO.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.tbQueryPO.Location = New System.Drawing.Point(299, 17)
         Me.tbQueryPO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbQueryPO.Multiline = True
+        Me.tbQueryPO.Multiline = true
         Me.tbQueryPO.Name = "tbQueryPO"
         Me.tbQueryPO.Size = New System.Drawing.Size(263, 25)
         Me.tbQueryPO.TabIndex = 68
@@ -998,7 +1019,7 @@ Partial Class GenManager
         'cbCriteriaPO
         '
         Me.cbCriteriaPO.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaPO.FormattingEnabled = True
+        Me.cbCriteriaPO.FormattingEnabled = true
         Me.cbCriteriaPO.Items.AddRange(New Object() {"By PO No", "By PO Date", "By PO Received Flag"})
         Me.cbCriteriaPO.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaPO.Name = "cbCriteriaPO"
@@ -1008,7 +1029,8 @@ Partial Class GenManager
         '
         'flpPO
         '
-        Me.flpPO.AutoSize = True
+        Me.flpPO.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.flpPO.AutoSize = true
         Me.flpPO.Controls.Add(Me.btnAddEditPO)
         Me.flpPO.Controls.Add(Me.btnSavePO)
         Me.flpPO.Controls.Add(Me.btnRemovePO)
@@ -1020,7 +1042,7 @@ Partial Class GenManager
         'btnAddEditPO
         '
         Me.btnAddEditPO.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditPO.Image = CType(resources.GetObject("btnAddEditPO.Image"), System.Drawing.Image)
+        Me.btnAddEditPO.Image = CType(resources.GetObject("btnAddEditPO.Image"),System.Drawing.Image)
         Me.btnAddEditPO.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditPO.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditPO.Name = "btnAddEditPO"
@@ -1028,12 +1050,12 @@ Partial Class GenManager
         Me.btnAddEditPO.TabIndex = 32
         Me.btnAddEditPO.Text = "Add/Edit"
         Me.btnAddEditPO.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditPO.UseCompatibleTextRendering = True
-        Me.btnAddEditPO.UseVisualStyleBackColor = True
+        Me.btnAddEditPO.UseCompatibleTextRendering = true
+        Me.btnAddEditPO.UseVisualStyleBackColor = true
         '
         'btnSavePO
         '
-        Me.btnSavePO.Image = CType(resources.GetObject("btnSavePO.Image"), System.Drawing.Image)
+        Me.btnSavePO.Image = CType(resources.GetObject("btnSavePO.Image"),System.Drawing.Image)
         Me.btnSavePO.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSavePO.Location = New System.Drawing.Point(221, 5)
         Me.btnSavePO.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -1043,12 +1065,12 @@ Partial Class GenManager
         Me.btnSavePO.TabIndex = 30
         Me.btnSavePO.Text = "Save"
         Me.btnSavePO.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSavePO.UseVisualStyleBackColor = True
+        Me.btnSavePO.UseVisualStyleBackColor = true
         '
         'btnRemovePO
         '
-        Me.btnRemovePO.AutoSize = True
-        Me.btnRemovePO.Image = CType(resources.GetObject("btnRemovePO.Image"), System.Drawing.Image)
+        Me.btnRemovePO.AutoSize = true
+        Me.btnRemovePO.Image = CType(resources.GetObject("btnRemovePO.Image"),System.Drawing.Image)
         Me.btnRemovePO.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemovePO.Location = New System.Drawing.Point(427, 5)
         Me.btnRemovePO.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -1058,12 +1080,12 @@ Partial Class GenManager
         Me.btnRemovePO.TabIndex = 31
         Me.btnRemovePO.Text = "Remove"
         Me.btnRemovePO.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemovePO.UseVisualStyleBackColor = True
+        Me.btnRemovePO.UseVisualStyleBackColor = true
         '
         'lblPoDetails
         '
-        Me.lblPoDetails.AutoSize = True
-        Me.lblPoDetails.Location = New System.Drawing.Point(91, 530)
+        Me.lblPoDetails.AutoSize = true
+        Me.lblPoDetails.Location = New System.Drawing.Point(91, 498)
         Me.lblPoDetails.Name = "lblPoDetails"
         Me.lblPoDetails.Size = New System.Drawing.Size(142, 17)
         Me.lblPoDetails.TabIndex = 77
@@ -1071,47 +1093,27 @@ Partial Class GenManager
         '
         'lblPO
         '
-        Me.lblPO.AutoSize = True
-        Me.lblPO.Location = New System.Drawing.Point(91, 255)
+        Me.lblPO.AutoSize = true
+        Me.lblPO.Location = New System.Drawing.Point(91, 227)
         Me.lblPO.Name = "lblPO"
         Me.lblPO.Size = New System.Drawing.Size(105, 17)
         Me.lblPO.TabIndex = 76
         Me.lblPO.Text = "Purchase Orders"
         '
-        'dgvPOD
-        '
-        Me.dgvPOD.AllowUserToAddRows = False
-        Me.dgvPOD.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvPOD.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
-        Me.dgvPOD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPOD.Location = New System.Drawing.Point(664, 276)
-        Me.dgvPOD.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.dgvPOD.Name = "dgvPOD"
-        Me.dgvPOD.ReadOnly = True
-        Me.dgvPOD.Size = New System.Drawing.Size(461, 225)
-        Me.dgvPOD.TabIndex = 62
-        '
         'dgvPO
         '
-        Me.dgvPO.AllowUserToAddRows = False
-        Me.dgvPO.AllowUserToDeleteRows = False
-        Me.dgvPO.AutoGenerateColumns = False
+        Me.dgvPO.AllowUserToAddRows = false
+        Me.dgvPO.AllowUserToDeleteRows = false
+        Me.dgvPO.AutoGenerateColumns = false
         Me.dgvPO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPO.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PONoDataGridViewTextBoxColumn, Me.PODateDataGridViewTextBoxColumn, Me.POTotalDataGridViewTextBoxColumn, Me.POReceivedFlagDataGridViewCheckBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn1})
-        Me.dgvPO.DataSource = Me.PurchaseOrderBindingSource1
-        Me.dgvPO.Location = New System.Drawing.Point(94, 276)
+        Me.dgvPO.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PONoDataGridViewTextBoxColumn, Me.PODateDataGridViewTextBoxColumn, Me.POTotalDataGridViewTextBoxColumn, Me.POReceivedFlagDataGridViewCheckBoxColumn, Me.SuppNameDataGridViewTextBoxColumn1, Me.EmpFNameDataGridViewTextBoxColumn3})
+        Me.dgvPO.DataSource = Me.PurchaseOrderBindingSource
+        Me.dgvPO.Location = New System.Drawing.Point(94, 248)
         Me.dgvPO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvPO.Name = "dgvPO"
-        Me.dgvPO.ReadOnly = True
-        Me.dgvPO.Size = New System.Drawing.Size(453, 225)
+        Me.dgvPO.ReadOnly = true
+        Me.dgvPO.Size = New System.Drawing.Size(899, 225)
         Me.dgvPO.TabIndex = 61
         '
         'PONoDataGridViewTextBoxColumn
@@ -1119,65 +1121,51 @@ Partial Class GenManager
         Me.PONoDataGridViewTextBoxColumn.DataPropertyName = "PO_No"
         Me.PONoDataGridViewTextBoxColumn.HeaderText = "PO_No"
         Me.PONoDataGridViewTextBoxColumn.Name = "PONoDataGridViewTextBoxColumn"
-        Me.PONoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PONoDataGridViewTextBoxColumn.ReadOnly = true
         '
         'PODateDataGridViewTextBoxColumn
         '
         Me.PODateDataGridViewTextBoxColumn.DataPropertyName = "PO_Date"
         Me.PODateDataGridViewTextBoxColumn.HeaderText = "PO_Date"
         Me.PODateDataGridViewTextBoxColumn.Name = "PODateDataGridViewTextBoxColumn"
-        Me.PODateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PODateDataGridViewTextBoxColumn.ReadOnly = true
         '
         'POTotalDataGridViewTextBoxColumn
         '
         Me.POTotalDataGridViewTextBoxColumn.DataPropertyName = "PO_Total"
         Me.POTotalDataGridViewTextBoxColumn.HeaderText = "PO_Total"
         Me.POTotalDataGridViewTextBoxColumn.Name = "POTotalDataGridViewTextBoxColumn"
-        Me.POTotalDataGridViewTextBoxColumn.ReadOnly = True
+        Me.POTotalDataGridViewTextBoxColumn.ReadOnly = true
         '
         'POReceivedFlagDataGridViewCheckBoxColumn
         '
         Me.POReceivedFlagDataGridViewCheckBoxColumn.DataPropertyName = "PO_Received_Flag"
         Me.POReceivedFlagDataGridViewCheckBoxColumn.HeaderText = "PO_Received_Flag"
         Me.POReceivedFlagDataGridViewCheckBoxColumn.Name = "POReceivedFlagDataGridViewCheckBoxColumn"
-        Me.POReceivedFlagDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.POReceivedFlagDataGridViewCheckBoxColumn.ReadOnly = true
         '
-        'EmployeeIDDataGridViewTextBoxColumn5
+        'SuppNameDataGridViewTextBoxColumn1
         '
-        Me.EmployeeIDDataGridViewTextBoxColumn5.DataPropertyName = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.DataSource = Me.EmployeeBindingSource
-        Me.EmployeeIDDataGridViewTextBoxColumn5.DisplayMember = "Emp_FName"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.HeaderText = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.Name = "EmployeeIDDataGridViewTextBoxColumn5"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.ReadOnly = True
-        Me.EmployeeIDDataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EmployeeIDDataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.EmployeeIDDataGridViewTextBoxColumn5.ValueMember = "Employee_ID"
+        Me.SuppNameDataGridViewTextBoxColumn1.DataPropertyName = "Supp_Name"
+        Me.SuppNameDataGridViewTextBoxColumn1.HeaderText = "Supp_Name"
+        Me.SuppNameDataGridViewTextBoxColumn1.Name = "SuppNameDataGridViewTextBoxColumn1"
+        Me.SuppNameDataGridViewTextBoxColumn1.ReadOnly = true
         '
-        'EmployeeBindingSource
+        'EmpFNameDataGridViewTextBoxColumn3
         '
-        Me.EmployeeBindingSource.DataMember = "Employee"
-        Me.EmployeeBindingSource.DataSource = Me.RecspecDataset
+        Me.EmpFNameDataGridViewTextBoxColumn3.DataPropertyName = "Emp_FName"
+        Me.EmpFNameDataGridViewTextBoxColumn3.HeaderText = "Emp_FName"
+        Me.EmpFNameDataGridViewTextBoxColumn3.Name = "EmpFNameDataGridViewTextBoxColumn3"
+        Me.EmpFNameDataGridViewTextBoxColumn3.ReadOnly = true
         '
-        'DataGridViewTextBoxColumn1
+        'PurchaseOrderBindingSource
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Supplier_ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Supplier_ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'PurchaseOrderBindingSource1
-        '
-        Me.PurchaseOrderBindingSource1.DataMember = "Purchase_Order"
-        Me.PurchaseOrderBindingSource1.DataSource = Me.RecSpecDataset1
-        '
-        'RecSpecDataset1
-        '
-        Me.RecSpecDataset1.DataSetName = "RecSpecDataset"
-        Me.RecSpecDataset1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
+        Me.PurchaseOrderBindingSource.DataSource = Me.RecspecDataset
         '
         'SalesOrderTab
         '
+        Me.SalesOrderTab.Controls.Add(Me.flpSOTotal)
         Me.SalesOrderTab.Controls.Add(Me.dgvSOBottom)
         Me.SalesOrderTab.Controls.Add(Me.lblSODetails)
         Me.SalesOrderTab.Controls.Add(Me.lblSO)
@@ -1190,69 +1178,47 @@ Partial Class GenManager
         Me.SalesOrderTab.Size = New System.Drawing.Size(1302, 763)
         Me.SalesOrderTab.TabIndex = 16
         Me.SalesOrderTab.Text = "Sales Order"
-        Me.SalesOrderTab.UseVisualStyleBackColor = True
+        Me.SalesOrderTab.UseVisualStyleBackColor = true
+        '
+        'flpSOTotal
+        '
+        Me.flpSOTotal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.flpSOTotal.Controls.Add(Me.lblSOTotal)
+        Me.flpSOTotal.Controls.Add(Me.tbSOTotal)
+        Me.flpSOTotal.Location = New System.Drawing.Point(768, 706)
+        Me.flpSOTotal.Name = "flpSOTotal"
+        Me.flpSOTotal.Size = New System.Drawing.Size(300, 31)
+        Me.flpSOTotal.TabIndex = 91
+        '
+        'lblSOTotal
+        '
+        Me.lblSOTotal.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblSOTotal.AutoSize = true
+        Me.lblSOTotal.Location = New System.Drawing.Point(3, 7)
+        Me.lblSOTotal.Name = "lblSOTotal"
+        Me.lblSOTotal.Size = New System.Drawing.Size(105, 17)
+        Me.lblSOTotal.TabIndex = 91
+        Me.lblSOTotal.Text = "Sales OrderTotal"
+        '
+        'tbSOTotal
+        '
+        Me.tbSOTotal.Location = New System.Drawing.Point(114, 3)
+        Me.tbSOTotal.Name = "tbSOTotal"
+        Me.tbSOTotal.Size = New System.Drawing.Size(150, 25)
+        Me.tbSOTotal.TabIndex = 90
         '
         'dgvSOBottom
         '
-        Me.dgvSOBottom.AutoGenerateColumns = False
         Me.dgvSOBottom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSOBottom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSOBottom.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SalesItemLineNoDataGridViewTextBoxColumn, Me.SaleOrderIDDataGridViewTextBoxColumn, Me.SaleItemQtyDataGridViewTextBoxColumn, Me.SaleItemPriceDataGridViewTextBoxColumn, Me.ProdVATDataGridViewCheckBoxColumn, Me.ProductCodeDataGridViewTextBoxColumn})
-        Me.dgvSOBottom.DataSource = Me.FKSaleItemSalesOrderBindingSource2
         Me.dgvSOBottom.Location = New System.Drawing.Point(112, 498)
         Me.dgvSOBottom.Name = "dgvSOBottom"
         Me.dgvSOBottom.Size = New System.Drawing.Size(896, 188)
         Me.dgvSOBottom.TabIndex = 89
         '
-        'SalesItemLineNoDataGridViewTextBoxColumn
-        '
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.DataPropertyName = "Sales_Item_Line_No"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.HeaderText = "Sales_Item_Line_No"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.Name = "SalesItemLineNoDataGridViewTextBoxColumn"
-        '
-        'SaleOrderIDDataGridViewTextBoxColumn
-        '
-        Me.SaleOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_ID"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.HeaderText = "Sale_Order_ID"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.Name = "SaleOrderIDDataGridViewTextBoxColumn"
-        '
-        'SaleItemQtyDataGridViewTextBoxColumn
-        '
-        Me.SaleItemQtyDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Qty"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Qty"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.Name = "SaleItemQtyDataGridViewTextBoxColumn"
-        '
-        'SaleItemPriceDataGridViewTextBoxColumn
-        '
-        Me.SaleItemPriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Price"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Price"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.Name = "SaleItemPriceDataGridViewTextBoxColumn"
-        '
-        'ProdVATDataGridViewCheckBoxColumn
-        '
-        Me.ProdVATDataGridViewCheckBoxColumn.DataPropertyName = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.HeaderText = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.Name = "ProdVATDataGridViewCheckBoxColumn"
-        '
-        'ProductCodeDataGridViewTextBoxColumn
-        '
-        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
-        '
-        'FKSaleItemSalesOrderBindingSource2
-        '
-        Me.FKSaleItemSalesOrderBindingSource2.DataMember = "FK_Sale_Item_Sales_Order"
-        Me.FKSaleItemSalesOrderBindingSource2.DataSource = Me.SalesOrderBindingSource
-        '
-        'SalesOrderBindingSource
-        '
-        Me.SalesOrderBindingSource.DataMember = "Sales_Order"
-        Me.SalesOrderBindingSource.DataSource = Me.RecspecDataset
-        '
         'lblSODetails
         '
-        Me.lblSODetails.AutoSize = True
+        Me.lblSODetails.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblSODetails.Location = New System.Drawing.Point(112, 478)
         Me.lblSODetails.Name = "lblSODetails"
         Me.lblSODetails.Size = New System.Drawing.Size(126, 17)
@@ -1261,8 +1227,9 @@ Partial Class GenManager
         '
         'lblSO
         '
-        Me.lblSO.AutoSize = True
+        Me.lblSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblSO.Location = New System.Drawing.Point(112, 176)
+        Me.lblSO.Margin = New System.Windows.Forms.Padding(0)
         Me.lblSO.Name = "lblSO"
         Me.lblSO.Size = New System.Drawing.Size(83, 17)
         Me.lblSO.TabIndex = 87
@@ -1270,6 +1237,7 @@ Partial Class GenManager
         '
         'tlpSO
         '
+        Me.tlpSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tlpSO.ColumnCount = 3
         Me.tlpSO.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tlpSO.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -1288,8 +1256,8 @@ Partial Class GenManager
         'btnSearchSO
         '
         Me.btnSearchSO.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchSO.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchSO.Image = CType(resources.GetObject("btnSearchSO.Image"), System.Drawing.Image)
+        Me.btnSearchSO.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchSO.Image = CType(resources.GetObject("btnSearchSO.Image"),System.Drawing.Image)
         Me.btnSearchSO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchSO.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchSO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -1298,18 +1266,18 @@ Partial Class GenManager
         Me.btnSearchSO.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchSO.TabIndex = 70
         Me.btnSearchSO.Text = "Search"
-        Me.btnSearchSO.UseVisualStyleBackColor = True
+        Me.btnSearchSO.UseVisualStyleBackColor = true
         '
         'cbCriteriaSO
         '
         Me.cbCriteriaSO.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaSO.FormattingEnabled = True
+        Me.cbCriteriaSO.FormattingEnabled = true
         Me.cbCriteriaSO.Items.AddRange(New Object() {"By Sales Order ID", "By Customer", "By Employee"})
         Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaSO.Name = "cbCriteriaSO"
         Me.cbCriteriaSO.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaSO.TabIndex = 71
-        Me.cbCriteriaSO.Text = "Select criteria"
+        Me.cbCriteriaSO.Text = "By Sales Order ID"
         '
         'tbQuerySO
         '
@@ -1322,9 +1290,9 @@ Partial Class GenManager
         '
         'dgvSO
         '
-        Me.dgvSO.AllowUserToAddRows = False
-        Me.dgvSO.AllowUserToDeleteRows = False
-        Me.dgvSO.AutoGenerateColumns = False
+        Me.dgvSO.AllowUserToAddRows = false
+        Me.dgvSO.AllowUserToDeleteRows = false
+        Me.dgvSO.AutoGenerateColumns = false
         Me.dgvSO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSO.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SalesOrderIDDataGridViewTextBoxColumn, Me.SaleOrderDateDataGridViewTextBoxColumn, Me.SaleTotalDataGridViewTextBoxColumn, Me.Customer_ID, Me.Employee_ID})
@@ -1333,8 +1301,7 @@ Partial Class GenManager
         Me.dgvSO.Location = New System.Drawing.Point(115, 197)
         Me.dgvSO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvSO.Name = "dgvSO"
-        Me.dgvSO.ReadOnly = True
-        Me.dgvSO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSO.ReadOnly = true
         Me.dgvSO.Size = New System.Drawing.Size(893, 202)
         Me.dgvSO.TabIndex = 61
         '
@@ -1343,28 +1310,28 @@ Partial Class GenManager
         Me.SalesOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_Order_ID"
         Me.SalesOrderIDDataGridViewTextBoxColumn.HeaderText = "Sales_Order_ID"
         Me.SalesOrderIDDataGridViewTextBoxColumn.Name = "SalesOrderIDDataGridViewTextBoxColumn"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SalesOrderIDDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SaleOrderDateDataGridViewTextBoxColumn
         '
         Me.SaleOrderDateDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_Date"
         Me.SaleOrderDateDataGridViewTextBoxColumn.HeaderText = "Sale_Order_Date"
         Me.SaleOrderDateDataGridViewTextBoxColumn.Name = "SaleOrderDateDataGridViewTextBoxColumn"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SaleOrderDateDataGridViewTextBoxColumn.ReadOnly = true
         '
         'SaleTotalDataGridViewTextBoxColumn
         '
         Me.SaleTotalDataGridViewTextBoxColumn.DataPropertyName = "Sale_Total"
         Me.SaleTotalDataGridViewTextBoxColumn.HeaderText = "Sale_Total"
         Me.SaleTotalDataGridViewTextBoxColumn.Name = "SaleTotalDataGridViewTextBoxColumn"
-        Me.SaleTotalDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SaleTotalDataGridViewTextBoxColumn.ReadOnly = true
         '
         'Customer_ID
         '
         Me.Customer_ID.DataPropertyName = "Cust_FName"
         Me.Customer_ID.HeaderText = "Customer"
         Me.Customer_ID.Name = "Customer_ID"
-        Me.Customer_ID.ReadOnly = True
+        Me.Customer_ID.ReadOnly = true
         Me.Customer_ID.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Customer_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
@@ -1373,9 +1340,14 @@ Partial Class GenManager
         Me.Employee_ID.DataPropertyName = "Emp_FName"
         Me.Employee_ID.HeaderText = "Employee"
         Me.Employee_ID.Name = "Employee_ID"
-        Me.Employee_ID.ReadOnly = True
+        Me.Employee_ID.ReadOnly = true
         Me.Employee_ID.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Employee_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'SalesOrderBindingSource
+        '
+        Me.SalesOrderBindingSource.DataMember = "Sales_Order"
+        Me.SalesOrderBindingSource.DataSource = Me.RecspecDataset
         '
         'ProductTab
         '
@@ -1389,7 +1361,7 @@ Partial Class GenManager
         Me.ProductTab.Size = New System.Drawing.Size(1302, 763)
         Me.ProductTab.TabIndex = 15
         Me.ProductTab.Text = "Products"
-        Me.ProductTab.UseVisualStyleBackColor = True
+        Me.ProductTab.UseVisualStyleBackColor = true
         '
         'flpProducts
         '
@@ -1404,7 +1376,7 @@ Partial Class GenManager
         'btnAddEditProduct
         '
         Me.btnAddEditProduct.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditProduct.Image = CType(resources.GetObject("btnAddEditProduct.Image"), System.Drawing.Image)
+        Me.btnAddEditProduct.Image = CType(resources.GetObject("btnAddEditProduct.Image"),System.Drawing.Image)
         Me.btnAddEditProduct.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditProduct.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditProduct.Name = "btnAddEditProduct"
@@ -1412,12 +1384,12 @@ Partial Class GenManager
         Me.btnAddEditProduct.TabIndex = 32
         Me.btnAddEditProduct.Text = "Add/Edit"
         Me.btnAddEditProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditProduct.UseCompatibleTextRendering = True
-        Me.btnAddEditProduct.UseVisualStyleBackColor = True
+        Me.btnAddEditProduct.UseCompatibleTextRendering = true
+        Me.btnAddEditProduct.UseVisualStyleBackColor = true
         '
         'btnSaveProduct
         '
-        Me.btnSaveProduct.Image = CType(resources.GetObject("btnSaveProduct.Image"), System.Drawing.Image)
+        Me.btnSaveProduct.Image = CType(resources.GetObject("btnSaveProduct.Image"),System.Drawing.Image)
         Me.btnSaveProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSaveProduct.Location = New System.Drawing.Point(221, 5)
         Me.btnSaveProduct.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -1427,12 +1399,12 @@ Partial Class GenManager
         Me.btnSaveProduct.TabIndex = 30
         Me.btnSaveProduct.Text = "Save"
         Me.btnSaveProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSaveProduct.UseVisualStyleBackColor = True
+        Me.btnSaveProduct.UseVisualStyleBackColor = true
         '
         'btnRemoveProduct
         '
-        Me.btnRemoveProduct.AutoSize = True
-        Me.btnRemoveProduct.Image = CType(resources.GetObject("btnRemoveProduct.Image"), System.Drawing.Image)
+        Me.btnRemoveProduct.AutoSize = true
+        Me.btnRemoveProduct.Image = CType(resources.GetObject("btnRemoveProduct.Image"),System.Drawing.Image)
         Me.btnRemoveProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemoveProduct.Location = New System.Drawing.Point(427, 5)
         Me.btnRemoveProduct.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -1442,23 +1414,23 @@ Partial Class GenManager
         Me.btnRemoveProduct.TabIndex = 31
         Me.btnRemoveProduct.Text = "Remove"
         Me.btnRemoveProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemoveProduct.UseVisualStyleBackColor = True
+        Me.btnRemoveProduct.UseVisualStyleBackColor = true
         '
         'dgvProduct
         '
-        Me.dgvProduct.AllowUserToAddRows = False
-        Me.dgvProduct.AllowUserToDeleteRows = False
-        Me.dgvProduct.AllowUserToResizeRows = False
-        Me.dgvProduct.AutoGenerateColumns = False
+        Me.dgvProduct.AllowUserToAddRows = false
+        Me.dgvProduct.AllowUserToDeleteRows = false
+        Me.dgvProduct.AllowUserToResizeRows = false
+        Me.dgvProduct.AutoGenerateColumns = false
         Me.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProduct.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCodeDataGridViewTextBoxColumn1, Me.ProdNameDataGridViewTextBoxColumn1, Me.ProdCostPriceDataGridViewTextBoxColumn1, Me.ProdStockLevelDataGridViewTextBoxColumn1, Me.ProdVATDataGridViewCheckBoxColumn1, Me.ProdActiveDataGridViewCheckBoxColumn1, Me.ProdCategoriesDataGridViewTextBoxColumn1, Me.ProdReorderThresholdDataGridViewTextBoxColumn1})
         Me.dgvProduct.DataSource = Me.ProductBindingSource
@@ -1466,7 +1438,7 @@ Partial Class GenManager
         Me.dgvProduct.Location = New System.Drawing.Point(56, 299)
         Me.dgvProduct.Margin = New System.Windows.Forms.Padding(0)
         Me.dgvProduct.Name = "dgvProduct"
-        Me.dgvProduct.ReadOnly = True
+        Me.dgvProduct.ReadOnly = true
         Me.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProduct.Size = New System.Drawing.Size(1000, 410)
         Me.dgvProduct.TabIndex = 78
@@ -1476,56 +1448,56 @@ Partial Class GenManager
         Me.ProductCodeDataGridViewTextBoxColumn1.DataPropertyName = "Product_Code"
         Me.ProductCodeDataGridViewTextBoxColumn1.HeaderText = "Product_Code"
         Me.ProductCodeDataGridViewTextBoxColumn1.Name = "ProductCodeDataGridViewTextBoxColumn1"
-        Me.ProductCodeDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ProductCodeDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'ProdNameDataGridViewTextBoxColumn1
         '
         Me.ProdNameDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Name"
         Me.ProdNameDataGridViewTextBoxColumn1.HeaderText = "Prod_Name"
         Me.ProdNameDataGridViewTextBoxColumn1.Name = "ProdNameDataGridViewTextBoxColumn1"
-        Me.ProdNameDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ProdNameDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'ProdCostPriceDataGridViewTextBoxColumn1
         '
         Me.ProdCostPriceDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Cost_Price"
         Me.ProdCostPriceDataGridViewTextBoxColumn1.HeaderText = "Prod_Cost_Price"
         Me.ProdCostPriceDataGridViewTextBoxColumn1.Name = "ProdCostPriceDataGridViewTextBoxColumn1"
-        Me.ProdCostPriceDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ProdCostPriceDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'ProdStockLevelDataGridViewTextBoxColumn1
         '
         Me.ProdStockLevelDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Stock_Level"
         Me.ProdStockLevelDataGridViewTextBoxColumn1.HeaderText = "Prod_Stock_Level"
         Me.ProdStockLevelDataGridViewTextBoxColumn1.Name = "ProdStockLevelDataGridViewTextBoxColumn1"
-        Me.ProdStockLevelDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ProdStockLevelDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'ProdVATDataGridViewCheckBoxColumn1
         '
         Me.ProdVATDataGridViewCheckBoxColumn1.DataPropertyName = "Prod_VAT"
         Me.ProdVATDataGridViewCheckBoxColumn1.HeaderText = "Prod_VAT"
         Me.ProdVATDataGridViewCheckBoxColumn1.Name = "ProdVATDataGridViewCheckBoxColumn1"
-        Me.ProdVATDataGridViewCheckBoxColumn1.ReadOnly = True
+        Me.ProdVATDataGridViewCheckBoxColumn1.ReadOnly = true
         '
         'ProdActiveDataGridViewCheckBoxColumn1
         '
         Me.ProdActiveDataGridViewCheckBoxColumn1.DataPropertyName = "Prod_Active"
         Me.ProdActiveDataGridViewCheckBoxColumn1.HeaderText = "Prod_Active"
         Me.ProdActiveDataGridViewCheckBoxColumn1.Name = "ProdActiveDataGridViewCheckBoxColumn1"
-        Me.ProdActiveDataGridViewCheckBoxColumn1.ReadOnly = True
+        Me.ProdActiveDataGridViewCheckBoxColumn1.ReadOnly = true
         '
         'ProdCategoriesDataGridViewTextBoxColumn1
         '
         Me.ProdCategoriesDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Categories"
         Me.ProdCategoriesDataGridViewTextBoxColumn1.HeaderText = "Prod_Categories"
         Me.ProdCategoriesDataGridViewTextBoxColumn1.Name = "ProdCategoriesDataGridViewTextBoxColumn1"
-        Me.ProdCategoriesDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ProdCategoriesDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'ProdReorderThresholdDataGridViewTextBoxColumn1
         '
         Me.ProdReorderThresholdDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Reorder_Threshold"
         Me.ProdReorderThresholdDataGridViewTextBoxColumn1.HeaderText = "Prod_Reorder_Threshold"
         Me.ProdReorderThresholdDataGridViewTextBoxColumn1.Name = "ProdReorderThresholdDataGridViewTextBoxColumn1"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'ProductBindingSource
         '
@@ -1551,8 +1523,8 @@ Partial Class GenManager
         'btnSearchProduct
         '
         Me.btnSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchProduct.Image = CType(resources.GetObject("btnSearchProduct.Image"), System.Drawing.Image)
+        Me.btnSearchProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchProduct.Image = CType(resources.GetObject("btnSearchProduct.Image"),System.Drawing.Image)
         Me.btnSearchProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchProduct.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -1561,16 +1533,16 @@ Partial Class GenManager
         Me.btnSearchProduct.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchProduct.TabIndex = 70
         Me.btnSearchProduct.Text = "Search"
-        Me.btnSearchProduct.UseVisualStyleBackColor = True
+        Me.btnSearchProduct.UseVisualStyleBackColor = true
         '
         'tbQueryProduct
         '
         Me.tbQueryProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbQueryProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQueryProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbQueryProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.tbQueryProduct.Location = New System.Drawing.Point(299, 17)
         Me.tbQueryProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbQueryProduct.Multiline = True
+        Me.tbQueryProduct.Multiline = true
         Me.tbQueryProduct.Name = "tbQueryProduct"
         Me.tbQueryProduct.Size = New System.Drawing.Size(263, 25)
         Me.tbQueryProduct.TabIndex = 68
@@ -1579,7 +1551,7 @@ Partial Class GenManager
         'cbCriteriaProduct
         '
         Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaProduct.FormattingEnabled = True
+        Me.cbCriteriaProduct.FormattingEnabled = true
         Me.cbCriteriaProduct.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
         Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
@@ -1599,10 +1571,10 @@ Partial Class GenManager
         Me.ManagerFormTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ManagerFormTabControl.Location = New System.Drawing.Point(0, 0)
         Me.ManagerFormTabControl.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ManagerFormTabControl.Multiline = True
+        Me.ManagerFormTabControl.Multiline = true
         Me.ManagerFormTabControl.Name = "ManagerFormTabControl"
         Me.ManagerFormTabControl.SelectedIndex = 0
-        Me.ManagerFormTabControl.ShowToolTips = True
+        Me.ManagerFormTabControl.ShowToolTips = true
         Me.ManagerFormTabControl.Size = New System.Drawing.Size(1310, 793)
         Me.ManagerFormTabControl.TabIndex = 1
         '
@@ -1618,7 +1590,7 @@ Partial Class GenManager
         Me.EmployeeTab.Size = New System.Drawing.Size(1302, 763)
         Me.EmployeeTab.TabIndex = 3
         Me.EmployeeTab.Text = "Emploee"
-        Me.EmployeeTab.UseVisualStyleBackColor = True
+        Me.EmployeeTab.UseVisualStyleBackColor = true
         '
         'FinalSearchLayout
         '
@@ -1639,8 +1611,8 @@ Partial Class GenManager
         'btnSearchEmployee
         '
         Me.btnSearchEmployee.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchEmployee.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchEmployee.Image = CType(resources.GetObject("btnSearchEmployee.Image"), System.Drawing.Image)
+        Me.btnSearchEmployee.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchEmployee.Image = CType(resources.GetObject("btnSearchEmployee.Image"),System.Drawing.Image)
         Me.btnSearchEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSearchEmployee.Location = New System.Drawing.Point(12, 17)
         Me.btnSearchEmployee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -1649,12 +1621,12 @@ Partial Class GenManager
         Me.btnSearchEmployee.Size = New System.Drawing.Size(263, 25)
         Me.btnSearchEmployee.TabIndex = 70
         Me.btnSearchEmployee.Text = "Search"
-        Me.btnSearchEmployee.UseVisualStyleBackColor = True
+        Me.btnSearchEmployee.UseVisualStyleBackColor = true
         '
         'cbCriteriaEmployee
         '
         Me.cbCriteriaEmployee.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaEmployee.FormattingEnabled = True
+        Me.cbCriteriaEmployee.FormattingEnabled = true
         Me.cbCriteriaEmployee.Items.AddRange(New Object() {"By Employee ID", "By First Name", "By Surname"})
         Me.cbCriteriaEmployee.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaEmployee.Name = "cbCriteriaEmployee"
@@ -1666,10 +1638,10 @@ Partial Class GenManager
         '
         Me.tbQueryEmployee.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbQueryEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQueryEmployee.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbQueryEmployee.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.tbQueryEmployee.Location = New System.Drawing.Point(299, 17)
         Me.tbQueryEmployee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbQueryEmployee.Multiline = True
+        Me.tbQueryEmployee.Multiline = true
         Me.tbQueryEmployee.Name = "tbQueryEmployee"
         Me.tbQueryEmployee.Size = New System.Drawing.Size(263, 25)
         Me.tbQueryEmployee.TabIndex = 68
@@ -1677,7 +1649,7 @@ Partial Class GenManager
         '
         'flpEmployee
         '
-        Me.flpEmployee.AutoSize = True
+        Me.flpEmployee.AutoSize = true
         Me.flpEmployee.Controls.Add(Me.btnAddEditEmployee)
         Me.flpEmployee.Controls.Add(Me.btnSaveEmployee)
         Me.flpEmployee.Controls.Add(Me.btnRemoveEmployee)
@@ -1689,7 +1661,7 @@ Partial Class GenManager
         'btnAddEditEmployee
         '
         Me.btnAddEditEmployee.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditEmployee.Image = CType(resources.GetObject("btnAddEditEmployee.Image"), System.Drawing.Image)
+        Me.btnAddEditEmployee.Image = CType(resources.GetObject("btnAddEditEmployee.Image"),System.Drawing.Image)
         Me.btnAddEditEmployee.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnAddEditEmployee.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditEmployee.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
@@ -1699,12 +1671,12 @@ Partial Class GenManager
         Me.btnAddEditEmployee.TabIndex = 32
         Me.btnAddEditEmployee.Text = "Edit Employee"
         Me.btnAddEditEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditEmployee.UseCompatibleTextRendering = True
-        Me.btnAddEditEmployee.UseVisualStyleBackColor = True
+        Me.btnAddEditEmployee.UseCompatibleTextRendering = true
+        Me.btnAddEditEmployee.UseVisualStyleBackColor = true
         '
         'btnSaveEmployee
         '
-        Me.btnSaveEmployee.Image = CType(resources.GetObject("btnSaveEmployee.Image"), System.Drawing.Image)
+        Me.btnSaveEmployee.Image = CType(resources.GetObject("btnSaveEmployee.Image"),System.Drawing.Image)
         Me.btnSaveEmployee.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSaveEmployee.Location = New System.Drawing.Point(221, 5)
         Me.btnSaveEmployee.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -1714,12 +1686,12 @@ Partial Class GenManager
         Me.btnSaveEmployee.TabIndex = 30
         Me.btnSaveEmployee.Text = "Save"
         Me.btnSaveEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSaveEmployee.UseVisualStyleBackColor = True
+        Me.btnSaveEmployee.UseVisualStyleBackColor = true
         '
         'btnRemoveEmployee
         '
-        Me.btnRemoveEmployee.AutoSize = True
-        Me.btnRemoveEmployee.Image = CType(resources.GetObject("btnRemoveEmployee.Image"), System.Drawing.Image)
+        Me.btnRemoveEmployee.AutoSize = true
+        Me.btnRemoveEmployee.Image = CType(resources.GetObject("btnRemoveEmployee.Image"),System.Drawing.Image)
         Me.btnRemoveEmployee.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemoveEmployee.Location = New System.Drawing.Point(427, 5)
         Me.btnRemoveEmployee.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -1729,23 +1701,23 @@ Partial Class GenManager
         Me.btnRemoveEmployee.TabIndex = 31
         Me.btnRemoveEmployee.Text = "Remove"
         Me.btnRemoveEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemoveEmployee.UseVisualStyleBackColor = True
+        Me.btnRemoveEmployee.UseVisualStyleBackColor = true
         '
         'dgvEmployee
         '
-        Me.dgvEmployee.AllowUserToAddRows = False
-        Me.dgvEmployee.AllowUserToDeleteRows = False
-        Me.dgvEmployee.AllowUserToResizeRows = False
-        Me.dgvEmployee.AutoGenerateColumns = False
+        Me.dgvEmployee.AllowUserToAddRows = false
+        Me.dgvEmployee.AllowUserToDeleteRows = false
+        Me.dgvEmployee.AllowUserToResizeRows = false
+        Me.dgvEmployee.AutoGenerateColumns = false
         Me.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEmployee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeIDDataGridViewTextBoxColumn1, Me.EmpFNameDataGridViewTextBoxColumn1, Me.EmpSNameDataGridViewTextBoxColumn1, Me.EmpEmailDataGridViewTextBoxColumn1, Me.EmpPasswordDataGridViewTextBoxColumn1, Me.EmpContactNoDataGridViewTextBoxColumn1, Me.EmpTypeDataGridViewTextBoxColumn1})
         Me.dgvEmployee.DataSource = Me.EmployeeBindingSource
@@ -1753,7 +1725,7 @@ Partial Class GenManager
         Me.dgvEmployee.Location = New System.Drawing.Point(70, 380)
         Me.dgvEmployee.Margin = New System.Windows.Forms.Padding(0)
         Me.dgvEmployee.Name = "dgvEmployee"
-        Me.dgvEmployee.ReadOnly = True
+        Me.dgvEmployee.ReadOnly = true
         Me.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvEmployee.Size = New System.Drawing.Size(981, 327)
         Me.dgvEmployee.TabIndex = 51
@@ -1763,124 +1735,124 @@ Partial Class GenManager
         Me.EmployeeIDDataGridViewTextBoxColumn1.DataPropertyName = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn1.HeaderText = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn1.Name = "EmployeeIDDataGridViewTextBoxColumn1"
-        Me.EmployeeIDDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmployeeIDDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'EmpFNameDataGridViewTextBoxColumn1
         '
         Me.EmpFNameDataGridViewTextBoxColumn1.DataPropertyName = "Emp_FName"
         Me.EmpFNameDataGridViewTextBoxColumn1.HeaderText = "Emp_FName"
         Me.EmpFNameDataGridViewTextBoxColumn1.Name = "EmpFNameDataGridViewTextBoxColumn1"
-        Me.EmpFNameDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmpFNameDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'EmpSNameDataGridViewTextBoxColumn1
         '
         Me.EmpSNameDataGridViewTextBoxColumn1.DataPropertyName = "Emp_SName"
         Me.EmpSNameDataGridViewTextBoxColumn1.HeaderText = "Emp_SName"
         Me.EmpSNameDataGridViewTextBoxColumn1.Name = "EmpSNameDataGridViewTextBoxColumn1"
-        Me.EmpSNameDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmpSNameDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'EmpEmailDataGridViewTextBoxColumn1
         '
         Me.EmpEmailDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Email"
         Me.EmpEmailDataGridViewTextBoxColumn1.HeaderText = "Emp_Email"
         Me.EmpEmailDataGridViewTextBoxColumn1.Name = "EmpEmailDataGridViewTextBoxColumn1"
-        Me.EmpEmailDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmpEmailDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'EmpPasswordDataGridViewTextBoxColumn1
         '
         Me.EmpPasswordDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Password"
         Me.EmpPasswordDataGridViewTextBoxColumn1.HeaderText = "Emp_Password"
         Me.EmpPasswordDataGridViewTextBoxColumn1.Name = "EmpPasswordDataGridViewTextBoxColumn1"
-        Me.EmpPasswordDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmpPasswordDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'EmpContactNoDataGridViewTextBoxColumn1
         '
         Me.EmpContactNoDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Contact_No"
         Me.EmpContactNoDataGridViewTextBoxColumn1.HeaderText = "Emp_Contact_No"
         Me.EmpContactNoDataGridViewTextBoxColumn1.Name = "EmpContactNoDataGridViewTextBoxColumn1"
-        Me.EmpContactNoDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmpContactNoDataGridViewTextBoxColumn1.ReadOnly = true
         '
         'EmpTypeDataGridViewTextBoxColumn1
         '
         Me.EmpTypeDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Type"
         Me.EmpTypeDataGridViewTextBoxColumn1.HeaderText = "Emp_Type"
         Me.EmpTypeDataGridViewTextBoxColumn1.Name = "EmpTypeDataGridViewTextBoxColumn1"
-        Me.EmpTypeDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmpTypeDataGridViewTextBoxColumn1.ReadOnly = true
+        '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataMember = "Employee"
+        Me.EmployeeBindingSource.DataSource = Me.RecspecDataset
         '
         'EmpTypeDataGridViewTextBoxColumn
         '
         Me.EmpTypeDataGridViewTextBoxColumn.DataPropertyName = "Emp_Type"
         Me.EmpTypeDataGridViewTextBoxColumn.HeaderText = "Emp_Type"
         Me.EmpTypeDataGridViewTextBoxColumn.Name = "EmpTypeDataGridViewTextBoxColumn"
-        Me.EmpTypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpTypeDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmpContactNoDataGridViewTextBoxColumn
         '
         Me.EmpContactNoDataGridViewTextBoxColumn.DataPropertyName = "Emp_Contact_No"
         Me.EmpContactNoDataGridViewTextBoxColumn.HeaderText = "Emp_Contact_No"
         Me.EmpContactNoDataGridViewTextBoxColumn.Name = "EmpContactNoDataGridViewTextBoxColumn"
-        Me.EmpContactNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpContactNoDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmpPasswordDataGridViewTextBoxColumn
         '
         Me.EmpPasswordDataGridViewTextBoxColumn.DataPropertyName = "Emp_Password"
         Me.EmpPasswordDataGridViewTextBoxColumn.HeaderText = "Emp_Password"
         Me.EmpPasswordDataGridViewTextBoxColumn.Name = "EmpPasswordDataGridViewTextBoxColumn"
-        Me.EmpPasswordDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpPasswordDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmpEmailDataGridViewTextBoxColumn
         '
         Me.EmpEmailDataGridViewTextBoxColumn.DataPropertyName = "Emp_Email"
         Me.EmpEmailDataGridViewTextBoxColumn.HeaderText = "Emp_Email"
         Me.EmpEmailDataGridViewTextBoxColumn.Name = "EmpEmailDataGridViewTextBoxColumn"
-        Me.EmpEmailDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpEmailDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmpSNameDataGridViewTextBoxColumn
         '
         Me.EmpSNameDataGridViewTextBoxColumn.DataPropertyName = "Emp_SName"
         Me.EmpSNameDataGridViewTextBoxColumn.HeaderText = "Emp_SName"
         Me.EmpSNameDataGridViewTextBoxColumn.Name = "EmpSNameDataGridViewTextBoxColumn"
-        Me.EmpSNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpSNameDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmpFNameDataGridViewTextBoxColumn
         '
         Me.EmpFNameDataGridViewTextBoxColumn.DataPropertyName = "Emp_FName"
         Me.EmpFNameDataGridViewTextBoxColumn.HeaderText = "Emp_FName"
         Me.EmpFNameDataGridViewTextBoxColumn.Name = "EmpFNameDataGridViewTextBoxColumn"
-        Me.EmpFNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpFNameDataGridViewTextBoxColumn.ReadOnly = true
         '
         'EmployeeIDDataGridViewTextBoxColumn
         '
         Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
-        Me.EmployeeIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmployeeIDDataGridViewTextBoxColumn.ReadOnly = true
         '
         'FKSaleItemSalesOrderBindingSource
         '
         Me.FKSaleItemSalesOrderBindingSource.DataMember = "FK_Sale_Item_Sales_Order"
         Me.FKSaleItemSalesOrderBindingSource.DataSource = Me.SalesOrderBindingSource
         '
-        'PurchaseOrderBindingSource
-        '
-        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
-        Me.PurchaseOrderBindingSource.DataSource = Me.RecspecDataset
-        '
         'EmployeeTableAdapter
         '
-        Me.EmployeeTableAdapter.ClearBeforeFill = True
+        Me.EmployeeTableAdapter.ClearBeforeFill = true
         '
         'ProductTableAdapter
         '
-        Me.ProductTableAdapter.ClearBeforeFill = True
+        Me.ProductTableAdapter.ClearBeforeFill = true
         '
         'Sales_OrderTableAdapter
         '
-        Me.Sales_OrderTableAdapter.ClearBeforeFill = True
+        Me.Sales_OrderTableAdapter.ClearBeforeFill = true
         '
         'Purchase_OrderTableAdapter
         '
-        Me.Purchase_OrderTableAdapter.ClearBeforeFill = True
+        Me.Purchase_OrderTableAdapter.ClearBeforeFill = true
         '
         'SaleItemBindingSource
         '
@@ -1889,7 +1861,7 @@ Partial Class GenManager
         '
         'Sale_ItemTableAdapter
         '
-        Me.Sale_ItemTableAdapter.ClearBeforeFill = True
+        Me.Sale_ItemTableAdapter.ClearBeforeFill = true
         '
         'PurchaseItemBindingSource
         '
@@ -1898,109 +1870,106 @@ Partial Class GenManager
         '
         'Purchase_ItemTableAdapter
         '
-        Me.Purchase_ItemTableAdapter.ClearBeforeFill = True
+        Me.Purchase_ItemTableAdapter.ClearBeforeFill = true
         '
         'CustomerTableTableAdapter
         '
-        Me.CustomerTableTableAdapter.ClearBeforeFill = True
+        Me.CustomerTableTableAdapter.ClearBeforeFill = true
         '
         'Customer_PaymentTableAdapter
         '
-        Me.Customer_PaymentTableAdapter.ClearBeforeFill = True
+        Me.Customer_PaymentTableAdapter.ClearBeforeFill = true
         '
         'SupplierTableAdapter
         '
-        Me.SupplierTableAdapter.ClearBeforeFill = True
+        Me.SupplierTableAdapter.ClearBeforeFill = true
         '
-        'FKSaleItemSalesOrderBindingSource1
+        'PrintDialog1
         '
-        Me.FKSaleItemSalesOrderBindingSource1.DataMember = "FK_Sale_Item_Sales_Order"
-        Me.FKSaleItemSalesOrderBindingSource1.DataSource = Me.SalesOrderBindingSource
+        Me.PrintDialog1.UseEXDialog = true
         '
         'GenManager
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(1310, 793)
         Me.Controls.Add(Me.ManagerFormTabControl)
-        Me.DoubleBuffered = True
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DoubleBuffered = true
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.MaximizeBox = false
+        Me.MinimizeBox = false
         Me.Name = "GenManager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Manager"
-        Me.PaymentTab.ResumeLayout(False)
-        Me.PaymentTab.PerformLayout()
-        Me.tlpPayment.ResumeLayout(False)
-        Me.tlpPayment.PerformLayout()
-        Me.flpPayment.ResumeLayout(False)
-        Me.flpPayment.PerformLayout()
-        CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CustomerPaymentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecspecDataset, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CustomerTab.ResumeLayout(False)
-        Me.CustomerTab.PerformLayout()
-        Me.tlpCustomer.ResumeLayout(False)
-        Me.tlpCustomer.PerformLayout()
-        Me.flpCustomer.ResumeLayout(False)
-        Me.flpCustomer.PerformLayout()
-        CType(Me.dgvCustomer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CustomerTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SupplierTab.ResumeLayout(False)
-        Me.SupplierTab.PerformLayout()
-        Me.tlpSupplier.ResumeLayout(False)
-        Me.tlpSupplier.PerformLayout()
-        Me.flpSupplier.ResumeLayout(False)
-        Me.flpSupplier.PerformLayout()
-        CType(Me.dgvSupplier, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.POTab.ResumeLayout(False)
-        Me.POTab.PerformLayout()
-        CType(Me.dgvPOBottom, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tlpPO.ResumeLayout(False)
-        Me.tlpPO.PerformLayout()
-        Me.flpPO.ResumeLayout(False)
-        Me.flpPO.PerformLayout()
-        CType(Me.dgvPOD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvPO, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseOrderBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecSpecDataset1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SalesOrderTab.ResumeLayout(False)
-        Me.SalesOrderTab.PerformLayout()
-        CType(Me.dgvSOBottom, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SalesOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tlpSO.ResumeLayout(False)
-        Me.tlpSO.PerformLayout()
-        CType(Me.dgvSO, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ProductTab.ResumeLayout(False)
-        Me.flpProducts.ResumeLayout(False)
-        Me.flpProducts.PerformLayout()
-        CType(Me.dgvProduct, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tlpProduct.ResumeLayout(False)
-        Me.tlpProduct.PerformLayout()
-        Me.ManagerFormTabControl.ResumeLayout(False)
-        Me.EmployeeTab.ResumeLayout(False)
-        Me.EmployeeTab.PerformLayout()
-        Me.FinalSearchLayout.ResumeLayout(False)
-        Me.FinalSearchLayout.PerformLayout()
-        Me.flpEmployee.ResumeLayout(False)
-        Me.flpEmployee.PerformLayout()
-        CType(Me.dgvEmployee, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SaleItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        Me.PaymentTab.ResumeLayout(false)
+        Me.PaymentTab.PerformLayout
+        Me.tlpPayment.ResumeLayout(false)
+        Me.tlpPayment.PerformLayout
+        Me.flpPayment.ResumeLayout(false)
+        Me.flpPayment.PerformLayout
+        CType(Me.dgvPayment,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.CustomerPaymentBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RecspecDataset,System.ComponentModel.ISupportInitialize).EndInit
+        Me.CustomerTab.ResumeLayout(false)
+        Me.CustomerTab.PerformLayout
+        Me.tlpCustomer.ResumeLayout(false)
+        Me.tlpCustomer.PerformLayout
+        Me.flpCustomer.ResumeLayout(false)
+        Me.flpCustomer.PerformLayout
+        CType(Me.dgvCustomer,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.CustomerTableBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.SupplierTab.ResumeLayout(false)
+        Me.SupplierTab.PerformLayout
+        Me.tlpSupplier.ResumeLayout(false)
+        Me.tlpSupplier.PerformLayout
+        Me.flpSupplier.ResumeLayout(false)
+        Me.flpSupplier.PerformLayout
+        CType(Me.dgvSupplier,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.SupplierBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.POTab.ResumeLayout(false)
+        Me.POTab.PerformLayout
+        Me.flpPOTotal.ResumeLayout(false)
+        Me.flpPOTotal.PerformLayout
+        CType(Me.dgvPOD,System.ComponentModel.ISupportInitialize).EndInit
+        Me.tlpPO.ResumeLayout(false)
+        Me.tlpPO.PerformLayout
+        Me.flpPO.ResumeLayout(false)
+        Me.flpPO.PerformLayout
+        CType(Me.dgvPO,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PurchaseOrderBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.SalesOrderTab.ResumeLayout(false)
+        Me.flpSOTotal.ResumeLayout(false)
+        Me.flpSOTotal.PerformLayout
+        CType(Me.dgvSOBottom,System.ComponentModel.ISupportInitialize).EndInit
+        Me.tlpSO.ResumeLayout(false)
+        Me.tlpSO.PerformLayout
+        CType(Me.dgvSO,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.SalesOrderBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ProductTab.ResumeLayout(false)
+        Me.flpProducts.ResumeLayout(false)
+        Me.flpProducts.PerformLayout
+        CType(Me.dgvProduct,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.tlpProduct.ResumeLayout(false)
+        Me.tlpProduct.PerformLayout
+        Me.ManagerFormTabControl.ResumeLayout(false)
+        Me.EmployeeTab.ResumeLayout(false)
+        Me.EmployeeTab.PerformLayout
+        Me.FinalSearchLayout.ResumeLayout(false)
+        Me.FinalSearchLayout.PerformLayout
+        Me.flpEmployee.ResumeLayout(false)
+        Me.flpEmployee.PerformLayout
+        CType(Me.dgvEmployee,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.EmployeeBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.FKSaleItemSalesOrderBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.SaleItemBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PurchaseItemBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
     Friend WithEvents PaymentTab As TabPage
     Friend WithEvents dgvPayment As DataGridView
     Friend WithEvents CustomerTab As TabPage
@@ -2010,7 +1979,6 @@ Partial Class GenManager
     Friend WithEvents POTab As TabPage
     Friend WithEvents lblPoDetails As Label
     Friend WithEvents lblPO As Label
-    Friend WithEvents dgvPOD As DataGridView
     Friend WithEvents dgvPO As DataGridView
     Friend WithEvents SalesOrderTab As TabPage
     Friend WithEvents ProductTab As TabPage
@@ -2154,23 +2122,20 @@ Partial Class GenManager
     Friend WithEvents Employee_ID As DataGridViewTextBoxColumn
     Friend WithEvents lblSODetails As Label
     Friend WithEvents lblSO As Label
-    Friend WithEvents RecSpecDataset1 As RecSpecDataset
-    Friend WithEvents PurchaseOrderBindingSource1 As BindingSource
+    Friend WithEvents dgvSOBottom As DataGridView
+    Friend WithEvents dgvPOD As DataGridView
+    Friend WithEvents tbQuerySO As TextBox
+    Friend WithEvents flpSOTotal As FlowLayoutPanel
+    Friend WithEvents lblSOTotal As Label
+    Friend WithEvents tbSOTotal As TextBox
+    Friend WithEvents flpPOTotal As FlowLayoutPanel
+    Friend WithEvents lblPOTotal As Label
+    Friend WithEvents tbPOTotal As TextBox
     Friend WithEvents PONoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PODateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents POTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents POReceivedFlagDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents EmployeeIDDataGridViewTextBoxColumn5 As DataGridViewComboBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents FKSaleItemSalesOrderBindingSource1 As BindingSource
-    Friend WithEvents dgvSOBottom As DataGridView
-    Friend WithEvents SalesItemLineNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SaleOrderIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SaleItemQtyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SaleItemPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ProdVATDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents ProductCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FKSaleItemSalesOrderBindingSource2 As BindingSource
-    Friend WithEvents dgvPOBottom As DataGridView
-    Friend WithEvents tbQuerySO As TextBox
+    Friend WithEvents SuppNameDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents EmpFNameDataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class
