@@ -32,13 +32,6 @@ Partial Class SalesRep
         Me.btnSaveProduct = New System.Windows.Forms.Button()
         Me.btnRemoveProduct = New System.Windows.Forms.Button()
         Me.dgvProduct = New System.Windows.Forms.DataGridView()
-        Me.tlpProduct = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnSearchProduct = New System.Windows.Forms.Button()
-        Me.tbQueryProduct = New System.Windows.Forms.TextBox()
-        Me.cbCriteriaProduct = New System.Windows.Forms.ComboBox()
-        Me.RecSpecDataset = New MenuForms.RecSpecDataset()
-        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
         Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdCostPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,13 +40,20 @@ Partial Class SalesRep
         Me.ProdActiveDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ProdCategoriesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdReorderThresholdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RecSpecDataset = New MenuForms.RecSpecDataset()
+        Me.tlpProduct = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnSearchProduct = New System.Windows.Forms.Button()
+        Me.tbQueryProduct = New System.Windows.Forms.TextBox()
+        Me.cbCriteriaProduct = New System.Windows.Forms.ComboBox()
+        Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
         Me.SalesRepTabControl.SuspendLayout
         Me.ProductTab.SuspendLayout
         Me.flpProducts.SuspendLayout
         CType(Me.dgvProduct,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tlpProduct.SuspendLayout
-        CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.tlpProduct.SuspendLayout
         Me.SuspendLayout
         '
         'SalesRepTabControl
@@ -162,77 +162,6 @@ Partial Class SalesRep
         Me.dgvProduct.Size = New System.Drawing.Size(1000, 410)
         Me.dgvProduct.TabIndex = 78
         '
-        'tlpProduct
-        '
-        Me.tlpProduct.ColumnCount = 3
-        Me.tlpProduct.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tlpProduct.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tlpProduct.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tlpProduct.Controls.Add(Me.btnSearchProduct, 0, 0)
-        Me.tlpProduct.Controls.Add(Me.tbQueryProduct, 1, 0)
-        Me.tlpProduct.Controls.Add(Me.cbCriteriaProduct, 2, 0)
-        Me.tlpProduct.Location = New System.Drawing.Point(117, 191)
-        Me.tlpProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tlpProduct.Name = "tlpProduct"
-        Me.tlpProduct.RowCount = 1
-        Me.tlpProduct.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpProduct.Size = New System.Drawing.Size(862, 60)
-        Me.tlpProduct.TabIndex = 89
-        '
-        'btnSearchProduct
-        '
-        Me.btnSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSearchProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnSearchProduct.Image = CType(resources.GetObject("btnSearchProduct.Image"),System.Drawing.Image)
-        Me.btnSearchProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSearchProduct.Location = New System.Drawing.Point(12, 17)
-        Me.btnSearchProduct.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnSearchProduct.Name = "btnSearchProduct"
-        Me.btnSearchProduct.Padding = New System.Windows.Forms.Padding(14, 0, 0, 0)
-        Me.btnSearchProduct.Size = New System.Drawing.Size(263, 25)
-        Me.btnSearchProduct.TabIndex = 70
-        Me.btnSearchProduct.Text = "Search"
-        Me.btnSearchProduct.UseVisualStyleBackColor = true
-        '
-        'tbQueryProduct
-        '
-        Me.tbQueryProduct.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.tbQueryProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbQueryProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.tbQueryProduct.Location = New System.Drawing.Point(299, 17)
-        Me.tbQueryProduct.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.tbQueryProduct.Multiline = true
-        Me.tbQueryProduct.Name = "tbQueryProduct"
-        Me.tbQueryProduct.Size = New System.Drawing.Size(263, 25)
-        Me.tbQueryProduct.TabIndex = 68
-        Me.tbQueryProduct.Text = "Enter query ..."
-        '
-        'cbCriteriaProduct
-        '
-        Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbCriteriaProduct.FormattingEnabled = true
-        Me.cbCriteriaProduct.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 17)
-        Me.cbCriteriaProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
-        Me.cbCriteriaProduct.Size = New System.Drawing.Size(263, 25)
-        Me.cbCriteriaProduct.TabIndex = 71
-        Me.cbCriteriaProduct.Text = "Select criteria"
-        '
-        'RecSpecDataset
-        '
-        Me.RecSpecDataset.DataSetName = "RecSpecDataset"
-        Me.RecSpecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProductBindingSource
-        '
-        Me.ProductBindingSource.DataMember = "Product"
-        Me.ProductBindingSource.DataSource = Me.RecSpecDataset
-        '
-        'ProductTableAdapter
-        '
-        Me.ProductTableAdapter.ClearBeforeFill = true
-        '
         'ProductCodeDataGridViewTextBoxColumn
         '
         Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
@@ -289,6 +218,77 @@ Partial Class SalesRep
         Me.ProdReorderThresholdDataGridViewTextBoxColumn.Name = "ProdReorderThresholdDataGridViewTextBoxColumn"
         Me.ProdReorderThresholdDataGridViewTextBoxColumn.ReadOnly = true
         '
+        'ProductBindingSource
+        '
+        Me.ProductBindingSource.DataMember = "Product"
+        Me.ProductBindingSource.DataSource = Me.RecSpecDataset
+        '
+        'RecSpecDataset
+        '
+        Me.RecSpecDataset.DataSetName = "RecSpecDataset"
+        Me.RecSpecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'tlpProduct
+        '
+        Me.tlpProduct.ColumnCount = 3
+        Me.tlpProduct.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpProduct.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpProduct.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpProduct.Controls.Add(Me.btnSearchProduct, 0, 0)
+        Me.tlpProduct.Controls.Add(Me.tbQueryProduct, 1, 0)
+        Me.tlpProduct.Controls.Add(Me.cbCriteriaProduct, 2, 0)
+        Me.tlpProduct.Location = New System.Drawing.Point(117, 191)
+        Me.tlpProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tlpProduct.Name = "tlpProduct"
+        Me.tlpProduct.RowCount = 1
+        Me.tlpProduct.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpProduct.Size = New System.Drawing.Size(862, 60)
+        Me.tlpProduct.TabIndex = 89
+        '
+        'btnSearchProduct
+        '
+        Me.btnSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnSearchProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnSearchProduct.Image = CType(resources.GetObject("btnSearchProduct.Image"),System.Drawing.Image)
+        Me.btnSearchProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSearchProduct.Location = New System.Drawing.Point(12, 17)
+        Me.btnSearchProduct.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnSearchProduct.Name = "btnSearchProduct"
+        Me.btnSearchProduct.Padding = New System.Windows.Forms.Padding(14, 0, 0, 0)
+        Me.btnSearchProduct.Size = New System.Drawing.Size(263, 25)
+        Me.btnSearchProduct.TabIndex = 70
+        Me.btnSearchProduct.Text = "Search"
+        Me.btnSearchProduct.UseVisualStyleBackColor = true
+        '
+        'tbQueryProduct
+        '
+        Me.tbQueryProduct.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.tbQueryProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbQueryProduct.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.tbQueryProduct.Location = New System.Drawing.Point(299, 17)
+        Me.tbQueryProduct.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.tbQueryProduct.Multiline = true
+        Me.tbQueryProduct.Name = "tbQueryProduct"
+        Me.tbQueryProduct.Size = New System.Drawing.Size(263, 25)
+        Me.tbQueryProduct.TabIndex = 68
+        Me.tbQueryProduct.Text = "Enter query ..."
+        '
+        'cbCriteriaProduct
+        '
+        Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cbCriteriaProduct.FormattingEnabled = true
+        Me.cbCriteriaProduct.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
+        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
+        Me.cbCriteriaProduct.Size = New System.Drawing.Size(263, 25)
+        Me.cbCriteriaProduct.TabIndex = 71
+        Me.cbCriteriaProduct.Text = "Select criteria"
+        '
+        'ProductTableAdapter
+        '
+        Me.ProductTableAdapter.ClearBeforeFill = true
+        '
         'SalesRep
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
@@ -309,10 +309,10 @@ Partial Class SalesRep
         Me.flpProducts.ResumeLayout(false)
         Me.flpProducts.PerformLayout
         CType(Me.dgvProduct,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).EndInit
         Me.tlpProduct.ResumeLayout(false)
         Me.tlpProduct.PerformLayout
-        CType(Me.RecSpecDataset,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.ProductBindingSource,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
 
 End Sub

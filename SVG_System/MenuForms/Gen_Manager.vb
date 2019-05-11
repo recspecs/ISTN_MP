@@ -2,8 +2,8 @@
 
 
     Private Sub GenManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
-        
+
+
 
         Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
 
@@ -261,12 +261,12 @@
 
     End Sub
 
-    Private Sub SetFormat4SO(ByRef pan As FlowLayoutPanel,  searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
+    Private Sub SetFormat4SO(ByRef pan As FlowLayoutPanel, searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
         dgvTop.Width = Me.ClientSize.Width * 0.9
         dgvTop.Height = Me.ClientSize.Height * 0.35
         dgvTop.Left = Me.ClientSize.Width * 0.05
         dgvTop.Top = Me.ClientSize.Height * 0.1
-        lblSO.Location = New Point(dgvSO.Left, dgvSO.Top - lblSO.Height -2)
+        lblSO.Location = New Point(dgvSO.Left, dgvSO.Top - lblSO.Height - 2)
 
         dgvBottom.Width = Me.ClientSize.Width * 0.9
         dgvBottom.Height = Me.ClientSize.Height * 0.4
@@ -275,7 +275,7 @@
         dgvSOBottom.AutoGenerateColumns = True
         dgvSOBottom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSOBottom.ReadOnly = True
-        lblSODetails.Location = New Point(dgvSOBottom.Left, dgvSOBottom.Top - lblSODetails.Height -2)
+        lblSODetails.Location = New Point(dgvSOBottom.Left, dgvSOBottom.Top - lblSODetails.Height - 2)
 
         'format column headers for display
         For Each i In dgvTop.Columns
@@ -300,17 +300,17 @@
 
 
     Private Sub dgvSO_SelectionChanged(sender As Object, e As EventArgs) Handles dgvSO.SelectionChanged
-        
+
         'Fill sales order details dgv 
         Dim soID = dgvSO.Rows(dgvSO.CurrentCell.RowIndex).Cells("SalesOrderIDDataGridViewTextBoxColumn").Value.ToString()
         ProductTableAdapter.Fill(RecspecDataset.Product)
         Sale_ItemTableAdapter.Fill(RecspecDataset.Sale_Item)
 
         Dim inter = From i In RecspecDataset.Sale_Item.AsEnumerable
-                Where i.Sale_Order_ID = soID
-                Select i.Sales_Item_Line_No, i.Sale_Order_ID, i.ProductRow.Product_Code, i.ProductRow.Prod_Name,
+                    Where i.Sale_Order_ID = soID
+                    Select i.Sales_Item_Line_No, i.Sale_Order_ID, i.ProductRow.Product_Code, i.ProductRow.Prod_Name,
                 i.Sale_Item_Qty, i.ProductRow.Prod_Categories, i.Sale_Item_Price
-     
+
         dgvSOBottom.DataSource = inter.ToList
 
 
@@ -352,8 +352,8 @@
 
         'Size and position the buttons and search bar
         flpPO.SetBounds((Me.ClientSize.Width - flpPO.Width) / 2, Me.ClientSize.Height * 0.01, 588, 146)
-        tlpPO.SetBounds((Me.ClientSize.Width - tlpPO.Width) / 2,Me.ClientSize.Height * 0.2 ,862, 60)
- 
+        tlpPO.SetBounds((Me.ClientSize.Width - tlpPO.Width) / 2, Me.ClientSize.Height * 0.2, 862, 60)
+
         'size and position top dgv
         dgvPO.Width = Me.ClientSize.Width * 0.9
         dgvPO.Height = Me.ClientSize.Height * 0.28
@@ -365,11 +365,10 @@
         dgvPOD.Height = Me.ClientSize.Height * 0.28
         dgvPOD.Left = Me.ClientSize.Width * 0.05
         dgvPOD.Top = Me.ClientSize.Height * 0.6
-        lblPoDetails.Location = New Point(dgvPOD.Left, dgvPOD.Top - lblPO.Height - 2)
-
         dgvPOD.AutoGenerateColumns = True
         dgvPOD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvPOD.ReadOnly = True
+        lblPoDetails.Location = New Point(dgvPOD.Left, dgvPOD.Top - lblPO.Height - 2)
         '
         For Each i In dgvPO.Columns
             i.HeaderText = i.HeaderText.ToString.Replace("PO_", "").Replace("_", " ")
@@ -385,9 +384,38 @@
         flpPOTotal.Top = dgvPOD.Bottom + 5
         flpPOTotal.Left = dgvPOD.Left + dgvPOD.Width - flpPOTotal.Width
 
+
+
+
+
     End Sub
 
-    Private Sub dgvPO_SelectionChanged(sender As Object, e As EventArgs) Handles dgvPO.SelectionChanged
+
+    Private Sub dgvPO_EditingControlShowing(ByVal sender As System.Object, ByVal e As DataGridViewEditingControlShowingEventArgs)
+
+        If dgvPO.CurrentCell.OwningColumn.HeaderText = "Customer" Then
+
+            Dim query = (From c In RecspecDataset.CustomerTable.AsEnumerable()
+                         Select c.Field(Of String)("Cust_FName")).ToArray()
+
+            Dim autotext As TextBox = TryCast(e.Control, TextBox)
+            If autotext IsNot Nothing Then
+                autotext.AutoCompleteMode = AutoCompleteMode.Suggest
+                autotext.AutoCompleteSource = AutoCompleteSource.CustomSource
+                Dim atCols As New AutoCompleteStringCollection()
+                atCols.AddRange(query)
+                autotext.AutoCompleteCustomSource = atCols
+            End If
+        End If
+    End Sub
+
+
+
+
+
+
+
+    Private Sub dgvPO_SelectionChanged(sender As Object, e As EventArgs)
         Dim poID = dgvPO.Rows(dgvPO.CurrentCell.RowIndex).Cells("PONoDataGridViewTextBoxColumn").Value.ToString()
         Purchase_ItemTableAdapter.Fill(RecspecDataset.Purchase_Item)
         ProductTableAdapter.Fill(RecspecDataset.Product)
@@ -844,7 +872,7 @@
         End If
     End Sub
 
-    Private Sub tbQueryPO_KeyDown(sender As Object, e As KeyEventArgs) Handles tbQueryPO.KeyDown
+    Private Sub tbQueryPO_KeyDown(sender As Object, e As KeyEventArgs)
         If e.KeyCode = Keys.Enter Then
             btnSearchPO.PerformClick()
             e.Handled = True
@@ -853,9 +881,5 @@
         End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblPOTotal.Click
 
-    End Sub
-
-    
 End Class
