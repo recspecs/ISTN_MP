@@ -879,5 +879,7 @@
         End If
     End Sub
 
+    Private Sub dgvSOBottom_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSOBottom.CellContentClick
 
+    End Sub
 End Class

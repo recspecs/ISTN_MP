@@ -74,6 +74,7 @@ Partial Class SalesRep
         Me.cbCriteriaSO = New System.Windows.Forms.ComboBox()
         Me.flpSO = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAddEditSO = New System.Windows.Forms.Button()
+        Me.btnAddEditSOD = New System.Windows.Forms.Button()
         Me.btnSaveSO = New System.Windows.Forms.Button()
         Me.btnRemoveSO = New System.Windows.Forms.Button()
         Me.CustomerTabRep = New System.Windows.Forms.TabPage()
@@ -591,33 +592,50 @@ Partial Class SalesRep
         'flpSO
         '
         Me.flpSO.Controls.Add(Me.btnAddEditSO)
+        Me.flpSO.Controls.Add(Me.btnAddEditSOD)
         Me.flpSO.Controls.Add(Me.btnSaveSO)
         Me.flpSO.Controls.Add(Me.btnRemoveSO)
-        Me.flpSO.Location = New System.Drawing.Point(265, 7)
+        Me.flpSO.Location = New System.Drawing.Point(96, 7)
         Me.flpSO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpSO.Name = "flpSO"
-        Me.flpSO.Size = New System.Drawing.Size(588, 146)
+        Me.flpSO.Size = New System.Drawing.Size(943, 146)
         Me.flpSO.TabIndex = 80
         '
         'btnAddEditSO
         '
         Me.btnAddEditSO.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditSO.Image = CType(resources.GetObject("btnAddEditSO.Image"), System.Drawing.Image)
+        Me.btnAddEditSO.Image = Global.MenuForms.My.Resources.Resources.pencil72
+        Me.btnAddEditSO.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnAddEditSO.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditSO.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditSO.Name = "btnAddEditSO"
+        Me.btnAddEditSO.Padding = New System.Windows.Forms.Padding(0, 15, 0, 0)
         Me.btnAddEditSO.Size = New System.Drawing.Size(146, 136)
         Me.btnAddEditSO.TabIndex = 32
-        Me.btnAddEditSO.Text = "Add/Edit"
+        Me.btnAddEditSO.Text = "Add/Edit" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Sales Orders"
         Me.btnAddEditSO.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnAddEditSO.UseCompatibleTextRendering = True
         Me.btnAddEditSO.UseVisualStyleBackColor = True
+        '
+        'btnAddEditSOD
+        '
+        Me.btnAddEditSOD.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.btnAddEditSOD.Image = Global.MenuForms.My.Resources.Resources.pencil72
+        Me.btnAddEditSOD.Location = New System.Drawing.Point(206, 5)
+        Me.btnAddEditSOD.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
+        Me.btnAddEditSOD.Name = "btnAddEditSOD"
+        Me.btnAddEditSOD.Size = New System.Drawing.Size(146, 136)
+        Me.btnAddEditSOD.TabIndex = 33
+        Me.btnAddEditSOD.Text = "Add/Edit"
+        Me.btnAddEditSOD.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnAddEditSOD.UseCompatibleTextRendering = True
+        Me.btnAddEditSOD.UseVisualStyleBackColor = True
         '
         'btnSaveSO
         '
         Me.btnSaveSO.Image = CType(resources.GetObject("btnSaveSO.Image"), System.Drawing.Image)
         Me.btnSaveSO.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnSaveSO.Location = New System.Drawing.Point(221, 5)
+        Me.btnSaveSO.Location = New System.Drawing.Point(412, 5)
         Me.btnSaveSO.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
         Me.btnSaveSO.Name = "btnSaveSO"
         Me.btnSaveSO.Padding = New System.Windows.Forms.Padding(0, 17, 0, 0)
@@ -632,7 +650,7 @@ Partial Class SalesRep
         Me.btnRemoveSO.AutoSize = True
         Me.btnRemoveSO.Image = CType(resources.GetObject("btnRemoveSO.Image"), System.Drawing.Image)
         Me.btnRemoveSO.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnRemoveSO.Location = New System.Drawing.Point(427, 5)
+        Me.btnRemoveSO.Location = New System.Drawing.Point(618, 5)
         Me.btnRemoveSO.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
         Me.btnRemoveSO.Name = "btnRemoveSO"
         Me.btnRemoveSO.Padding = New System.Windows.Forms.Padding(0, 17, 0, 0)
@@ -918,4 +936,5 @@ Partial Class SalesRep
     Friend WithEvents ProdActiveDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents ProdCategoriesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProdReorderThresholdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnAddEditSOD As Button
 End Class
