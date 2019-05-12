@@ -126,9 +126,11 @@
   <ItemGroup>
     <EmbeddedResource Include="SalesRep.resx">
       <DependentUpon>SalesRep.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gen_Manager.resx">
       <DependentUpon>Gen_Manager.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -141,6 +143,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WarehouseManager.resx">
       <DependentUpon>WarehouseManager.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

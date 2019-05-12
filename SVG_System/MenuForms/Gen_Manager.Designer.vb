@@ -81,7 +81,7 @@ Partial Class GenManager
         Me.btnSaveSupplier = New System.Windows.Forms.Button()
         Me.btnRemoveSupplier = New System.Windows.Forms.Button()
         Me.dgvSupplier = New System.Windows.Forms.DataGridView()
-        Me.SuppierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SuppNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SuppContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SuppEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -148,7 +148,7 @@ Partial Class GenManager
         Me.EmpContactNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpTypeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.POTab = New System.Windows.Forms.TabPage()
         Me.dgvPO = New System.Windows.Forms.DataGridView()
         Me.PONoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PODateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -225,7 +225,7 @@ Partial Class GenManager
         Me.flpEmployee.SuspendLayout()
         CType(Me.dgvEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
+        Me.POTab.SuspendLayout()
         CType(Me.dgvPO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPOD, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -299,12 +299,12 @@ Partial Class GenManager
         '
         Me.cbCriteriaPayment.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPayment.FormattingEnabled = True
-        Me.cbCriteriaPayment.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
+        Me.cbCriteriaPayment.Items.AddRange(New Object() {"By Payment ID", "By Payment Type", "By Customer", "By Employee"})
         Me.cbCriteriaPayment.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaPayment.Name = "cbCriteriaPayment"
         Me.cbCriteriaPayment.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaPayment.TabIndex = 71
-        Me.cbCriteriaPayment.Text = "Select criteria"
+        Me.cbCriteriaPayment.Text = "By Payment ID"
         '
         'flpPayment
         '
@@ -757,12 +757,12 @@ Partial Class GenManager
         '
         Me.cbCriteriaSupplier.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSupplier.FormattingEnabled = True
-        Me.cbCriteriaSupplier.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
+        Me.cbCriteriaSupplier.Items.AddRange(New Object() {"By Supplier ID", "By Supplier Name", "By Contact Person"})
         Me.cbCriteriaSupplier.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaSupplier.Name = "cbCriteriaSupplier"
         Me.cbCriteriaSupplier.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaSupplier.TabIndex = 71
-        Me.cbCriteriaSupplier.Text = "Select criteria"
+        Me.cbCriteriaSupplier.Text = "By Supplier ID"
         '
         'flpSupplier
         '
@@ -833,7 +833,7 @@ Partial Class GenManager
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvSupplier.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSupplier.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SuppierIDDataGridViewTextBoxColumn, Me.SuppNameDataGridViewTextBoxColumn, Me.SuppContactNoDataGridViewTextBoxColumn, Me.SuppEmailDataGridViewTextBoxColumn, Me.SuppContactPersonDataGridViewTextBoxColumn, Me.SuppAddress1DataGridViewTextBoxColumn, Me.SuppAddress2DataGridViewTextBoxColumn, Me.SuppSurburbDataGridViewTextBoxColumn, Me.SuppCityDataGridViewTextBoxColumn, Me.SuppPostalCodeDataGridViewTextBoxColumn})
+        Me.dgvSupplier.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SupplierIDDataGridViewTextBoxColumn, Me.SuppNameDataGridViewTextBoxColumn, Me.SuppContactNoDataGridViewTextBoxColumn, Me.SuppEmailDataGridViewTextBoxColumn, Me.SuppContactPersonDataGridViewTextBoxColumn, Me.SuppAddress1DataGridViewTextBoxColumn, Me.SuppAddress2DataGridViewTextBoxColumn, Me.SuppSurburbDataGridViewTextBoxColumn, Me.SuppCityDataGridViewTextBoxColumn, Me.SuppPostalCodeDataGridViewTextBoxColumn})
         Me.dgvSupplier.DataSource = Me.SupplierBindingSource
         Me.dgvSupplier.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvSupplier.Location = New System.Drawing.Point(39, 318)
@@ -843,12 +843,12 @@ Partial Class GenManager
         Me.dgvSupplier.Size = New System.Drawing.Size(1000, 413)
         Me.dgvSupplier.TabIndex = 61
         '
-        'SuppierIDDataGridViewTextBoxColumn
+        'SupplierIDDataGridViewTextBoxColumn
         '
-        Me.SuppierIDDataGridViewTextBoxColumn.DataPropertyName = "Suppier_ID"
-        Me.SuppierIDDataGridViewTextBoxColumn.HeaderText = "Suppier_ID"
-        Me.SuppierIDDataGridViewTextBoxColumn.Name = "SuppierIDDataGridViewTextBoxColumn"
-        Me.SuppierIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SupplierIDDataGridViewTextBoxColumn.DataPropertyName = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn.Name = "SupplierIDDataGridViewTextBoxColumn"
+        Me.SupplierIDDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SuppNameDataGridViewTextBoxColumn
         '
@@ -1027,7 +1027,7 @@ Partial Class GenManager
         '
         Me.cbCriteriaSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSO.FormattingEnabled = True
-        Me.cbCriteriaSO.Items.AddRange(New Object() {"By Sales Order ID", "By Customer", "By Employee"})
+        Me.cbCriteriaSO.Items.AddRange(New Object() {"By Sales Order ID", "By Sale Order Date", "By Customer", "By Employee"})
         Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaSO.Name = "cbCriteriaSO"
         Me.cbCriteriaSO.Size = New System.Drawing.Size(263, 25)
@@ -1307,22 +1307,22 @@ Partial Class GenManager
         '
         Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaProduct.FormattingEnabled = True
-        Me.cbCriteriaProduct.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
+        Me.cbCriteriaProduct.Items.AddRange(New Object() {"By Product Code", "By Product Name", "By Stock Level", "By Categories"})
         Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
         Me.cbCriteriaProduct.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaProduct.TabIndex = 71
-        Me.cbCriteriaProduct.Text = "Select criteria"
+        Me.cbCriteriaProduct.Text = "By Product Code"
         '
         'ManagerFormTabControl
         '
         Me.ManagerFormTabControl.Controls.Add(Me.EmployeeTab)
         Me.ManagerFormTabControl.Controls.Add(Me.ProductTab)
         Me.ManagerFormTabControl.Controls.Add(Me.SalesOrderTab)
-        Me.ManagerFormTabControl.Controls.Add(Me.SupplierTab)
         Me.ManagerFormTabControl.Controls.Add(Me.CustomerTab)
         Me.ManagerFormTabControl.Controls.Add(Me.PaymentTab)
-        Me.ManagerFormTabControl.Controls.Add(Me.TabPage1)
+        Me.ManagerFormTabControl.Controls.Add(Me.POTab)
+        Me.ManagerFormTabControl.Controls.Add(Me.SupplierTab)
         Me.ManagerFormTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ManagerFormTabControl.Location = New System.Drawing.Point(0, 0)
         Me.ManagerFormTabControl.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -1344,7 +1344,7 @@ Partial Class GenManager
         Me.EmployeeTab.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.EmployeeTab.Size = New System.Drawing.Size(1302, 763)
         Me.EmployeeTab.TabIndex = 3
-        Me.EmployeeTab.Text = "Emploee"
+        Me.EmployeeTab.Text = "Employee"
         Me.EmployeeTab.UseVisualStyleBackColor = True
         '
         'FinalSearchLayout
@@ -1539,26 +1539,29 @@ Partial Class GenManager
         Me.EmployeeBindingSource.DataMember = "Employee"
         Me.EmployeeBindingSource.DataSource = Me.RecspecDataset
         '
-        'TabPage1
+        'POTab
         '
-        Me.TabPage1.AutoScroll = True
-        Me.TabPage1.Controls.Add(Me.dgvPO)
-        Me.TabPage1.Controls.Add(Me.dgvPOD)
-        Me.TabPage1.Controls.Add(Me.tlpPO)
-        Me.TabPage1.Controls.Add(Me.flpPO)
-        Me.TabPage1.Controls.Add(Me.lblPoDetails)
-        Me.TabPage1.Controls.Add(Me.lblPO)
-        Me.TabPage1.Controls.Add(Me.flpPOTotal)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1302, 763)
-        Me.TabPage1.TabIndex = 17
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.POTab.AutoScroll = True
+        Me.POTab.Controls.Add(Me.dgvPO)
+        Me.POTab.Controls.Add(Me.dgvPOD)
+        Me.POTab.Controls.Add(Me.tlpPO)
+        Me.POTab.Controls.Add(Me.flpPO)
+        Me.POTab.Controls.Add(Me.lblPoDetails)
+        Me.POTab.Controls.Add(Me.lblPO)
+        Me.POTab.Controls.Add(Me.flpPOTotal)
+        Me.POTab.Location = New System.Drawing.Point(4, 26)
+        Me.POTab.Name = "POTab"
+        Me.POTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.POTab.Size = New System.Drawing.Size(1302, 763)
+        Me.POTab.TabIndex = 17
+        Me.POTab.Text = "Purchase Order"
+        Me.POTab.UseVisualStyleBackColor = True
         '
         'dgvPO
         '
+        Me.dgvPO.AllowUserToAddRows = False
+        Me.dgvPO.AllowUserToDeleteRows = False
+        Me.dgvPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgvPO.AutoGenerateColumns = False
         Me.dgvPO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -1566,6 +1569,7 @@ Partial Class GenManager
         Me.dgvPO.DataSource = Me.PurchaseOrderBindingSource
         Me.dgvPO.Location = New System.Drawing.Point(192, 254)
         Me.dgvPO.Name = "dgvPO"
+        Me.dgvPO.ReadOnly = True
         Me.dgvPO.Size = New System.Drawing.Size(899, 232)
         Me.dgvPO.TabIndex = 100
         '
@@ -1574,30 +1578,35 @@ Partial Class GenManager
         Me.PONoDataGridViewTextBoxColumn.DataPropertyName = "PO_No"
         Me.PONoDataGridViewTextBoxColumn.HeaderText = "PO_No"
         Me.PONoDataGridViewTextBoxColumn.Name = "PONoDataGridViewTextBoxColumn"
+        Me.PONoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PODateDataGridViewTextBoxColumn
         '
         Me.PODateDataGridViewTextBoxColumn.DataPropertyName = "PO_Date"
         Me.PODateDataGridViewTextBoxColumn.HeaderText = "PO_Date"
         Me.PODateDataGridViewTextBoxColumn.Name = "PODateDataGridViewTextBoxColumn"
+        Me.PODateDataGridViewTextBoxColumn.ReadOnly = True
         '
         'POTotalDataGridViewTextBoxColumn
         '
         Me.POTotalDataGridViewTextBoxColumn.DataPropertyName = "PO_Total"
         Me.POTotalDataGridViewTextBoxColumn.HeaderText = "PO_Total"
         Me.POTotalDataGridViewTextBoxColumn.Name = "POTotalDataGridViewTextBoxColumn"
+        Me.POTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
         'POReceivedFlagDataGridViewCheckBoxColumn
         '
         Me.POReceivedFlagDataGridViewCheckBoxColumn.DataPropertyName = "PO_Received_Flag"
         Me.POReceivedFlagDataGridViewCheckBoxColumn.HeaderText = "PO_Received_Flag"
         Me.POReceivedFlagDataGridViewCheckBoxColumn.Name = "POReceivedFlagDataGridViewCheckBoxColumn"
+        Me.POReceivedFlagDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'EmployeeIDDataGridViewTextBoxColumn5
         '
         Me.EmployeeIDDataGridViewTextBoxColumn5.DataPropertyName = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn5.HeaderText = "Employee_ID"
         Me.EmployeeIDDataGridViewTextBoxColumn5.Name = "EmployeeIDDataGridViewTextBoxColumn5"
+        Me.EmployeeIDDataGridViewTextBoxColumn5.ReadOnly = True
         Me.EmployeeIDDataGridViewTextBoxColumn5.Visible = False
         '
         'DataGridViewTextBoxColumn1
@@ -1605,6 +1614,7 @@ Partial Class GenManager
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Supplier_ID"
         Me.DataGridViewTextBoxColumn1.HeaderText = "Supplier_ID"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         Me.DataGridViewTextBoxColumn1.Visible = False
         '
         'Supp_Name
@@ -1612,12 +1622,14 @@ Partial Class GenManager
         Me.Supp_Name.DataPropertyName = "Supp_Name"
         Me.Supp_Name.HeaderText = "Supp_Name"
         Me.Supp_Name.Name = "Supp_Name"
+        Me.Supp_Name.ReadOnly = True
         '
         'Emp_FName
         '
         Me.Emp_FName.DataPropertyName = "Emp_FName"
         Me.Emp_FName.HeaderText = "Emp_FName"
         Me.Emp_FName.Name = "Emp_FName"
+        Me.Emp_FName.ReadOnly = True
         '
         'PurchaseOrderBindingSource
         '
@@ -1682,12 +1694,12 @@ Partial Class GenManager
         '
         Me.cbCriteriaPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPO.FormattingEnabled = True
-        Me.cbCriteriaPO.Items.AddRange(New Object() {"By PO No", "By PO Date", "By PO Received Flag"})
+        Me.cbCriteriaPO.Items.AddRange(New Object() {"By PO No", "By PO Date", "By PO Received Flag", "By Supplier", "By Employee"})
         Me.cbCriteriaPO.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaPO.Name = "cbCriteriaPO"
         Me.cbCriteriaPO.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaPO.TabIndex = 71
-        Me.cbCriteriaPO.Text = "Select criteria"
+        Me.cbCriteriaPO.Text = "By PO No"
         '
         'flpPO
         '
@@ -1954,8 +1966,8 @@ Partial Class GenManager
         Me.flpEmployee.PerformLayout()
         CType(Me.dgvEmployee, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.POTab.ResumeLayout(False)
+        Me.POTab.PerformLayout()
         CType(Me.dgvPO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPOD, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2072,7 +2084,7 @@ Partial Class GenManager
     Friend WithEvents CustPostalCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CustContactNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CustBalanceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SuppierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SuppNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SuppContactNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SuppEmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -2083,7 +2095,6 @@ Partial Class GenManager
     Friend WithEvents SuppCityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SuppPostalCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductCodeDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents ProdNameDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents ProdCostPriceDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
@@ -2115,7 +2126,7 @@ Partial Class GenManager
     Friend WithEvents lblSOTotal As Label
     Friend WithEvents tbSOTotal As TextBox
     Friend WithEvents EmpFNameDataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents POTab As TabPage
     Friend WithEvents dgvPOD As DataGridView
     Friend WithEvents tlpPO As TableLayoutPanel
     Friend WithEvents btnSearchPO As Button

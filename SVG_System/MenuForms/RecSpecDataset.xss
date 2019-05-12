@@ -157,11 +157,11 @@
     <Connector ID="DesignRelation:FK_Customer_Payment_CustomerTable1" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>197</X>
+          <X>129</X>
           <Y>429</Y>
         </Point>
         <Point>
-          <X>197</X>
+          <X>129</X>
           <Y>739</Y>
         </Point>
         <Point>

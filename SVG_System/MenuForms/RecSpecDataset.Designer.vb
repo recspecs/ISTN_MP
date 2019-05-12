@@ -457,7 +457,7 @@ Partial Public Class RecSpecDataset
         Me.Relations.Add(Me.relationFK_Purchase_Item_Purchase_Order)
         Me.relationFK_Purchase_Order_Employee = New Global.System.Data.DataRelation("FK_Purchase_Order_Employee", New Global.System.Data.DataColumn() {Me.tableEmployee.Employee_IDColumn}, New Global.System.Data.DataColumn() {Me.tablePurchase_Order.Employee_IDColumn}, false)
         Me.Relations.Add(Me.relationFK_Purchase_Order_Employee)
-        Me.relationFK_Purchase_Order_Supplier = New Global.System.Data.DataRelation("FK_Purchase_Order_Supplier", New Global.System.Data.DataColumn() {Me.tableSupplier.Suppier_IDColumn}, New Global.System.Data.DataColumn() {Me.tablePurchase_Order.Supplier_IDColumn}, false)
+        Me.relationFK_Purchase_Order_Supplier = New Global.System.Data.DataRelation("FK_Purchase_Order_Supplier", New Global.System.Data.DataColumn() {Me.tableSupplier.Supplier_IDColumn}, New Global.System.Data.DataColumn() {Me.tablePurchase_Order.Supplier_IDColumn}, false)
         Me.Relations.Add(Me.relationFK_Purchase_Order_Supplier)
         Me.relationFK_Sale_Item_Product = New Global.System.Data.DataRelation("FK_Sale_Item_Product", New Global.System.Data.DataColumn() {Me.tableProduct.Product_CodeColumn}, New Global.System.Data.DataColumn() {Me.tableSale_Item.Product_CodeColumn}, false)
         Me.Relations.Add(Me.relationFK_Sale_Item_Product)
@@ -3455,7 +3455,7 @@ Partial Public Class RecSpecDataset
     Partial Public Class SupplierDataTable
         Inherits Global.System.Data.TypedTableBase(Of SupplierRow)
         
-        Private columnSuppier_ID As Global.System.Data.DataColumn
+        Private columnSupplier_ID As Global.System.Data.DataColumn
         
         Private columnSupp_Name As Global.System.Data.DataColumn
         
@@ -3512,9 +3512,9 @@ Partial Public Class RecSpecDataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Suppier_IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Supplier_IDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSuppier_ID
+                Return Me.columnSupplier_ID
             End Get
         End Property
         
@@ -3637,8 +3637,8 @@ Partial Public Class RecSpecDataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindBySuppier_ID(ByVal Suppier_ID As Integer) As SupplierRow
-            Return CType(Me.Rows.Find(New Object() {Suppier_ID}),SupplierRow)
+        Public Function FindBySupplier_ID(ByVal Supplier_ID As Integer) As SupplierRow
+            Return CType(Me.Rows.Find(New Object() {Supplier_ID}),SupplierRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3658,7 +3658,7 @@ Partial Public Class RecSpecDataset
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnSuppier_ID = MyBase.Columns("Suppier_ID")
+            Me.columnSupplier_ID = MyBase.Columns("Supplier_ID")
             Me.columnSupp_Name = MyBase.Columns("Supp_Name")
             Me.columnSupp_Contact_No = MyBase.Columns("Supp_Contact_No")
             Me.columnSupp_Email = MyBase.Columns("Supp_Email")
@@ -3673,8 +3673,8 @@ Partial Public Class RecSpecDataset
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnSuppier_ID = New Global.System.Data.DataColumn("Suppier_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSuppier_ID)
+            Me.columnSupplier_ID = New Global.System.Data.DataColumn("Supplier_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSupplier_ID)
             Me.columnSupp_Name = New Global.System.Data.DataColumn("Supp_Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSupp_Name)
             Me.columnSupp_Contact_No = New Global.System.Data.DataColumn("Supp_Contact_No", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3693,13 +3693,13 @@ Partial Public Class RecSpecDataset
             MyBase.Columns.Add(Me.columnSupp_City)
             Me.columnSupp_Postal_Code = New Global.System.Data.DataColumn("Supp_Postal_Code", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSupp_Postal_Code)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnSuppier_ID}, true))
-            Me.columnSuppier_ID.AutoIncrement = true
-            Me.columnSuppier_ID.AutoIncrementSeed = -1
-            Me.columnSuppier_ID.AutoIncrementStep = -1
-            Me.columnSuppier_ID.AllowDBNull = false
-            Me.columnSuppier_ID.ReadOnly = true
-            Me.columnSuppier_ID.Unique = true
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnSupplier_ID}, true))
+            Me.columnSupplier_ID.AutoIncrement = true
+            Me.columnSupplier_ID.AutoIncrementSeed = -1
+            Me.columnSupplier_ID.AutoIncrementStep = -1
+            Me.columnSupplier_ID.AllowDBNull = false
+            Me.columnSupplier_ID.ReadOnly = true
+            Me.columnSupplier_ID.Unique = true
             Me.columnSupp_Name.MaxLength = 50
             Me.columnSupp_Contact_No.MaxLength = 10
             Me.columnSupp_Email.MaxLength = 50
@@ -5146,12 +5146,12 @@ Partial Public Class RecSpecDataset
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Suppier_ID() As Integer
+        Public Property Supplier_ID() As Integer
             Get
-                Return CType(Me(Me.tableSupplier.Suppier_IDColumn),Integer)
+                Return CType(Me(Me.tableSupplier.Supplier_IDColumn),Integer)
             End Get
             Set
-                Me(Me.tableSupplier.Suppier_IDColumn) = value
+                Me(Me.tableSupplier.Supplier_IDColumn) = value
             End Set
         End Property
         
@@ -9459,7 +9459,7 @@ Namespace RecSpecDatasetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Supplier"
-            tableMapping.ColumnMappings.Add("Suppier_ID", "Suppier_ID")
+            tableMapping.ColumnMappings.Add("Supplier_ID", "Supplier_ID")
             tableMapping.ColumnMappings.Add("Supp_Name", "Supp_Name")
             tableMapping.ColumnMappings.Add("Supp_Contact_No", "Supp_Contact_No")
             tableMapping.ColumnMappings.Add("Supp_Email", "Supp_Email")
@@ -9472,22 +9472,22 @@ Namespace RecSpecDatasetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Supplier] WHERE (([Suppier_ID] = @Original_Suppier_ID) AND ((@"& _ 
-                "IsNull_Supp_Name = 1 AND [Supp_Name] IS NULL) OR ([Supp_Name] = @Original_Supp_N"& _ 
-                "ame)) AND ((@IsNull_Supp_Contact_No = 1 AND [Supp_Contact_No] IS NULL) OR ([Supp"& _ 
-                "_Contact_No] = @Original_Supp_Contact_No)) AND ((@IsNull_Supp_Email = 1 AND [Sup"& _ 
-                "p_Email] IS NULL) OR ([Supp_Email] = @Original_Supp_Email)) AND ((@IsNull_Supp_C"& _ 
-                "ontact_Person = 1 AND [Supp_Contact_Person] IS NULL) OR ([Supp_Contact_Person] ="& _ 
-                " @Original_Supp_Contact_Person)) AND ((@IsNull_Supp_Address1 = 1 AND [Supp_Addre"& _ 
-                "ss1] IS NULL) OR ([Supp_Address1] = @Original_Supp_Address1)) AND ((@IsNull_Supp"& _ 
-                "_Address2 = 1 AND [Supp_Address2] IS NULL) OR ([Supp_Address2] = @Original_Supp_"& _ 
-                "Address2)) AND ((@IsNull_Supp_Surburb = 1 AND [Supp_Surburb] IS NULL) OR ([Supp_"& _ 
-                "Surburb] = @Original_Supp_Surburb)) AND ((@IsNull_Supp_City = 1 AND [Supp_City] "& _ 
-                "IS NULL) OR ([Supp_City] = @Original_Supp_City)) AND ((@IsNull_Supp_Postal_Code "& _ 
-                "= 1 AND [Supp_Postal_Code] IS NULL) OR ([Supp_Postal_Code] = @Original_Supp_Post"& _ 
-                "al_Code)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Supplier] WHERE (([Supplier_ID] = @Original_Supplier_ID) AND ("& _ 
+                "(@IsNull_Supp_Name = 1 AND [Supp_Name] IS NULL) OR ([Supp_Name] = @Original_Supp"& _ 
+                "_Name)) AND ((@IsNull_Supp_Contact_No = 1 AND [Supp_Contact_No] IS NULL) OR ([Su"& _ 
+                "pp_Contact_No] = @Original_Supp_Contact_No)) AND ((@IsNull_Supp_Email = 1 AND [S"& _ 
+                "upp_Email] IS NULL) OR ([Supp_Email] = @Original_Supp_Email)) AND ((@IsNull_Supp"& _ 
+                "_Contact_Person = 1 AND [Supp_Contact_Person] IS NULL) OR ([Supp_Contact_Person]"& _ 
+                " = @Original_Supp_Contact_Person)) AND ((@IsNull_Supp_Address1 = 1 AND [Supp_Add"& _ 
+                "ress1] IS NULL) OR ([Supp_Address1] = @Original_Supp_Address1)) AND ((@IsNull_Su"& _ 
+                "pp_Address2 = 1 AND [Supp_Address2] IS NULL) OR ([Supp_Address2] = @Original_Sup"& _ 
+                "p_Address2)) AND ((@IsNull_Supp_Surburb = 1 AND [Supp_Surburb] IS NULL) OR ([Sup"& _ 
+                "p_Surburb] = @Original_Supp_Surburb)) AND ((@IsNull_Supp_City = 1 AND [Supp_City"& _ 
+                "] IS NULL) OR ([Supp_City] = @Original_Supp_City)) AND ((@IsNull_Supp_Postal_Cod"& _ 
+                "e = 1 AND [Supp_Postal_Code] IS NULL) OR ([Supp_Postal_Code] = @Original_Supp_Po"& _ 
+                "stal_Code)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Suppier_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Suppier_ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Supplier_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supplier_ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Supp_Name", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Name", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Supp_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Supp_Contact_No", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Contact_No", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -9512,9 +9512,9 @@ Namespace RecSpecDatasetTableAdapters
                 "_Contact_Person], [Supp_Address1], [Supp_Address2], [Supp_Surburb], [Supp_City],"& _ 
                 " [Supp_Postal_Code]) VALUES (@Supp_Name, @Supp_Contact_No, @Supp_Email, @Supp_Co"& _ 
                 "ntact_Person, @Supp_Address1, @Supp_Address2, @Supp_Surburb, @Supp_City, @Supp_P"& _ 
-                "ostal_Code);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Suppier_ID, Supp_Name, Supp_Contact_No, Supp_Email, Supp_Co"& _ 
-                "ntact_Person, Supp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal"& _ 
-                "_Code FROM Supplier WHERE (Suppier_ID = SCOPE_IDENTITY())"
+                "ostal_Code);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Supplier_ID, Supp_Name, Supp_Contact_No, Supp_Email, Supp_C"& _ 
+                "ontact_Person, Supp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Posta"& _ 
+                "l_Code FROM Supplier WHERE (Supplier_ID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_Contact_No", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Contact_No", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9531,22 +9531,22 @@ Namespace RecSpecDatasetTableAdapters
                 "ontact_No, [Supp_Email] = @Supp_Email, [Supp_Contact_Person] = @Supp_Contact_Per"& _ 
                 "son, [Supp_Address1] = @Supp_Address1, [Supp_Address2] = @Supp_Address2, [Supp_S"& _ 
                 "urburb] = @Supp_Surburb, [Supp_City] = @Supp_City, [Supp_Postal_Code] = @Supp_Po"& _ 
-                "stal_Code WHERE (([Suppier_ID] = @Original_Suppier_ID) AND ((@IsNull_Supp_Name ="& _ 
-                " 1 AND [Supp_Name] IS NULL) OR ([Supp_Name] = @Original_Supp_Name)) AND ((@IsNul"& _ 
-                "l_Supp_Contact_No = 1 AND [Supp_Contact_No] IS NULL) OR ([Supp_Contact_No] = @Or"& _ 
-                "iginal_Supp_Contact_No)) AND ((@IsNull_Supp_Email = 1 AND [Supp_Email] IS NULL) "& _ 
-                "OR ([Supp_Email] = @Original_Supp_Email)) AND ((@IsNull_Supp_Contact_Person = 1 "& _ 
-                "AND [Supp_Contact_Person] IS NULL) OR ([Supp_Contact_Person] = @Original_Supp_Co"& _ 
-                "ntact_Person)) AND ((@IsNull_Supp_Address1 = 1 AND [Supp_Address1] IS NULL) OR ("& _ 
-                "[Supp_Address1] = @Original_Supp_Address1)) AND ((@IsNull_Supp_Address2 = 1 AND "& _ 
-                "[Supp_Address2] IS NULL) OR ([Supp_Address2] = @Original_Supp_Address2)) AND ((@"& _ 
-                "IsNull_Supp_Surburb = 1 AND [Supp_Surburb] IS NULL) OR ([Supp_Surburb] = @Origin"& _ 
-                "al_Supp_Surburb)) AND ((@IsNull_Supp_City = 1 AND [Supp_City] IS NULL) OR ([Supp"& _ 
-                "_City] = @Original_Supp_City)) AND ((@IsNull_Supp_Postal_Code = 1 AND [Supp_Post"& _ 
-                "al_Code] IS NULL) OR ([Supp_Postal_Code] = @Original_Supp_Postal_Code)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
-                "T Suppier_ID, Supp_Name, Supp_Contact_No, Supp_Email, Supp_Contact_Person, Supp_"& _ 
-                "Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal_Code FROM Supplier"& _ 
-                " WHERE (Suppier_ID = @Suppier_ID)"
+                "stal_Code WHERE (([Supplier_ID] = @Original_Supplier_ID) AND ((@IsNull_Supp_Name"& _ 
+                " = 1 AND [Supp_Name] IS NULL) OR ([Supp_Name] = @Original_Supp_Name)) AND ((@IsN"& _ 
+                "ull_Supp_Contact_No = 1 AND [Supp_Contact_No] IS NULL) OR ([Supp_Contact_No] = @"& _ 
+                "Original_Supp_Contact_No)) AND ((@IsNull_Supp_Email = 1 AND [Supp_Email] IS NULL"& _ 
+                ") OR ([Supp_Email] = @Original_Supp_Email)) AND ((@IsNull_Supp_Contact_Person = "& _ 
+                "1 AND [Supp_Contact_Person] IS NULL) OR ([Supp_Contact_Person] = @Original_Supp_"& _ 
+                "Contact_Person)) AND ((@IsNull_Supp_Address1 = 1 AND [Supp_Address1] IS NULL) OR"& _ 
+                " ([Supp_Address1] = @Original_Supp_Address1)) AND ((@IsNull_Supp_Address2 = 1 AN"& _ 
+                "D [Supp_Address2] IS NULL) OR ([Supp_Address2] = @Original_Supp_Address2)) AND ("& _ 
+                "(@IsNull_Supp_Surburb = 1 AND [Supp_Surburb] IS NULL) OR ([Supp_Surburb] = @Orig"& _ 
+                "inal_Supp_Surburb)) AND ((@IsNull_Supp_City = 1 AND [Supp_City] IS NULL) OR ([Su"& _ 
+                "pp_City] = @Original_Supp_City)) AND ((@IsNull_Supp_Postal_Code = 1 AND [Supp_Po"& _ 
+                "stal_Code] IS NULL) OR ([Supp_Postal_Code] = @Original_Supp_Postal_Code)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SEL"& _ 
+                "ECT Supplier_ID, Supp_Name, Supp_Contact_No, Supp_Email, Supp_Contact_Person, Su"& _ 
+                "pp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal_Code FROM Suppl"& _ 
+                "ier WHERE (Supplier_ID = @Supplier_ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_Contact_No", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Contact_No", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9557,7 +9557,7 @@ Namespace RecSpecDatasetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_Surburb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Surburb", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_City", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_City", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supp_Postal_Code", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Postal_Code", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Suppier_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Suppier_ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Supplier_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supplier_ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Supp_Name", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Name", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Supp_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Supp_Contact_No", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Contact_No", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -9576,7 +9576,7 @@ Namespace RecSpecDatasetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Supp_City", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_City", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Supp_Postal_Code", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Postal_Code", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Supp_Postal_Code", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Supp_Postal_Code", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Suppier_ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Suppier_ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Supplier_ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Supplier_ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9592,9 +9592,9 @@ Namespace RecSpecDatasetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Suppier_ID, Supp_Name, Supp_Contact_No, Supp_Email, Supp_Contact_Person, S"& _ 
-                "upp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal_Code FROM dbo."& _ 
-                "Supplier"
+            Me._commandCollection(0).CommandText = "SELECT Supplier_ID, Supp_Name, Supp_Contact_No, Supp_Email, Supp_Contact_Person, "& _ 
+                "Supp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal_Code FROM dbo"& _ 
+                ".Supplier"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -9654,8 +9654,8 @@ Namespace RecSpecDatasetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Suppier_ID As Integer, ByVal Original_Supp_Name As String, ByVal Original_Supp_Contact_No As String, ByVal Original_Supp_Email As String, ByVal Original_Supp_Contact_Person As String, ByVal Original_Supp_Address1 As String, ByVal Original_Supp_Address2 As String, ByVal Original_Supp_Surburb As String, ByVal Original_Supp_City As String, ByVal Original_Supp_Postal_Code As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Suppier_ID,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_Supplier_ID As Integer, ByVal Original_Supp_Name As String, ByVal Original_Supp_Contact_No As String, ByVal Original_Supp_Email As String, ByVal Original_Supp_Contact_Person As String, ByVal Original_Supp_Address1 As String, ByVal Original_Supp_Address2 As String, ByVal Original_Supp_Surburb As String, ByVal Original_Supp_City As String, ByVal Original_Supp_Postal_Code As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Supplier_ID,Integer)
             If (Original_Supp_Name Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -9813,7 +9813,7 @@ Namespace RecSpecDatasetTableAdapters
                     ByVal Supp_Surburb As String,  _
                     ByVal Supp_City As String,  _
                     ByVal Supp_Postal_Code As String,  _
-                    ByVal Original_Suppier_ID As Integer,  _
+                    ByVal Original_Supplier_ID As Integer,  _
                     ByVal Original_Supp_Name As String,  _
                     ByVal Original_Supp_Contact_No As String,  _
                     ByVal Original_Supp_Email As String,  _
@@ -9823,7 +9823,7 @@ Namespace RecSpecDatasetTableAdapters
                     ByVal Original_Supp_Surburb As String,  _
                     ByVal Original_Supp_City As String,  _
                     ByVal Original_Supp_Postal_Code As String,  _
-                    ByVal Suppier_ID As Integer) As Integer
+                    ByVal Supplier_ID As Integer) As Integer
             If (Supp_Name Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -9869,7 +9869,7 @@ Namespace RecSpecDatasetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Supp_Postal_Code,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Suppier_ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Supplier_ID,Integer)
             If (Original_Supp_Name Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
@@ -9933,7 +9933,7 @@ Namespace RecSpecDatasetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Supp_Postal_Code,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Suppier_ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Supplier_ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -9963,7 +9963,7 @@ Namespace RecSpecDatasetTableAdapters
                     ByVal Supp_Surburb As String,  _
                     ByVal Supp_City As String,  _
                     ByVal Supp_Postal_Code As String,  _
-                    ByVal Original_Suppier_ID As Integer,  _
+                    ByVal Original_Supplier_ID As Integer,  _
                     ByVal Original_Supp_Name As String,  _
                     ByVal Original_Supp_Contact_No As String,  _
                     ByVal Original_Supp_Email As String,  _
@@ -9973,7 +9973,7 @@ Namespace RecSpecDatasetTableAdapters
                     ByVal Original_Supp_Surburb As String,  _
                     ByVal Original_Supp_City As String,  _
                     ByVal Original_Supp_Postal_Code As String) As Integer
-            Return Me.Update(Supp_Name, Supp_Contact_No, Supp_Email, Supp_Contact_Person, Supp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal_Code, Original_Suppier_ID, Original_Supp_Name, Original_Supp_Contact_No, Original_Supp_Email, Original_Supp_Contact_Person, Original_Supp_Address1, Original_Supp_Address2, Original_Supp_Surburb, Original_Supp_City, Original_Supp_Postal_Code, Original_Suppier_ID)
+            Return Me.Update(Supp_Name, Supp_Contact_No, Supp_Email, Supp_Contact_Person, Supp_Address1, Supp_Address2, Supp_Surburb, Supp_City, Supp_Postal_Code, Original_Supplier_ID, Original_Supp_Name, Original_Supp_Contact_No, Original_Supp_Email, Original_Supp_Contact_Person, Original_Supp_Address1, Original_Supp_Address2, Original_Supp_Surburb, Original_Supp_City, Original_Supp_Postal_Code, Original_Supplier_ID)
         End Function
     End Class
     

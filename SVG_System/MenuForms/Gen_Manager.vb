@@ -30,6 +30,11 @@
 
 
 #Region "Employee tab"
+
+    Private Sub EmployeeTab_Enter(sender As Object, e As EventArgs) Handles EmployeeTab.Enter
+        Employee_Init()
+    End Sub
+
     Private Sub Employee_Init()
 
         SetAllFormat(EmployeeTab, flpEmployee, FinalSearchLayout, dgvEmployee, "Emp_")
@@ -37,12 +42,6 @@
         dgvEmployee.Columns(1).HeaderText = "First Name"
         dgvEmployee.Columns(2).HeaderText = "Surname"
     End Sub
-
-    Private Sub tbQueryEmployee_Enter(sender As Object, e As EventArgs) Handles tbQueryEmployee.Enter
-        tbQueryEmployee.Text = ""
-    End Sub
-
-
 
     Private Sub btnAddEdit_Click(sender As Object, e As EventArgs) Handles btnAddEditEmployee.Click
         If Not btnAddEditEmployee.Text = "Cancel" Then
@@ -120,12 +119,12 @@
         Dim query As String
 
         Select Case cbCriteriaEmployee.Text
-            Case "by Employee ID"
+            Case "By Employee ID"
                 query = "CONVERT(Employee_ID, System.String) LIKE '%" + tbQueryEmployee.Text + "%'"
-            Case "by Employee Name"
+            Case "By First Name"
                 query = "Emp_FName LIKE '%" + tbQueryEmployee.Text + "%'"
-            Case "by Employee Type"
-                query = "Emp_Type LIKE '%" + tbQueryEmployee.Text + "%'"
+            Case "By Surname"
+                query = "Emp_LName LIKE '%" + tbQueryEmployee.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -227,12 +226,14 @@
         Dim query As String
 
         Select Case cbCriteriaProduct.Text
-            Case "by Product Code"
+            Case "By Product Code"
                 query = "Product_Code LIKE '%" + tbQueryProduct.Text + "%'"
-            Case "by Product Name"
+            Case "By Product Name"
                 query = "Prod_Name LIKE '%" + tbQueryProduct.Text + "%'"
-            Case "by Stock level"
+            Case "By Stock Level"
                 query = "Prod_Stock_Level LIKE '" + tbQueryProduct.Text + "%'"
+            Case "By Categories"
+                query = "Prod_Categories LIKE '" + tbQueryProduct.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -245,9 +246,6 @@
     End Sub
 
 
-    Private Sub tbQueryProduct_Enter(sender As Object, e As EventArgs) Handles tbQueryProduct.Enter
-        tbQueryProduct.Text = ""
-    End Sub
 
 
 #End Region
@@ -290,7 +288,7 @@
 
 
         tbSOTotal.Width = (dgvSOBottom.Width / 7) - dgvSOBottom.RowHeadersWidth
-        tbSOTotal.Height = dgvSOBottom.Rows.Item(1).Height
+        tbSOTotal.Height = 25
         flpSOTotal.AutoSizeMode = AutoSizeMode.GrowAndShrink
         flpSOTotal.AutoSize = True
         flpSOTotal.Top = dgvSOBottom.Bottom + 5
@@ -299,10 +297,13 @@
     End Sub
 
 
-    Private Sub dgvSO_SelectionChanged(sender As Object, e As EventArgs) Handles dgvSO.SelectionChanged
+
+
+
+    Private Sub dgvSO_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSO.CellEnter
 
         'Fill sales order details dgv 
-        Dim soID = dgvSO.Rows(dgvSO.CurrentCell.RowIndex).Cells("SalesOrderIDDataGridViewTextBoxColumn").Value.ToString()
+        Dim soID = dgvSO.Rows(e.RowIndex).Cells("SalesOrderIDDataGridViewTextBoxColumn").Value.ToString()
         ProductTableAdapter.Fill(RecspecDataset.Product)
         Sale_ItemTableAdapter.Fill(RecspecDataset.Sale_Item)
 
@@ -314,8 +315,7 @@
         dgvSOBottom.DataSource = inter.ToList
 
 
-        tbSOTotal.Text = dgvSO.Rows(dgvSO.CurrentCell.RowIndex).Cells("SaleTotalDataGridViewTextBoxColumn").Value.ToString()
-
+        tbSOTotal.Text = dgvSO.Rows(e.RowIndex).Cells("SaleTotalDataGridViewTextBoxColumn").Value.ToString()
     End Sub
 
 
@@ -325,13 +325,13 @@
 
         Select Case cbCriteriaSO.Text
             Case "By Sales Order ID"
-                query = "Sales_Order_ID LIKE '%" + tbQuerySO.Text + "%'"
+                query = "Sales_Order_ID LIKE '" + tbQuerySO.Text + "%'"
             Case "By Sale Order Date"
-                query = "Product_Code LIKE '%" + tbQuerySO.Text + "%'"
+                query = "Product_Code LIKE '" + tbQuerySO.Text + "%'"
             Case "By Customer"
-                query = "Cust_FName LIKE '%" + tbQuerySO.Text + "%'"
+                query = "Cust_FName LIKE '" + tbQuerySO.Text + "%'"
             Case "By Employee"
-                query = "Emp_FName LIKE '%" + tbQuerySO.Text + "%'"
+                query = "Emp_FName LIKE '" + tbQuerySO.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -410,13 +410,8 @@
     End Sub
 
 
-
-
-
-
-
-    Private Sub dgvPO_SelectionChanged(sender As Object, e As EventArgs)
-        Dim poID = dgvPO.Rows(dgvPO.CurrentCell.RowIndex).Cells("PONoDataGridViewTextBoxColumn").Value.ToString()
+    Private Sub dgvPO_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPO.CellEnter
+        Dim poID = dgvPO.Rows(e.RowIndex).Cells("PONoDataGridViewTextBoxColumn").Value.ToString()
         Purchase_ItemTableAdapter.Fill(RecspecDataset.Purchase_Item)
         ProductTableAdapter.Fill(RecspecDataset.Product)
 
@@ -426,27 +421,36 @@
                   i.Purchase_Item_Qty, i.ProductRow.Prod_Categories, i.Purchase_Item_Price
 
         dgvPOD.DataSource = res.ToList
-        tbPOTotal.Text = dgvPO.Rows(dgvPO.CurrentCell.RowIndex).Cells("POTotalDataGridViewTextBoxColumn").Value.ToString()
+
+        tbPOTotal.Text = dgvPO.Rows(e.RowIndex).Cells("POTotalDataGridViewTextBoxColumn").Value.ToString()
+
     End Sub
 
-    'Private Sub dgvPO_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPO.RowEnter
-    '    ProductTableAdapter.Fill(RecspecDataset.Product)
-    '    Purchase_ItemTableAdapter.Fill(RecspecDataset.Purchase_Item)
+    Private Sub btnSearchPO_Click(sender As Object, e As EventArgs) Handles btnSearchPO.Click
+        Dim query As String
 
-    '    Dim poID = RecspecDataset.Purchase_Order.Rows(e.RowIndex).Item("PO_No").ToString
-    '    Dim result = From i In RecspecDataset.Purchase_Item.AsEnumerable
-    '                 Where i.PO_No = poID
-    '                 Select i.ProductRow.Product_Code, i.ProductRow.Prod_Name, i.ProductRow.Prod_Cost_Price,
-    '                       i.ProductRow.Prod_Stock_Level, i.ProductRow.Prod_VAT, i.ProductRow.Prod_Active,
-    '                       i.ProductRow.Prod_Categories, i.ProductRow.Prod_Reorder_Threshold
+        Select Case cbCriteriaPO.Text
+            Case "By PO No"
+                query = "PO_No LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By PO Date"
+                query = "PO_Date LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By PO Received Flag"
+                query = "PO_Received_Flag LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By Supplier"
+                query = "Supp_Name LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By Employee"
+                query = "Emp_FName LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case Else
+                query = ""
+        End Select
 
-    '    dgvPOD.AutoGenerateColumns = True
-    '    dgvPOD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-    '    dgvPOD.ReadOnly = True
-    '    dgvPOD.DataSource = result.ToList
+        If query.Length = 0 Then
+            SupplierBindingSource.RemoveFilter()
+        Else
+            SupplierBindingSource.Filter = query
+        End If
+    End Sub
 
-
-    'End Sub
 
 
 
@@ -458,20 +462,18 @@
         SetAllFormat(SupplierTab, flpSupplier, tlpSupplier, dgvSupplier, "Supp_")
     End Sub
 
-    Private Sub tbQuerySupplier_Enter(sender As Object, e As EventArgs) Handles tbQuerySupplier.Enter
-        tbQuerySupplier.Text = ""
-    End Sub
+
 
     Private Sub btnSearchSupplier_Click(sender As Object, e As EventArgs) Handles btnSearchSupplier.Click
         Dim query As String
 
         Select Case cbCriteriaSupplier.Text
-            Case "by Supplier ID"
-                query = "Convert(Suppier_ID, System.String) LIKE '%" + tbQuerySupplier.Text + "%'"
-            Case "by Supplier Name"
+            Case "By Supplier ID"
+                query = "Convert(Supplier_ID, System.String) LIKE '" + tbQuerySupplier.Text + "%'"
+            Case "By Supplier Name"
                 query = "Supp_Name LIKE '%" + tbQuerySupplier.Text + "%'"
-            Case "by Supplier City"
-                query = "Supp_City LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By Contact Person"
+                query = "Supp_Contact_Person LIKE '%" + tbQuerySupplier.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -586,9 +588,7 @@
             CustomerTableBindingSource.Filter = query
         End If
     End Sub
-    Private Sub tbQueryCustomer_Enter(sender As Object, e As EventArgs) Handles tbQueryCustomer.Enter
-        tbQueryCustomer.Text = ""
-    End Sub
+
 
 
     Private Sub btnAddEditCustomer_Click(sender As Object, e As EventArgs) Handles btnAddEditCustomer.Click
@@ -675,12 +675,14 @@
         Dim query As String
 
         Select Case cbCriteriaPayment.Text
-            Case "by Customer Payment ID"
-                query = "Cust_Payment_ID LIKE '%" + tbQueryPayment.Text + "%'"
-            Case "by Customer Payment Type"
+            Case "By Payment ID"
+                query = "Cust_Payment_ID LIKE '" + tbQueryPayment.Text + "%'"
+            Case "By Payment Type"
                 query = "Cust_Payment_Type LIKE '%" + tbQueryPayment.Text + "%'"
-            Case "by Customer ID"
-                query = "Convert(Customer_ID, System.String) LIKE '%" + tbQueryPayment.Text + "%'"
+            Case "By Customer"
+                query = "Cust_FName LIKE '" + tbQueryPayment.Text + "%'"
+            Case "By Employee"
+                query = "Emp_FName LIKE '" + tbQueryPayment.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -691,10 +693,7 @@
             CustomerPaymentBindingSource.Filter = query
         End If
     End Sub
-    Private Sub tbQueryPayment_Enter(sender As Object, e As EventArgs) Handles tbQueryPayment.Enter
 
-        tbQueryPayment.Text = ""
-    End Sub
 
 
     Private Sub btnAddEditPayment_Click(sender As Object, e As EventArgs) Handles btnAddEditPayment.Click
@@ -824,11 +823,12 @@
 
 
 
-
-
-
-
-
+    Private Sub tbQueryAll_Enter(sender As Object, e As EventArgs) Handles tbQuerySupplier.Enter, tbQueryEmployee.Enter, tbQueryProduct.Enter, tbQuerySO.Enter, tbQueryPO.Enter, tbQueryCustomer.Enter, tbQueryPayment.Enter
+        Dim tb As TextBox = DirectCast(sender, TextBox)
+        If tb.Text = "Enter Query..." Then
+            tb.Clear()
+        End If
+    End Sub
 
 
 
@@ -856,28 +856,26 @@
 
     End Sub
 
-    Private Sub EmployeeTab_Enter(sender As Object, e As EventArgs) Handles EmployeeTab.Enter
-        Employee_Init()
-    End Sub
 
 
 
 
-    Private Sub tbQuerySO_KeyDown(sender As Object, e As KeyEventArgs) Handles tbQuerySO.KeyDown, tbQueryEmployee.KeyDown
+
+
+    Private Sub tbQueryAll_KeyDown(sender As Object, e As KeyEventArgs) Handles tbQueryEmployee.KeyDown, tbQueryProduct.KeyDown, tbQuerySO.KeyDown, tbQueryCustomer.KeyDown, tbQueryPayment.KeyDown, tbQueryPO.KeyDown, tbQuerySupplier.KeyDown
+
         If e.KeyCode = Keys.Enter Then
-            btnSearchSO.PerformClick()
-            e.Handled = True
-            e.SuppressKeyPress = True
+            Dim tbSender = TryCast(sender, TextBox)
 
-        End If
-    End Sub
-
-    Private Sub tbQueryPO_KeyDown(sender As Object, e As KeyEventArgs)
-        If e.KeyCode = Keys.Enter Then
-            btnSearchPO.PerformClick()
-            e.Handled = True
-            e.SuppressKeyPress = True
-
+            Select Case tbSender.Name
+                Case "tbQueryEmployee" : btnSearchEmployee.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryProduct" : btnSearchProduct.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQuerySO" : btnSearchSO.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryCustomer" : btnSearchCustomer.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryPayment" : btnSearchPayment.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryPO" : btnSearchPO.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQuerySupplier" : btnSearchSupplier.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+            End Select
         End If
     End Sub
 
