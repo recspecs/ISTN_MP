@@ -84,9 +84,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RecSpecDataset.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RecSpecDataset.vb">
-      <DependentUpon>RecSpecDataset.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SalesRep.Designer.vb">
       <DependentUpon>SalesRep.vb</DependentUpon>
     </Compile>

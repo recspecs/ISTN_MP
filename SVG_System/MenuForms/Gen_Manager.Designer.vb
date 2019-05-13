@@ -24,11 +24,11 @@ Partial Class GenManager
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GenManager))
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PaymentTab = New System.Windows.Forms.TabPage()
         Me.tlpPayment = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchPayment = New System.Windows.Forms.Button()
@@ -39,6 +39,14 @@ Partial Class GenManager
         Me.btnSavePayment = New System.Windows.Forms.Button()
         Me.btnRemovePayment = New System.Windows.Forms.Button()
         Me.dgvPayment = New System.Windows.Forms.DataGridView()
+        Me.CustPaymentIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustPaymentTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustPaymentDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeIDDataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerIDDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerPaymentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RecspecDataset = New MenuForms.RecSpecDataset()
         Me.CustomerTab = New System.Windows.Forms.TabPage()
         Me.tlpCustomer = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchCustomer = New System.Windows.Forms.Button()
@@ -49,6 +57,20 @@ Partial Class GenManager
         Me.btnSaveCustomer = New System.Windows.Forms.Button()
         Me.btnRemoveCustomer = New System.Windows.Forms.Button()
         Me.dgvCustomer = New System.Windows.Forms.DataGridView()
+        Me.CustomerIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustLNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustBussinessNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustAddress1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustAddress2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustSuburbDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustCityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustPostalCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustBalanceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SupplierTab = New System.Windows.Forms.TabPage()
         Me.tlpSupplier = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchSupplier = New System.Windows.Forms.Button()
@@ -59,11 +81,31 @@ Partial Class GenManager
         Me.btnSaveSupplier = New System.Windows.Forms.Button()
         Me.btnRemoveSupplier = New System.Windows.Forms.Button()
         Me.dgvSupplier = New System.Windows.Forms.DataGridView()
+        Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppContactPersonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppAddress1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppAddress2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppSurburbDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppCityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SuppPostalCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalesOrderTab = New System.Windows.Forms.TabPage()
         Me.flpSOTotal = New System.Windows.Forms.FlowLayoutPanel()
         Me.lblSOTotal = New System.Windows.Forms.Label()
         Me.tbSOTotal = New System.Windows.Forms.TextBox()
         Me.dgvSOBottom = New System.Windows.Forms.DataGridView()
+        Me.SalesItemLineNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdVATDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.SaleItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FKSaleItemSalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblSODetails = New System.Windows.Forms.Label()
         Me.lblSO = New System.Windows.Forms.Label()
         Me.tlpSO = New System.Windows.Forms.TableLayoutPanel()
@@ -71,6 +113,9 @@ Partial Class GenManager
         Me.cbCriteriaSO = New System.Windows.Forms.ComboBox()
         Me.tbQuerySO = New System.Windows.Forms.TextBox()
         Me.dgvSO = New System.Windows.Forms.DataGridView()
+        Me.SalesOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleOrderDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Customer_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Employee_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductTab = New System.Windows.Forms.TabPage()
@@ -79,6 +124,15 @@ Partial Class GenManager
         Me.btnSaveProduct = New System.Windows.Forms.Button()
         Me.btnRemoveProduct = New System.Windows.Forms.Button()
         Me.dgvProduct = New System.Windows.Forms.DataGridView()
+        Me.ProductCodeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdCostPriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdStockLevelDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdVATDataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ProdActiveDataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ProdCategoriesDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.tlpProduct = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchProduct = New System.Windows.Forms.Button()
         Me.tbQueryProduct = New System.Windows.Forms.TextBox()
@@ -94,10 +148,25 @@ Partial Class GenManager
         Me.btnSaveEmployee = New System.Windows.Forms.Button()
         Me.btnRemoveEmployee = New System.Windows.Forms.Button()
         Me.dgvEmployee = New System.Windows.Forms.DataGridView()
+        Me.EmployeeIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpFNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpSNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpEmailDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpPasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpContactNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpTypeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.POTab = New System.Windows.Forms.TabPage()
         Me.dgvPO = New System.Windows.Forms.DataGridView()
+        Me.PONoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PODateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.POTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.POReceivedFlagDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.EmployeeIDDataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Supp_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Emp_FName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.dgvPOD = New System.Windows.Forms.DataGridView()
         Me.tlpPO = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchPO = New System.Windows.Forms.Button()
@@ -119,67 +188,6 @@ Partial Class GenManager
         Me.EmpSNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpFNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpSNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpEmailDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpPasswordDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpContactNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpTypeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RecspecDataset = New MenuForms.RecSpecDataset()
-        Me.ProductCodeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdCostPriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdStockLevelDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdVATDataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ProdActiveDataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ProdCategoriesDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SalesOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleOrderDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CustomerIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustLNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustBussinessNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustAddress1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustAddress2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustSuburbDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustCityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustPostalCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustBalanceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CustPaymentIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustPaymentTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustPaymentDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeIDDataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerIDDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerPaymentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PONoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PODateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.POTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.POReceivedFlagDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.EmployeeIDDataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppContactNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppContactPersonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppAddress1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppAddress2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppSurburbDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppCityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuppPostalCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SupplierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.EmployeeTableAdapter()
         Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
         Me.Sales_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Sales_OrderTableAdapter()
@@ -191,57 +199,49 @@ Partial Class GenManager
         Me.Customer_PaymentTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Customer_PaymentTableAdapter()
         Me.SupplierTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.SupplierTableAdapter()
         Me.Purchase_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Purchase_OrderTableAdapter()
-        Me.FKSaleItemSalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SalesItemLineNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdVATDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.SaleItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PaymentTab.SuspendLayout()
         Me.tlpPayment.SuspendLayout()
         Me.flpPayment.SuspendLayout()
         CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustomerPaymentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RecspecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerTab.SuspendLayout()
         Me.tlpCustomer.SuspendLayout()
         Me.flpCustomer.SuspendLayout()
         CType(Me.dgvCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustomerTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SupplierTab.SuspendLayout()
         Me.tlpSupplier.SuspendLayout()
         Me.flpSupplier.SuspendLayout()
         CType(Me.dgvSupplier, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SalesOrderTab.SuspendLayout()
         Me.flpSOTotal.SuspendLayout()
         CType(Me.dgvSOBottom, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKSaleItemSalesOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SalesOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlpSO.SuspendLayout()
         CType(Me.dgvSO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ProductTab.SuspendLayout()
         Me.flpProducts.SuspendLayout()
         CType(Me.dgvProduct, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlpProduct.SuspendLayout()
         Me.ManagerFormTabControl.SuspendLayout()
         Me.EmployeeTab.SuspendLayout()
         Me.FinalSearchLayout.SuspendLayout()
         Me.flpEmployee.SuspendLayout()
         CType(Me.dgvEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.POTab.SuspendLayout()
         CType(Me.dgvPO, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPOD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlpPO.SuspendLayout()
         Me.flpPO.SuspendLayout()
         Me.flpPOTotal.SuspendLayout()
-        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RecspecDataset, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SalesOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CustomerTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CustomerPaymentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SaleItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PaymentTab
@@ -307,7 +307,7 @@ Partial Class GenManager
         Me.cbCriteriaPayment.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPayment.FormattingEnabled = True
         Me.cbCriteriaPayment.Items.AddRange(New Object() {"By Payment ID", "By Payment Type", "By Customer", "By Employee"})
-        Me.cbCriteriaPayment.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaPayment.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaPayment.Name = "cbCriteriaPayment"
         Me.cbCriteriaPayment.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaPayment.TabIndex = 71
@@ -374,14 +374,14 @@ Partial Class GenManager
         Me.dgvPayment.AutoGenerateColumns = False
         Me.dgvPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustPaymentIDDataGridViewTextBoxColumn, Me.CustPaymentTypeDataGridViewTextBoxColumn, Me.CustPaymentTotalAmtDataGridViewTextBoxColumn, Me.CustPaymentDateDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn4, Me.CustomerIDDataGridViewTextBoxColumn2})
         Me.dgvPayment.DataSource = Me.CustomerPaymentBindingSource
@@ -392,6 +392,58 @@ Partial Class GenManager
         Me.dgvPayment.ReadOnly = True
         Me.dgvPayment.Size = New System.Drawing.Size(986, 333)
         Me.dgvPayment.TabIndex = 3
+        '
+        'CustPaymentIDDataGridViewTextBoxColumn
+        '
+        Me.CustPaymentIDDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_ID"
+        Me.CustPaymentIDDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_ID"
+        Me.CustPaymentIDDataGridViewTextBoxColumn.Name = "CustPaymentIDDataGridViewTextBoxColumn"
+        Me.CustPaymentIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CustPaymentTypeDataGridViewTextBoxColumn
+        '
+        Me.CustPaymentTypeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Type"
+        Me.CustPaymentTypeDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Type"
+        Me.CustPaymentTypeDataGridViewTextBoxColumn.Name = "CustPaymentTypeDataGridViewTextBoxColumn"
+        Me.CustPaymentTypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CustPaymentTotalAmtDataGridViewTextBoxColumn
+        '
+        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Total_Amt"
+        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Total_Amt"
+        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.Name = "CustPaymentTotalAmtDataGridViewTextBoxColumn"
+        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CustPaymentDateDataGridViewTextBoxColumn
+        '
+        Me.CustPaymentDateDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Date"
+        Me.CustPaymentDateDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Date"
+        Me.CustPaymentDateDataGridViewTextBoxColumn.Name = "CustPaymentDateDataGridViewTextBoxColumn"
+        Me.CustPaymentDateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EmployeeIDDataGridViewTextBoxColumn4
+        '
+        Me.EmployeeIDDataGridViewTextBoxColumn4.DataPropertyName = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn4.HeaderText = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn4.Name = "EmployeeIDDataGridViewTextBoxColumn4"
+        Me.EmployeeIDDataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'CustomerIDDataGridViewTextBoxColumn2
+        '
+        Me.CustomerIDDataGridViewTextBoxColumn2.DataPropertyName = "Customer_ID"
+        Me.CustomerIDDataGridViewTextBoxColumn2.HeaderText = "Customer_ID"
+        Me.CustomerIDDataGridViewTextBoxColumn2.Name = "CustomerIDDataGridViewTextBoxColumn2"
+        Me.CustomerIDDataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'CustomerPaymentBindingSource
+        '
+        Me.CustomerPaymentBindingSource.DataMember = "Customer_Payment"
+        Me.CustomerPaymentBindingSource.DataSource = Me.RecspecDataset
+        '
+        'RecspecDataset
+        '
+        Me.RecspecDataset.DataSetName = "RecSpecDataset"
+        Me.RecspecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CustomerTab
         '
@@ -456,7 +508,7 @@ Partial Class GenManager
         Me.cbCriteriaCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaCustomer.FormattingEnabled = True
         Me.cbCriteriaCustomer.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaCustomer.Name = "cbCriteriaCustomer"
         Me.cbCriteriaCustomer.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaCustomer.TabIndex = 71
@@ -522,14 +574,14 @@ Partial Class GenManager
         Me.dgvCustomer.AllowUserToDeleteRows = False
         Me.dgvCustomer.AutoGenerateColumns = False
         Me.dgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn1, Me.CustFNameDataGridViewTextBoxColumn, Me.CustLNameDataGridViewTextBoxColumn, Me.CustTypeDataGridViewTextBoxColumn, Me.CustBussinessNameDataGridViewTextBoxColumn, Me.CustEmailDataGridViewTextBoxColumn, Me.CustAddress1DataGridViewTextBoxColumn, Me.CustAddress2DataGridViewTextBoxColumn, Me.CustSuburbDataGridViewTextBoxColumn, Me.CustCityDataGridViewTextBoxColumn, Me.CustPostalCodeDataGridViewTextBoxColumn, Me.CustContactNoDataGridViewTextBoxColumn, Me.CustBalanceDataGridViewTextBoxColumn})
         Me.dgvCustomer.DataSource = Me.CustomerTableBindingSource
@@ -540,6 +592,115 @@ Partial Class GenManager
         Me.dgvCustomer.ReadOnly = True
         Me.dgvCustomer.Size = New System.Drawing.Size(975, 363)
         Me.dgvCustomer.TabIndex = 10
+        '
+        'CustomerIDDataGridViewTextBoxColumn1
+        '
+        Me.CustomerIDDataGridViewTextBoxColumn1.DataPropertyName = "Customer_ID"
+        Me.CustomerIDDataGridViewTextBoxColumn1.HeaderText = "Customer_ID"
+        Me.CustomerIDDataGridViewTextBoxColumn1.Name = "CustomerIDDataGridViewTextBoxColumn1"
+        Me.CustomerIDDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.CustomerIDDataGridViewTextBoxColumn1.Width = 106
+        '
+        'CustFNameDataGridViewTextBoxColumn
+        '
+        Me.CustFNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_FName"
+        Me.CustFNameDataGridViewTextBoxColumn.HeaderText = "Cust_FName"
+        Me.CustFNameDataGridViewTextBoxColumn.Name = "CustFNameDataGridViewTextBoxColumn"
+        Me.CustFNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustFNameDataGridViewTextBoxColumn.Width = 104
+        '
+        'CustLNameDataGridViewTextBoxColumn
+        '
+        Me.CustLNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_LName"
+        Me.CustLNameDataGridViewTextBoxColumn.HeaderText = "Cust_LName"
+        Me.CustLNameDataGridViewTextBoxColumn.Name = "CustLNameDataGridViewTextBoxColumn"
+        Me.CustLNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustLNameDataGridViewTextBoxColumn.Width = 104
+        '
+        'CustTypeDataGridViewTextBoxColumn
+        '
+        Me.CustTypeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Type"
+        Me.CustTypeDataGridViewTextBoxColumn.HeaderText = "Cust_Type"
+        Me.CustTypeDataGridViewTextBoxColumn.Name = "CustTypeDataGridViewTextBoxColumn"
+        Me.CustTypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustTypeDataGridViewTextBoxColumn.Width = 90
+        '
+        'CustBussinessNameDataGridViewTextBoxColumn
+        '
+        Me.CustBussinessNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_Bussiness_Name"
+        Me.CustBussinessNameDataGridViewTextBoxColumn.HeaderText = "Cust_Bussiness_Name"
+        Me.CustBussinessNameDataGridViewTextBoxColumn.Name = "CustBussinessNameDataGridViewTextBoxColumn"
+        Me.CustBussinessNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustBussinessNameDataGridViewTextBoxColumn.Width = 158
+        '
+        'CustEmailDataGridViewTextBoxColumn
+        '
+        Me.CustEmailDataGridViewTextBoxColumn.DataPropertyName = "Cust_Email"
+        Me.CustEmailDataGridViewTextBoxColumn.HeaderText = "Cust_Email"
+        Me.CustEmailDataGridViewTextBoxColumn.Name = "CustEmailDataGridViewTextBoxColumn"
+        Me.CustEmailDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustEmailDataGridViewTextBoxColumn.Width = 94
+        '
+        'CustAddress1DataGridViewTextBoxColumn
+        '
+        Me.CustAddress1DataGridViewTextBoxColumn.DataPropertyName = "Cust_Address1"
+        Me.CustAddress1DataGridViewTextBoxColumn.HeaderText = "Cust_Address1"
+        Me.CustAddress1DataGridViewTextBoxColumn.Name = "CustAddress1DataGridViewTextBoxColumn"
+        Me.CustAddress1DataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustAddress1DataGridViewTextBoxColumn.Width = 118
+        '
+        'CustAddress2DataGridViewTextBoxColumn
+        '
+        Me.CustAddress2DataGridViewTextBoxColumn.DataPropertyName = "Cust_Address2"
+        Me.CustAddress2DataGridViewTextBoxColumn.HeaderText = "Cust_Address2"
+        Me.CustAddress2DataGridViewTextBoxColumn.Name = "CustAddress2DataGridViewTextBoxColumn"
+        Me.CustAddress2DataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustAddress2DataGridViewTextBoxColumn.Width = 118
+        '
+        'CustSuburbDataGridViewTextBoxColumn
+        '
+        Me.CustSuburbDataGridViewTextBoxColumn.DataPropertyName = "Cust_Suburb"
+        Me.CustSuburbDataGridViewTextBoxColumn.HeaderText = "Cust_Suburb"
+        Me.CustSuburbDataGridViewTextBoxColumn.Name = "CustSuburbDataGridViewTextBoxColumn"
+        Me.CustSuburbDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustSuburbDataGridViewTextBoxColumn.Width = 105
+        '
+        'CustCityDataGridViewTextBoxColumn
+        '
+        Me.CustCityDataGridViewTextBoxColumn.DataPropertyName = "Cust_City"
+        Me.CustCityDataGridViewTextBoxColumn.HeaderText = "Cust_City"
+        Me.CustCityDataGridViewTextBoxColumn.Name = "CustCityDataGridViewTextBoxColumn"
+        Me.CustCityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustCityDataGridViewTextBoxColumn.Width = 84
+        '
+        'CustPostalCodeDataGridViewTextBoxColumn
+        '
+        Me.CustPostalCodeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Postal_Code"
+        Me.CustPostalCodeDataGridViewTextBoxColumn.HeaderText = "Cust_Postal_Code"
+        Me.CustPostalCodeDataGridViewTextBoxColumn.Name = "CustPostalCodeDataGridViewTextBoxColumn"
+        Me.CustPostalCodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustPostalCodeDataGridViewTextBoxColumn.Width = 134
+        '
+        'CustContactNoDataGridViewTextBoxColumn
+        '
+        Me.CustContactNoDataGridViewTextBoxColumn.DataPropertyName = "Cust_Contact_No"
+        Me.CustContactNoDataGridViewTextBoxColumn.HeaderText = "Cust_Contact_No"
+        Me.CustContactNoDataGridViewTextBoxColumn.Name = "CustContactNoDataGridViewTextBoxColumn"
+        Me.CustContactNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustContactNoDataGridViewTextBoxColumn.Width = 130
+        '
+        'CustBalanceDataGridViewTextBoxColumn
+        '
+        Me.CustBalanceDataGridViewTextBoxColumn.DataPropertyName = "Cust_Balance"
+        Me.CustBalanceDataGridViewTextBoxColumn.HeaderText = "Cust_Balance"
+        Me.CustBalanceDataGridViewTextBoxColumn.Name = "CustBalanceDataGridViewTextBoxColumn"
+        Me.CustBalanceDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustBalanceDataGridViewTextBoxColumn.Width = 107
+        '
+        'CustomerTableBindingSource
+        '
+        Me.CustomerTableBindingSource.DataMember = "CustomerTable"
+        Me.CustomerTableBindingSource.DataSource = Me.RecspecDataset
         '
         'SupplierTab
         '
@@ -604,7 +765,7 @@ Partial Class GenManager
         Me.cbCriteriaSupplier.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSupplier.FormattingEnabled = True
         Me.cbCriteriaSupplier.Items.AddRange(New Object() {"By Supplier ID", "By Supplier Name", "By Contact Person"})
-        Me.cbCriteriaSupplier.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaSupplier.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaSupplier.Name = "cbCriteriaSupplier"
         Me.cbCriteriaSupplier.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaSupplier.TabIndex = 71
@@ -670,14 +831,14 @@ Partial Class GenManager
         Me.dgvSupplier.AllowUserToDeleteRows = False
         Me.dgvSupplier.AutoGenerateColumns = False
         Me.dgvSupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSupplier.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSupplier.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSupplier.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SupplierIDDataGridViewTextBoxColumn, Me.SuppNameDataGridViewTextBoxColumn, Me.SuppContactNoDataGridViewTextBoxColumn, Me.SuppEmailDataGridViewTextBoxColumn, Me.SuppContactPersonDataGridViewTextBoxColumn, Me.SuppAddress1DataGridViewTextBoxColumn, Me.SuppAddress2DataGridViewTextBoxColumn, Me.SuppSurburbDataGridViewTextBoxColumn, Me.SuppCityDataGridViewTextBoxColumn, Me.SuppPostalCodeDataGridViewTextBoxColumn})
         Me.dgvSupplier.DataSource = Me.SupplierBindingSource
@@ -688,6 +849,81 @@ Partial Class GenManager
         Me.dgvSupplier.ReadOnly = True
         Me.dgvSupplier.Size = New System.Drawing.Size(1000, 413)
         Me.dgvSupplier.TabIndex = 61
+        '
+        'SupplierIDDataGridViewTextBoxColumn
+        '
+        Me.SupplierIDDataGridViewTextBoxColumn.DataPropertyName = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn.Name = "SupplierIDDataGridViewTextBoxColumn"
+        Me.SupplierIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppNameDataGridViewTextBoxColumn
+        '
+        Me.SuppNameDataGridViewTextBoxColumn.DataPropertyName = "Supp_Name"
+        Me.SuppNameDataGridViewTextBoxColumn.HeaderText = "Supp_Name"
+        Me.SuppNameDataGridViewTextBoxColumn.Name = "SuppNameDataGridViewTextBoxColumn"
+        Me.SuppNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppContactNoDataGridViewTextBoxColumn
+        '
+        Me.SuppContactNoDataGridViewTextBoxColumn.DataPropertyName = "Supp_Contact_No"
+        Me.SuppContactNoDataGridViewTextBoxColumn.HeaderText = "Supp_Contact_No"
+        Me.SuppContactNoDataGridViewTextBoxColumn.Name = "SuppContactNoDataGridViewTextBoxColumn"
+        Me.SuppContactNoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppEmailDataGridViewTextBoxColumn
+        '
+        Me.SuppEmailDataGridViewTextBoxColumn.DataPropertyName = "Supp_Email"
+        Me.SuppEmailDataGridViewTextBoxColumn.HeaderText = "Supp_Email"
+        Me.SuppEmailDataGridViewTextBoxColumn.Name = "SuppEmailDataGridViewTextBoxColumn"
+        Me.SuppEmailDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppContactPersonDataGridViewTextBoxColumn
+        '
+        Me.SuppContactPersonDataGridViewTextBoxColumn.DataPropertyName = "Supp_Contact_Person"
+        Me.SuppContactPersonDataGridViewTextBoxColumn.HeaderText = "Supp_Contact_Person"
+        Me.SuppContactPersonDataGridViewTextBoxColumn.Name = "SuppContactPersonDataGridViewTextBoxColumn"
+        Me.SuppContactPersonDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppAddress1DataGridViewTextBoxColumn
+        '
+        Me.SuppAddress1DataGridViewTextBoxColumn.DataPropertyName = "Supp_Address1"
+        Me.SuppAddress1DataGridViewTextBoxColumn.HeaderText = "Supp_Address1"
+        Me.SuppAddress1DataGridViewTextBoxColumn.Name = "SuppAddress1DataGridViewTextBoxColumn"
+        Me.SuppAddress1DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppAddress2DataGridViewTextBoxColumn
+        '
+        Me.SuppAddress2DataGridViewTextBoxColumn.DataPropertyName = "Supp_Address2"
+        Me.SuppAddress2DataGridViewTextBoxColumn.HeaderText = "Supp_Address2"
+        Me.SuppAddress2DataGridViewTextBoxColumn.Name = "SuppAddress2DataGridViewTextBoxColumn"
+        Me.SuppAddress2DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppSurburbDataGridViewTextBoxColumn
+        '
+        Me.SuppSurburbDataGridViewTextBoxColumn.DataPropertyName = "Supp_Surburb"
+        Me.SuppSurburbDataGridViewTextBoxColumn.HeaderText = "Supp_Surburb"
+        Me.SuppSurburbDataGridViewTextBoxColumn.Name = "SuppSurburbDataGridViewTextBoxColumn"
+        Me.SuppSurburbDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppCityDataGridViewTextBoxColumn
+        '
+        Me.SuppCityDataGridViewTextBoxColumn.DataPropertyName = "Supp_City"
+        Me.SuppCityDataGridViewTextBoxColumn.HeaderText = "Supp_City"
+        Me.SuppCityDataGridViewTextBoxColumn.Name = "SuppCityDataGridViewTextBoxColumn"
+        Me.SuppCityDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SuppPostalCodeDataGridViewTextBoxColumn
+        '
+        Me.SuppPostalCodeDataGridViewTextBoxColumn.DataPropertyName = "Supp_Postal_Code"
+        Me.SuppPostalCodeDataGridViewTextBoxColumn.HeaderText = "Supp_Postal_Code"
+        Me.SuppPostalCodeDataGridViewTextBoxColumn.Name = "SuppPostalCodeDataGridViewTextBoxColumn"
+        Me.SuppPostalCodeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SupplierBindingSource
+        '
+        Me.SupplierBindingSource.DataMember = "Supplier"
+        Me.SupplierBindingSource.DataSource = Me.RecspecDataset
         '
         'SalesOrderTab
         '
@@ -751,6 +987,65 @@ Partial Class GenManager
         Me.dgvSOBottom.Size = New System.Drawing.Size(896, 188)
         Me.dgvSOBottom.TabIndex = 89
         '
+        'SalesItemLineNoDataGridViewTextBoxColumn
+        '
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.DataPropertyName = "Sales_Item_Line_No"
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.HeaderText = "Sales_Item_Line_No"
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.Name = "SalesItemLineNoDataGridViewTextBoxColumn"
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleOrderIDDataGridViewTextBoxColumn
+        '
+        Me.SaleOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_ID"
+        Me.SaleOrderIDDataGridViewTextBoxColumn.HeaderText = "Sale_Order_ID"
+        Me.SaleOrderIDDataGridViewTextBoxColumn.Name = "SaleOrderIDDataGridViewTextBoxColumn"
+        Me.SaleOrderIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductCodeDataGridViewTextBoxColumn
+        '
+        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
+        Me.ProductCodeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdNameDataGridViewTextBoxColumn
+        '
+        Me.ProdNameDataGridViewTextBoxColumn.DataPropertyName = "Prod_Name"
+        Me.ProdNameDataGridViewTextBoxColumn.HeaderText = "Prod_Name"
+        Me.ProdNameDataGridViewTextBoxColumn.Name = "ProdNameDataGridViewTextBoxColumn"
+        Me.ProdNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleItemQtyDataGridViewTextBoxColumn
+        '
+        Me.SaleItemQtyDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Qty"
+        Me.SaleItemQtyDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Qty"
+        Me.SaleItemQtyDataGridViewTextBoxColumn.Name = "SaleItemQtyDataGridViewTextBoxColumn"
+        Me.SaleItemQtyDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProdVATDataGridViewCheckBoxColumn
+        '
+        Me.ProdVATDataGridViewCheckBoxColumn.DataPropertyName = "Prod_VAT"
+        Me.ProdVATDataGridViewCheckBoxColumn.HeaderText = "Prod_VAT"
+        Me.ProdVATDataGridViewCheckBoxColumn.Name = "ProdVATDataGridViewCheckBoxColumn"
+        Me.ProdVATDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'SaleItemPriceDataGridViewTextBoxColumn
+        '
+        Me.SaleItemPriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Price"
+        Me.SaleItemPriceDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Price"
+        Me.SaleItemPriceDataGridViewTextBoxColumn.Name = "SaleItemPriceDataGridViewTextBoxColumn"
+        Me.SaleItemPriceDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FKSaleItemSalesOrderBindingSource
+        '
+        Me.FKSaleItemSalesOrderBindingSource.DataMember = "FK_Sale_Item_Sales_Order"
+        Me.FKSaleItemSalesOrderBindingSource.DataSource = Me.SalesOrderBindingSource
+        '
+        'SalesOrderBindingSource
+        '
+        Me.SalesOrderBindingSource.DataMember = "Sales_Order"
+        Me.SalesOrderBindingSource.DataSource = Me.RecspecDataset
+        '
         'lblSODetails
         '
         Me.lblSODetails.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -808,7 +1103,7 @@ Partial Class GenManager
         Me.cbCriteriaSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSO.FormattingEnabled = True
         Me.cbCriteriaSO.Items.AddRange(New Object() {"By Sales Order ID", "By Sale Order Date", "By Customer", "By Employee"})
-        Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaSO.Name = "cbCriteriaSO"
         Me.cbCriteriaSO.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaSO.TabIndex = 71
@@ -839,6 +1134,27 @@ Partial Class GenManager
         Me.dgvSO.ReadOnly = True
         Me.dgvSO.Size = New System.Drawing.Size(893, 202)
         Me.dgvSO.TabIndex = 61
+        '
+        'SalesOrderIDDataGridViewTextBoxColumn
+        '
+        Me.SalesOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_Order_ID"
+        Me.SalesOrderIDDataGridViewTextBoxColumn.HeaderText = "Sales_Order_ID"
+        Me.SalesOrderIDDataGridViewTextBoxColumn.Name = "SalesOrderIDDataGridViewTextBoxColumn"
+        Me.SalesOrderIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleOrderDateDataGridViewTextBoxColumn
+        '
+        Me.SaleOrderDateDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_Date"
+        Me.SaleOrderDateDataGridViewTextBoxColumn.HeaderText = "Sale_Order_Date"
+        Me.SaleOrderDateDataGridViewTextBoxColumn.Name = "SaleOrderDateDataGridViewTextBoxColumn"
+        Me.SaleOrderDateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleTotalDataGridViewTextBoxColumn
+        '
+        Me.SaleTotalDataGridViewTextBoxColumn.DataPropertyName = "Sale_Total"
+        Me.SaleTotalDataGridViewTextBoxColumn.HeaderText = "Sale_Total"
+        Me.SaleTotalDataGridViewTextBoxColumn.Name = "SaleTotalDataGridViewTextBoxColumn"
+        Me.SaleTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Customer_ID
         '
@@ -932,14 +1248,14 @@ Partial Class GenManager
         Me.dgvProduct.AllowUserToResizeRows = False
         Me.dgvProduct.AutoGenerateColumns = False
         Me.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProduct.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCodeDataGridViewTextBoxColumn1, Me.ProdNameDataGridViewTextBoxColumn1, Me.ProdCostPriceDataGridViewTextBoxColumn1, Me.ProdStockLevelDataGridViewTextBoxColumn1, Me.ProdVATDataGridViewCheckBoxColumn1, Me.ProdActiveDataGridViewCheckBoxColumn1, Me.ProdCategoriesDataGridViewTextBoxColumn1, Me.ProdReorderThresholdDataGridViewTextBoxColumn1})
         Me.dgvProduct.DataSource = Me.ProductBindingSource
@@ -951,6 +1267,67 @@ Partial Class GenManager
         Me.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProduct.Size = New System.Drawing.Size(1000, 410)
         Me.dgvProduct.TabIndex = 78
+        '
+        'ProductCodeDataGridViewTextBoxColumn1
+        '
+        Me.ProductCodeDataGridViewTextBoxColumn1.DataPropertyName = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn1.HeaderText = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn1.Name = "ProductCodeDataGridViewTextBoxColumn1"
+        Me.ProductCodeDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'ProdNameDataGridViewTextBoxColumn1
+        '
+        Me.ProdNameDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Name"
+        Me.ProdNameDataGridViewTextBoxColumn1.HeaderText = "Prod_Name"
+        Me.ProdNameDataGridViewTextBoxColumn1.Name = "ProdNameDataGridViewTextBoxColumn1"
+        Me.ProdNameDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'ProdCostPriceDataGridViewTextBoxColumn1
+        '
+        Me.ProdCostPriceDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Cost_Price"
+        Me.ProdCostPriceDataGridViewTextBoxColumn1.HeaderText = "Prod_Cost_Price"
+        Me.ProdCostPriceDataGridViewTextBoxColumn1.Name = "ProdCostPriceDataGridViewTextBoxColumn1"
+        Me.ProdCostPriceDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'ProdStockLevelDataGridViewTextBoxColumn1
+        '
+        Me.ProdStockLevelDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Stock_Level"
+        Me.ProdStockLevelDataGridViewTextBoxColumn1.HeaderText = "Prod_Stock_Level"
+        Me.ProdStockLevelDataGridViewTextBoxColumn1.Name = "ProdStockLevelDataGridViewTextBoxColumn1"
+        Me.ProdStockLevelDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'ProdVATDataGridViewCheckBoxColumn1
+        '
+        Me.ProdVATDataGridViewCheckBoxColumn1.DataPropertyName = "Prod_VAT"
+        Me.ProdVATDataGridViewCheckBoxColumn1.HeaderText = "Prod_VAT"
+        Me.ProdVATDataGridViewCheckBoxColumn1.Name = "ProdVATDataGridViewCheckBoxColumn1"
+        Me.ProdVATDataGridViewCheckBoxColumn1.ReadOnly = True
+        '
+        'ProdActiveDataGridViewCheckBoxColumn1
+        '
+        Me.ProdActiveDataGridViewCheckBoxColumn1.DataPropertyName = "Prod_Active"
+        Me.ProdActiveDataGridViewCheckBoxColumn1.HeaderText = "Prod_Active"
+        Me.ProdActiveDataGridViewCheckBoxColumn1.Name = "ProdActiveDataGridViewCheckBoxColumn1"
+        Me.ProdActiveDataGridViewCheckBoxColumn1.ReadOnly = True
+        '
+        'ProdCategoriesDataGridViewTextBoxColumn1
+        '
+        Me.ProdCategoriesDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Categories"
+        Me.ProdCategoriesDataGridViewTextBoxColumn1.HeaderText = "Prod_Categories"
+        Me.ProdCategoriesDataGridViewTextBoxColumn1.Name = "ProdCategoriesDataGridViewTextBoxColumn1"
+        Me.ProdCategoriesDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'ProdReorderThresholdDataGridViewTextBoxColumn1
+        '
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Reorder_Threshold"
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.HeaderText = "Prod_Reorder_Threshold"
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.Name = "ProdReorderThresholdDataGridViewTextBoxColumn1"
+        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'ProductBindingSource
+        '
+        Me.ProductBindingSource.DataMember = "Product"
+        Me.ProductBindingSource.DataSource = Me.RecspecDataset
         '
         'tlpProduct
         '
@@ -1001,7 +1378,7 @@ Partial Class GenManager
         Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaProduct.FormattingEnabled = True
         Me.cbCriteriaProduct.Items.AddRange(New Object() {"By Product Code", "By Product Name", "By Stock Level", "By Categories"})
-        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
         Me.cbCriteriaProduct.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaProduct.TabIndex = 71
@@ -1076,7 +1453,7 @@ Partial Class GenManager
         Me.cbCriteriaEmployee.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaEmployee.FormattingEnabled = True
         Me.cbCriteriaEmployee.Items.AddRange(New Object() {"By Employee ID", "By First Name", "By Surname"})
-        Me.cbCriteriaEmployee.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaEmployee.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaEmployee.Name = "cbCriteriaEmployee"
         Me.cbCriteriaEmployee.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaEmployee.TabIndex = 71
@@ -1158,14 +1535,14 @@ Partial Class GenManager
         Me.dgvEmployee.AllowUserToResizeRows = False
         Me.dgvEmployee.AutoGenerateColumns = False
         Me.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEmployee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeIDDataGridViewTextBoxColumn1, Me.EmpFNameDataGridViewTextBoxColumn1, Me.EmpSNameDataGridViewTextBoxColumn1, Me.EmpEmailDataGridViewTextBoxColumn1, Me.EmpPasswordDataGridViewTextBoxColumn1, Me.EmpContactNoDataGridViewTextBoxColumn1, Me.EmpTypeDataGridViewTextBoxColumn1})
         Me.dgvEmployee.DataSource = Me.EmployeeBindingSource
@@ -1177,6 +1554,60 @@ Partial Class GenManager
         Me.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvEmployee.Size = New System.Drawing.Size(981, 327)
         Me.dgvEmployee.TabIndex = 51
+        '
+        'EmployeeIDDataGridViewTextBoxColumn1
+        '
+        Me.EmployeeIDDataGridViewTextBoxColumn1.DataPropertyName = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn1.HeaderText = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn1.Name = "EmployeeIDDataGridViewTextBoxColumn1"
+        Me.EmployeeIDDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmpFNameDataGridViewTextBoxColumn1
+        '
+        Me.EmpFNameDataGridViewTextBoxColumn1.DataPropertyName = "Emp_FName"
+        Me.EmpFNameDataGridViewTextBoxColumn1.HeaderText = "Emp_FName"
+        Me.EmpFNameDataGridViewTextBoxColumn1.Name = "EmpFNameDataGridViewTextBoxColumn1"
+        Me.EmpFNameDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmpSNameDataGridViewTextBoxColumn1
+        '
+        Me.EmpSNameDataGridViewTextBoxColumn1.DataPropertyName = "Emp_SName"
+        Me.EmpSNameDataGridViewTextBoxColumn1.HeaderText = "Emp_SName"
+        Me.EmpSNameDataGridViewTextBoxColumn1.Name = "EmpSNameDataGridViewTextBoxColumn1"
+        Me.EmpSNameDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmpEmailDataGridViewTextBoxColumn1
+        '
+        Me.EmpEmailDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Email"
+        Me.EmpEmailDataGridViewTextBoxColumn1.HeaderText = "Emp_Email"
+        Me.EmpEmailDataGridViewTextBoxColumn1.Name = "EmpEmailDataGridViewTextBoxColumn1"
+        Me.EmpEmailDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmpPasswordDataGridViewTextBoxColumn1
+        '
+        Me.EmpPasswordDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Password"
+        Me.EmpPasswordDataGridViewTextBoxColumn1.HeaderText = "Emp_Password"
+        Me.EmpPasswordDataGridViewTextBoxColumn1.Name = "EmpPasswordDataGridViewTextBoxColumn1"
+        Me.EmpPasswordDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmpContactNoDataGridViewTextBoxColumn1
+        '
+        Me.EmpContactNoDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Contact_No"
+        Me.EmpContactNoDataGridViewTextBoxColumn1.HeaderText = "Emp_Contact_No"
+        Me.EmpContactNoDataGridViewTextBoxColumn1.Name = "EmpContactNoDataGridViewTextBoxColumn1"
+        Me.EmpContactNoDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmpTypeDataGridViewTextBoxColumn1
+        '
+        Me.EmpTypeDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Type"
+        Me.EmpTypeDataGridViewTextBoxColumn1.HeaderText = "Emp_Type"
+        Me.EmpTypeDataGridViewTextBoxColumn1.Name = "EmpTypeDataGridViewTextBoxColumn1"
+        Me.EmpTypeDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataMember = "Employee"
+        Me.EmployeeBindingSource.DataSource = Me.RecspecDataset
         '
         'POTab
         '
@@ -1212,6 +1643,50 @@ Partial Class GenManager
         Me.dgvPO.Size = New System.Drawing.Size(899, 232)
         Me.dgvPO.TabIndex = 100
         '
+        'PONoDataGridViewTextBoxColumn
+        '
+        Me.PONoDataGridViewTextBoxColumn.DataPropertyName = "PO_No"
+        Me.PONoDataGridViewTextBoxColumn.HeaderText = "PO_No"
+        Me.PONoDataGridViewTextBoxColumn.Name = "PONoDataGridViewTextBoxColumn"
+        Me.PONoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PODateDataGridViewTextBoxColumn
+        '
+        Me.PODateDataGridViewTextBoxColumn.DataPropertyName = "PO_Date"
+        Me.PODateDataGridViewTextBoxColumn.HeaderText = "PO_Date"
+        Me.PODateDataGridViewTextBoxColumn.Name = "PODateDataGridViewTextBoxColumn"
+        Me.PODateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'POTotalDataGridViewTextBoxColumn
+        '
+        Me.POTotalDataGridViewTextBoxColumn.DataPropertyName = "PO_Total"
+        Me.POTotalDataGridViewTextBoxColumn.HeaderText = "PO_Total"
+        Me.POTotalDataGridViewTextBoxColumn.Name = "POTotalDataGridViewTextBoxColumn"
+        Me.POTotalDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'POReceivedFlagDataGridViewCheckBoxColumn
+        '
+        Me.POReceivedFlagDataGridViewCheckBoxColumn.DataPropertyName = "PO_Received_Flag"
+        Me.POReceivedFlagDataGridViewCheckBoxColumn.HeaderText = "PO_Received_Flag"
+        Me.POReceivedFlagDataGridViewCheckBoxColumn.Name = "POReceivedFlagDataGridViewCheckBoxColumn"
+        Me.POReceivedFlagDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'EmployeeIDDataGridViewTextBoxColumn5
+        '
+        Me.EmployeeIDDataGridViewTextBoxColumn5.DataPropertyName = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn5.HeaderText = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn5.Name = "EmployeeIDDataGridViewTextBoxColumn5"
+        Me.EmployeeIDDataGridViewTextBoxColumn5.ReadOnly = True
+        Me.EmployeeIDDataGridViewTextBoxColumn5.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Supplier_ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Supplier_ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
         'Supp_Name
         '
         Me.Supp_Name.DataPropertyName = "Supp_Name"
@@ -1225,6 +1700,11 @@ Partial Class GenManager
         Me.Emp_FName.HeaderText = "Emp_FName"
         Me.Emp_FName.Name = "Emp_FName"
         Me.Emp_FName.ReadOnly = True
+        '
+        'PurchaseOrderBindingSource
+        '
+        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
+        Me.PurchaseOrderBindingSource.DataSource = Me.RecspecDataset
         '
         'dgvPOD
         '
@@ -1285,7 +1765,7 @@ Partial Class GenManager
         Me.cbCriteriaPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPO.FormattingEnabled = True
         Me.cbCriteriaPO.Items.AddRange(New Object() {"By PO No", "By PO Date", "By PO Received Flag", "By Supplier", "By Employee"})
-        Me.cbCriteriaPO.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaPO.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaPO.Name = "cbCriteriaPO"
         Me.cbCriteriaPO.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaPO.TabIndex = 71
@@ -1440,432 +1920,6 @@ Partial Class GenManager
         Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
         Me.EmployeeIDDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'EmployeeIDDataGridViewTextBoxColumn1
-        '
-        Me.EmployeeIDDataGridViewTextBoxColumn1.DataPropertyName = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn1.HeaderText = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn1.Name = "EmployeeIDDataGridViewTextBoxColumn1"
-        Me.EmployeeIDDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmpFNameDataGridViewTextBoxColumn1
-        '
-        Me.EmpFNameDataGridViewTextBoxColumn1.DataPropertyName = "Emp_FName"
-        Me.EmpFNameDataGridViewTextBoxColumn1.HeaderText = "Emp_FName"
-        Me.EmpFNameDataGridViewTextBoxColumn1.Name = "EmpFNameDataGridViewTextBoxColumn1"
-        Me.EmpFNameDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmpSNameDataGridViewTextBoxColumn1
-        '
-        Me.EmpSNameDataGridViewTextBoxColumn1.DataPropertyName = "Emp_SName"
-        Me.EmpSNameDataGridViewTextBoxColumn1.HeaderText = "Emp_SName"
-        Me.EmpSNameDataGridViewTextBoxColumn1.Name = "EmpSNameDataGridViewTextBoxColumn1"
-        Me.EmpSNameDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmpEmailDataGridViewTextBoxColumn1
-        '
-        Me.EmpEmailDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Email"
-        Me.EmpEmailDataGridViewTextBoxColumn1.HeaderText = "Emp_Email"
-        Me.EmpEmailDataGridViewTextBoxColumn1.Name = "EmpEmailDataGridViewTextBoxColumn1"
-        Me.EmpEmailDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmpPasswordDataGridViewTextBoxColumn1
-        '
-        Me.EmpPasswordDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Password"
-        Me.EmpPasswordDataGridViewTextBoxColumn1.HeaderText = "Emp_Password"
-        Me.EmpPasswordDataGridViewTextBoxColumn1.Name = "EmpPasswordDataGridViewTextBoxColumn1"
-        Me.EmpPasswordDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmpContactNoDataGridViewTextBoxColumn1
-        '
-        Me.EmpContactNoDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Contact_No"
-        Me.EmpContactNoDataGridViewTextBoxColumn1.HeaderText = "Emp_Contact_No"
-        Me.EmpContactNoDataGridViewTextBoxColumn1.Name = "EmpContactNoDataGridViewTextBoxColumn1"
-        Me.EmpContactNoDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmpTypeDataGridViewTextBoxColumn1
-        '
-        Me.EmpTypeDataGridViewTextBoxColumn1.DataPropertyName = "Emp_Type"
-        Me.EmpTypeDataGridViewTextBoxColumn1.HeaderText = "Emp_Type"
-        Me.EmpTypeDataGridViewTextBoxColumn1.Name = "EmpTypeDataGridViewTextBoxColumn1"
-        Me.EmpTypeDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'EmployeeBindingSource
-        '
-        Me.EmployeeBindingSource.DataMember = "Employee"
-        Me.EmployeeBindingSource.DataSource = Me.RecspecDataset
-        '
-        'RecspecDataset
-        '
-        Me.RecspecDataset.DataSetName = "RecSpecDataset"
-        Me.RecspecDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProductCodeDataGridViewTextBoxColumn1
-        '
-        Me.ProductCodeDataGridViewTextBoxColumn1.DataPropertyName = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn1.HeaderText = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn1.Name = "ProductCodeDataGridViewTextBoxColumn1"
-        Me.ProductCodeDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ProdNameDataGridViewTextBoxColumn1
-        '
-        Me.ProdNameDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Name"
-        Me.ProdNameDataGridViewTextBoxColumn1.HeaderText = "Prod_Name"
-        Me.ProdNameDataGridViewTextBoxColumn1.Name = "ProdNameDataGridViewTextBoxColumn1"
-        Me.ProdNameDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ProdCostPriceDataGridViewTextBoxColumn1
-        '
-        Me.ProdCostPriceDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Cost_Price"
-        Me.ProdCostPriceDataGridViewTextBoxColumn1.HeaderText = "Prod_Cost_Price"
-        Me.ProdCostPriceDataGridViewTextBoxColumn1.Name = "ProdCostPriceDataGridViewTextBoxColumn1"
-        Me.ProdCostPriceDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ProdStockLevelDataGridViewTextBoxColumn1
-        '
-        Me.ProdStockLevelDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Stock_Level"
-        Me.ProdStockLevelDataGridViewTextBoxColumn1.HeaderText = "Prod_Stock_Level"
-        Me.ProdStockLevelDataGridViewTextBoxColumn1.Name = "ProdStockLevelDataGridViewTextBoxColumn1"
-        Me.ProdStockLevelDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ProdVATDataGridViewCheckBoxColumn1
-        '
-        Me.ProdVATDataGridViewCheckBoxColumn1.DataPropertyName = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn1.HeaderText = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn1.Name = "ProdVATDataGridViewCheckBoxColumn1"
-        Me.ProdVATDataGridViewCheckBoxColumn1.ReadOnly = True
-        '
-        'ProdActiveDataGridViewCheckBoxColumn1
-        '
-        Me.ProdActiveDataGridViewCheckBoxColumn1.DataPropertyName = "Prod_Active"
-        Me.ProdActiveDataGridViewCheckBoxColumn1.HeaderText = "Prod_Active"
-        Me.ProdActiveDataGridViewCheckBoxColumn1.Name = "ProdActiveDataGridViewCheckBoxColumn1"
-        Me.ProdActiveDataGridViewCheckBoxColumn1.ReadOnly = True
-        '
-        'ProdCategoriesDataGridViewTextBoxColumn1
-        '
-        Me.ProdCategoriesDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Categories"
-        Me.ProdCategoriesDataGridViewTextBoxColumn1.HeaderText = "Prod_Categories"
-        Me.ProdCategoriesDataGridViewTextBoxColumn1.Name = "ProdCategoriesDataGridViewTextBoxColumn1"
-        Me.ProdCategoriesDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ProdReorderThresholdDataGridViewTextBoxColumn1
-        '
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.DataPropertyName = "Prod_Reorder_Threshold"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.HeaderText = "Prod_Reorder_Threshold"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.Name = "ProdReorderThresholdDataGridViewTextBoxColumn1"
-        Me.ProdReorderThresholdDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ProductBindingSource
-        '
-        Me.ProductBindingSource.DataMember = "Product"
-        Me.ProductBindingSource.DataSource = Me.RecspecDataset
-        '
-        'SalesOrderIDDataGridViewTextBoxColumn
-        '
-        Me.SalesOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_Order_ID"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.HeaderText = "Sales_Order_ID"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.Name = "SalesOrderIDDataGridViewTextBoxColumn"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleOrderDateDataGridViewTextBoxColumn
-        '
-        Me.SaleOrderDateDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_Date"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.HeaderText = "Sale_Order_Date"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.Name = "SaleOrderDateDataGridViewTextBoxColumn"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleTotalDataGridViewTextBoxColumn
-        '
-        Me.SaleTotalDataGridViewTextBoxColumn.DataPropertyName = "Sale_Total"
-        Me.SaleTotalDataGridViewTextBoxColumn.HeaderText = "Sale_Total"
-        Me.SaleTotalDataGridViewTextBoxColumn.Name = "SaleTotalDataGridViewTextBoxColumn"
-        Me.SaleTotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SalesOrderBindingSource
-        '
-        Me.SalesOrderBindingSource.DataMember = "Sales_Order"
-        Me.SalesOrderBindingSource.DataSource = Me.RecspecDataset
-        '
-        'CustomerIDDataGridViewTextBoxColumn1
-        '
-        Me.CustomerIDDataGridViewTextBoxColumn1.DataPropertyName = "Customer_ID"
-        Me.CustomerIDDataGridViewTextBoxColumn1.HeaderText = "Customer_ID"
-        Me.CustomerIDDataGridViewTextBoxColumn1.Name = "CustomerIDDataGridViewTextBoxColumn1"
-        Me.CustomerIDDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.CustomerIDDataGridViewTextBoxColumn1.Width = 106
-        '
-        'CustFNameDataGridViewTextBoxColumn
-        '
-        Me.CustFNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_FName"
-        Me.CustFNameDataGridViewTextBoxColumn.HeaderText = "Cust_FName"
-        Me.CustFNameDataGridViewTextBoxColumn.Name = "CustFNameDataGridViewTextBoxColumn"
-        Me.CustFNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustFNameDataGridViewTextBoxColumn.Width = 104
-        '
-        'CustLNameDataGridViewTextBoxColumn
-        '
-        Me.CustLNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_LName"
-        Me.CustLNameDataGridViewTextBoxColumn.HeaderText = "Cust_LName"
-        Me.CustLNameDataGridViewTextBoxColumn.Name = "CustLNameDataGridViewTextBoxColumn"
-        Me.CustLNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustLNameDataGridViewTextBoxColumn.Width = 104
-        '
-        'CustTypeDataGridViewTextBoxColumn
-        '
-        Me.CustTypeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Type"
-        Me.CustTypeDataGridViewTextBoxColumn.HeaderText = "Cust_Type"
-        Me.CustTypeDataGridViewTextBoxColumn.Name = "CustTypeDataGridViewTextBoxColumn"
-        Me.CustTypeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustTypeDataGridViewTextBoxColumn.Width = 90
-        '
-        'CustBussinessNameDataGridViewTextBoxColumn
-        '
-        Me.CustBussinessNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_Bussiness_Name"
-        Me.CustBussinessNameDataGridViewTextBoxColumn.HeaderText = "Cust_Bussiness_Name"
-        Me.CustBussinessNameDataGridViewTextBoxColumn.Name = "CustBussinessNameDataGridViewTextBoxColumn"
-        Me.CustBussinessNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustBussinessNameDataGridViewTextBoxColumn.Width = 158
-        '
-        'CustEmailDataGridViewTextBoxColumn
-        '
-        Me.CustEmailDataGridViewTextBoxColumn.DataPropertyName = "Cust_Email"
-        Me.CustEmailDataGridViewTextBoxColumn.HeaderText = "Cust_Email"
-        Me.CustEmailDataGridViewTextBoxColumn.Name = "CustEmailDataGridViewTextBoxColumn"
-        Me.CustEmailDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustEmailDataGridViewTextBoxColumn.Width = 94
-        '
-        'CustAddress1DataGridViewTextBoxColumn
-        '
-        Me.CustAddress1DataGridViewTextBoxColumn.DataPropertyName = "Cust_Address1"
-        Me.CustAddress1DataGridViewTextBoxColumn.HeaderText = "Cust_Address1"
-        Me.CustAddress1DataGridViewTextBoxColumn.Name = "CustAddress1DataGridViewTextBoxColumn"
-        Me.CustAddress1DataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustAddress1DataGridViewTextBoxColumn.Width = 118
-        '
-        'CustAddress2DataGridViewTextBoxColumn
-        '
-        Me.CustAddress2DataGridViewTextBoxColumn.DataPropertyName = "Cust_Address2"
-        Me.CustAddress2DataGridViewTextBoxColumn.HeaderText = "Cust_Address2"
-        Me.CustAddress2DataGridViewTextBoxColumn.Name = "CustAddress2DataGridViewTextBoxColumn"
-        Me.CustAddress2DataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustAddress2DataGridViewTextBoxColumn.Width = 118
-        '
-        'CustSuburbDataGridViewTextBoxColumn
-        '
-        Me.CustSuburbDataGridViewTextBoxColumn.DataPropertyName = "Cust_Suburb"
-        Me.CustSuburbDataGridViewTextBoxColumn.HeaderText = "Cust_Suburb"
-        Me.CustSuburbDataGridViewTextBoxColumn.Name = "CustSuburbDataGridViewTextBoxColumn"
-        Me.CustSuburbDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustSuburbDataGridViewTextBoxColumn.Width = 105
-        '
-        'CustCityDataGridViewTextBoxColumn
-        '
-        Me.CustCityDataGridViewTextBoxColumn.DataPropertyName = "Cust_City"
-        Me.CustCityDataGridViewTextBoxColumn.HeaderText = "Cust_City"
-        Me.CustCityDataGridViewTextBoxColumn.Name = "CustCityDataGridViewTextBoxColumn"
-        Me.CustCityDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustCityDataGridViewTextBoxColumn.Width = 84
-        '
-        'CustPostalCodeDataGridViewTextBoxColumn
-        '
-        Me.CustPostalCodeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Postal_Code"
-        Me.CustPostalCodeDataGridViewTextBoxColumn.HeaderText = "Cust_Postal_Code"
-        Me.CustPostalCodeDataGridViewTextBoxColumn.Name = "CustPostalCodeDataGridViewTextBoxColumn"
-        Me.CustPostalCodeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustPostalCodeDataGridViewTextBoxColumn.Width = 134
-        '
-        'CustContactNoDataGridViewTextBoxColumn
-        '
-        Me.CustContactNoDataGridViewTextBoxColumn.DataPropertyName = "Cust_Contact_No"
-        Me.CustContactNoDataGridViewTextBoxColumn.HeaderText = "Cust_Contact_No"
-        Me.CustContactNoDataGridViewTextBoxColumn.Name = "CustContactNoDataGridViewTextBoxColumn"
-        Me.CustContactNoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustContactNoDataGridViewTextBoxColumn.Width = 130
-        '
-        'CustBalanceDataGridViewTextBoxColumn
-        '
-        Me.CustBalanceDataGridViewTextBoxColumn.DataPropertyName = "Cust_Balance"
-        Me.CustBalanceDataGridViewTextBoxColumn.HeaderText = "Cust_Balance"
-        Me.CustBalanceDataGridViewTextBoxColumn.Name = "CustBalanceDataGridViewTextBoxColumn"
-        Me.CustBalanceDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CustBalanceDataGridViewTextBoxColumn.Width = 107
-        '
-        'CustomerTableBindingSource
-        '
-        Me.CustomerTableBindingSource.DataMember = "CustomerTable"
-        Me.CustomerTableBindingSource.DataSource = Me.RecspecDataset
-        '
-        'CustPaymentIDDataGridViewTextBoxColumn
-        '
-        Me.CustPaymentIDDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_ID"
-        Me.CustPaymentIDDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_ID"
-        Me.CustPaymentIDDataGridViewTextBoxColumn.Name = "CustPaymentIDDataGridViewTextBoxColumn"
-        Me.CustPaymentIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CustPaymentTypeDataGridViewTextBoxColumn
-        '
-        Me.CustPaymentTypeDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Type"
-        Me.CustPaymentTypeDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Type"
-        Me.CustPaymentTypeDataGridViewTextBoxColumn.Name = "CustPaymentTypeDataGridViewTextBoxColumn"
-        Me.CustPaymentTypeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CustPaymentTotalAmtDataGridViewTextBoxColumn
-        '
-        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Total_Amt"
-        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Total_Amt"
-        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.Name = "CustPaymentTotalAmtDataGridViewTextBoxColumn"
-        Me.CustPaymentTotalAmtDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CustPaymentDateDataGridViewTextBoxColumn
-        '
-        Me.CustPaymentDateDataGridViewTextBoxColumn.DataPropertyName = "Cust_Payment_Date"
-        Me.CustPaymentDateDataGridViewTextBoxColumn.HeaderText = "Cust_Payment_Date"
-        Me.CustPaymentDateDataGridViewTextBoxColumn.Name = "CustPaymentDateDataGridViewTextBoxColumn"
-        Me.CustPaymentDateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmployeeIDDataGridViewTextBoxColumn4
-        '
-        Me.EmployeeIDDataGridViewTextBoxColumn4.DataPropertyName = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn4.HeaderText = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn4.Name = "EmployeeIDDataGridViewTextBoxColumn4"
-        Me.EmployeeIDDataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'CustomerIDDataGridViewTextBoxColumn2
-        '
-        Me.CustomerIDDataGridViewTextBoxColumn2.DataPropertyName = "Customer_ID"
-        Me.CustomerIDDataGridViewTextBoxColumn2.HeaderText = "Customer_ID"
-        Me.CustomerIDDataGridViewTextBoxColumn2.Name = "CustomerIDDataGridViewTextBoxColumn2"
-        Me.CustomerIDDataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'CustomerPaymentBindingSource
-        '
-        Me.CustomerPaymentBindingSource.DataMember = "Customer_Payment"
-        Me.CustomerPaymentBindingSource.DataSource = Me.RecspecDataset
-        '
-        'PONoDataGridViewTextBoxColumn
-        '
-        Me.PONoDataGridViewTextBoxColumn.DataPropertyName = "PO_No"
-        Me.PONoDataGridViewTextBoxColumn.HeaderText = "PO_No"
-        Me.PONoDataGridViewTextBoxColumn.Name = "PONoDataGridViewTextBoxColumn"
-        Me.PONoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PODateDataGridViewTextBoxColumn
-        '
-        Me.PODateDataGridViewTextBoxColumn.DataPropertyName = "PO_Date"
-        Me.PODateDataGridViewTextBoxColumn.HeaderText = "PO_Date"
-        Me.PODateDataGridViewTextBoxColumn.Name = "PODateDataGridViewTextBoxColumn"
-        Me.PODateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'POTotalDataGridViewTextBoxColumn
-        '
-        Me.POTotalDataGridViewTextBoxColumn.DataPropertyName = "PO_Total"
-        Me.POTotalDataGridViewTextBoxColumn.HeaderText = "PO_Total"
-        Me.POTotalDataGridViewTextBoxColumn.Name = "POTotalDataGridViewTextBoxColumn"
-        Me.POTotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'POReceivedFlagDataGridViewCheckBoxColumn
-        '
-        Me.POReceivedFlagDataGridViewCheckBoxColumn.DataPropertyName = "PO_Received_Flag"
-        Me.POReceivedFlagDataGridViewCheckBoxColumn.HeaderText = "PO_Received_Flag"
-        Me.POReceivedFlagDataGridViewCheckBoxColumn.Name = "POReceivedFlagDataGridViewCheckBoxColumn"
-        Me.POReceivedFlagDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'EmployeeIDDataGridViewTextBoxColumn5
-        '
-        Me.EmployeeIDDataGridViewTextBoxColumn5.DataPropertyName = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.HeaderText = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.Name = "EmployeeIDDataGridViewTextBoxColumn5"
-        Me.EmployeeIDDataGridViewTextBoxColumn5.ReadOnly = True
-        Me.EmployeeIDDataGridViewTextBoxColumn5.Visible = False
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Supplier_ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Supplier_ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'PurchaseOrderBindingSource
-        '
-        Me.PurchaseOrderBindingSource.DataMember = "Purchase_Order"
-        Me.PurchaseOrderBindingSource.DataSource = Me.RecspecDataset
-        '
-        'SupplierIDDataGridViewTextBoxColumn
-        '
-        Me.SupplierIDDataGridViewTextBoxColumn.DataPropertyName = "Supplier_ID"
-        Me.SupplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier_ID"
-        Me.SupplierIDDataGridViewTextBoxColumn.Name = "SupplierIDDataGridViewTextBoxColumn"
-        Me.SupplierIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppNameDataGridViewTextBoxColumn
-        '
-        Me.SuppNameDataGridViewTextBoxColumn.DataPropertyName = "Supp_Name"
-        Me.SuppNameDataGridViewTextBoxColumn.HeaderText = "Supp_Name"
-        Me.SuppNameDataGridViewTextBoxColumn.Name = "SuppNameDataGridViewTextBoxColumn"
-        Me.SuppNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppContactNoDataGridViewTextBoxColumn
-        '
-        Me.SuppContactNoDataGridViewTextBoxColumn.DataPropertyName = "Supp_Contact_No"
-        Me.SuppContactNoDataGridViewTextBoxColumn.HeaderText = "Supp_Contact_No"
-        Me.SuppContactNoDataGridViewTextBoxColumn.Name = "SuppContactNoDataGridViewTextBoxColumn"
-        Me.SuppContactNoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppEmailDataGridViewTextBoxColumn
-        '
-        Me.SuppEmailDataGridViewTextBoxColumn.DataPropertyName = "Supp_Email"
-        Me.SuppEmailDataGridViewTextBoxColumn.HeaderText = "Supp_Email"
-        Me.SuppEmailDataGridViewTextBoxColumn.Name = "SuppEmailDataGridViewTextBoxColumn"
-        Me.SuppEmailDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppContactPersonDataGridViewTextBoxColumn
-        '
-        Me.SuppContactPersonDataGridViewTextBoxColumn.DataPropertyName = "Supp_Contact_Person"
-        Me.SuppContactPersonDataGridViewTextBoxColumn.HeaderText = "Supp_Contact_Person"
-        Me.SuppContactPersonDataGridViewTextBoxColumn.Name = "SuppContactPersonDataGridViewTextBoxColumn"
-        Me.SuppContactPersonDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppAddress1DataGridViewTextBoxColumn
-        '
-        Me.SuppAddress1DataGridViewTextBoxColumn.DataPropertyName = "Supp_Address1"
-        Me.SuppAddress1DataGridViewTextBoxColumn.HeaderText = "Supp_Address1"
-        Me.SuppAddress1DataGridViewTextBoxColumn.Name = "SuppAddress1DataGridViewTextBoxColumn"
-        Me.SuppAddress1DataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppAddress2DataGridViewTextBoxColumn
-        '
-        Me.SuppAddress2DataGridViewTextBoxColumn.DataPropertyName = "Supp_Address2"
-        Me.SuppAddress2DataGridViewTextBoxColumn.HeaderText = "Supp_Address2"
-        Me.SuppAddress2DataGridViewTextBoxColumn.Name = "SuppAddress2DataGridViewTextBoxColumn"
-        Me.SuppAddress2DataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppSurburbDataGridViewTextBoxColumn
-        '
-        Me.SuppSurburbDataGridViewTextBoxColumn.DataPropertyName = "Supp_Surburb"
-        Me.SuppSurburbDataGridViewTextBoxColumn.HeaderText = "Supp_Surburb"
-        Me.SuppSurburbDataGridViewTextBoxColumn.Name = "SuppSurburbDataGridViewTextBoxColumn"
-        Me.SuppSurburbDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppCityDataGridViewTextBoxColumn
-        '
-        Me.SuppCityDataGridViewTextBoxColumn.DataPropertyName = "Supp_City"
-        Me.SuppCityDataGridViewTextBoxColumn.HeaderText = "Supp_City"
-        Me.SuppCityDataGridViewTextBoxColumn.Name = "SuppCityDataGridViewTextBoxColumn"
-        Me.SuppCityDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SuppPostalCodeDataGridViewTextBoxColumn
-        '
-        Me.SuppPostalCodeDataGridViewTextBoxColumn.DataPropertyName = "Supp_Postal_Code"
-        Me.SuppPostalCodeDataGridViewTextBoxColumn.HeaderText = "Supp_Postal_Code"
-        Me.SuppPostalCodeDataGridViewTextBoxColumn.Name = "SuppPostalCodeDataGridViewTextBoxColumn"
-        Me.SuppPostalCodeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SupplierBindingSource
-        '
-        Me.SupplierBindingSource.DataMember = "Supplier"
-        Me.SupplierBindingSource.DataSource = Me.RecspecDataset
-        '
         'EmployeeTableAdapter
         '
         Me.EmployeeTableAdapter.ClearBeforeFill = True
@@ -1912,60 +1966,6 @@ Partial Class GenManager
         '
         Me.Purchase_OrderTableAdapter.ClearBeforeFill = True
         '
-        'FKSaleItemSalesOrderBindingSource
-        '
-        Me.FKSaleItemSalesOrderBindingSource.DataMember = "FK_Sale_Item_Sales_Order"
-        Me.FKSaleItemSalesOrderBindingSource.DataSource = Me.SalesOrderBindingSource
-        '
-        'SalesItemLineNoDataGridViewTextBoxColumn
-        '
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.DataPropertyName = "Sales_Item_Line_No"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.HeaderText = "Sales_Item_Line_No"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.Name = "SalesItemLineNoDataGridViewTextBoxColumn"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleOrderIDDataGridViewTextBoxColumn
-        '
-        Me.SaleOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_ID"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.HeaderText = "Sale_Order_ID"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.Name = "SaleOrderIDDataGridViewTextBoxColumn"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProductCodeDataGridViewTextBoxColumn
-        '
-        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
-        Me.ProductCodeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdNameDataGridViewTextBoxColumn
-        '
-        Me.ProdNameDataGridViewTextBoxColumn.DataPropertyName = "Prod_Name"
-        Me.ProdNameDataGridViewTextBoxColumn.HeaderText = "Prod_Name"
-        Me.ProdNameDataGridViewTextBoxColumn.Name = "ProdNameDataGridViewTextBoxColumn"
-        Me.ProdNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleItemQtyDataGridViewTextBoxColumn
-        '
-        Me.SaleItemQtyDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Qty"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Qty"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.Name = "SaleItemQtyDataGridViewTextBoxColumn"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdVATDataGridViewCheckBoxColumn
-        '
-        Me.ProdVATDataGridViewCheckBoxColumn.DataPropertyName = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.HeaderText = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.Name = "ProdVATDataGridViewCheckBoxColumn"
-        Me.ProdVATDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'SaleItemPriceDataGridViewTextBoxColumn
-        '
-        Me.SaleItemPriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Price"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Price"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.Name = "SaleItemPriceDataGridViewTextBoxColumn"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'GenManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -1989,6 +1989,8 @@ Partial Class GenManager
         Me.flpPayment.ResumeLayout(False)
         Me.flpPayment.PerformLayout()
         CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerPaymentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RecspecDataset, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomerTab.ResumeLayout(False)
         Me.CustomerTab.PerformLayout()
         Me.tlpCustomer.ResumeLayout(False)
@@ -1996,6 +1998,7 @@ Partial Class GenManager
         Me.flpCustomer.ResumeLayout(False)
         Me.flpCustomer.PerformLayout()
         CType(Me.dgvCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SupplierTab.ResumeLayout(False)
         Me.SupplierTab.PerformLayout()
         Me.tlpSupplier.ResumeLayout(False)
@@ -2003,10 +2006,13 @@ Partial Class GenManager
         Me.flpSupplier.ResumeLayout(False)
         Me.flpSupplier.PerformLayout()
         CType(Me.dgvSupplier, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SalesOrderTab.ResumeLayout(False)
         Me.flpSOTotal.ResumeLayout(False)
         Me.flpSOTotal.PerformLayout()
         CType(Me.dgvSOBottom, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKSaleItemSalesOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SalesOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tlpSO.ResumeLayout(False)
         Me.tlpSO.PerformLayout()
         CType(Me.dgvSO, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2014,6 +2020,7 @@ Partial Class GenManager
         Me.flpProducts.ResumeLayout(False)
         Me.flpProducts.PerformLayout()
         CType(Me.dgvProduct, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tlpProduct.ResumeLayout(False)
         Me.tlpProduct.PerformLayout()
         Me.ManagerFormTabControl.ResumeLayout(False)
@@ -2024,9 +2031,11 @@ Partial Class GenManager
         Me.flpEmployee.ResumeLayout(False)
         Me.flpEmployee.PerformLayout()
         CType(Me.dgvEmployee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.POTab.ResumeLayout(False)
         Me.POTab.PerformLayout()
         CType(Me.dgvPO, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPOD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tlpPO.ResumeLayout(False)
         Me.tlpPO.PerformLayout()
@@ -2034,17 +2043,8 @@ Partial Class GenManager
         Me.flpPO.PerformLayout()
         Me.flpPOTotal.ResumeLayout(False)
         Me.flpPOTotal.PerformLayout()
-        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RecspecDataset, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SalesOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CustomerTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CustomerPaymentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SaleItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurchaseItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FKSaleItemSalesOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

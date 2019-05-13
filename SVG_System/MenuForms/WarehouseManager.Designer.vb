@@ -117,7 +117,7 @@ Partial Class WarehouseManager
         Me.cbCriteriaWM.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaWM.FormattingEnabled = true
         Me.cbCriteriaWM.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaWM.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaWM.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaWM.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbCriteriaWM.Name = "cbCriteriaWM"
         Me.cbCriteriaWM.Size = New System.Drawing.Size(263, 25)
@@ -139,7 +139,7 @@ Partial Class WarehouseManager
         '
         Me.btnAddEditWM.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnAddEditWM.Cursor = System.Windows.Forms.Cursors.WaitCursor
-        Me.btnAddEditWM.Image = CType(resources.GetObject("btnAddEditWM.Image"),System.Drawing.Image)
+        Me.btnAddEditWM.Image = CType(resources.GetObject("btnAddEditWM.Image"), System.Drawing.Image)
         Me.btnAddEditWM.Location = New System.Drawing.Point(15, 5)
         Me.btnAddEditWM.Margin = New System.Windows.Forms.Padding(15, 5, 30, 5)
         Me.btnAddEditWM.Name = "btnAddEditWM"
@@ -147,13 +147,13 @@ Partial Class WarehouseManager
         Me.btnAddEditWM.TabIndex = 32
         Me.btnAddEditWM.Text = "Add/Edit"
         Me.btnAddEditWM.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddEditWM.UseCompatibleTextRendering = true
-        Me.btnAddEditWM.UseVisualStyleBackColor = true
+        Me.btnAddEditWM.UseCompatibleTextRendering = True
+        Me.btnAddEditWM.UseVisualStyleBackColor = True
         '
         'btnSaveWN
         '
         Me.btnSaveWN.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSaveWN.Image = CType(resources.GetObject("btnSaveWN.Image"),System.Drawing.Image)
+        Me.btnSaveWN.Image = CType(resources.GetObject("btnSaveWN.Image"), System.Drawing.Image)
         Me.btnSaveWN.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnSaveWN.Location = New System.Drawing.Point(221, 5)
         Me.btnSaveWN.Margin = New System.Windows.Forms.Padding(30, 5, 30, 5)
@@ -163,12 +163,12 @@ Partial Class WarehouseManager
         Me.btnSaveWN.TabIndex = 30
         Me.btnSaveWN.Text = "Save"
         Me.btnSaveWN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSaveWN.UseVisualStyleBackColor = true
+        Me.btnSaveWN.UseVisualStyleBackColor = True
         '
         'btnRemoveWM
         '
         Me.btnRemoveWM.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnRemoveWM.Image = CType(resources.GetObject("btnRemoveWM.Image"),System.Drawing.Image)
+        Me.btnRemoveWM.Image = CType(resources.GetObject("btnRemoveWM.Image"), System.Drawing.Image)
         Me.btnRemoveWM.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemoveWM.Location = New System.Drawing.Point(427, 5)
         Me.btnRemoveWM.Margin = New System.Windows.Forms.Padding(30, 5, 15, 5)
@@ -178,17 +178,17 @@ Partial Class WarehouseManager
         Me.btnRemoveWM.TabIndex = 31
         Me.btnRemoveWM.Text = "Remove"
         Me.btnRemoveWM.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnRemoveWM.UseVisualStyleBackColor = true
+        Me.btnRemoveWM.UseVisualStyleBackColor = True
         '
         'dgyWM
         '
-        Me.dgyWM.AllowUserToAddRows = false
-        Me.dgyWM.AllowUserToDeleteRows = false
+        Me.dgyWM.AllowUserToAddRows = False
+        Me.dgyWM.AllowUserToDeleteRows = False
         Me.dgyWM.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgyWM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -196,7 +196,7 @@ Partial Class WarehouseManager
         Me.dgyWM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgyWM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgyWM.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgyWM.Location = New System.Drawing.Point(45, 416)
+        Me.dgyWM.Location = New System.Drawing.Point(95, 344)
         Me.dgyWM.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.dgyWM.Name = "dgyWM"
         Me.dgyWM.ReadOnly = true

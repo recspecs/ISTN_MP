@@ -445,9 +445,9 @@
         End Select
 
         If query.Length = 0 Then
-            SupplierBindingSource.RemoveFilter()
+            PurchaseOrderBindingSource.RemoveFilter()
         Else
-            SupplierBindingSource.Filter = query
+            PurchaseOrderBindingSource.Filter = query
         End If
     End Sub
 
@@ -879,7 +879,5 @@
         End If
     End Sub
 
-    Private Sub dgvSOBottom_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSOBottom.CellContentClick
 
-    End Sub
 End Class
