@@ -1,423 +1,239 @@
 ﻿Public Class GenManager
-    Private Sub Label58_Click(sender As Object, e As EventArgs) 
 
-    End Sub
-
-    Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) 
-
-    End Sub
-
-    Private Sub Supplier_Click(sender As Object, e As EventArgs) Handles Supplier.Click
-
-    End Sub
-
-    Private Sub DataGridView3_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV3.CellContentClick
-
-    End Sub
-
-    Private Sub Payment_Click(sender As Object, e As EventArgs) Handles Payment.Click
-
-    End Sub
-
-    Private Sub DataGridView6_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles EmployeeDGV.CellContentClick
-
-    End Sub
-
-    Private Sub SalesOrder_Click(sender As Object, e As EventArgs) Handles SalesOrder.Click
-
-    End Sub
 
     Private Sub GenManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'RecSpecDataset.Customer_Payment' table. You can move, or remove it, as needed.
-        Me.Customer_PaymentTableAdapter.Fill(Me.RecSpecDataset.Customer_Payment)
-        'TODO: This line of code loads data into the 'RecSpecDataset.CustomerTable' table. You can move, or remove it, as needed.
-        Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset.CustomerTable)
-        'TODO: This line of code loads data into the 'RecSpecDataset.Supplier' table. You can move, or remove it, as needed.
-        Me.SupplierTableAdapter.Fill(Me.RecSpecDataset.Supplier)
-        'TODO: This line of code loads data into the 'RecSpecDataset.Purchase_Item' table. You can move, or remove it, as needed.
-        Me.Purchase_ItemTableAdapter.Fill(Me.RecSpecDataset.Purchase_Item)
-        'TODO: This line of code loads data into the 'RecSpecDataset.Purchase_Order' table. You can move, or remove it, as needed.
-        Me.Purchase_OrderTableAdapter.Fill(Me.RecSpecDataset.Purchase_Order)
-        'TODO: This line of code loads data into the 'RecSpecDataset.Sales_Order' table. You can move, or remove it, as needed.
-        Me.Sales_OrderTableAdapter.Fill(Me.RecSpecDataset.Sales_Order)
-        'TODO: This line of code loads data into the 'RecSpecDataset.Product' table. You can move, or remove it, as needed.
-        Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
-        'TODO: This line of code loads data into the 'RecSpecDataset.Employee' table. You can move, or remove it, as needed.
-        Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
 
-        Me.Size = New Size(1330, 836)
 
+
+        Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
+
+        Me.Customer_PaymentTableAdapter.Fill(Me.RecspecDataset.Customer_Payment)
+
+        Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
+
+        Me.Purchase_ItemTableAdapter.Fill(Me.RecspecDataset.Purchase_Item)
+
+        Me.Sale_ItemTableAdapter.Fill(Me.RecspecDataset.Sale_Item)
+
+        Me.Purchase_OrderTableAdapter.Fill(Me.RecspecDataset.Purchase_Order)
+
+        Me.Sales_OrderTableAdapter.Fill(Me.RecspecDataset.Sales_Order)
+
+        Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
+
+        Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
+
+
+        Me.DoubleBuffered = True
         Me.CenterToScreen()
-
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        If Not Button11.Text = "Cancel" Then
-            EmployeeDGV.ReadOnly = False
-            EmployeeDGV.AllowUserToAddRows = True
-            EmployeeDGV.GridColor = Color.Crimson
-            Button11.Text = "Cancel"
-            Button11.Image = My.Resources._return
-            Button11.ImageAlign = ContentAlignment.MiddleCenter
-            Button6.Enabled = False
+
+#Region "Employee tab"
+
+    Private Sub EmployeeTab_Enter(sender As Object, e As EventArgs) Handles EmployeeTab.Enter
+        Employee_Init()
+    End Sub
+
+    Private Sub Employee_Init()
+
+        SetAllFormat(EmployeeTab, flpEmployee, FinalSearchLayout, dgvEmployee, "Emp_")
+
+        dgvEmployee.Columns(1).HeaderText = "First Name"
+        dgvEmployee.Columns(2).HeaderText = "Surname"
+    End Sub
+
+    Private Sub btnAddEdit_Click(sender As Object, e As EventArgs) Handles btnAddEditEmployee.Click
+        If Not btnAddEditEmployee.Text = "Cancel" Then
+            dgvEmployee.ReadOnly = False
+            dgvEmployee.AllowUserToAddRows = True
+            dgvEmployee.GridColor = Color.Crimson
+            btnAddEditEmployee.Text = "Cancel"
+            btnAddEditEmployee.Image = My.Resources._return
+            btnAddEditEmployee.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveEmployee.Enabled = False
             MsgBox("Add new employee, or edit existing employees!")
         Else
-            EmployeeDGV.ReadOnly = True
-            EmployeeDGV.AllowUserToAddRows = False
-            EmployeeDGV.GridColor = Color.Gray
-            Button11.Text = "Add New/Edit Employees"
-            Button11.Image = My.Resources.Pencil_icon
-            Button11.ImageAlign = ContentAlignment.MiddleCenter
-            Button6.Enabled = True
-            Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
+            dgvEmployee.ReadOnly = True
+            dgvEmployee.AllowUserToAddRows = False
+            dgvEmployee.GridColor = Color.Gray
+            btnAddEditEmployee.Text = "Add New/Edit Employees"
+            btnAddEditEmployee.Image = My.Resources.pencil961
+            btnAddEditEmployee.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveEmployee.Enabled = True
+            Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
 
         End If
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        If Not Button6.Text = "Cancel" Then
-            EmployeeDGV.ReadOnly = False
-            EmployeeDGV.AllowUserToDeleteRows = True
-            EmployeeDGV.GridColor = Color.Crimson
-            Button6.Text = "Cancel"
-            Button6.Image = My.Resources._return
-            Button6.ImageAlign = ContentAlignment.TopCenter
-            Button11.Enabled = False
+    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemoveEmployee.Click
+        If Not btnRemoveEmployee.Text = "Cancel" Then
+            dgvEmployee.ReadOnly = False
+            dgvEmployee.AllowUserToDeleteRows = True
+            dgvEmployee.GridColor = Color.Crimson
+            btnRemoveEmployee.Text = "Cancel"
+            btnRemoveEmployee.Image = My.Resources._return
+            btnRemoveEmployee.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditEmployee.Enabled = False
             MsgBox("Select employees then press delete key! Click on the Save button when done!")
         Else
-            Button6.Text = "Remove"
-            EmployeeDGV.ReadOnly = True
-            EmployeeDGV.AllowUserToDeleteRows = False
-            EmployeeDGV.GridColor = Color.Gray
-            Button6.Image = My.Resources.bin_red_full_icon
-            Button6.ImageAlign = ContentAlignment.TopCenter
-            Button11.Enabled = True
-            Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
+            btnRemoveEmployee.Text = "Remove"
+            dgvEmployee.ReadOnly = True
+            dgvEmployee.AllowUserToDeleteRows = False
+            dgvEmployee.GridColor = Color.Gray
+            btnRemoveEmployee.Image = My.Resources.redbin296
+            btnRemoveEmployee.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditEmployee.Enabled = True
+            Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
         End If
     End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        If Button11.Text = "Cancel" Or Button6.Text = "Cancel" Then
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSaveEmployee.Click
+        If btnAddEditEmployee.Text = "Cancel" Or btnRemoveEmployee.Text = "Cancel" Then
             EmployeeBindingSource.EndEdit()
             Try
-                EmployeeTableAdapter.Update(RecSpecDataset.Employee)
+                EmployeeTableAdapter.Update(Me.RecspecDataset.Employee)
                 MsgBox("Information saved!")
             Catch ex As DataException
                 MsgBox(ex.StackTrace)
             End Try
-            EmployeeDGV.ReadOnly = True
-            EmployeeDGV.AllowUserToAddRows = False
-            EmployeeDGV.AllowUserToDeleteRows = False
-            EmployeeDGV.GridColor = Color.Gray
-            Button11.Image = My.Resources.Pencil_icon
-            Button11.ImageAlign = ContentAlignment.TopCenter
-            Button11.Text = "Add New/Edit Employees"
-            Button11.Enabled = True
+            dgvEmployee.ReadOnly = True
+            dgvEmployee.AllowUserToAddRows = False
+            dgvEmployee.AllowUserToDeleteRows = False
+            dgvEmployee.GridColor = Color.Gray
+            btnAddEditEmployee.Image = My.Resources.pencil961
+            btnAddEditEmployee.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditEmployee.Text = "Add New/Edit Employees"
+            btnAddEditEmployee.Enabled = True
 
-            Button6.Image = My.Resources.bin_red_full_icon
-            Button6.ImageAlign = ContentAlignment.TopCenter
-            Button6.Text = "Remove"
-            Button6.Enabled = True
-            Me.EmployeeTableAdapter.Fill(Me.RecSpecDataset.Employee)
-
-        End If
-    End Sub
-
-    Private Sub Update1_Click(sender As Object, e As EventArgs) Handles Update1.Click
-        If Not Update1.Text = "Cancel" Then
-            DGV1.ReadOnly = False
-            DGV1.AllowUserToAddRows = True
-            DGV1.GridColor = Color.Crimson
-            Update1.Text = "Cancel"
-            Update1.Image = My.Resources._return
-            Update1.ImageAlign = ContentAlignment.MiddleCenter
-            Remove1.Enabled = False
-            MsgBox("Add new product, or edit existing products!")
-        Else
-            DGV1.ReadOnly = True
-            DGV1.AllowUserToAddRows = False
-            DGV1.GridColor = Color.Gray
-            Update1.Text = "Add New/Edit Products"
-            Update1.Image = My.Resources.Pencil_icon
-            Update1.ImageAlign = ContentAlignment.MiddleCenter
-            Remove1.Enabled = True
-            Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
+            btnRemoveEmployee.Image = My.Resources.redbin296
+            btnRemoveEmployee.ImageAlign = ContentAlignment.TopCenter
+            btnRemoveEmployee.Text = "Remove"
+            btnRemoveEmployee.Enabled = True
+            Me.EmployeeTableAdapter.Fill(Me.RecspecDataset.Employee)
 
         End If
     End Sub
 
-    Private Sub Remove1_Click(sender As Object, e As EventArgs) Handles Remove1.Click
-        If Not Remove1.Text = "Cancel" Then
-            DGV1.ReadOnly = False
-            DGV1.AllowUserToDeleteRows = True
-            DGV1.GridColor = Color.Crimson
-            Remove1.Text = "Cancel"
-            Remove1.Image = My.Resources._return
-            Remove1.ImageAlign = ContentAlignment.TopCenter
-            Update1.Enabled = False
-            MsgBox("Select products then press delete key! Click on the Save button when done!")
-        Else
-            Remove1.Text = "Remove"
-            DGV1.ReadOnly = True
-            DGV1.AllowUserToDeleteRows = False
-            DGV1.GridColor = Color.Gray
-            Remove1.Image = My.Resources.bin_red_full_icon
-            Remove1.ImageAlign = ContentAlignment.TopCenter
-            Update1.Enabled = True
-            Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
-        End If
-    End Sub
-
-    Private Sub Save1_Click(sender As Object, e As EventArgs) Handles Save1.Click
-        If Update1.Text = "Cancel" Or Remove1.Text = "Cancel" Then
-            ProductBindingSource.EndEdit()
-            Try
-                ProductTableAdapter.Update(RecSpecDataset.Product)
-                MsgBox("Information saved!")
-            Catch ex As DataException
-                MsgBox(ex.StackTrace)
-            End Try
-            DGV1.ReadOnly = True
-            DGV1.AllowUserToAddRows = False
-            DGV1.AllowUserToDeleteRows = False
-            DGV1.GridColor = Color.Gray
-            Update1.Image = My.Resources.Pencil_icon
-            Update1.ImageAlign = ContentAlignment.TopCenter
-            Update1.Text = "Add New/Edit Products"
-            Update1.Enabled = True
-
-            Remove1.Image = My.Resources.bin_red_full_icon
-            Remove1.ImageAlign = ContentAlignment.TopCenter
-            Remove1.Text = "Remove"
-            Remove1.Enabled = True
-            Me.ProductTableAdapter.Fill(Me.RecSpecDataset.Product)
-
-        End If
-    End Sub
-
-    Private Sub Update3_Click(sender As Object, e As EventArgs) Handles Update3.Click
-        If Not Update3.Text = "Cancel" Then
-            DGV3.ReadOnly = False
-            DGV3.AllowUserToAddRows = True
-            DGV3.GridColor = Color.Crimson
-            Update3.Text = "Cancel"
-            Update3.Image = My.Resources._return
-            Update3.ImageAlign = ContentAlignment.MiddleCenter
-            Remove3.Enabled = False
-            MsgBox("Add new supplier, or edit existing suppliers!")
-        Else
-            DGV3.ReadOnly = True
-            DGV3.AllowUserToAddRows = False
-            DGV3.GridColor = Color.Gray
-            Update3.Text = "Add New/Edit Suppliers"
-            Update3.Image = My.Resources.Pencil_icon
-            Update3.ImageAlign = ContentAlignment.MiddleCenter
-            Remove3.Enabled = True
-            Me.SupplierTableAdapter.Fill(Me.RecSpecDataset.Supplier)
-
-        End If
-    End Sub
-
-    Private Sub Remove3_Click(sender As Object, e As EventArgs) Handles Remove3.Click
-        If Not Remove3.Text = "Cancel" Then
-            DGV3.ReadOnly = False
-            DGV3.AllowUserToDeleteRows = True
-            DGV3.GridColor = Color.Crimson
-            Remove3.Text = "Cancel"
-            Remove3.Image = My.Resources._return
-            Remove3.ImageAlign = ContentAlignment.TopCenter
-            Update3.Enabled = False
-            MsgBox("Select suppliers then press delete key! Click on the Save button when done!")
-        Else
-            Remove3.Text = "Remove"
-            DGV3.ReadOnly = True
-            DGV3.AllowUserToDeleteRows = False
-            DGV3.GridColor = Color.Gray
-            Remove3.Image = My.Resources.bin_red_full_icon
-            Remove3.ImageAlign = ContentAlignment.TopCenter
-            Update3.Enabled = True
-            Me.SupplierTableAdapter.Fill(Me.RecSpecDataset.Supplier)
-        End If
-    End Sub
-
-    Private Sub Save3_Click(sender As Object, e As EventArgs) Handles Save3.Click
-        If Update3.Text = "Cancel" Or Remove3.Text = "Cancel" Then
-            SupplierBindingSource.EndEdit()
-            Try
-                SupplierTableAdapter.Update(RecSpecDataset.Supplier)
-                MsgBox("Information saved!")
-            Catch ex As DataException
-                MsgBox(ex.StackTrace)
-            End Try
-            DGV3.ReadOnly = True
-            DGV3.AllowUserToAddRows = False
-            DGV3.AllowUserToDeleteRows = False
-            DGV3.GridColor = Color.Gray
-            Update3.Image = My.Resources.Pencil_icon
-            Update3.ImageAlign = ContentAlignment.TopCenter
-            Update3.Text = "Add New/Edit Suppliers"
-            Update3.Enabled = True
-
-            Remove3.Image = My.Resources.bin_red_full_icon
-            Remove3.ImageAlign = ContentAlignment.TopCenter
-            Remove3.Text = "Remove"
-            Remove3.Enabled = True
-            Me.SupplierTableAdapter.Fill(Me.RecSpecDataset.Supplier)
-        End If
-    End Sub
-
-    Private Sub Update4_Click(sender As Object, e As EventArgs) Handles Update4.Click
-        If Not Update4.Text = "Cancel" Then
-            DGV4.ReadOnly = False
-            DGV4.AllowUserToAddRows = True
-            DGV4.GridColor = Color.Crimson
-            Update4.Text = "Cancel"
-            Update4.Image = My.Resources._return
-            Update4.ImageAlign = ContentAlignment.MiddleCenter
-            Remove4.Enabled = False
-            MsgBox("Add new customer, or edit existing customers!")
-        Else
-            DGV4.ReadOnly = True
-            DGV4.AllowUserToAddRows = False
-            DGV4.GridColor = Color.Gray
-            Update4.Text = "Add New/Edit Customers"
-            Update4.Image = My.Resources.Pencil_icon
-            Update4.ImageAlign = ContentAlignment.MiddleCenter
-            Remove4.Enabled = True
-            Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset.CustomerTable)
-
-        End If
-    End Sub
-
-    Private Sub Remove4_Click(sender As Object, e As EventArgs) Handles Remove4.Click
-        If Not Remove4.Text = "Cancel" Then
-            DGV4.ReadOnly = False
-            DGV4.AllowUserToDeleteRows = True
-            DGV4.GridColor = Color.Crimson
-            Remove4.Text = "Cancel"
-            Remove4.Image = My.Resources._return
-            Remove4.ImageAlign = ContentAlignment.TopCenter
-            Update4.Enabled = False
-            MsgBox("Select customers then press delete key! Click on the Save button when done!")
-        Else
-            Remove4.Text = "Remove"
-            DGV4.ReadOnly = True
-            DGV4.AllowUserToDeleteRows = False
-            DGV4.GridColor = Color.Gray
-            Remove4.Image = My.Resources.bin_red_full_icon
-            Remove4.ImageAlign = ContentAlignment.TopCenter
-            Update4.Enabled = True
-            Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset.CustomerTable)
-        End If
-    End Sub
-
-    Private Sub Save4_Click(sender As Object, e As EventArgs) Handles Save4.Click
-        If Update4.Text = "Cancel" Or Remove4.Text = "Cancel" Then
-            CustomerTableBindingSource.EndEdit()
-            Try
-                CustomerTableTableAdapter.Update(RecSpecDataset.CustomerTable)
-                MsgBox("Information saved!")
-            Catch ex As DataException
-                MsgBox(ex.StackTrace)
-            End Try
-            DGV4.ReadOnly = True
-            DGV4.AllowUserToAddRows = False
-            DGV4.AllowUserToDeleteRows = False
-            DGV4.GridColor = Color.Gray
-            Update4.Image = My.Resources.Pencil_icon
-            Update4.ImageAlign = ContentAlignment.TopCenter
-            Update4.Text = "Add New/Edit Customers"
-            Update4.Enabled = True
-
-            Remove4.Image = My.Resources.bin_red_full_icon
-            Remove4.ImageAlign = ContentAlignment.TopCenter
-            Remove4.Text = "Remove"
-            Remove4.Enabled = True
-            Me.CustomerTableTableAdapter.Fill(Me.RecSpecDataset.CustomerTable)
-        End If
-    End Sub
-
-    Private Sub Update5_Click(sender As Object, e As EventArgs) Handles Update5.Click
-        If Not Update5.Text = "Cancel" Then
-            DGV5.ReadOnly = False
-            DGV5.AllowUserToAddRows = True
-            DGV5.GridColor = Color.Crimson
-            Update5.Text = "Cancel"
-            Update5.Image = My.Resources._return
-            Update5.ImageAlign = ContentAlignment.MiddleCenter
-            Remove5.Enabled = False
-            MsgBox("Add new customer payment, or edit existing customer payments!")
-        Else
-            DGV5.ReadOnly = True
-            DGV5.AllowUserToAddRows = False
-            DGV5.GridColor = Color.Gray
-            Update5.Text = "Add New/Edit Customer Payments"
-            Update5.Image = My.Resources.Pencil_icon
-            Update5.ImageAlign = ContentAlignment.MiddleCenter
-            Remove5.Enabled = True
-            Me.Customer_PaymentTableAdapter.Fill(Me.RecSpecDataset.Customer_Payment)
-
-        End If
-    End Sub
-
-    Private Sub Remove5_Click(sender As Object, e As EventArgs) Handles Remove5.Click
-        If Not Remove5.Text = "Cancel" Then
-            DGV5.ReadOnly = False
-            DGV5.AllowUserToDeleteRows = True
-            DGV5.GridColor = Color.Crimson
-            Remove5.Text = "Cancel"
-            Remove5.Image = My.Resources._return
-            Remove5.ImageAlign = ContentAlignment.TopCenter
-            Update5.Enabled = False
-            MsgBox("Select customer payments then press delete key! Click on the Save button when done!")
-        Else
-            Remove5.Text = "Remove"
-            DGV5.ReadOnly = True
-            DGV5.AllowUserToDeleteRows = False
-            DGV5.GridColor = Color.Gray
-            Remove5.Image = My.Resources.bin_red_full_icon
-            Remove5.ImageAlign = ContentAlignment.TopCenter
-            Update5.Enabled = True
-            Me.Customer_PaymentTableAdapter.Fill(Me.RecSpecDataset.Customer_Payment)
-        End If
-    End Sub
-
-    Private Sub Save5_Click(sender As Object, e As EventArgs) Handles Save5.Click
-        If Update5.Text = "Cancel" Or Remove5.Text = "Cancel" Then
-            CustomerPaymentBindingSource.EndEdit()
-            Try
-                Customer_PaymentTableAdapter.Update(RecSpecDataset.Customer_Payment)
-                MsgBox("Information saved!")
-            Catch ex As DataException
-                MsgBox(ex.StackTrace)
-            End Try
-            DGV5.ReadOnly = True
-            DGV5.AllowUserToAddRows = False
-            DGV5.AllowUserToDeleteRows = False
-            DGV5.GridColor = Color.Gray
-            Update5.Image = My.Resources.Pencil_icon
-            Update5.ImageAlign = ContentAlignment.TopCenter
-            Update5.Text = "Add New/Edit Customer Payments"
-            Update5.Enabled = True
-
-            Remove5.Image = My.Resources.bin_red_full_icon
-            Remove5.ImageAlign = ContentAlignment.TopCenter
-            Remove5.Text = "Remove"
-            Remove5.Enabled = True
-            Me.Customer_PaymentTableAdapter.Fill(Me.RecSpecDataset.Customer_Payment)
-        End If
-    End Sub
-
-    Private Sub S2_Click(sender As Object, e As EventArgs) Handles S2.Click
+    Private Sub btnSearchEmployee_Click(sender As Object, e As EventArgs) Handles btnSearchEmployee.Click
         Dim query As String
 
-        Select Case CB2.Text
-            Case "by Product Code"
-                query = "Product_Code LIKE '%" + QB2.Text + "%'"
-            Case "by Product Name"
-                query = "Prod_Name LIKE '%" + QB2.Text + "%'"
-            Case "by Stock level"
-                query = "Prod_Stock_Level LIKE '" + QB2.Text + "%'"
+        Select Case cbCriteriaEmployee.Text
+            Case "By Employee ID"
+                query = "CONVERT(Employee_ID, System.String) LIKE '%" + tbQueryEmployee.Text + "%'"
+            Case "By First Name"
+                query = "Emp_FName LIKE '%" + tbQueryEmployee.Text + "%'"
+            Case "By Surname"
+                query = "Emp_LName LIKE '%" + tbQueryEmployee.Text + "%'"
+            Case Else
+                query = ""
+        End Select
+
+        If query.Length = 0 Then
+            EmployeeBindingSource.RemoveFilter()
+        Else
+            EmployeeBindingSource.Filter = query
+        End If
+    End Sub
+
+
+
+#End Region
+
+
+#Region "Product tab"
+
+    Private Sub Product_init()
+        SetAllFormat(ProductTab, flpProducts, tlpProduct, dgvProduct, "Prod_")
+
+    End Sub
+
+
+    Private Sub btnAddEditProduct_Click(sender As Object, e As EventArgs) Handles btnAddEditProduct.Click
+        If Not btnAddEditProduct.Text = "Cancel" Then
+            dgvProduct.ReadOnly = False
+            dgvProduct.AllowUserToAddRows = True
+            dgvProduct.GridColor = Color.Crimson
+            btnAddEditProduct.Text = "Cancel"
+            btnAddEditProduct.Image = My.Resources._return
+            btnAddEditProduct.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveProduct.Enabled = False
+            MsgBox("Add new product, or edit existing products!")
+        Else
+            dgvProduct.ReadOnly = True
+            dgvProduct.AllowUserToAddRows = False
+            dgvProduct.GridColor = Color.Gray
+            btnAddEditProduct.Text = "Add New/Edit Products"
+            btnAddEditProduct.Image = My.Resources.pencil961
+            btnAddEditProduct.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveProduct.Enabled = True
+            Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
+
+        End If
+    End Sub
+
+    Private Sub btnRemoveProduct_Click(sender As Object, e As EventArgs) Handles btnRemoveProduct.Click
+        If Not btnRemoveProduct.Text = "Cancel" Then
+            dgvProduct.ReadOnly = False
+            dgvProduct.AllowUserToDeleteRows = True
+            dgvProduct.GridColor = Color.Crimson
+            btnRemoveProduct.Text = "Cancel"
+            btnRemoveProduct.Image = My.Resources._return
+            btnRemoveProduct.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditProduct.Enabled = False
+            MsgBox("Select products then press delete key! Click on the Save button when done!")
+        Else
+            btnRemoveProduct.Text = "Remove"
+            dgvProduct.ReadOnly = True
+            dgvProduct.AllowUserToDeleteRows = False
+            dgvProduct.GridColor = Color.Gray
+            btnRemoveProduct.Image = My.Resources.redbin296
+            btnRemoveProduct.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditProduct.Enabled = True
+            Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
+        End If
+    End Sub
+
+
+    Private Sub btnSaveProduct_Click(sender As Object, e As EventArgs) Handles btnSaveProduct.Click
+        If btnAddEditPO.Text = "Cancel" Or btnRemoveProduct.Text = "Cancel" Then
+            ProductBindingSource.EndEdit()
+            Try
+                ProductTableAdapter.Update(RecspecDataset.Product)
+                MsgBox("Information saved!")
+            Catch ex As DataException
+                MsgBox(ex.StackTrace)
+            End Try
+            dgvProduct.ReadOnly = True
+            dgvProduct.AllowUserToAddRows = False
+            dgvProduct.AllowUserToDeleteRows = False
+            dgvProduct.GridColor = Color.Gray
+            btnAddEditProduct.Image = My.Resources.pencil961
+            btnAddEditProduct.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditProduct.Text = "Add New/Edit Products"
+            btnAddEditProduct.Enabled = True
+
+            btnRemoveProduct.Image = My.Resources.redbin296
+            btnRemoveProduct.ImageAlign = ContentAlignment.TopCenter
+            btnRemoveProduct.Text = "Remove"
+            btnRemoveProduct.Enabled = True
+            Me.ProductTableAdapter.Fill(Me.RecspecDataset.Product)
+
+        End If
+    End Sub
+
+    Private Sub btnSearchProduct_Click(sender As Object, e As EventArgs) Handles btnSearchProduct.Click
+        Dim query As String
+
+        Select Case cbCriteriaProduct.Text
+            Case "By Product Code"
+                query = "Product_Code LIKE '%" + tbQueryProduct.Text + "%'"
+            Case "By Product Name"
+                query = "Prod_Name LIKE '%" + tbQueryProduct.Text + "%'"
+            Case "By Stock Level"
+                query = "Prod_Stock_Level LIKE '" + tbQueryProduct.Text + "%'"
+            Case "By Categories"
+                query = "Prod_Categories LIKE '" + tbQueryProduct.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -429,209 +245,201 @@
         End If
     End Sub
 
-    Private Sub QB2_Enter(sender As Object, e As EventArgs) Handles QB2.Enter
-        QB2.Text = ""
+
+
+
+#End Region
+
+#Region "Sales Order tab"
+
+    Private Sub SalesOrder_Init()
+        SetFormat4SO(Nothing, tlpSO, dgvSO, dgvSOBottom, "Cust_", "Prod_")
+        dgvSO.Columns(3).HeaderText = "Customer"
+        dgvSO.Columns(4).HeaderText = "Employee"
+
     End Sub
 
-    Private Sub S1_Click(sender As Object, e As EventArgs) Handles S1.Click
-        Dim query As String
+    Private Sub SetFormat4SO(ByRef pan As FlowLayoutPanel, searchBar As TableLayoutPanel, ByRef dgvTop As DataGridView, ByRef dgvBottom As DataGridView, prefixTop As String, prefixBottom As String)
+        dgvTop.Width = Me.ClientSize.Width * 0.9
+        dgvTop.Height = Me.ClientSize.Height * 0.35
+        dgvTop.Left = Me.ClientSize.Width * 0.05
+        dgvTop.Top = Me.ClientSize.Height * 0.1
+        lblSO.Location = New Point(dgvSO.Left, dgvSO.Top - lblSO.Height - 2)
 
-        Select Case CB1.Text
-            Case "by Employee ID"
-                query = "CONVERT(Employee_ID, System.String) LIKE '%" + QB1.Text + "%'"
-            Case "by Employee Name"
-                query = "Emp_FName LIKE '%" + QB1.Text + "%'"
-            Case "by Employee Type"
-                query = "Emp_Type LIKE '%" + QB1.Text + "%'"
+        dgvBottom.Width = Me.ClientSize.Width * 0.9
+        dgvBottom.Height = Me.ClientSize.Height * 0.4
+        dgvBottom.Left = Me.ClientSize.Width * 0.05
+        dgvBottom.Top = Me.ClientSize.Height * 0.5
+        dgvSOBottom.AutoGenerateColumns = True
+        dgvSOBottom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvSOBottom.ReadOnly = True
+        lblSODetails.Location = New Point(dgvSOBottom.Left, dgvSOBottom.Top - lblSODetails.Height - 2)
+
+        'format column headers for display
+        For Each i In dgvTop.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace(prefixTop, "").Replace("_", " ")
+        Next
+        For Each i In dgvBottom.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace(prefixBottom, "").Replace("_", " ")
+        Next
+
+        searchBar.Top = Me.ClientSize.Height * 0.01
+        searchBar.Left = (Me.ClientSize.Width - searchBar.Width) / 2
+
+
+        tbSOTotal.Width = (dgvSOBottom.Width / 7) - dgvSOBottom.RowHeadersWidth
+        tbSOTotal.Height = 25
+        flpSOTotal.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        flpSOTotal.AutoSize = True
+        flpSOTotal.Top = dgvSOBottom.Bottom + 5
+        flpSOTotal.Left = dgvSOBottom.Left + dgvSOBottom.Width - flpSOTotal.Width
+
+    End Sub
+
+
+
+
+
+    Private Sub dgvSO_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSO.CellEnter
+
+        'Fill sales order details dgv 
+        Dim soID = dgvSO.Rows(e.RowIndex).Cells("SalesOrderIDDataGridViewTextBoxColumn").Value.ToString()
+        ProductTableAdapter.Fill(RecspecDataset.Product)
+        Sale_ItemTableAdapter.Fill(RecspecDataset.Sale_Item)
+
+        Dim inter = From i In RecspecDataset.Sale_Item.AsEnumerable
+                    Where i.Sale_Order_ID = soID
+                    Select i.Sales_Item_Line_No, i.Sale_Order_ID, i.ProductRow.Product_Code, i.ProductRow.Prod_Name,
+                i.Sale_Item_Qty, i.ProductRow.Prod_Categories, i.Sale_Item_Price
+
+        dgvSOBottom.DataSource = inter.ToList
+
+
+        tbSOTotal.Text = dgvSO.Rows(e.RowIndex).Cells("SaleTotalDataGridViewTextBoxColumn").Value.ToString()
+    End Sub
+
+
+
+    Private Sub btnSearchSO_Click(sender As Object, e As EventArgs) Handles btnSearchSO.Click
+        Dim query As String = ""
+
+        Select Case cbCriteriaSO.Text
+            Case "By Sales Order ID"
+                query = "Sales_Order_ID LIKE '" + tbQuerySO.Text + "%'"
+            Case "By Sale Order Date"
+                query = "Product_Code LIKE '" + tbQuerySO.Text + "%'"
+            Case "By Customer"
+                query = "Cust_FName LIKE '" + tbQuerySO.Text + "%'"
+            Case "By Employee"
+                query = "Emp_FName LIKE '" + tbQuerySO.Text + "%'"
             Case Else
                 query = ""
         End Select
 
-        If query.Length = 0 Then
-            EmployeeBindingSource.RemoveFilter()
-        Else
-            EmployeeBindingSource.Filter = query
-        End If
-    End Sub
-    Private Sub QB1_Enter(sender As Object, e As EventArgs) Handles QB1.Enter
-        QB1.Text = ""
-    End Sub
-
-    Private Sub S3_Click(sender As Object, e As EventArgs) Handles S3.Click
-        Dim query As String
-
-        Select Case CB3.Text
-            Case "by Sales Order ID"
-                query = "Sales_Order_ID LIKE '%" + QB3.Text + "%'"
-            Case "by Product Code"
-                query = "Product_Code LIKE '%" + QB3.Text + "%'"
-            Case "by Customer ID"
-                query = "Convert(Customer_ID, System.String) LIKE '%" + QB3.Text + "%'"
-            Case Else
-                query = ""
-        End Select
-
-        If query.Length = 0 Then
+        If String.IsNullOrWhiteSpace(query) Then
             SalesOrderBindingSource.RemoveFilter()
         Else
             SalesOrderBindingSource.Filter = query
+
         End If
     End Sub
-    Private Sub QB3_Enter(sender As Object, e As EventArgs) Handles QB3.Enter
-        QB3.Text = ""
-    End Sub
-    Private Sub S5_Click(sender As Object, e As EventArgs) Handles S5.Click
-        Dim query As String
 
-        Select Case CB5.Text
-            Case "by Supplier ID"
-                query = "Convert(Suppier_ID, System.String) LIKE '%" + QB5.Text + "%'"
-            Case "by Supplier Name"
-                query = "Supp_Name LIKE '%" + QB5.Text + "%'"
-            Case "by Supplier City"
-                query = "Supp_City LIKE '%" + QB5.Text + "%'"
-            Case Else
-                query = ""
-        End Select
-
-        If query.Length = 0 Then
-            SupplierBindingSource.RemoveFilter()
-        Else
-            SupplierBindingSource.Filter = query
-        End If
-    End Sub
-    Private Sub QB5_Enter(sender As Object, e As EventArgs) Handles QB5.Enter
-        QB5.Text = ""
-    End Sub
-    Private Sub S6_Click(sender As Object, e As EventArgs) Handles S6.Click
-        Dim query As String
-
-        Select Case CB6.Text
-            Case "by Customer ID"
-                query = "Convert(Customer_ID, System.String) LIKE '%" + QB6.Text + "%'"
-            Case "by Customer Name"
-                query = "Cust_FName LIKE '%" + QB6.Text + "%'"
-            Case "by Customer City"
-                query = "Cust_City LIKE '%" + QB6.Text + "%'"
-            Case Else
-                query = ""
-        End Select
-
-        If query.Length = 0 Then
-            CustomerTableBindingSource.RemoveFilter()
-        Else
-            CustomerTableBindingSource.Filter = query
-        End If
-    End Sub
-    Private Sub QB6_Enter(sender As Object, e As EventArgs) Handles QB6.Enter
-        QB6.Text = ""
-    End Sub
-    Private Sub S7_Click(sender As Object, e As EventArgs) Handles S7.Click
-        Dim query As String
-
-        Select Case CB7.Text
-            Case "by Customer Payment ID"
-                query = "Cust_Payment_ID LIKE '%" + QB7.Text + "%'"
-            Case "by Customer Payment Type"
-                query = "Cust_Payment_Type LIKE '%" + QB7.Text + "%'"
-            Case "by Customer ID"
-                query = "Convert(Customer_ID, System.String) LIKE '%" + QB7.Text + "%'"
-            Case Else
-                query = ""
-        End Select
-
-        If query.Length = 0 Then
-            CustomerPaymentBindingSource.RemoveFilter()
-        Else
-            CustomerPaymentBindingSource.Filter = query
-        End If
-    End Sub
-    Private Sub QB7_Enter(sender As Object, e As EventArgs) Handles QB7.Enter
-        QB7.Text = ""
-    End Sub
+#End Region
 
 
-    Private Sub SetDGVFormat(ByRef pan As Panel, ByRef dgvCol As DataGridView, prefix As String)
+#Region "Purchase Order Tab"
+    Private Sub PurchaseOrder_Init()
 
-        For Each i In dgvCol.Columns
-            i.HeaderText = i.HeaderText.ToString.Replace(prefix, "").Replace("_", " ")
+        'Size and position the buttons and search bar
+        flpPO.SetBounds((Me.ClientSize.Width - flpPO.Width) / 2, Me.ClientSize.Height * 0.01, 588, 146)
+        tlpPO.SetBounds((Me.ClientSize.Width - tlpPO.Width) / 2, Me.ClientSize.Height * 0.2, 862, 60)
+
+        'size and position top dgv
+        dgvPO.Width = Me.ClientSize.Width * 0.9
+        dgvPO.Height = Me.ClientSize.Height * 0.28
+        dgvPO.Left = Me.ClientSize.Width * 0.05
+        dgvPO.Top = Me.ClientSize.Height * 0.28
+        lblPO.Location = New Point(dgvPO.Left, dgvPO.Top - lblPO.Height - 2)
+        'size and position bottom dgv
+        dgvPOD.Width = Me.ClientSize.Width * 0.9
+        dgvPOD.Height = Me.ClientSize.Height * 0.28
+        dgvPOD.Left = Me.ClientSize.Width * 0.05
+        dgvPOD.Top = Me.ClientSize.Height * 0.6
+        dgvPOD.AutoGenerateColumns = True
+        dgvPOD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvPOD.ReadOnly = True
+        lblPoDetails.Location = New Point(dgvPOD.Left, dgvPOD.Top - lblPO.Height - 2)
+        '
+        For Each i In dgvPO.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace("PO_", "").Replace("_", " ")
         Next
-        dgvCol.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dgvCol.ColumnHeadersVisible = True
-        dgvCol.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        dgvCol.ReadOnly = True
-        dgvCol.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvCol.AllowUserToAddRows = False
-        dgvCol.AllowUserToDeleteRows = False
-        dgvCol.AllowUserToOrderColumns = False
-        dgvCol.AllowUserToResizeColumns = True
-        dgvCol.AllowUserToResizeRows = False
+        For Each i In dgvPOD.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace("_", " ")
+        Next
 
-        dgvCol.Left = (dgvCol.Parent.Width - dgvCol.Width) / 2
+        tbPOTotal.Width = (dgvPOD.Width / 7) - dgvPOD.RowHeadersWidth
+        tbPOTotal.Height = 25
+        flpPOTotal.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        flpPOTotal.AutoSize = True
+        flpPOTotal.Top = dgvPOD.Bottom + 5
+        flpPOTotal.Left = dgvPOD.Left + dgvPOD.Width - flpPOTotal.Width
 
-        If pan IsNot Nothing Then
-            pan.Size = New Size(650, 180)
-            pan.Left = (pan.Parent.Width - pan.Width) / 2
+
+
+
+
+    End Sub
+
+
+    Private Sub dgvPO_EditingControlShowing(ByVal sender As System.Object, ByVal e As DataGridViewEditingControlShowingEventArgs)
+
+        If dgvPO.CurrentCell.OwningColumn.HeaderText = "Customer" Then
+
+            Dim query = (From c In RecspecDataset.CustomerTable.AsEnumerable()
+                         Select c.Field(Of String)("Cust_FName")).ToArray()
+
+            Dim autotext As TextBox = TryCast(e.Control, TextBox)
+            If autotext IsNot Nothing Then
+                autotext.AutoCompleteMode = AutoCompleteMode.Suggest
+                autotext.AutoCompleteSource = AutoCompleteSource.CustomSource
+                Dim atCols As New AutoCompleteStringCollection()
+                atCols.AddRange(query)
+                autotext.AutoCompleteCustomSource = atCols
+            End If
         End If
-
-
-
     End Sub
 
 
-    Private Sub Employee_Enter(sender As Object, e As EventArgs) Handles Employee.Enter
+    Private Sub dgvPO_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPO.CellEnter
+        Dim poID = dgvPO.Rows(e.RowIndex).Cells("PONoDataGridViewTextBoxColumn").Value.ToString()
+        Purchase_ItemTableAdapter.Fill(RecspecDataset.Purchase_Item)
+        ProductTableAdapter.Fill(RecspecDataset.Product)
 
-        SetDGVFormat(Panel1, EmployeeDGV, "Emp_")
-        EmployeeDGV.Columns(1).HeaderText = "First Name"
-        EmployeeDGV.Columns(2).HeaderText = "Surname"
+        Dim res = From i In RecspecDataset.Purchase_Item.AsEnumerable
+                  Where i.PO_No = poID
+                  Select i.Purchase_Item_Line_No, i.PO_No, i.ProductRow.Product_Code, i.ProductRow.Prod_Name,
+                  i.Purchase_Item_Qty, i.ProductRow.Prod_Categories, i.Purchase_Item_Price
 
-    End Sub
+        dgvPOD.DataSource = res.ToList
 
-    Private Sub Products_Enter(sender As Object, e As EventArgs) Handles Products.Enter
-        SetDGVFormat(Panel3, DGV1, "Prod_")
-
-    End Sub
-
-    Private Sub SalesOrder_Enter(sender As Object, e As EventArgs) Handles SalesOrder.Enter
-        SetDGVFormat(Nothing, DataGridView9, "Cust_")
-        DataGridView9.Columns(3).HeaderText = "Customer"
-        DataGridView9.Columns(4).HeaderText = "Employee"
+        tbPOTotal.Text = dgvPO.Rows(e.RowIndex).Cells("POTotalDataGridViewTextBoxColumn").Value.ToString()
 
     End Sub
 
-    Private Sub Supplier_Enter(sender As Object, e As EventArgs) Handles Supplier.Enter
-        SetDGVFormat(Panel2, DGV3, "Supp_")
-    End Sub
-
-    Private Sub PurchaseOrder_Enter(sender As Object, e As EventArgs) Handles PurchaseOrder.Enter
-        SetDGVFormat(Panel6, DGV2_1, "ZZZ")
-        SetDGVFormat(Nothing, DGV2_2, "ZZZ")
-    End Sub
-
-    Private Sub Customer_Enter(sender As Object, e As EventArgs) Handles Customer.Enter
-        SetDGVFormat(Panel4, DGV4, "Cust_")
-        DGV4.Columns(1).HeaderText = "First Name"
-        DGV4.Columns(2).HeaderText = "Surname"
-    End Sub
-
-    Private Sub Payment_Enter(sender As Object, e As EventArgs) Handles Payment.Enter
-        SetDGVFormat(Panel5, DGV5, "Cust_")
-    End Sub
-
-    Private Sub Customer_Click(sender As Object, e As EventArgs) Handles Customer.Click
-
-    End Sub
-
-    Private Sub S4_Click(sender As Object, e As EventArgs) Handles S4.Click
+    Private Sub btnSearchPO_Click(sender As Object, e As EventArgs) Handles btnSearchPO.Click
         Dim query As String
 
-        Select Case CB4.Text
-            Case "by PO No"
-                query = "PO_No LIKE '%" + QB4.Text + "%'"
-            Case "by PO Date"
-                query = "Convert(PO_Date, System.String) LIKE '" + QB4.Text + "'"
-            Case "by PO Received Flag"
-                query = "PO_Received_Flag ='" + QB7.Text + "'"
+        Select Case cbCriteriaPO.Text
+            Case "By PO No"
+                query = "PO_No LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By PO Date"
+                query = "PO_Date LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By PO Received Flag"
+                query = "PO_Received_Flag LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By Supplier"
+                query = "Supp_Name LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By Employee"
+                query = "Emp_FName LIKE '%" + tbQuerySupplier.Text + "%'"
             Case Else
                 query = ""
         End Select
@@ -642,4 +450,434 @@
             PurchaseOrderBindingSource.Filter = query
         End If
     End Sub
+
+
+
+
+#End Region
+
+#Region "Supplier tab"
+
+    Private Sub Supplier_Init()
+        SetAllFormat(SupplierTab, flpSupplier, tlpSupplier, dgvSupplier, "Supp_")
+    End Sub
+
+
+
+    Private Sub btnSearchSupplier_Click(sender As Object, e As EventArgs) Handles btnSearchSupplier.Click
+        Dim query As String
+
+        Select Case cbCriteriaSupplier.Text
+            Case "By Supplier ID"
+                query = "Convert(Supplier_ID, System.String) LIKE '" + tbQuerySupplier.Text + "%'"
+            Case "By Supplier Name"
+                query = "Supp_Name LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case "By Contact Person"
+                query = "Supp_Contact_Person LIKE '%" + tbQuerySupplier.Text + "%'"
+            Case Else
+                query = ""
+        End Select
+
+        If query.Length = 0 Then
+            SupplierBindingSource.RemoveFilter()
+        Else
+            SupplierBindingSource.Filter = query
+        End If
+    End Sub
+
+
+    Private Sub btnAddEditSupplier_Click(sender As Object, e As EventArgs) Handles btnAddEditSupplier.Click
+        If Not btnAddEditSupplier.Text = "Cancel" Then
+            dgvSupplier.ReadOnly = False
+            dgvSupplier.AllowUserToAddRows = True
+            dgvSupplier.GridColor = Color.Crimson
+            btnAddEditSupplier.Text = "Cancel"
+            btnAddEditSupplier.Image = My.Resources._return
+            btnAddEditSupplier.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveSupplier.Enabled = False
+            MsgBox("Add new supplier, or edit existing suppliers!")
+        Else
+            dgvSupplier.ReadOnly = True
+            dgvSupplier.AllowUserToAddRows = False
+            dgvSupplier.GridColor = Color.Gray
+            btnAddEditSupplier.Text = "Add New/Edit Suppliers"
+            btnAddEditSupplier.Image = My.Resources.pencil961
+            btnAddEditSupplier.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveSupplier.Enabled = True
+            Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
+
+        End If
+    End Sub
+
+    Private Sub btnRemoveSupplier_Click(sender As Object, e As EventArgs) Handles btnRemoveSupplier.Click
+        If Not btnRemoveSupplier.Text = "Cancel" Then
+            dgvSupplier.ReadOnly = False
+            dgvSupplier.AllowUserToDeleteRows = True
+            dgvSupplier.GridColor = Color.Crimson
+            btnRemoveSupplier.Text = "Cancel"
+            btnRemoveSupplier.Image = My.Resources._return
+            btnRemoveSupplier.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditSupplier.Enabled = False
+            MsgBox("Select suppliers then press delete key! Click on the Save button when done!")
+        Else
+            btnRemoveSupplier.Text = "Remove"
+            dgvSupplier.ReadOnly = True
+            dgvSupplier.AllowUserToDeleteRows = False
+            dgvSupplier.GridColor = Color.Gray
+            btnRemoveSupplier.Image = My.Resources.redbin296
+            btnRemoveSupplier.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditSupplier.Enabled = True
+            Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
+        End If
+    End Sub
+
+    Private Sub btnSaveSupplier_Click(sender As Object, e As EventArgs) Handles btnSaveSupplier.Click
+        If btnAddEditSupplier.Text = "Cancel" Or btnRemoveSupplier.Text = "Cancel" Then
+            SupplierBindingSource.EndEdit()
+            Try
+                SupplierTableAdapter.Update(RecspecDataset.Supplier)
+                MsgBox("Information saved!")
+            Catch ex As DataException
+                MsgBox(ex.StackTrace)
+            End Try
+            dgvSupplier.ReadOnly = True
+            dgvSupplier.AllowUserToAddRows = False
+            dgvSupplier.AllowUserToDeleteRows = False
+            dgvSupplier.GridColor = Color.Gray
+            btnAddEditSupplier.Image = My.Resources.pencil961
+            btnAddEditSupplier.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditSupplier.Text = "Add New/Edit Suppliers"
+            btnAddEditSupplier.Enabled = True
+
+            btnRemoveSupplier.Image = My.Resources.redbin296
+            btnRemoveSupplier.ImageAlign = ContentAlignment.TopCenter
+            btnRemoveSupplier.Text = "Remove"
+            btnRemoveSupplier.Enabled = True
+            Me.SupplierTableAdapter.Fill(Me.RecspecDataset.Supplier)
+        End If
+    End Sub
+
+#End Region
+
+
+#Region "Customer tab"
+    Private Sub Customer_Init()
+        SetAllFormat(CustomerTab, flpCustomer, tlpCustomer, dgvCustomer, "Cust_")
+        dgvCustomer.Columns(1).HeaderText = "First Name"
+        dgvCustomer.Columns(2).HeaderText = "Surname"
+    End Sub
+
+
+    Private Sub btnSearchCustomer_Click(sender As Object, e As EventArgs) Handles btnSearchCustomer.Click
+        Dim query As String
+
+        Select Case cbCriteriaCustomer.Text
+            Case "by Customer ID"
+                query = "Convert(Customer_ID, System.String) LIKE '%" + tbQueryCustomer.Text + "%'"
+            Case "by Customer Name"
+                query = "Cust_FName LIKE '%" + tbQueryCustomer.Text + "%'"
+            Case "by Customer City"
+                query = "Cust_City LIKE '%" + tbQueryCustomer.Text + "%'"
+            Case Else
+                query = ""
+        End Select
+
+        If query.Length = 0 Then
+            CustomerTableBindingSource.RemoveFilter()
+        Else
+            CustomerTableBindingSource.Filter = query
+        End If
+    End Sub
+
+
+
+    Private Sub btnAddEditCustomer_Click(sender As Object, e As EventArgs) Handles btnAddEditCustomer.Click
+        If Not btnAddEditCustomer.Text = "Cancel" Then
+            dgvCustomer.ReadOnly = False
+            dgvCustomer.AllowUserToAddRows = True
+            dgvCustomer.GridColor = Color.Crimson
+            btnAddEditCustomer.Text = "Cancel"
+            btnAddEditCustomer.Image = My.Resources._return
+            btnAddEditCustomer.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveCustomer.Enabled = False
+            MsgBox("Add new customer, or edit existing customers!")
+        Else
+            dgvCustomer.ReadOnly = True
+            dgvCustomer.AllowUserToAddRows = False
+            dgvCustomer.GridColor = Color.Gray
+            btnAddEditCustomer.Text = "Add New/Edit Customers"
+            btnAddEditCustomer.Image = My.Resources.pencil961
+            btnAddEditCustomer.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemoveCustomer.Enabled = True
+            Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
+
+        End If
+    End Sub
+
+    Private Sub btnRemoveCustomer_Click(sender As Object, e As EventArgs) Handles btnRemoveCustomer.Click
+        If Not btnRemoveCustomer.Text = "Cancel" Then
+            dgvCustomer.ReadOnly = False
+            dgvCustomer.AllowUserToDeleteRows = True
+            dgvCustomer.GridColor = Color.Crimson
+            btnRemoveCustomer.Text = "Cancel"
+            btnRemoveCustomer.Image = My.Resources._return
+            btnRemoveCustomer.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditCustomer.Enabled = False
+            MsgBox("Select customers then press delete key! Click on the Save button when done!")
+        Else
+            btnRemoveCustomer.Text = "Remove"
+            dgvCustomer.ReadOnly = True
+            dgvCustomer.AllowUserToDeleteRows = False
+            dgvCustomer.GridColor = Color.Gray
+            btnRemoveCustomer.Image = My.Resources.redbin296
+            btnRemoveCustomer.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditCustomer.Enabled = True
+            Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
+        End If
+    End Sub
+
+    Private Sub btnSaveCustomer_Click(sender As Object, e As EventArgs) Handles btnSaveCustomer.Click
+        If btnAddEditCustomer.Text = "Cancel" Or btnRemoveCustomer.Text = "Cancel" Then
+            CustomerTableBindingSource.EndEdit()
+            Try
+                CustomerTableTableAdapter.Update(RecspecDataset.CustomerTable)
+                MsgBox("Information saved!")
+            Catch ex As DataException
+                MsgBox(ex.StackTrace)
+            End Try
+            dgvCustomer.ReadOnly = True
+            dgvCustomer.AllowUserToAddRows = False
+            dgvCustomer.AllowUserToDeleteRows = False
+            dgvCustomer.GridColor = Color.Gray
+            btnAddEditCustomer.Image = My.Resources.pencil961
+            btnAddEditCustomer.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditCustomer.Text = "Add New/Edit Customers"
+            btnAddEditCustomer.Enabled = True
+
+            btnRemoveCustomer.Image = My.Resources.redbin296
+            btnRemoveCustomer.ImageAlign = ContentAlignment.TopCenter
+            btnRemoveCustomer.Text = "Remove"
+            btnRemoveCustomer.Enabled = True
+            Me.CustomerTableTableAdapter.Fill(Me.RecspecDataset.CustomerTable)
+        End If
+    End Sub
+
+#End Region
+
+
+#Region "Payments tab"
+    Private Sub Payment_Init()
+        SetAllFormat(PaymentTab, flpPayment, tlpPayment, dgvPayment, "Cust_")
+
+    End Sub
+
+    Private Sub btnSearchPayment_Click(sender As Object, e As EventArgs) Handles btnSearchPayment.Click
+        Dim query As String
+
+        Select Case cbCriteriaPayment.Text
+            Case "By Payment ID"
+                query = "Cust_Payment_ID LIKE '" + tbQueryPayment.Text + "%'"
+            Case "By Payment Type"
+                query = "Cust_Payment_Type LIKE '%" + tbQueryPayment.Text + "%'"
+            Case "By Customer"
+                query = "Cust_FName LIKE '" + tbQueryPayment.Text + "%'"
+            Case "By Employee"
+                query = "Emp_FName LIKE '" + tbQueryPayment.Text + "%'"
+            Case Else
+                query = ""
+        End Select
+
+        If query.Length = 0 Then
+            CustomerPaymentBindingSource.RemoveFilter()
+        Else
+            CustomerPaymentBindingSource.Filter = query
+        End If
+    End Sub
+
+
+
+    Private Sub btnAddEditPayment_Click(sender As Object, e As EventArgs) Handles btnAddEditPayment.Click
+        If Not btnAddEditPayment.Text = "Cancel" Then
+            dgvPayment.ReadOnly = False
+            dgvPayment.AllowUserToAddRows = True
+            dgvPayment.GridColor = Color.Crimson
+            btnAddEditPayment.Text = "Cancel"
+            btnAddEditPayment.Image = My.Resources._return
+            btnAddEditPayment.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemovePayment.Enabled = False
+            MsgBox("Add new customer payment, or edit existing customer payments!")
+        Else
+            dgvPayment.ReadOnly = True
+            dgvPayment.AllowUserToAddRows = False
+            dgvPayment.GridColor = Color.Gray
+            btnAddEditPayment.Text = "Add New/Edit Customer Payments"
+            btnAddEditPayment.Image = My.Resources.pencil961
+            btnAddEditPayment.ImageAlign = ContentAlignment.MiddleCenter
+            btnRemovePayment.Enabled = True
+            Me.Customer_PaymentTableAdapter.Fill(Me.RecspecDataset.Customer_Payment)
+
+        End If
+    End Sub
+
+    Private Sub btnRemovePayment_Click(sender As Object, e As EventArgs) Handles btnRemovePayment.Click
+        If Not btnRemovePayment.Text = "Cancel" Then
+            dgvPayment.ReadOnly = False
+            dgvPayment.AllowUserToDeleteRows = True
+            dgvPayment.GridColor = Color.Crimson
+            btnRemovePayment.Text = "Cancel"
+            btnRemovePayment.Image = My.Resources._return
+            btnRemovePayment.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditPayment.Enabled = False
+            MsgBox("Select customer payments then press delete key! Click on the Save button when done!")
+        Else
+            btnRemovePayment.Text = "Remove"
+            dgvPayment.ReadOnly = True
+            dgvPayment.AllowUserToDeleteRows = False
+            dgvPayment.GridColor = Color.Gray
+            btnRemovePayment.Image = My.Resources.redbin296
+            btnRemovePayment.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditPayment.Enabled = True
+            Me.Customer_PaymentTableAdapter.Fill(Me.RecspecDataset.Customer_Payment)
+        End If
+    End Sub
+
+    Private Sub btnSavePayment_Click(sender As Object, e As EventArgs) Handles btnSavePayment.Click
+        If btnAddEditPayment.Text = "Cancel" Or btnRemovePayment.Text = "Cancel" Then
+            CustomerPaymentBindingSource.EndEdit()
+            Try
+                Customer_PaymentTableAdapter.Update(RecspecDataset.Customer_Payment)
+                MsgBox("Information saved!")
+            Catch ex As DataException
+                MsgBox(ex.StackTrace)
+            End Try
+            dgvPayment.ReadOnly = True
+            dgvPayment.AllowUserToAddRows = False
+            dgvPayment.AllowUserToDeleteRows = False
+            dgvPayment.GridColor = Color.Gray
+            btnAddEditPayment.Image = My.Resources.pencil961
+            btnAddEditPayment.ImageAlign = ContentAlignment.TopCenter
+            btnAddEditPayment.Text = "Add New/Edit Customer Payments"
+            btnAddEditPayment.Enabled = True
+
+            btnRemovePayment.Image = My.Resources.redbin296
+            btnRemovePayment.ImageAlign = ContentAlignment.TopCenter
+            btnRemovePayment.Text = "Remove"
+            btnRemovePayment.Enabled = True
+            Me.Customer_PaymentTableAdapter.Fill(Me.RecspecDataset.Customer_Payment)
+        End If
+    End Sub
+
+#End Region
+
+
+    Private Sub SetAllFormat(ByRef tpage As TabPage, ByRef pan As FlowLayoutPanel, ByRef searchBar As TableLayoutPanel, ByRef dgv As DataGridView, prefix As String)
+        'position the search bar
+
+        tpage.SuspendLayout()
+
+        If (searchBar IsNot Nothing And pan IsNot Nothing) Then
+            searchBar.Top = Me.ClientSize.Height * 0.25
+            searchBar.Left = (Me.ClientSize.Width - searchBar.Width) / 2
+        End If
+
+        'dgv.SetBounds(66, 317, 1179, 396)
+
+        dgv.Width = Me.ClientSize.Width * 0.9
+        dgv.Left = Me.ClientSize.Width * 0.05
+        dgv.Height = Me.ClientSize.Height * 0.5
+        dgv.Top = Me.ClientSize.Height * 0.4
+
+
+
+        'format column headers for display
+        For Each i In dgv.Columns
+            i.HeaderText = i.HeaderText.ToString.Replace(prefix, "").Replace("_", " ")
+        Next
+        dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgv.ColumnHeadersVisible = True
+        dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        dgv.ReadOnly = True
+        dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgv.AllowUserToAddRows = False
+        dgv.AllowUserToDeleteRows = False
+        dgv.AllowUserToOrderColumns = False
+        dgv.AllowUserToResizeColumns = True
+        dgv.AllowUserToResizeRows = False
+
+        'position the buttons
+        If pan IsNot Nothing Then
+            pan.Size = New Size(588, 146)
+            pan.SetBounds((Me.ClientSize.Width - pan.Width) / 2,
+                           Me.ClientSize.Height * 0.05,
+                           pan.Width, pan.Height)
+
+        End If
+
+        tpage.ResumeLayout()
+        tpage.Invalidate()
+
+    End Sub
+
+
+
+
+
+
+    Private Sub tbQueryAll_Enter(sender As Object, e As EventArgs) Handles tbQuerySupplier.Enter, tbQueryEmployee.Enter, tbQueryProduct.Enter, tbQuerySO.Enter, tbQueryPO.Enter, tbQueryCustomer.Enter, tbQueryPayment.Enter
+        Dim tb As TextBox = DirectCast(sender, TextBox)
+        If tb.Text = "Enter Query..." Then
+            tb.Clear()
+        End If
+    End Sub
+
+
+
+
+    Private Sub ManagerFormTabControl_Selected(sender As Object, e As TabControlEventArgs) Handles ManagerFormTabControl.Selected
+
+        Select Case e.TabPage.Name
+            Case "PaymentTab"
+                Payment_Init()
+            Case "ProductTab"
+                Product_init()
+            Case "SalesOrderTab"
+                SalesOrder_Init()
+            Case "POTab"
+                PurchaseOrder_Init()
+            Case "SupplierTab"
+                Supplier_Init()
+            Case "CustomerTab"
+                Customer_Init()
+            Case "EmployeeTab"
+                Employee_Init()
+            Case Else
+                MsgBox("No such tab exist!")
+        End Select
+
+    End Sub
+
+
+
+
+
+
+
+    Private Sub tbQueryAll_KeyDown(sender As Object, e As KeyEventArgs) Handles tbQueryEmployee.KeyDown, tbQueryProduct.KeyDown, tbQuerySO.KeyDown, tbQueryCustomer.KeyDown, tbQueryPayment.KeyDown, tbQueryPO.KeyDown, tbQuerySupplier.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+            Dim tbSender = TryCast(sender, TextBox)
+
+            Select Case tbSender.Name
+                Case "tbQueryEmployee" : btnSearchEmployee.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryProduct" : btnSearchProduct.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQuerySO" : btnSearchSO.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryCustomer" : btnSearchCustomer.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryPayment" : btnSearchPayment.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQueryPO" : btnSearchPO.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+                Case "tbQuerySupplier" : btnSearchSupplier.PerformClick() : e.Handled = True : e.SuppressKeyPress = True
+            End Select
+        End If
+    End Sub
+
+
 End Class

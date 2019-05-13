@@ -45,16 +45,18 @@ Partial Class Login
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.SalesRep_RadioButton = New System.Windows.Forms.RadioButton()
         Me.Manager_RadioButton = New System.Windows.Forms.RadioButton()
-        Me.LoginBtn = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.WarehouseMngRadioBtn = New System.Windows.Forms.RadioButton()
-        Me.SalesRepRadioButton = New System.Windows.Forms.RadioButton()
-        Me.GmRadioBtn = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1.SuspendLayout()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBoxPassword = New System.Windows.Forms.MaskedTextBox()
+        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
+        Me.RecSpecDataset1 = New MenuForms.RecSpecDataset()
+        Me.EmployeeTableAdapter1 = New MenuForms.RecSpecDatasetTableAdapters.EmployeeTableAdapter()
+        CType(Me.RecSpecDataset1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStripMenuItem1
@@ -210,107 +212,131 @@ Partial Class Login
         Me.Manager_RadioButton.Text = "Manager"
         Me.Manager_RadioButton.UseVisualStyleBackColor = True
         '
-        'LoginBtn
+        'Label1
         '
-        Me.LoginBtn.Location = New System.Drawing.Point(198, 249)
-        Me.LoginBtn.Name = "LoginBtn"
-        Me.LoginBtn.Size = New System.Drawing.Size(75, 23)
-        Me.LoginBtn.TabIndex = 18
-        Me.LoginBtn.Text = "Login"
-        Me.LoginBtn.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(102, 194)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 17
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(102, 165)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 16
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(369, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(231, 78)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Login"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(41, 194)
+        Me.Label2.Location = New System.Drawing.Point(158, 137)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Password"
+        Me.Label2.Size = New System.Drawing.Size(164, 23)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "E-mail Address:"
         '
-        'Label1
+        'Label3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(41, 168)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Username"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(213, 205)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(109, 23)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Password:"
         '
-        'GroupBox1
+        'Button1
         '
-        Me.GroupBox1.Controls.Add(Me.GmRadioBtn)
-        Me.GroupBox1.Controls.Add(Me.WarehouseMngRadioBtn)
-        Me.GroupBox1.Controls.Add(Me.SalesRepRadioButton)
-        Me.GroupBox1.Location = New System.Drawing.Point(28, 29)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(245, 130)
-        Me.GroupBox1.TabIndex = 13
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Login options"
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(347, 256)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(109, 36)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "LOGIN"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'WarehouseMngRadioBtn
+        'Button2
         '
-        Me.WarehouseMngRadioBtn.AutoSize = True
-        Me.WarehouseMngRadioBtn.Location = New System.Drawing.Point(7, 77)
-        Me.WarehouseMngRadioBtn.Name = "WarehouseMngRadioBtn"
-        Me.WarehouseMngRadioBtn.Size = New System.Drawing.Size(125, 17)
-        Me.WarehouseMngRadioBtn.TabIndex = 2
-        Me.WarehouseMngRadioBtn.TabStop = True
-        Me.WarehouseMngRadioBtn.Text = "Warehouse Manager"
-        Me.WarehouseMngRadioBtn.UseVisualStyleBackColor = True
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button2.Location = New System.Drawing.Point(526, 256)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(109, 36)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "CANCEL"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'SalesRepRadioButton
+        'Label4
         '
-        Me.SalesRepRadioButton.AutoSize = True
-        Me.SalesRepRadioButton.Location = New System.Drawing.Point(7, 53)
-        Me.SalesRepRadioButton.Name = "SalesRepRadioButton"
-        Me.SalesRepRadioButton.Size = New System.Drawing.Size(74, 17)
-        Me.SalesRepRadioButton.TabIndex = 1
-        Me.SalesRepRadioButton.TabStop = True
-        Me.SalesRepRadioButton.Text = "Sales Rep"
-        Me.SalesRepRadioButton.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(117, 338)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(788, 45)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "SVG SALES AND INVENTORY SYSTEM"
         '
-        'GmRadioBtn
+        'Label5
         '
-        Me.GmRadioBtn.AutoSize = True
-        Me.GmRadioBtn.Location = New System.Drawing.Point(7, 101)
-        Me.GmRadioBtn.Name = "GmRadioBtn"
-        Me.GmRadioBtn.Size = New System.Drawing.Size(107, 17)
-        Me.GmRadioBtn.TabIndex = 3
-        Me.GmRadioBtn.TabStop = True
-        Me.GmRadioBtn.Text = "General Manager"
-        Me.GmRadioBtn.UseVisualStyleBackColor = True
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(321, 383)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(376, 23)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Designed by Recommended Specs"
+        '
+        'TextBoxPassword
+        '
+        Me.TextBoxPassword.ImeMode = System.Windows.Forms.ImeMode.Katakana
+        Me.TextBoxPassword.Location = New System.Drawing.Point(347, 202)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(288, 31)
+        Me.TextBoxPassword.TabIndex = 9
+        '
+        'TextBoxEmail
+        '
+        Me.TextBoxEmail.Location = New System.Drawing.Point(347, 134)
+        Me.TextBoxEmail.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
+        Me.TextBoxEmail.Name = "TextBoxEmail"
+        Me.TextBoxEmail.Size = New System.Drawing.Size(288, 31)
+        Me.TextBoxEmail.TabIndex = 1
+        '
+        'RecSpecDataset1
+        '
+        Me.RecSpecDataset1.DataSetName = "RecSpecDataset"
+        Me.RecSpecDataset1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmployeeTableAdapter1
+        '
+        Me.EmployeeTableAdapter1.ClearBeforeFill = True
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(436, 326)
-        Me.Controls.Add(Me.LoginBtn)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.ClientSize = New System.Drawing.Size(977, 448)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.Name = "Login"
         Me.Text = "Login"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        CType(Me.RecSpecDataset1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -338,13 +364,15 @@ Partial Class Login
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents SalesRep_RadioButton As RadioButton
     Friend WithEvents Manager_RadioButton As RadioButton
-    Friend WithEvents LoginBtn As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents WarehouseMngRadioBtn As RadioButton
-    Friend WithEvents SalesRepRadioButton As RadioButton
-    Friend WithEvents GmRadioBtn As RadioButton
+	Friend WithEvents Label2 As Label
+	Friend WithEvents Label3 As Label
+	Friend WithEvents Button1 As Button
+	Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBoxPassword As MaskedTextBox
+    Friend WithEvents TextBoxEmail As TextBox
+    Friend WithEvents RecSpecDataset1 As RecSpecDataset
+    Friend WithEvents EmployeeTableAdapter1 As RecSpecDatasetTableAdapters.EmployeeTableAdapter
 End Class

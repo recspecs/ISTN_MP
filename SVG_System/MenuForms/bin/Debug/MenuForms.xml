@@ -27,27 +27,22 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.Action_ok_icon">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:MenuForms.My.Resources.Resources.add_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.Awicons_Vista_Artistic_Delete">
-<summary>
-  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-</summary>
-</member>
-<member name="P:MenuForms.My.Resources.Resources.bin_red_full_icon">
+<member name="P:MenuForms.My.Resources.Resources.add72">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.close_icon">
+<member name="P:MenuForms.My.Resources.Resources.add96">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.AddEditDetails72">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -57,24 +52,9 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.delete_icon__1_">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:MenuForms.My.Resources.Resources.delete48x48">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:MenuForms.My.Resources.Resources.delete64x64">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:MenuForms.My.Resources.Resources.Everaldo_Crystal_Clear_Action_ok">
-<summary>
-  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
 <member name="P:MenuForms.My.Resources.Resources.Fatcow_Farm_Fresh_Exclamation">
@@ -87,7 +67,7 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
-<member name="P:MenuForms.My.Resources.Resources.network_error_icon">
+<member name="P:MenuForms.My.Resources.Resources.Logos_Details_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -102,7 +82,32 @@ MenuForms
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MenuForms.My.Resources.Resources.pencil72">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.pencil961">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.redbin296">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.Redbin72">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MenuForms.My.Resources.Resources.Save_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MenuForms.My.Resources.Resources.savedisk72">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -113,11 +118,6 @@ MenuForms
 </summary>
 </member>
 <member name="P:MenuForms.My.Resources.Resources.searchico2n">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:MenuForms.My.Resources.Resources.Trash_can_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -308,6 +308,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:MenuForms.RecSpecDatasetTableAdapters.SupplierTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MenuForms.RecSpecDatasetTableAdapters.QueriesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
