@@ -23,9 +23,9 @@ Partial Class SalesRep
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalesRep))
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SalesRepTabControl = New System.Windows.Forms.TabControl()
         Me.ProductTabRep = New System.Windows.Forms.TabPage()
         Me.flpProducts = New System.Windows.Forms.FlowLayoutPanel()
@@ -52,11 +52,22 @@ Partial Class SalesRep
         Me.lblSOTotal = New System.Windows.Forms.Label()
         Me.tbSOTotal = New System.Windows.Forms.TextBox()
         Me.dgvSODetails = New System.Windows.Forms.DataGridView()
+        Me.SalesItemLineNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Prod_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FKSaleItemSalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblSODetails = New System.Windows.Forms.Label()
         Me.lblSO = New System.Windows.Forms.Label()
         Me.dgvSO = New System.Windows.Forms.DataGridView()
+        Me.SalesOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleOrderDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaleTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tlpSO = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearchSO = New System.Windows.Forms.Button()
         Me.tbQuerySO = New System.Windows.Forms.TextBox()
@@ -81,18 +92,6 @@ Partial Class SalesRep
         Me.CustomerTableTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.CustomerTableTableAdapter()
         Me.Sales_OrderTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.Sales_OrderTableAdapter()
         Me.ProductTableAdapter = New MenuForms.RecSpecDatasetTableAdapters.ProductTableAdapter()
-        Me.SalesOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleOrderDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpFNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SalesItemLineNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleOrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Prod_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SaleItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdVATDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.SaleItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SalesRepTabControl.SuspendLayout()
         Me.ProductTabRep.SuspendLayout()
         Me.flpProducts.SuspendLayout()
@@ -204,14 +203,14 @@ Partial Class SalesRep
         Me.dgvProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgvProduct.AutoGenerateColumns = False
         Me.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProduct.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductCodeDataGridViewTextBoxColumn1, Me.ProdNameDataGridViewTextBoxColumn, Me.ProdCostPriceDataGridViewTextBoxColumn, Me.ProdStockLevelDataGridViewTextBoxColumn, Me.ProdVATDataGridViewCheckBoxColumn1, Me.ProdActiveDataGridViewCheckBoxColumn, Me.ProdCategoriesDataGridViewTextBoxColumn, Me.ProdReorderThresholdDataGridViewTextBoxColumn})
         Me.dgvProduct.DataSource = Me.ProductBindingSource
@@ -339,7 +338,7 @@ Partial Class SalesRep
         Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaProduct.FormattingEnabled = True
         Me.cbCriteriaProduct.Items.AddRange(New Object() {"By Product Code", "By Product Name", "By Stock Level", "By Categories"})
-        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaProduct.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
         Me.cbCriteriaProduct.Size = New System.Drawing.Size(263, 25)
@@ -399,13 +398,55 @@ Partial Class SalesRep
         Me.dgvSODetails.AutoGenerateColumns = False
         Me.dgvSODetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSODetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSODetails.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SalesItemLineNoDataGridViewTextBoxColumn, Me.SaleOrderIDDataGridViewTextBoxColumn, Me.ProductCodeDataGridViewTextBoxColumn, Me.Prod_Name, Me.SaleItemQtyDataGridViewTextBoxColumn, Me.ProdVATDataGridViewCheckBoxColumn, Me.SaleItemPriceDataGridViewTextBoxColumn})
+        Me.dgvSODetails.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SalesItemLineNoDataGridViewTextBoxColumn, Me.SaleOrderIDDataGridViewTextBoxColumn, Me.ProductCodeDataGridViewTextBoxColumn, Me.Prod_Name, Me.SaleItemQtyDataGridViewTextBoxColumn, Me.SaleItemPriceDataGridViewTextBoxColumn})
         Me.dgvSODetails.DataSource = Me.FKSaleItemSalesOrderBindingSource
         Me.dgvSODetails.Location = New System.Drawing.Point(96, 486)
         Me.dgvSODetails.Name = "dgvSODetails"
         Me.dgvSODetails.ReadOnly = True
         Me.dgvSODetails.Size = New System.Drawing.Size(968, 150)
         Me.dgvSODetails.TabIndex = 94
+        '
+        'SalesItemLineNoDataGridViewTextBoxColumn
+        '
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.DataPropertyName = "Sales_Item_Line_No"
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.HeaderText = "Sales_Item_Line_No"
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.Name = "SalesItemLineNoDataGridViewTextBoxColumn"
+        Me.SalesItemLineNoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleOrderIDDataGridViewTextBoxColumn
+        '
+        Me.SaleOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_ID"
+        Me.SaleOrderIDDataGridViewTextBoxColumn.HeaderText = "Sale_Order_ID"
+        Me.SaleOrderIDDataGridViewTextBoxColumn.Name = "SaleOrderIDDataGridViewTextBoxColumn"
+        Me.SaleOrderIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductCodeDataGridViewTextBoxColumn
+        '
+        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
+        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
+        Me.ProductCodeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'Prod_Name
+        '
+        Me.Prod_Name.DataPropertyName = "Prod_Name"
+        Me.Prod_Name.HeaderText = "Prod_Name"
+        Me.Prod_Name.Name = "Prod_Name"
+        Me.Prod_Name.ReadOnly = True
+        '
+        'SaleItemQtyDataGridViewTextBoxColumn
+        '
+        Me.SaleItemQtyDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Qty"
+        Me.SaleItemQtyDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Qty"
+        Me.SaleItemQtyDataGridViewTextBoxColumn.Name = "SaleItemQtyDataGridViewTextBoxColumn"
+        Me.SaleItemQtyDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleItemPriceDataGridViewTextBoxColumn
+        '
+        Me.SaleItemPriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Price"
+        Me.SaleItemPriceDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Price"
+        Me.SaleItemPriceDataGridViewTextBoxColumn.Name = "SaleItemPriceDataGridViewTextBoxColumn"
+        Me.SaleItemPriceDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FKSaleItemSalesOrderBindingSource
         '
@@ -454,6 +495,41 @@ Partial Class SalesRep
         Me.dgvSO.ReadOnly = True
         Me.dgvSO.Size = New System.Drawing.Size(968, 150)
         Me.dgvSO.TabIndex = 91
+        '
+        'SalesOrderIDDataGridViewTextBoxColumn
+        '
+        Me.SalesOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_Order_ID"
+        Me.SalesOrderIDDataGridViewTextBoxColumn.HeaderText = "Sales_Order_ID"
+        Me.SalesOrderIDDataGridViewTextBoxColumn.Name = "SalesOrderIDDataGridViewTextBoxColumn"
+        Me.SalesOrderIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleOrderDateDataGridViewTextBoxColumn
+        '
+        Me.SaleOrderDateDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_Date"
+        Me.SaleOrderDateDataGridViewTextBoxColumn.HeaderText = "Sale_Order_Date"
+        Me.SaleOrderDateDataGridViewTextBoxColumn.Name = "SaleOrderDateDataGridViewTextBoxColumn"
+        Me.SaleOrderDateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaleTotalDataGridViewTextBoxColumn
+        '
+        Me.SaleTotalDataGridViewTextBoxColumn.DataPropertyName = "Sale_Total"
+        Me.SaleTotalDataGridViewTextBoxColumn.HeaderText = "Sale_Total"
+        Me.SaleTotalDataGridViewTextBoxColumn.Name = "SaleTotalDataGridViewTextBoxColumn"
+        Me.SaleTotalDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CustFNameDataGridViewTextBoxColumn
+        '
+        Me.CustFNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_FName"
+        Me.CustFNameDataGridViewTextBoxColumn.HeaderText = "Cust_FName"
+        Me.CustFNameDataGridViewTextBoxColumn.Name = "CustFNameDataGridViewTextBoxColumn"
+        Me.CustFNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EmpFNameDataGridViewTextBoxColumn
+        '
+        Me.EmpFNameDataGridViewTextBoxColumn.DataPropertyName = "Emp_FName"
+        Me.EmpFNameDataGridViewTextBoxColumn.HeaderText = "Emp_FName"
+        Me.EmpFNameDataGridViewTextBoxColumn.Name = "EmpFNameDataGridViewTextBoxColumn"
+        Me.EmpFNameDataGridViewTextBoxColumn.ReadOnly = True
         '
         'tlpSO
         '
@@ -506,7 +582,7 @@ Partial Class SalesRep
         Me.cbCriteriaSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSO.FormattingEnabled = True
         Me.cbCriteriaSO.Items.AddRange(New Object() {"By Customer ID", "By First Name", "By Surname"})
-        Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 17)
+        Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 19)
         Me.cbCriteriaSO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbCriteriaSO.Name = "cbCriteriaSO"
         Me.cbCriteriaSO.Size = New System.Drawing.Size(263, 25)
@@ -650,7 +726,7 @@ Partial Class SalesRep
         Me.cbCriteriaCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaCustomer.FormattingEnabled = True
         Me.cbCriteriaCustomer.Items.AddRange(New Object() {"By Customer ID", "By First Name", "By Surname", "By Business Name"})
-        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaCustomer.Name = "cbCriteriaCustomer"
         Me.cbCriteriaCustomer.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaCustomer.TabIndex = 71
@@ -716,14 +792,14 @@ Partial Class SalesRep
         Me.dgvCustomer.AllowUserToDeleteRows = False
         Me.dgvCustomer.AutoGenerateColumns = False
         Me.dgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCustomer.DataSource = Me.CustomerTableBindingSource
         Me.dgvCustomer.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
@@ -749,90 +825,6 @@ Partial Class SalesRep
         'ProductTableAdapter
         '
         Me.ProductTableAdapter.ClearBeforeFill = True
-        '
-        'SalesOrderIDDataGridViewTextBoxColumn
-        '
-        Me.SalesOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_Order_ID"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.HeaderText = "Sales_Order_ID"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.Name = "SalesOrderIDDataGridViewTextBoxColumn"
-        Me.SalesOrderIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleOrderDateDataGridViewTextBoxColumn
-        '
-        Me.SaleOrderDateDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_Date"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.HeaderText = "Sale_Order_Date"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.Name = "SaleOrderDateDataGridViewTextBoxColumn"
-        Me.SaleOrderDateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleTotalDataGridViewTextBoxColumn
-        '
-        Me.SaleTotalDataGridViewTextBoxColumn.DataPropertyName = "Sale_Total"
-        Me.SaleTotalDataGridViewTextBoxColumn.HeaderText = "Sale_Total"
-        Me.SaleTotalDataGridViewTextBoxColumn.Name = "SaleTotalDataGridViewTextBoxColumn"
-        Me.SaleTotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CustFNameDataGridViewTextBoxColumn
-        '
-        Me.CustFNameDataGridViewTextBoxColumn.DataPropertyName = "Cust_FName"
-        Me.CustFNameDataGridViewTextBoxColumn.HeaderText = "Cust_FName"
-        Me.CustFNameDataGridViewTextBoxColumn.Name = "CustFNameDataGridViewTextBoxColumn"
-        Me.CustFNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmpFNameDataGridViewTextBoxColumn
-        '
-        Me.EmpFNameDataGridViewTextBoxColumn.DataPropertyName = "Emp_FName"
-        Me.EmpFNameDataGridViewTextBoxColumn.HeaderText = "Emp_FName"
-        Me.EmpFNameDataGridViewTextBoxColumn.Name = "EmpFNameDataGridViewTextBoxColumn"
-        Me.EmpFNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SalesItemLineNoDataGridViewTextBoxColumn
-        '
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.DataPropertyName = "Sales_Item_Line_No"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.HeaderText = "Sales_Item_Line_No"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.Name = "SalesItemLineNoDataGridViewTextBoxColumn"
-        Me.SalesItemLineNoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SaleOrderIDDataGridViewTextBoxColumn
-        '
-        Me.SaleOrderIDDataGridViewTextBoxColumn.DataPropertyName = "Sale_Order_ID"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.HeaderText = "Sale_Order_ID"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.Name = "SaleOrderIDDataGridViewTextBoxColumn"
-        Me.SaleOrderIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProductCodeDataGridViewTextBoxColumn
-        '
-        Me.ProductCodeDataGridViewTextBoxColumn.DataPropertyName = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.HeaderText = "Product_Code"
-        Me.ProductCodeDataGridViewTextBoxColumn.Name = "ProductCodeDataGridViewTextBoxColumn"
-        Me.ProductCodeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'Prod_Name
-        '
-        Me.Prod_Name.DataPropertyName = "Prod_Name"
-        Me.Prod_Name.HeaderText = "Prod_Name"
-        Me.Prod_Name.Name = "Prod_Name"
-        Me.Prod_Name.ReadOnly = True
-        '
-        'SaleItemQtyDataGridViewTextBoxColumn
-        '
-        Me.SaleItemQtyDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Qty"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Qty"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.Name = "SaleItemQtyDataGridViewTextBoxColumn"
-        Me.SaleItemQtyDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdVATDataGridViewCheckBoxColumn
-        '
-        Me.ProdVATDataGridViewCheckBoxColumn.DataPropertyName = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.HeaderText = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.Name = "ProdVATDataGridViewCheckBoxColumn"
-        Me.ProdVATDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'SaleItemPriceDataGridViewTextBoxColumn
-        '
-        Me.SaleItemPriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Item_Price"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Price"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.Name = "SaleItemPriceDataGridViewTextBoxColumn"
-        Me.SaleItemPriceDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SalesRep
         '

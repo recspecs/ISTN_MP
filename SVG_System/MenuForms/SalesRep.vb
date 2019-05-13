@@ -448,9 +448,6 @@
         End If
     End Sub
 
-    Private Sub btnAddEditSO_Click(sender As Object, e As EventArgs) Handles btnAddEditSO.Click
 
 
-
-    End Sub
 End Class
