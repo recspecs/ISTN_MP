@@ -365,10 +365,10 @@ Partial Class Login
     Friend WithEvents SalesRep_RadioButton As RadioButton
     Friend WithEvents Manager_RadioButton As RadioButton
     Friend WithEvents Label1 As Label
-	Friend WithEvents Label2 As Label
-	Friend WithEvents Label3 As Label
-	Friend WithEvents Button1 As Button
-	Friend WithEvents Button2 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBoxPassword As MaskedTextBox

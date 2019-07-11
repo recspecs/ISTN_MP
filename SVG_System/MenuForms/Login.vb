@@ -1,27 +1,38 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text
+
 Public Class Login
-    Dim genManagerForm As New GenManager
-    Dim salesRepForm As New SalesRep
-    Dim warehouseManagerForm As New WarehouseManager
+
+
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         EmployeeTableAdapter1.FillBy(RecSpecDataset1.Employee, TextBoxEmail.Text, TextBoxPassword.Text)
         If RecSpecDataset1.Employee.Rows.Count > 0 Then
-            MessageBox.Show("Welcome " & RecSpecDataset1.Employee.Rows(0).Item(1).ToString & vbLf & "You will now be directed to the system")
-            If RecSpecDataset1.Employee.Rows(0).Item(6).ToString = "General Manager" Then
-                genManagerForm.Show()
-                Me.Close()
-            ElseIf RecSpecDataset1.Employee.Rows(0).Item(6).ToString = "Sales Rep" Then
-                salesRepForm.Show()
-                Me.Close()
-            ElseIf RecSpecDataset1.Employee.Rows(0).Item(6).ToString = "Warehouse Manager" Then
-                warehouseManagerForm.Show()
-                Me.Close()
 
+            Dim msg As New StringBuilder
+            msg.Append("Welcome ")
+            msg.AppendLine(RecSpecDataset1.Employee.Rows(0).Item(1).ToString())
+            msg.Append("You will now be directed to the system")
+            MessageBox.Show(msg.ToString())
 
+            Dim employeeType As New String(RecSpecDataset1.Employee.Rows(0).Item(6).ToString)
 
+            Select Case employeeType
+                Case "General Manager"
+                    Dim genManagerForm As New GenManager
+                    genManagerForm.Show()
+                    Me.Hide()
+                Case "Sales Rep"
+                    Dim salesRepForm As New SalesRep
+                    salesRepForm.Show()
+                    Me.Hide()
+                Case "Warehouse Manager"
+                    Dim warehouseManagerForm As New WarehouseManager
+                    warehouseManagerForm.Show()
+                    Me.Hide()
+            End Select
 
-            End If
         Else
             MessageBox.Show("Invalid user details entered")
             TextBoxEmail.Clear()
@@ -34,6 +45,10 @@ Public Class Login
 
 
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
     End Sub
 
 

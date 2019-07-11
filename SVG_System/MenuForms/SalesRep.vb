@@ -448,6 +448,11 @@
         End If
     End Sub
 
-
-
+    Private Sub SalesRep_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        If Application.OpenForms.Count > 0 Then
+            Application.OpenForms.Item("Login").Show()
+        Else
+            Application.Exit()
+        End If
+    End Sub
 End Class

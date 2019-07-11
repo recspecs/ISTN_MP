@@ -394,4 +394,12 @@
     Private Sub tbQueryProduct_Enter(sender As Object, e As EventArgs) Handles tbQueryProduct.Enter
         tbQueryProduct.Text = ""
     End Sub
+
+    Private Sub WarehouseManager_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        If Application.OpenForms.Count > 0 Then
+            Application.OpenForms.Item("Login").Show()
+        Else
+            Application.Exit()
+        End If
+    End Sub
 End Class

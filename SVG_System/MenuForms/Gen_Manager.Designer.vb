@@ -102,7 +102,6 @@ Partial Class GenManager
         Me.ProductCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProdNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SaleItemQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProdVATDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.SaleItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FKSaleItemSalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalesOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -307,7 +306,7 @@ Partial Class GenManager
         Me.cbCriteriaPayment.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPayment.FormattingEnabled = True
         Me.cbCriteriaPayment.Items.AddRange(New Object() {"By Payment ID", "By Payment Type", "By Customer", "By Employee"})
-        Me.cbCriteriaPayment.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaPayment.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaPayment.Name = "cbCriteriaPayment"
         Me.cbCriteriaPayment.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaPayment.TabIndex = 71
@@ -508,7 +507,7 @@ Partial Class GenManager
         Me.cbCriteriaCustomer.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaCustomer.FormattingEnabled = True
         Me.cbCriteriaCustomer.Items.AddRange(New Object() {"By employee ID", "By first name", "By surname"})
-        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaCustomer.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaCustomer.Name = "cbCriteriaCustomer"
         Me.cbCriteriaCustomer.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaCustomer.TabIndex = 71
@@ -765,7 +764,7 @@ Partial Class GenManager
         Me.cbCriteriaSupplier.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSupplier.FormattingEnabled = True
         Me.cbCriteriaSupplier.Items.AddRange(New Object() {"By Supplier ID", "By Supplier Name", "By Contact Person"})
-        Me.cbCriteriaSupplier.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaSupplier.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaSupplier.Name = "cbCriteriaSupplier"
         Me.cbCriteriaSupplier.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaSupplier.TabIndex = 71
@@ -978,7 +977,7 @@ Partial Class GenManager
         Me.dgvSOBottom.AutoGenerateColumns = False
         Me.dgvSOBottom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSOBottom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSOBottom.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SalesItemLineNoDataGridViewTextBoxColumn, Me.SaleOrderIDDataGridViewTextBoxColumn, Me.ProductCodeDataGridViewTextBoxColumn, Me.ProdNameDataGridViewTextBoxColumn, Me.SaleItemQtyDataGridViewTextBoxColumn, Me.ProdVATDataGridViewCheckBoxColumn, Me.SaleItemPriceDataGridViewTextBoxColumn})
+        Me.dgvSOBottom.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SalesItemLineNoDataGridViewTextBoxColumn, Me.SaleOrderIDDataGridViewTextBoxColumn, Me.ProductCodeDataGridViewTextBoxColumn, Me.ProdNameDataGridViewTextBoxColumn, Me.SaleItemQtyDataGridViewTextBoxColumn, Me.SaleItemPriceDataGridViewTextBoxColumn})
         Me.dgvSOBottom.DataSource = Me.FKSaleItemSalesOrderBindingSource
         Me.dgvSOBottom.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvSOBottom.Location = New System.Drawing.Point(115, 498)
@@ -1021,13 +1020,6 @@ Partial Class GenManager
         Me.SaleItemQtyDataGridViewTextBoxColumn.HeaderText = "Sale_Item_Qty"
         Me.SaleItemQtyDataGridViewTextBoxColumn.Name = "SaleItemQtyDataGridViewTextBoxColumn"
         Me.SaleItemQtyDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProdVATDataGridViewCheckBoxColumn
-        '
-        Me.ProdVATDataGridViewCheckBoxColumn.DataPropertyName = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.HeaderText = "Prod_VAT"
-        Me.ProdVATDataGridViewCheckBoxColumn.Name = "ProdVATDataGridViewCheckBoxColumn"
-        Me.ProdVATDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'SaleItemPriceDataGridViewTextBoxColumn
         '
@@ -1103,7 +1095,7 @@ Partial Class GenManager
         Me.cbCriteriaSO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaSO.FormattingEnabled = True
         Me.cbCriteriaSO.Items.AddRange(New Object() {"By Sales Order ID", "By Sale Order Date", "By Customer", "By Employee"})
-        Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaSO.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaSO.Name = "cbCriteriaSO"
         Me.cbCriteriaSO.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaSO.TabIndex = 71
@@ -1378,7 +1370,7 @@ Partial Class GenManager
         Me.cbCriteriaProduct.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaProduct.FormattingEnabled = True
         Me.cbCriteriaProduct.Items.AddRange(New Object() {"By Product Code", "By Product Name", "By Stock Level", "By Categories"})
-        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaProduct.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaProduct.Name = "cbCriteriaProduct"
         Me.cbCriteriaProduct.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaProduct.TabIndex = 71
@@ -1453,7 +1445,7 @@ Partial Class GenManager
         Me.cbCriteriaEmployee.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaEmployee.FormattingEnabled = True
         Me.cbCriteriaEmployee.Items.AddRange(New Object() {"By Employee ID", "By First Name", "By Surname"})
-        Me.cbCriteriaEmployee.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaEmployee.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaEmployee.Name = "cbCriteriaEmployee"
         Me.cbCriteriaEmployee.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaEmployee.TabIndex = 71
@@ -1765,7 +1757,7 @@ Partial Class GenManager
         Me.cbCriteriaPO.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbCriteriaPO.FormattingEnabled = True
         Me.cbCriteriaPO.Items.AddRange(New Object() {"By PO No", "By PO Date", "By PO Received Flag", "By Supplier", "By Employee"})
-        Me.cbCriteriaPO.Location = New System.Drawing.Point(586, 19)
+        Me.cbCriteriaPO.Location = New System.Drawing.Point(586, 17)
         Me.cbCriteriaPO.Name = "cbCriteriaPO"
         Me.cbCriteriaPO.Size = New System.Drawing.Size(263, 25)
         Me.cbCriteriaPO.TabIndex = 71
